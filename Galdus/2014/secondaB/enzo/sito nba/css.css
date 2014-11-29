@@ -1,0 +1,70 @@
+/*** Body ***/
+html,body{
+   /* margin-top:0px !important; */
+   padding:0px;
+   font-family:"Verdana",Georgia,Serif;
+   background:url("america.jpg");
+}
+h1{
+  text-align: center;
+  font-family:Arial; 
+}
+
+/*** Header ***/
+header {
+    width:100%;
+    min-height:90px;
+    margin-top:0px !important;
+    background-color:lightblue;
+}
+ 
+/*** Nav ***/
+nav{
+    float:left;
+    width:180px;
+    min-height:180px;
+    background: #222222;
+    color:#fff;
+    margin:0 auto;
+    position:fixed;
+    padding:10px;
+}
+
+/*** NAVIGAZIONE ***/
+#nav ul{margin: 0;padding: 0; list-style-type: none}
+#nav li{margin: 0;padding: 0}
+#nav a{color:opacity;font: normal bold 1.2em/1.4em text-decoration: none}
+#nav a:hover{color: #AD6003;text-decoration: underline}
+#nav a#activelink{color: #196003;text-decoration: none}
+#nav p{font-size: 90%}
+
+/*** Section ***/
+section {
+    width:80%;
+    min-height:350px;
+	background-color:white;
+    background:opacity;
+    margin:0px 10px 10px 220px;
+    padding:10px;
+	opacity:0.7;
+    filter:alpha(opacity=70);
+}
+ 
+/*** Content ***/
+#content {
+    width:960px;
+    min-height:200px;
+    background:white;
+}
+ 
+/*** Footer ***/
+footer {
+    clear:both;
+    width:100%;
+    min-height:50px;
+    background:lightblue;
+    color:black;
+    font-size:10px;
+    text-align:center;
+    padding:10px;
+}

@@ -1,0 +1,12 @@
+body {
+		text-align: center; 
+		margin: 10px;
+		border:1px solid gray;
+		line-height:150%;
+		color: blue;
+		background-color: #ffffcc;
+		position: absolute;
+		left: 50%;
+		margin:10px 0 0 -400px;
+	}
+	

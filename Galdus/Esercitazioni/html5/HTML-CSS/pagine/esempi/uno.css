@@ -1,0 +1,45 @@
+p {
+	font-family: sans-serif;
+	text-align= justify;
+                 margin-left: 10%;
+	margin-right: 10%;
+	text-indent : 3%;
+}
+
+h2 {
+	font-family: sans-serif;
+	color: navy;
+	font-style: oblique;
+	}
+h3 {
+	font-family: sans-serif;
+	color: blue;
+	font-style: oblique;
+	margin-left: 5%;
+}
+
+pre {	font-family: "Courier New";
+	monospace;
+	FONT-WEIGHT: bold;  
+	color: navy;
+	text-align=justify;
+	margin-left: 8%;
+	margin-right: 10%;
+ 
+}
+
+ul {            font-family: sans-serif;
+	text-align= justify;
+                 margin-left: 10%;
+                 margin-right: 10%;
+}
+
+dl {            font-family: sans-serif;
+	text-align= justify;
+                 margin-left: 10%;
+                 margin-right: 10%;
+}
+
+dt {  	FONT-WEIGHT: bold;  
+	 color: navy;
+}

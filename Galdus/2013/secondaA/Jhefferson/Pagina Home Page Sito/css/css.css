@@ -1,0 +1,22 @@
+body {
+color:"green";
+font-family:"comic Sans MS";
+ 
+font-size:11px;
+}
+body{ background: url(images/2.jpg);
+ background-repeat: no-repeat;
+ background-color: black;
+height=1}
+
+#pulsante {  
+outline: none;  
+cursor: pointer;  
+text-align: center;  
+text-decoration: none;  
+font: bold 12px Arial, Helvetica, sans-serif;  
+color: #fff;  
+padding: 10px 20px;  
+border: solid 1px white;  
+background: limegreen; 
+} 

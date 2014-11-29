@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item><pubDate>Thu, 15 May 2014 11:18:29 +0200</pubDate><title><![CDATA[Hub]]></title><url><![CDATA[hub]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Hub]]></menu><menuOrder><![CDATA[6]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;Un HUB riceve un segnale diretto da un computer ad un altro ma lo passa a tutti gli altri computer della rete.&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;Il risultato è che una rete basata su HUB è più caotica e soffre di problemi di collisione (quindi è più lenta).&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;&lt;img alt=&quot;&quot; src=&quot;http://localhost/GS/data/uploads/immagini/difference-between-hub-and-switch-in-networking1.jpg&quot; style=&quot;width: 220px; height: 137px;&quot; /&gt;&lt;/strong&gt;&lt;/p&gt;
+]]></content><private><![CDATA[]]></private><author><![CDATA[m.t.]]></author></item>

@@ -1,0 +1,268 @@
+<!DOCTYPE HTML>
+<head>
+<title>
+Progettare una Rete
+</title>
+<meta charset="utf-8"/>
+<link rel='stylesheet' href='styles.css'>
+<script src="jquery.min.js"></script>
+<style>
+/*caratteristiche dello stile di questo form*/
+section{
+  width:70%;
+  margin:auto;
+  padding:10px;
+}
+.centrato{
+  width:800px;
+}
+form#payment{
+  width:750px;
+}
+fieldset ol li{
+  width:97%;
+}
+form#payment label{
+  width:320px;
+}
+
+</style>
+
+</head>
+<body>
+<section>
+<div class="centrato">	
+<h1>Progettare una rete</h1>
+<h5>
+<p>
+&nbsp
+</p> 
+&nbsp
+Prima di iniziare la realizzazione di una rete e necessario raccogliere tutte le <br/>
+&nbsp
+Informazioni importanti che servono a realizzare la rete necessaria al cliente.
+<br/> &nbsp La prima informazioni da raccogliere sono: 
+<p>
+&nbsp
+</p>
+</h5>
+<form id=payment method="POST" action="#">
+
+<fieldset>
+<legend>Dati della rete</legend>
+<ol>
+<li>
+<label for=name>Nome e Cognome del responsabile</label>
+<input id=nome name=nome type=text placeholder="Nome e Cognome" required autofocus>
+</li>
+<li>
+<label for=Cognome>Indirizzo</label>
+<input id=Cognome name=classe type=text placeholder="indirizzo" required >
+</li>
+<li>
+<label for=sedi>Numero delle sedi dell'azienda</label>
+<input id=Cognome name=classe type=text placeholder="sedi" required>
+</li>
+<li>
+<label for=DataCompilazione>Data di Compilazione </label>
+<input type=date name=compilazione placeholder="gg/mm/aaaa" required >
+</li>
+</ol>
+</fieldset>
+<fieldset>
+<legend>Dimensioni della rete in base alla tipologia</legend>
+<ol>
+<li>
+<label> LAN </label>
+<input type="checkbox" name="Elett" value="LAN"/>
+</li>
+<li>
+<label> MAN </label>
+<input type="checkbox" name="Elett" value="MAN"/>
+</li>
+<li>
+<label> WAN </label>
+<input type="checkbox" name="Elett " value="WAN"/>
+</li>
+<li>
+<label> Altro </label>
+<input type="text" name="Elett" value="Specificare"/>
+</li>
+</ol>
+</fieldset>
+<fieldset>
+<legend>&Egrave; gi&agrave; nota la forma della rete (topologia)</legend>
+<ol>
+<li>
+<label for=Elett> A stella </label>
+<input type="radio" name="Elett" value="stella"/> 
+<br />
+<label for=Elett> A bus </label>
+<input type="radio" name="Elett" value="bus"/>   
+<br />  
+<label for=Elett> Ad albero </label>
+<input type="radio" name="Elett " value="albero"/> 
+<br />
+<label for=Elett> Altro </label>
+<input type="text" name="Elett" value="Specificare"/>  
+<br />   
+</li>
+</ol>
+</fieldset>
+
+<fieldset>
+<legend>Raccogliere tutte le informazioni dei device coinvolte nella rete.</legend>
+<ol>
+<li>
+<legend>In particolare :</legend>
+<li>
+<label for=A>Il tipo di Processore e Il suo Clock</label>
+<input id=A name='nameclass' type='text' value='Processore e Clock'>
+</li>
+<li>
+<label for=B>Dimensione degli hard disk </label>
+<input id=B name='nameclass' type='text' value='hard disk'>
+</li>
+<li>
+<label for=G>La quantità di RAM</label>
+<input id=c name='nameclass' type='text' value='RAM'>
+</li>
+<li>
+<input id=C name='nameclass' type='text' value='Memoria'>
+<label for=C>Memoria disponibile</label>
+</li>
+<li>
+<input id=D name='nameclass' type='text' value='Sistema operativo'>
+<label for=D>Sistema operativo installato</label>
+</li>
+<li>
+<input id=E name='nameclass' type='text' value='Scheda di rete'>
+<label for=E>Tipo di scheda di rete installata delle sue caratteristiche.<br/></label>
+</li>
+<li>
+<input id=F name='nameclass' type='text' value='Protocollo di rete'>
+<label for=F>Protocollo di rete utilizzato</label>
+</li>
+</ol>
+<ol>
+<li>
+<label for=Elett>Quanto è estesa la superficie della rete da realizzare </label>
+<input type="text" id="Elett" name="Elett" class="test" value="kw  "/> 
+<br />
+</li>
+<li>
+<label for=Elett>Il numero di edifici, stanze sono coinvolte nella rete </label>
+<input type="text" id="Elett" name="Elett" class="test" value=""/>   
+<br />
+</li>
+<li> 
+<label for=Elett>Il tipo di materiale usato per la costruzione degli edifici dove sarà realizzata la rete </label>
+<input type="text" id="Elett" name="Elett" class="test" value=""/> 
+<br />
+</li>
+<li>
+<label for=Elett>Capire se esiste già una rete e qualè  la sua  topologia </label>
+<input type="text" id="Elett" name="Elett" class="test" value=""/>  
+<br />  
+</li>
+<li> 
+<label for=Elett>Raccogliere tutte le informazioni dei device coinvolte nella rete </label>
+<input type="text" id="Elett" name="Elett" class="test" value=""/>  
+<br /> 
+</li>
+<li> 
+<label for=Elett>La disponibilità di stampanti a quali computer sono collegati  </label>
+<input type="text" id="Elett" name="Elett" class="test" value=""/>  
+<br />
+</li>
+<li>  
+<label for=Elett>Hanno la disponibilità di scheda WI-FI </label>
+<input type="text" id="Elett" name="Elett" class="test" value=""/>  
+<br />
+</li>
+<li>  
+<label for=Elett>Quali atri device sono presenti negli ufficio e devono essere connessi </label>
+<input type="text" id="Elett" name="Elett" class="test" value=""/> 
+<br />
+</li>
+<li>  
+<label for=Elett>Quali software sono utilizzati in ufficio </label>
+<input type="text" id="Elett" name="Elett" class="test" value=""/> 
+<br />
+</li>
+<li>  
+<label for=Elett>Quali driver e disk d’installazione sono disponibili in azienda </label>
+<input type="text" id="Elett" name="Elett" class="test" value=""/>  
+<br />
+</li>  
+</ol>
+</fieldset>
+<fieldset><!-- Costi fissi e di servizio -->
+<legend>Costi fissi e costi per servizi di rete </legend>
+<ol>
+<li>
+<label for=Elett id="large"> 
+Nella bolletta dell'energia elettrica, tra le voci che compongono la spesa totale c'è una distinzione tra costi fissi e servizi di rete. 
+Scrivi gli importi in € e prova a dire secondo perché ci sono queste due voci di spesa diverse.
+</label>
+<textarea rows="10" cols="50" name="fissi">
+</textarea>
+</li>
+</ol>
+</fieldset>
+<fieldset><!-- Costi fasce orarie -->
+<legend>Fasce orarie costi energia elettrica</legend>
+<ol>
+<li>
+<label for=Elett id="large"> 
+In quante fasce orarie è divisa il costo dell'energia elettrica per uso domestico (di solito indicate dalla lettera F e un numero)? 
+Sono le ore in cui l'energia costa meno e altre in cui costa di più. Scrivi il costo di 1 kWh per ogni fascia.
+</label>
+<textarea rows="10" cols="50" name="fasce">
+</textarea>
+</li>
+</ol>
+</fieldset>
+
+<fieldset><!-- Costi  A1, A2, A3 -->
+<legend>Fasce A1, A2, A3</legend>
+<ol>
+<li>
+<label for=Elett id="large"> 
+Oltre ai consumi di energia, in bolletta, potrebbero esserci alcune voci come A1, A2, A3,... Cosa indicano?
+</label>
+<textarea rows="10" cols="50" name="a1a2a3">
+</textarea>
+</li>
+</ol>
+</fieldset>
+
+<fieldset>
+<ol>
+<li class=centrato>
+<input type=submit value='Invia Dati'/>
+<input type=reset value='annulla'/>
+</li>
+</ol>
+</fieldset>
+<script> 
+$(document).ready ( function () {
+            $("#btn1").click ( function () {
+              var resultVal = 0.0;
+              var objRegExp = '\s+';
+               $(".test").each ( function() {
+                    var temp = $(this).val();
+                    if(!isNaN(temp) && temp) //se non e' un numero non lo sommo
+                       resultVal += parseFloat ( temp.replace(/\s/g,'').replace(',','.'));
+                });
+                //alert ( resultVal );
+                $(".risu").val(""+resultVal);
+                
+            });
+        });
+</script>
+</form>	
+</div>
+</section>
+</body>
+</html>

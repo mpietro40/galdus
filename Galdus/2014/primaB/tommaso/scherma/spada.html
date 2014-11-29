@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8"> 
+  <title>
+	Esempio di sito base HTML5 completo
+  </title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js"></script>
+  <link rel="SHORTCUT ICON" href="favicon.ico">
+  <style>
+  @import url(http://fonts.googleapis.com/css?family=Capriola);
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  font-family: Capriola, Helvetica, sans-serif;
+}
+#cssmenu {
+  width: auto;
+  height: 59px;
+  padding-bottom: 4px;
+}
+#cssmenu.align-right {
+  float: right;
+}
+#cssmenu.align-right ul li {
+  float: right;
+  margin-right: 0;
+  margin-left: 4px;
+}
+#cssmenu.align-right ul li:first-child,
+#cssmenu.align-right ul li:first-child > a {
+  border-bottom-right-radius: 3px;
+}
+#cssmenu #bg-one,
+#cssmenu #bg-two,
+#cssmenu #bg-three,
+#cssmenu #bg-four {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+#cssmenu #bg-one {
+  height: 10px;
+  background: #ede213;
+}
+#cssmenu #bg-two {
+  height: 59px;
+  z-index: 2;
+  background: url('bg.png');
+}
+#cssmenu #bg-three {
+  bottom: 4px;
+  height: 55px;
+  z-index: 3;
+  background: #0015ff;
+  background: -moz-linear-gradient(top, #6673ff 0%, #ffffff 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6673ff), color-stop(100%, #0015ff));
+  background: -webkit-linear-gradient(top, #6673ff 0%, #0015ff 100%);
+  background: -o-linear-gradient(top, #6673ff 0%, #0015ff 100%);
+  background: -ms-linear-gradient(top, #6673ff 0%, #0015ff 100%);
+  background: linear-gradient(to bottom, #6673ff 0%, #0015ff 100%);
+}
+#cssmenu #bg-four {
+  bottom: 4px;
+  height: 55px;
+  z-index: 4;
+  background: url('bg.png');
+}
+#cssmenu ul {
+  height: 59px;
+}
+#cssmenu ul li {
+  float: left;
+  margin-right: 4px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  z-index: 5;
+}
+#cssmenu ul li a {
+  padding: 24px 30px 20px 30px;
+  margin-bottom: 4px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  color: #ffffff;
+  font-size: 15px;
+  text-decoration: none;
+}
+#cssmenu ul li:first-child,
+#cssmenu ul li:first-child > a {
+  border-bottom-left-radius: 3px;
+}
+#cssmenu ul li:hover,
+#cssmenu ul li.active {
+  background: #ede213;
+  background: -moz-linear-gradient(top, #f4ee72 0%, #ede213 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f4ee72), color-stop(100%, #ede213));
+  background: -webkit-linear-gradient(top, #f4ee72 0%, #ede213 100%);
+  background: -o-linear-gradient(top, #f4ee72 0%, #ede213 100%);
+  background: -ms-linear-gradient(top, #f4ee72 0%, #ede213 100%);
+  background: linear-gradient(to bottom, #f4ee72 0%, #ede213 100%);
+}
+#cssmenu ul li a:hover,
+#cssmenu ul li.active > a {
+  background: url('bg.png');
+  color: #ffffff;
+}
+  </style>
+</head>
+<body>
+   <header id="header">
+        <h1>scherma</h1>
+
+    </header>
+    <nav id="nav">
+       circolo della spada di M. Marcello Lodetti <br>
+       <div id='cssmenu'>
+<ul>
+   <li><a href='index.html'><span>foto </span></a></li>
+   <li><a href='#'><span>spada</span></a></li>
+   <li class='active'><a href='#'><span>marcello lodetti </span></a></li>
+   <li class='last'><a href='#'><span>immagini lodetti </span></a></li>
+</ul>
+</div>
+    </nav>
+    <section id="slider">
+       <h1>foto</h1>
+  <img src="chi1.jpg" alt="descrivo immagine"> 
+ 
+    </section>
+ 
+    <footer id="footer">
+      creato da tommy giudici &copy;
+    </footer>
+</body>
+</html>

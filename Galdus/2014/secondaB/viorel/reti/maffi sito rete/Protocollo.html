@@ -1,0 +1,104 @@
+<html>
+<head>
+<script language="JavaScript" type="text/javascript">
+<!-- 
+// SCRIPT EDITE SUR L'EDITEUR JAVASCRIPT http://www.editeurjavascript.com
+// Prelevato ed illustrato su HTTP://Web-Link.it
+
+if (document.getElementById)
+	{
+	fromPub = 0;
+	iVolePub = new Image;
+	iVolePub.src = "protocollo.jpg";
+	offsetyPub=0;
+	HauteurPub = 0;
+	place = fromPub;
+	xpub = 4;
+	ypub = 4;
+	}
+
+function RandomDep()
+	{
+	numimagePub= Math.round(Math.random()*8);
+	numimagePub ++;
+	return(numimagePub);
+	}
+
+function VolimPub()
+	{
+	if(document.all)
+		{
+		EcranlargPub = document.body.clientWidth-iVolePub.width;
+		EcranhautPub = document.body.clientHeight-iVolePub.height;	
+		}
+	else
+		{
+		EcranlargPub = screen.width-100;
+		EcranhautPub = screen.height-100;
+		}
+	if (document.getElementById)
+		{
+		if (place > EcranlargPub)
+			xpub = (-(RandomDep()));
+		if (place < fromPub)
+			xpub = RandomDep();
+		document.getElementById("pubBulle").style.left = (place = place + xpub);
+		document.getElementById("pubBulle").style.top = (HauteurPub += ypub)+offsetyPub;
+		if (HauteurPub>EcranhautPub)
+			ypub = (-(RandomDep()));
+		if (HauteurPub<0)
+			ypub = RandomDep();
+		tempo36 = setTimeout('VolimPub()', 50);
+		}
+	}
+
+function OffSet()
+	{
+	if (navigator.appName=="Microsoft Internet Explorer")
+   		offsetyPub = document.body.scrollTop;
+	}
+window.onload = VolimPub;
+onscroll = OffSet;
+// end  -->
+</script>	  
+<title>La rete</title>
+<body background='images.jpg'>
+<script language="JavaScript" type="text/javascript">
+<!-- 
+if (document.getElementById)
+	{
+	document.write('<DIV ID="pubBulle" STYLE="position:absolute; top:200px; left:-100px; z-indexpub:10"><IMG SRC="'+iVolePub.src+'" BORDER=0 HSPACE=0><\/DIV>');
+	}
+// prelevato su web-link.it -->
+</script>	
+<marquee align="middle" direction="right"scrolldelay="5"><h1><center><font color="lime"> Protocollo</font></center></h1></marquee>
+ 
+<div align='center' style='padding:4px;'>
+<table border='10'> <td> 
+    <span style="background-color:chartreuse; border:2px solid black; padding:4px;   width:150px"><a href='Larete.html'>HOME</a></span>
+    <span style="background-color:chartreuse; border:2px solid black; padding:4px;   width:150px"><a href='Protocollo.html'>Protocollo</a></span>
+    <span style="background-color:chartreuse; border:2px solid black; padding:4px;   width:150px"><a href='Requisiti.html'>Requisiti</a></span>
+    <span style="background-color:chartreuse; border:2px solid black; padding:4px;   width:150px"><a href='#'>Componenti</a></span>
+	    <span style="background-color:chartreuse; border:2px solid black; padding:4px;   width:150px"><a href='http.html'>HTTP</a></span>
+</div>
+</table>
+<hr/>
+<p align='justify'>
+<font color="white">
+<table background="images1.jpg" border="10">
+<td>
+<font color="white">
+Il protocollo in informatica e un insieme di informazioni che indica la modalita con le quali e possibile creare e mantenere la comunicazione tra due device che finisce il metodo trasporto. Generalmente un protocollo contiene:<p>
+1. Indirizzo del destinatario.<p>
+2. Indicazione sulla velocita di trasferimento dei dati.<p>
+3. Informazioni per il controllo degli errori di trasmissioni.<p>
+4. I dati del protocollo sono elaborati in diversi livelli.<p>
+<br>
+E manmano sono aggiunte delle informazioni specifiche  del livello. Nel caso  di protocolli di collegamento e possibile l'uso di un secondo protocollo piu specifico  al suo interno.
+</font>
+</p>
+<hr/>
+</table>
+</body>
+</head>
+</html>

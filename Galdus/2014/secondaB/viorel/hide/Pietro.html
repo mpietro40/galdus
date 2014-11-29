@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>
+Pietro
+</title>
+</head>
+<body>
+<div id="Nascondi">
+testo da nascondere
+</div>
+<script>
+function mostra(){
+document.getElementById("Nascondi").style.display="none";
+}
+        var sPath = window.location.pathname;
+		var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
+			alert(sPage)
+		if(sPage=="Pietro.html")
+			mostra();
+
+</script>
+<input type='button' value='sparisci' onclick="mostra()">
+
+</body>
+</html>

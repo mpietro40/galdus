@@ -1,0 +1,56 @@
+body{
+background-image: url(http://digiphotostatic.libero.it/saverio.milella/lrg/5e7b6fdb00_2511591_lrg.jpg);
+color: white;
+}
+table td{
+border:solid 3px #1E90FF;
+}
+table th{
+border:solid 3px #1E90FF;
+}
+table{
+border-collapse:collapse;
+}
+h1{
+text-align:center;
+color: #00FF00;
+}
+p{
+text-align:center;
+}
+.testoRosso{
+font-weight: bold;
+color: red;
+font-size: 120%;
+text-align:left;
+}
+.testoVerde{
+font-weight: bold;
+color: green;
+font-size: 120%;
+text-align:left;
+}
+.testoBlue{
+font-weight: bold;
+color: blue;
+font-size: 120%;
+text-align:left;
+}
+.testoPurple{
+font-weight: bold;
+color: purple;
+font-size: 120%;
+text-align:left;
+}
+.testoAzzurro{
+font-weight: bold;
+color: #00FF00;
+font-size: 120%;
+text-align:center;
+}
+div.centrato{
+text-align:center;}
+table.centrata{
+margin-left:auto;
+margin-right:auto;
+}

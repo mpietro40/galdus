@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<script>
+function calcola () {
+var n1=document.f1.numero1.value; 
+var n2=document.f1.numero2.value; 
+var r=Math.sqrt (n1*n1+n2*n2) 
+alert("hai inserito"+r);
+
+document.f1.risultato.value=r;
+}
+</script>
+<style>
+label{
+font-size:18px;
+color:#123456;
+}
+</style>
+</heaD>
+<body>
+<h1>Pitagora</h1>
+<form name=f1>
+<label>Cateto 1</label><Input type=text name='numero1'>
+<br>
+<label>Cateto 2</label><Input type=text name='numero2'>
+<br>
+<label>Risultato</label><Input type=text name='risultato'>
+</form>
+<input type=button name=calcola value=calcola onclick="calcola()">
+</form>
+</body>
+</html>

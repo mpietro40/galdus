@@ -1,0 +1,182 @@
+/*-- color ------------------------------------ */
+/* Author: Oleg Svetlov http://getsimplecms.ru/ */
+body{
+	background-color:#ffffff; 
+	color:#434A54;
+}
+a {
+    color: #273815;
+}
+a:hover {
+    color: #721E4F; 
+}
+h1, h2, h3, h4 {
+    color : #273815;
+}
+#footer h5 {
+	color : #ffffff;
+}
+#header{
+	background : #8CC152 url(../images/bg/bg3.jpg) no-repeat center;
+	background-size:cover;
+}
+#logo {
+	color : #ffffff;
+}
+#logo:first-letter {
+	color : #F6BB42;
+}
+blockquote {
+	border-left : thick solid #cef4a5;
+}
+
+/* -- menu ------------------------------------*/
+
+.nav ul li a {
+	color: #FCE9EF;
+}
+.nav ul > li a:hover, .nav ul > li:hover a {
+	color: #E8F3DD; 
+	background-color: #5D8630;
+}
+.nav ul > li.current a, .nav ul > li.currentpath a {
+	color: #E8F3DD; 
+	background-color: #5D8630;
+}
+
+/* -- title ------------------------------------------- */
+
+#title {
+	background-color : #cef4a5;
+}
+#title h1 {
+	color : #434A54;
+}
+/* Slider ====================================*/
+.cycle-slideshow .cycle-slide {
+	color : #ffffff;
+}
+
+/* -- content ----------------------------------------*/
+
+article img {
+	border : thin solid #cef4a5;
+}
+/* -- form ---------------------------------- */
+.main input[type="text"] {
+	border : 1px solid #CCCCCC;
+	color : #555555;
+}
+.main textarea {
+	border : 1px solid #CCCCCC;
+	color : #555555;
+}
+.main input[type="text"]:focus, .main textarea:focus{
+	border-color : #97E840;
+	box-shadow : inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(151,232,64,0.6);
+	-webkit-box-shadow : inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(206,244,64,0.6);
+}
+.error {
+	padding : 10px;
+	color : White;
+	border : 1px solid Red;
+	z-index : 999;
+	margin-bottom : 10px;
+	position : relative;
+	display : block;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(255, 0, 0, 0.75);
+	-moz-box-shadow:inset 0 1px 1px rgba(0,0,0,0.075),0px 0px 8px rgba(255, 0, 0, 0.75);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0px 0px 8px rgba(255, 0, 0, 0.75);
+	border-radius : 5px;
+	width : 423px;
+	max-width : 80%;
+	background-color : Red;
+}
+.fix {
+	padding : 10px;
+	color : White;
+	border : 1px solid Green;
+	z-index : 999;
+	margin-bottom : 10px;
+	position : relative;
+	display : block;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(0, 128, 0, 0.75);
+	-moz-box-shadow:inset 0 1px 1px rgba(0,0,0,0.075),0px 0px 8px rgba(0, 128, 0, 0.75);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0px 0px 8px rgba(0, 128, 0, 0.75);
+	border-radius : 5px;
+	width : 423px;
+	max-width : 80%;
+	background-color : Green;
+}
+
+/* -- table ------------------------------------------------*/
+article table caption {
+	color : #33491B;
+}
+article th, article td {
+	border : 1px solid #ffffff;
+}
+article th {
+	background-color : #8CC152;
+	color : #ffffff;
+}
+article td {
+	background-color : #DBEEC3;
+}
+article tr:hover td {
+	background-color : #cef4a5;
+	color : Black;
+}
+/* -- footer ----------------------------- */
+#footer {
+	color:#ffffff;
+	background-color: #8cc152;
+}
+#footer h4 {
+	color:#ffffff; 
+}
+#footer a, #copy a {
+	color: #ffffff;
+}
+#footer a:hover, #copy a:hover {
+	color:#ffffff; 
+}
+#copy {
+	color:#ffffff;
+	background-color:rgba(0,0,0, 0.25);
+}
+#cms {
+	background-color : #4A6A26;
+}
+#cms a {
+	color : #ffffff;
+}
+#cms .gs {
+	background-color : #7CB441;
+}
+#cms .ru {
+	background-color : #8DCB49;
+}
+#cms a:hover {
+background-color : #CCE3B3;
+ color : #434A54!important;
+}
+
+/* --- go to top ------------------------------- */
+
+#gotoTop {
+    color : #ffffff;
+    background-color : #69A12D;
+}
+#gotoTop:hover { 
+    background-color: #5D8630; 
+}
+
+
+@media only screen and (max-width: 767px) {
+
+.nav select {
+    background : #577D2D;
+    color: #fff;
+}
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/miocss.css" type="text/css" />
+<script>
+function apriLinea(){
+    document.write("<tr>");
+    }
+function chiudiLinea(){
+    document.write("</tr>");
+}
+function scriviInput(){
+    document.write("<input type='text' name='' size='10'/>");
+}
+var tipiElettro=new Array("Televisore","PC","Stereo","Lavatrice","Lavastoviglie","Stampante","Frigorifero","Lampadine","PlayStation","Lettori dvd","Modem");
+ 
+function scriviElettro(indice){
+	document.write(tipiElettro[indice]);
+ }
+</script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div align=center>
+<img src="img/logo.png" alt="logo">
+</div>
+<div id='cssmenu'>
+<ul>
+   <li class='active '><a href='home.html'><span>Home</span></a></li>
+   <li class='has-sub '><a href='#'><span>Lavori</span></a>
+      <ul>
+       <li class='has-sub '><a href='#'><span>Dicembre</span></a>
+       <ul>
+      <li><a href='ese1.html'><span>Tabella1</span></a></li>
+         <li><a href='NewFile.html'><span>Tabella2</span></a></li>
+         <li><a href='3.html'><span>Tabella3</span></a></li>
+      </ul>
+      </li>
+        <li class='has-sub '><a href='#'><span>Gennaio</span></a>
+       <ul>
+      <li><a href='2.html'><span>Tabella1</span></a></li>
+         <li><a href='1.html'><span>Tabella2</span></a></li>
+         </ul>
+   </li>
+   </ul>
+   </li>
+   <li><a href='#'><span>About</span></a></li>
+   <li><a href='#'><span>Contact</span></a></li>
+</ul>
+</div>
+<section>
+            <h1>Tabella 1</h1>
+Ogni settimana di Gennaio scrivi quante ore hai accesso ogni singolo elettronico<p>
+            <article>
+                <p>
+                
+                <script>
+                document.write("<table>");
+                for(ii=0;ii<11;ii++){
+                  if(ii==0){
+                    
+                    apriLinea();
+                    
+                    document.write("<th>");
+                    document.write("Elettrodomestico");
+                    document.write("</th><th>");
+                    document.write("Consumo nominale");
+                    document.write("</th><th>");
+                    document.write("Prima settimana");
+                    document.write("</th><th>");
+                    document.write("Seconda settimana");
+                    document.write("</th><th>");
+                    document.write("Terza settimana");
+                    document.write("</th><th>");
+                    document.write("Quarta settimana");
+                    document.write("</th><th>");
+                    document.write("Totale");
+                    document.write("</th>");
+                    
+                    chiudiLinea();
+                    
+                  } else {
+                    apriLinea();
+                    document.write("<th>");
+                    scriviElettro(ii);
+                    document.write("</th><td>");
+                    scriviInput();
+                    document.write("</td><td>");
+                    scriviInput();
+                    document.write("</td><td>");
+                    scriviInput();
+                    document.write("</td><td>");
+                    scriviInput();
+                    document.write("</td><td>");
+                    scriviInput();
+                    document.write("</td><td>");
+                    scriviInput();
+                    document.write("</td>");
+                    chiudiLinea();
+                  }
+                }
+                apriLinea();
+                document.write("<th colspan=6 class='destra'>Totale</th><td>");
+                scriviInput();
+                document.write("</td>");
+                chiudiLinea();
+                document.write("</table>");
+                </script>
+                </p>
+            </article>
+        </section>
+
+
+</body>
+</html>

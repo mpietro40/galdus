@@ -1,0 +1,16 @@
+body{
+  background-image:url('sfondo.jpg');
+}
+body {
+font-family:Arial Narrow;
+font-size:14px;
+}
+.bordodestro{
+border-right:solid 1px black;
+}
+nav{
+border-right:solid 1px black;
+width:200px;
+float:left;
+}
+

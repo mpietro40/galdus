@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Linux/x86 (vers 25 March 2009), see www.w3.org" />
+
+  <title>Compito di 03dice2013</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <style type="text/css">
+/*<![CDATA[*/
+  @import url(https://themes.googleusercontent.com/fonts/css?kit=10JVD_humAd5zP2yrFqw6vesZW2xOQ-xsNqO47m55DA);
+  /*]]>*/
+  </style>
+  <style type="text/css">
+/*<![CDATA[*/
+  body.c21 {max-width:468pt;background-color:#ffffff;padding:72pt 72pt 72pt 72pt}
+  p.c20 {height:11pt;color:#000000;direction:ltr;font-size:11pt;margin:0;font-family:"Arial";padding:0}
+  p.c19 {padding-left:0;padding-right:0;padding-top:9pt;line-height:1.714285714;color:#000000;direction:ltr;font-size:11pt;margin:0;font-family:"Arial";padding-bottom:9pt}
+  td.c18 {vertical-align:top;width:446.1pt;border-style:solid;border-color:#000000;border-width:0pt;padding:0pt 5pt 0pt 5pt}
+  td.c17 {vertical-align:top;width:21.9pt;border-style:solid;border-color:#000000;border-width:0pt;padding:0pt 5pt 0pt 5pt}
+  table.c16 {margin-right:auto;border-collapse:collapse;margin-left:}
+  td.c15 {vertical-align:top;width:446.8pt;border-style:solid;border-color:#000000;border-width:0pt;padding:0pt 5pt 0pt 5pt}
+  p.c14 {padding-left:0;padding-right:0;padding-top:9pt;line-height:2.0;color:#000000;direction:ltr;font-size:11pt;margin:0;font-family:"Arial";padding-bottom:9pt}
+  span.c13 {font-size:12pt;background-color:#ffffff;font-family:"Indie Flower"}
+  td.c12 {vertical-align:top;width:21.2pt;border-style:solid;border-color:#000000;border-width:0pt;padding:0pt 5pt 0pt 5pt}
+  p.c11 {padding-left:0;padding-right:0;padding-top:9pt;line-height:2.0;text-align:center;color:#000000;direction:ltr;font-size:11pt;margin:0;font-family:"Arial";padding-bottom:9pt}
+  span.c10 {color:#757575;font-size:12pt;background-color:#ffffff;font-family:"Indie Flower"}
+  p.c9 {line-height:1.714285714;color:#000000;direction:ltr;font-size:11pt;margin:0;font-family:"Arial";padding:0}
+  span.c8 {color:#444444;font-size:12pt;background-color:#ffffff;font-family:"Indie Flower"}
+  p.c7 {line-height:1.714285714;height:11pt;color:#000000;direction:ltr;font-size:11pt;margin:0;font-family:"Arial";padding:0}
+  p.c6 {padding-left:0;padding-right:0;line-height:1.714285714;padding-top:0pt;color:#666666;text-align:left;direction:ltr;font-size:13pt;font-style:italic;margin:0;font-family:"Trebuchet MS";padding-bottom:10pt}
+  span.c5 {font-size:9pt;font-family:"Indie Flower"}
+  p.c4 {line-height:1.846153846;height:11pt;color:#000000;direction:ltr;font-size:11pt;margin:0;font-family:"Arial";padding:0}
+  p.c3 {line-height:1.2;color:#000000;text-align:center;direction:ltr;font-size:21pt;margin:0;font-family:"Trebuchet MS";padding:0}
+  p.c2 {color:#000000;direction:ltr;font-size:11pt;margin:0;font-family:"Arial";padding:0}
+  span.c1 {font-family:"Indie Flower"}
+  /*]]>*/
+  </style>
+</head>
+
+<body class="c21">
+  <div>
+    <p class="c2"><span class="c1">Mohamed Hassan &nbsp;3InfoA
+    02Dice&rdquo;2013</span></p>
+  </div>
+
+  <p class="title c3"><a name="h.191evp5d2rvi" id="h.191evp5d2rvi"></a><span class=
+  "c1">PHP e l&rsquo;interazione con il database:</span></p>
+
+  <p class="title c3"><a name="h.aqnsawkahh4t" id="h.aqnsawkahh4t"></a><span class=
+  "c1">Aprire/Chiudere la connessione al DB</span></p>
+
+  <p class="c4"></p>
+
+  <p class="subtitle c6"><a name="h.hmi7djgvvios" id="h.hmi7djgvvios"></a><span class=
+  "c5">Cominciamo dalle cose semplici, ossia connetterci al database senza inviare query,
+  in questo primo post di programmazione vedremo come instaurare la connessione e,
+  successivamente, distruggerla per liberare risorse.</span></p>
+
+  <p class="c7"></p>
+
+  <p class="c9"><span class="c8">La funzione che consente di creare una connessione
+  &egrave;:</span></p><a href="#" name=
+  "86cbc87f8617c065aa1f5ebf881cabcc636510ce"></a><a href="#" name="0"></a>
+
+  <table cellpadding="0" cellspacing="0" class="c16">
+    <tbody>
+      <tr>
+        <td class="c12">
+          <p class="c11"><span class="c10">1</span></p>
+        </td>
+
+        <td class="c15">
+          <p class="c14"><span class="c13">mysqli_connect([string $host], [string
+          $username], [string $password], [string $dbname])</span></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="c9"><span class="c8">Essa prende in input l&rsquo;host su cui &egrave;
+  installato MySQL, le credenziali di accesso al DB, il nome di questo (opzionalmente
+  &egrave; possibile specificare la porta &ndash; se diversa da quella standard &ndash;
+  ed il socket) e ritorna una variabile di tipo mysqli che servir&agrave; per
+  l&rsquo;esecuzione delle query.</span></p>
+
+  <p class="c9"><span class="c8">Supponendo di volerci connettere al DB
+  dell&rsquo;applicazione GymGym in maniera procedurale il codice da usare &egrave; il
+  seguente:</span></p><a href="#" name=
+  "84bfd5b040e54ebd66ccb4f3cd7b64e0ac9eee9c"></a><a href="#" name="1"></a>
+
+  <table cellpadding="0" cellspacing="0" class="c16">
+    <tbody>
+      <tr>
+        <td class="c17">
+          <p class="c11"><span class="c10">1</span></p>
+
+          <p class="c11"><span class="c10">2</span></p>
+
+          <p class="c11"><span class="c10">3</span></p>
+
+          <p class="c11"><span class="c10">4</span></p>
+
+          <p class="c11"><span class="c10">5</span></p>
+
+          <p class="c11"><span class="c10">6</span></p>
+        </td>
+
+        <td class="c18">
+          <p class="c14"><span class="c13">$dbhostname = 'localhost';</span></p>
+
+          <p class="c14"><span class="c13">$dbusername = 'root';</span></p>
+
+          <p class="c14"><span class="c13">$dbpassword = '';</span></p>
+
+          <p class="c14"><span class="c13">$dbname = 'GymGymDB';</span></p>
+
+          <p class="c14"><span class="c13">&nbsp;</span></p>
+
+          <p class="c14"><span class="c13">$dbConnection = mysqli_connect($dbhostname,
+          $dbusername, $dbpassword, $dbname);</span></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="c9"><span class="c8">Ovviamente se i parametri di connessione al vostro
+  database sono diversi dai miei valorizzate le variabili che sono diverse in maniera
+  opportuna. Se qualcosa durante la connessione &egrave; andato storto, mysqli_connect
+  restituisce false e possiamo stampare l&rsquo;errore in questo modo:</span></p><a href=
+  "#" name="22d59f1e25e0b0c1db35cd6bdc244960768660ac"></a><a href="#" name="2"></a>
+
+  <table cellpadding="0" cellspacing="0" class="c16">
+    <tbody>
+      <tr>
+        <td class="c17">
+          <p class="c11"><span class="c10">1</span></p>
+
+          <p class="c11"><span class="c10">2</span></p>
+        </td>
+
+        <td class="c18">
+          <p class="c14"><span class="c13">if(!$dbConnection)</span></p>
+
+          <p class="c14"><span class="c13">&nbsp; &nbsp; die('Database connection failed:
+          ' . mysqli_connect_error());</span></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="c9"><span class="c8">Bene, abbiamo visto come instaurare una connessione al
+  DB accertandoci che tutto sia andato a buon fine, nei prossimi articoli vedremo come
+  usare la connessione creata per eseguire query; oggi concludiamo con la chiusura della
+  connessione, che rilascia le risorse precedentemente allocate dal sistema.
+  L&rsquo;istruzione che consente di distruggere una connessione &egrave; la
+  seguente:</span></p>
+
+  <p class="c19"><span class="c8">PHP</span></p><a href="#" name=
+  "111a75671d3485da4350712486baff344cc392c8"></a><a href="#" name="3"></a>
+
+  <table cellpadding="0" cellspacing="0" class="c16">
+    <tbody>
+      <tr>
+        <td class="c17">
+          <p class="c11"><span class="c10">1</span></p>
+        </td>
+
+        <td class="c18">
+          <p class="c14"><span class="c13">mysqli_close(mysqli $connection)</span></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="c20"></p>
+</body>
+</html>

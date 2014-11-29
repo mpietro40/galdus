@@ -1,0 +1,83 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+background-image:url(s.jpg);
+}
+.info a.back{
+	position: absolute;
+	bottom:30px;
+	left:20px;
+	text-decoration:none;
+	color:#603d05;
+	text-shadow:1px 1px 1px #fff;
+	font-weight:bold;
+}
+.info a.back:hover{
+	color:#000;
+}
+header{
+    position:center;
+    top:20px;
+    left:0px;
+    font-size:16px;
+    background-color:red;
+    color:black;
+    text-align:center;
+}
+nav{
+float: left;
+width: 220px;
+width: 230px;
+width: 220px;
+padding: 1em 0 0 5px;
+
+}
+div#content{
+margin:0 200px 10px 230px;
+padding: 1em 10px;
+background-color: green;
+height:95%;
+font-size:18px;
+text-align:center;
+}
+div#extra{
+float: right;
+width: 170px;
+width:180px;
+width:170px;
+padding: 1em 5px;
+background-color:black;
+color:white;}
+#content .text{
+    padding:300px 0px 0px 150px;
+    background-color:black;
+    color:white;
+}
+#navigation li {
+        list-style:center;
+        display: block;
+        margin: 0.4em;
+        background-color:black;
+        
+}
+#navigation li a {
+        text-shadow: 0 2px 1px rgba(0,0,0,0.5);
+        display: block;
+        text-decoration:left;
+        color: #ffffff;
+        font-size: 1.3em;
+        margin: 0.7em;
+        display: ;
+       
+}
+#navigation li a:hover {
+        margin-top: 0px;
+}
+footer{
+text-align:center;
+color:black;
+background-color:green;
+font-family:Algerian;
+}

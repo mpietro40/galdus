@@ -1,0 +1,55 @@
+/*stili per il layout fluido*/
+html,body{margin: 0;padding:0}
+body{font-family: verdana;
+        font-size: 80%;
+        /*background-image:url('images/sfondo.jpg');*/
+        background-color: #A9F5BC;
+        height:80%;}
+container{background-color: #90BD09;}
+body { background-image: url(http://immagini.4ever.eu/data/download/natura/bosco%20scuro,%20notte%20185020.jpg);}
+
+/*stili generici, su header e footer*/
+header{color: red; font-family:Cooper Black; font-size:20px;}
+h1,h2{margin: 0;padding:0}
+h1{padding-left:10px;font: bold 2.3em/80px; text-align:center}
+h2{color: #AD6003;font-size: 1.5em}
+footer a{color:#fff;font-weight: bold;text-decoration: underline}
+
+/*stili specifici per il layout*/
+nav{float: left;width: 20%;padding: 1em 0 0 5px}
+aside{float: right;width: 15%;padding: 1em 5px;}
+article{margin:0 200px 2px 230px;padding: 1em 5px;background-color:  height:100%;}
+footer{clear:both; text-align:center; padding: 5px 0;background-color: #pink color: #606060;
+        position:fixed; bottom:0;width:100%;height:40px;}
+
+/*stili per la navigazione*/
+nav ul{margin: 0;padding: 0; list-style-type: none}
+nav li{margin: 0;padding: 0}
+nav a{color:Red;font-family:Rockwell Extra Bold; font-size:27px;}
+nav a:hover{color: #AD6003;text-decoration: underline}
+nav a#activelink{color: #196003;text-decoration: none}
+nav p{font-size: 250px}
+#navbar-iframe {
+position: fixed !important;
+left: 0px !important;
+right: 0px !important;
+bottom: 0px !important;
+}
+<b:if cond='data:blog.url == data:blog.homepageUrl'>
+<style>
+#navbar-iframe {
+position: fixed !important;
+left: 0px !important;
+right: 0px !important;
+bottom: 0px !important;
+}
+</style>
+</b:if>
+
+/*stili per la sezione destra*/
+aside{font-size: 90%;margin-bottom: 2em ; font-family:Tw Cen MT Condensed Extra Bold;}
+aside h2{color: #AD6003;font-size: 1.2em}
+aside p{margin: 0}
+section{ font-family:Baskerville Old Face; font-size:15px; color:white; font-family:}
+#video{text-align:center;}
+#contenuto{ font-family:Baskerville Old Face; font-size:15px;}

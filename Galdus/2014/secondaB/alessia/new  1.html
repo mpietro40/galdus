@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<style>
+body {background-color:orange ;}
+</style>
+<script> 
+function esegui(scelta){
+document.body.style.background=scelta;
+}
+function converti(){
+res=999;
+args=document.f1.campo1.value;
+last=args.substring(args.length
+-1,args.leght);
+field=document.getElementById("campo1");
+if(last !=0&& last !=1){
+  field.bin.value= args.substring.(0, args.length-1);
+}res=1;
+}else{
+k=args.length-1;
+for(i=0;i<args.length;i++){ 
+thisnum=args.subtring(i, i+1)
+resd=(math.pow(2, k))*thisnum ;
+k= k-1;
+} else{ 
+res= pareseint(res) + pareseint (resd);
+} 
+} 
+} document.f1.risultato.value=res;
+} 
+</script>
+</head>
+<body onload="esegui('#110022')">
+<a href="javascript: esegui(#008000)">color1</a>
+<a href="javascript: esegui('#214365')"> color2</a>
+<form name=f1>
+<label> inserisci numero  </label>
+<input type=text name=campo1><br>
+<label> risultato </label>
+<input type='text' name='risultato'><br>
+<input type='button' name='calcola' value='calcola' onclick="converti()";>
+</form>
+</body>
+</html>

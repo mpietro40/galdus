@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cambiare colore di sfondo - Esempio JavaScript scaricato da HTML.it</title>
+	<meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
+	<meta http-equiv="Content-Language" content="it" />
+	<meta name="Robots" content="All" />
+	<meta name="Description" content="HTML.it - il sito italiano sul Web publishing" />
+	<meta name="Keywords" content="Lo script permette di cambiare colore di sfondo alla pagina con un click oppure passando sopra un link con il mouse." />
+	<meta name="Owner" content="HTML.it srl" /> 
+	<meta name="Author" content="HTML.it srl" />  
+	<meta name="Copyright" content="HTML.it srl" />
+ 
+<script language="JavaScript"> 
+//<!--
+
+var colore = new Array();
+ 
+colore[0] = '#FF0000';
+colore[1] = '#00FF00';
+colore[2] = '#00007F';
+colore[3] = '#F000FF';
+ 
+function esegui(scelta){
+//document.bgColor = colore[scelta];
+document.body.style.background = colore[scelta];
+//document. = colore[scelta+1];
+
+}
+
+//-->
+</script>
+
+</head>
+<body >
+<br /><br />
+<div align="center">
+ 
+In questa pagina e' possibile cambiare i colori 
+ 
+<br><br>
+ 
+<a href="javascript:esegui(0)">Clicca rosso</a><br>
+<a href="javascript:esegui(1)">Clicca verde</a><br>
+<a href="javascript:esegui(2)">Clicca blu</a><br>
+<a href="javascript:esegui(3)">Clicca ....</a><br> 
+</div>
+<br /><br /><br /><br /><br /><br />
+<h2>Temporary index</h2>
+<a href="esercizio html5.txt">Il testo dell'esercizio</a>
+</body>
+</html>

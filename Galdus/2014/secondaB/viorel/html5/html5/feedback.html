@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Esempio HTML 5</title>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+<header>
+<h1>Esempio di HTML 5</h1>
+</header>
+<nav>
+<ul>
+<li><a href="provahtml5.html">Home</a></li>
+<li><a href="Chi siamo.html">Chi siamo</a></li>
+<li><a href="feedback.html">Feedback</a></li>
+<li><a href="#">Contatti</a></li>
+</ul>
+</nav>
+<div id="content">
+<div id="mcontent">
+<header>
+<h2>Chi siamo</h2>
+</header>
+<section>
+<article class='bpage'>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+</p>
+<div id="im1"></div>
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.font="30px Arial";
+ctx.strokeText("Hello World",10,50);
+
+</script>
+</article>
+</section>
+</div>
+<aside>
+<section>
+<ul>
+<li><a href="provahtml5.html">Home</a></li>
+<li><a href="Chi siamo.html">Chi siamo</a></li>
+<li><a href="feedback.html">Feedback</a></li>
+<li><a href="#">Contatti</a></li>
+</ul>
+</section>
+</aside>
+</div>
+<footer>
+<section> Questo &egrave; il footer</section>
+</footer>
+</body>
+</html>

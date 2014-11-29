@@ -1,0 +1,33 @@
+/*    BRYAN OLAYRES    */
+/* CSS */
+
+body{
+background:rgba(204, 204, 204, 0);
+}
+
+table{
+border:1px solid black;
+margin-left:14%;
+width:1000px;
+}
+
+th{
+font-size:17px;
+font-weight:bold;
+padding-left:15px;
+padding-top:7px;
+}
+
+td{
+padding-left:25px;
+}
+
+.space{
+padding-top:15px;
+}
+
+.space1{
+padding-top:20px;
+}
+
+/*    BRYAN OLAYRES    */

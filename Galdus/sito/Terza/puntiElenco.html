@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+  <title>Pagina di esempio con link che cambiano</title>
+  <style>
+      /* div menu principale */
+     #menu {
+     position: relative;
+     width: 180px;
+     left: 82px;
+     top: 0px;
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 12px;
+     color: #FFFF00;
+     padding: 10px;
+     }
+    
+     /* stile menu */
+     #menu ul {
+     margin: 0px;
+     list-style-type: none;
+     padding: 5px 0px 0px 0px;
+     }
+    
+     /* stile elenco puntato */
+     #menu ul li{
+     padding: 2px 0px 2px 0px; 
+     }
+    
+     /* stile link */
+     a {
+     color: #FF00FF;
+     text-decoration: none;
+     }
+    
+     /* stile elenco puntato link */
+     #menu ul li a {
+     background-image: url(images/freccino_out.jpg);
+     background-repeat: no-repeat;
+     background-position: 0px 5px;
+     padding: 0px 0px 0px 9px;
+     display: block;
+     font-weight: normal;
+     }
+    
+     /* stile elenco puntato link a mouse over */
+     #menu ul li a:hover {
+     color: #999999;
+     background-image: url(images/freccino_in.jpg);
+     background-repeat: no-repeat;
+     background-position: 0px 5px;
+     padding: 0px 0px 0px 9px;
+     display: block;
+     font-weight: normal;
+     }
+    
+     /* stile per pagina corrente */
+     .in {
+     font-weight: bold;
+     background-image: url(images/freccino_in.jpg);
+     background-repeat: no-repeat;
+     background-position: 0px 7px;
+     color: #999999;
+     }
+    
+     /* stile per pagina non corrente */
+     .out {
+     background-image: none;
+     }
+  </style>
+  <script>
+      function load(){
+     var pagina_corrente = document.URL;
+    
+     if (pagina_corrente.indexOf("puntiElenco.html") == (-1))
+     {
+     var el = document.getElementById("pagina1");
+     el.className = "out";
+     }
+     else
+     {
+     var el = document.getElementById("pagina1");
+     el.removeAttribute ("href");
+     el.className = "in";
+     }
+    
+     if (pagina_corrente.indexOf("terza.html") == (-1))
+     {
+     var el = document.getElementById("pagina2");
+     el.className = "out";
+     }
+     else
+     {
+     var el = document.getElementById("pagina2");
+     el.removeAttribute ("href");
+     el.className = "in";
+     }
+    
+     if (pagina_corrente.indexOf("../index.html") == (-1))
+     {
+     var el = document.getElementById("pagina3");
+     el.className = "out";
+     }
+     else
+     {
+     var el = document.getElementById("pagina3");
+     el.removeAttribute ("href");
+     el.className = "in";
+     }
+    
+     }
+  </script>
+  </head>
+  
+  <body>
+     <div id="menu">
+     <ul>
+     <li><a href="puntiElenco.html" id="pagina1">Questa pagina</a></li>
+     <li><a href="terza.html" id="pagina2">Tesina Terza</a></li>
+     <li><a href="../index.html" id="pagina3">Esercitazioni</a></li -->
+     </ul>
+ </div>
+  </body>
+</html>

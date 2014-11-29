@@ -1,0 +1,69 @@
+body
+{color:white;
+background:url(../img/oro.jpg);
+}
+img{
+  width:200px;
+  height:200px;
+}
+div.centrato{
+   text-align:center;
+/*   background:#fff;*/
+}
+
+table.centrata{
+  margin-left:auto;
+  margin-right:auto;
+}
+footer{
+	position:bottom;
+}
+table,th, td 
+{ 
+border: solid 1px red; 
+}
+table 
+{ 
+border-collapse: collapse; 
+
+}
+
+h1 { 
+/*text-align: center; */
+} 
+#navigation {
+	width: 920px;
+	height: 56px;
+	margin: 0;
+	padding: 8px 0 0 30px;
+	background: url(../img/navigation-bg.jpg) no-repeat left top;
+} 
+#navigation ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+} 
+#navigation ul li {
+	display: inline;
+	margin: 0px;
+} 
+#navigation ul li a {
+	height:33px;
+	display: block;
+	float: left;
+	padding: 17px 15px 0 15px;
+	font: bold 12px Arial;
+	color: #FFF;
+	text-decoration: none;
+	background: url(../img/navigation-separator.png) no-repeat right center;
+} 
+
+#navigation ul li a:hover {
+	color:#3B3B3B;
+	background: url(../img/navigation-hover.png) repeat-x left top;
+}
+
+#navigation ul li#active a {
+	color:#3B3B3B;
+	background: url(../img/navigation-hover.png) repeat-x left top;
+}

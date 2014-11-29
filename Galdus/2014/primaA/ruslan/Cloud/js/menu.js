@@ -1,0 +1,16 @@
+document.write("<div id='cssmenu'>");
+document.write("<ul>");
+ document.write("  <li><a href='cloud home.html'><span>Home</span></a></li>");
+  document.write(" <li class='has-sub '><a href='#'><span>Servizi di memoria</span></a>");
+  document.write("    <ul>");
+document.write("         <li class='has-sub '><a href='pagina2.html'><span>Pagina 2</span></a>");
+ document.write("           <ul>");
+ document.write("              <li><a href='modem cosa.html'><span>cosa fa</span></a></li>");
+ document.write("           </ul>");
+ document.write("        </li>");
+ document.write("         <li class='has-sub '><a href='pagina3.html'><span>Pagina 3</span></a>");
+ document.write("           <ul>");
+ document.write("              <li><a href='modem cosa.html'><span>cosa fa</span></a></li>");
+ document.write("           </ul>");
+document.write("</ul>");
+document.write("</div>");

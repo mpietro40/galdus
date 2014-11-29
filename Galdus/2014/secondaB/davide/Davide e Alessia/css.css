@@ -1,0 +1,131 @@
+/*caratteristiche dello stile di questo form*/
+section{
+  width:70%;
+  margin:auto;
+  padding:10px;
+}
+.centrato{
+  width:800px;
+}
+form#payment{
+  width:750px;
+}
+fieldset ol li{
+  width:97%;
+}
+form#payment label{
+  width:320px;
+}
+
+element.style {
+}
+body {
+background: hsl(80, 41%, 55%);
+color: hsl(0, 0%, 7%);
+font-family: Georgia, "Times New Roman", Times, serif;
+padding: 20px;
+}
+html, body, h1, form, fieldset, legend, ol, li {
+margin: 0;
+padding: 0;
+}
+user agent stylesheetbody {
+display: block;
+margin: 8px;
+}
+
+form#payment fieldset {
+border: none;
+margin-bottom: 10px;
+-moz-border-radius: 15px;
+border-radius: 15px;
+}
+html, body, h1, form, fieldset, legend, ol, li {
+margin: 0;
+padding: 0;
+}
+user agent stylesheetfieldset {
+display: block;
+-webkit-margin-start: 2px;
+-webkit-margin-end: 2px;
+-webkit-padding-before: 0.35em;
+-webkit-padding-start: 0.75em;
+-webkit-padding-end: 0.75em;
+-webkit-padding-after: 0.625em;
+border: 2px groove threedface;
+border-image-source: initial;
+border-image-slice: initial;
+border-image-width: initial;
+border-image-outset: initial;
+border-image-repeat: initial;
+min-width: -webkit-min-content;
+}
+Inherited from body
+body {
+color: hsl(0, 0%, 7%);
+font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+form#payment ol li {
+background: hsl(73, 51%, 61%);
+background: hsla(0, 100%, 100%, 0.3);
+border-color: hsl(72, 50%, 84%);
+border-color: hsla(0, 100%, 100%, 0.6);
+border-style: solid;
+border-width: 2px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+-khtml-border-radius: 5px;
+border-radius: 5px;
+line-height: 30px;
+list-style: none;
+padding: 5px 10px;
+margin-bottom: 2px;
+}
+fieldset ol li {
+width: 97%;
+}
+html, body, h1, form, fieldset, legend, ol, li {
+margin: 0;
+padding: 0;
+}
+user agent stylesheetli {
+display: list-item;
+text-align: -webkit-match-parent;
+}
+Inherited from ol
+user agent stylesheetol {
+list-style-type: decimal;
+}
+Inherited from body
+body {
+color: hsl(0, 0%, 7%);
+font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+form#payment {
+width: 750px;
+}
+form#payment {
+background: hsl(73, 62%, 45%);
+-webkit-border-radius: 15px;
+-khtml-border-radius: 15px;
+-moz-border-radius: 15px;
+border-radius: 5px;
+counter-reset: fieldsets;
+padding: 20px;
+width: 600px;
+}
+html, body, h1, form, fieldset, legend, ol, li {
+margin: 0;
+padding: 0;
+}
+user agent stylesheetform {
+display: block;
+margin-top: 0em;
+}
+Inherited from body
+body {
+color: hsl(0, 0%, 7%);
+font-family: Georgia, "Times New Roman", Times, serif;
+}

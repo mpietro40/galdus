@@ -1,0 +1,1477 @@
+/*
+Rockatee Base Screen Styles
+Author: Maleika Esther Attawel
+Site: http://rockatee.com
+Twitter ID: @rockatee
+Updated: August 2nd, 2010
+*/
+
+/* = Reset Browser Defaults
+================================================================================================================= */
+
+:link, :visited {
+  text-decoration: none;
+}
+
+a img, :link img, :visited img, img {
+  border: 0 none;
+}
+
+img, object {
+  max-width: 100%;
+}
+
+img {
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+html, body, ul, ol, dl, li, dt, dd, h1, h2, h3, h4, h5, h6, p, blockquote, pre, form, fieldset, input, table, td, th, img, object {
+  margin: 0; 
+  padding: 0;
+}
+
+acronym, abbr {
+  cursor: help;
+}
+
+em {
+  font-style: normal;
+}
+
+/* = Global
+================================================================================================================= */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: rgb(210,207,193); 
+  color: rgb(68,68,68); 
+  font: 85%/1.5 Helvetica Neue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* see if this is redundant 
+
+body:before {
+  content:"";
+  height:100%;
+  float:left;
+  width:0;
+  margin-top:-32767px;
+}
+*/
+
+/* = Links
+================================================================================================================= */
+
+a:link, a:visited {
+  color: rgb(200,78,62);
+}
+
+a:hover, a:focus {
+  color: rgb(105,102,90);
+}
+
+/* = Structure
+================================================================================================================= */
+
+/* Layout Containers */
+
+#wrap {
+  margin: -17em 0 0 0; 
+  min-height: 100%; 
+  position: relative; 
+  z-index: 100;
+}
+
+.container {
+  padding-bottom: 1em; 
+  width: 100%;
+}
+
+.group {
+  clear: both; 
+  margin: 0 auto; 
+  overflow: hidden; 
+  width: 88%
+}
+
+.section-a, .section-b, .section-c, .section-d, .section-e, .section-f, .section-g, .section-h, .section-i, .section-j, .section-split-even {
+  float: left; 
+  margin: 0 0 1em 0; 
+  padding: .5em 0;
+}
+
+.section-a {
+  width: 10%;
+}
+
+.section-b {
+  width: 20%;
+}
+
+.section-c {
+  width: 30%;
+}
+
+.section-d {
+  width: 40%;
+}
+
+.section-e {
+  width: 50%;
+}
+
+.section-f {
+  width: 60%;
+}
+
+.section-g {
+  width: 70%;
+}
+
+.section-h {
+  width: 80%;
+}
+
+.section-i {
+  width: 90%;
+}
+
+.section-j {
+  width: 100%;
+}
+
+.section-split-even {
+  width: 33.333%;
+}
+
+.module {
+  margin: 0 1em; 
+  padding: .5em;
+}
+
+.module:after, #header:after {
+  content: ""; 
+  height: 100%; 
+  float: left; 
+  width: 0; 
+  margin-top: -32767px; 
+  display: block;
+}
+
+/* @end */
+
+#main {
+  border-top: 17em solid rgb(0,0,0); 
+  position: relative; 
+  z-index: 20;
+}
+
+/* Lists */
+
+dt {
+  font-weight: bold;
+}
+
+.code {
+  background: rgb(225,223,210); 
+  padding: 1em;
+}
+
+.code li {
+  border-bottom: 1px solid rgb(216,215,205);
+}
+
+.code li:nth-child(2n+1) {
+  background: rgb(232,230,215);
+}
+
+/* = Structure
+================================================================================================================= */
+
+#header {
+  background: rgb(92,87,76) url(../images/headerAlt.jpg); 
+  border-bottom: 2px solid rgb(80,75,70); 
+  position: relative; 
+  width: 100%; 
+  z-index: 500;
+}
+
+#header #top {
+  background: url(../images/top.jpg) repeat-x top; 
+  border-bottom: 5px solid rgb(80,75,70); 
+  height: 36px; 
+  width: 100%;
+}
+
+/* Logo */
+
+#logo {
+  display: inline; 
+  float: left; 
+  height: 110px; 
+  margin: 1em 1em 1em 0; 
+  width: 165px;
+}
+
+#logo a {
+  display: block;
+}
+
+/* Main Navigation */
+
+#nav {
+  float: left; 
+  font-size: 130%; 
+  margin: 1.4em 0 0 0;
+}
+
+#nav li {
+  float: left; 
+  margin: 0.25em 0 0;
+}
+
+#nav a {
+  color: rgb(188,180,170); 
+  border: 1px solid transparent; 
+  display: block; 
+  line-height: 1.2; 
+  padding: .6em; 
+  text-shadow: 0 1px 1px rgb(0,0,0);
+}
+
+#nav a span {
+  color: rgb(232,230,213); 
+  display: block; 
+  font-size: 70%; 
+  text-transform: uppercase;
+}
+
+#nav a:hover span, #nav a:focus span {
+  color: rgb(185,180,160);
+}
+
+#nav a:hover, #nav a:focus {
+  background: rgb(68,65,60); 
+  border: 1px solid rgb(58,55,51); 
+  color: rgb(200,78,62);
+}
+
+/* = Typography
+================================================================================================================= */
+
+h1, h2, h3, h4 {
+  font-weight: normal; 
+  line-height: 1.5; 
+  text-shadow: 0 1px 0 rgb(232,230,213);
+}
+
+h1 {
+  color: rgb(79,74,63); 
+  font-size: 200%;
+}
+
+h2 {
+  color: rgb(90,84,73); 
+  font-size: 180%;
+}
+
+h3 {
+  color: rgb(79,66,64); 
+  font-size: 160%;
+}
+
+h4 {
+  color: rgb(73,80,90); 
+  font-size: 140%;
+}
+
+p {
+  margin: 0.75em 0;
+}
+
+blockquote {
+  
+}
+
+code, var {
+  
+}
+
+pre code {
+  display: block; 
+  overflow: auto;
+}
+
+.a {
+  font-size: 50%;
+}
+
+.b {
+  font-size: 75%;
+}
+
+.c {
+  font-size: 150%;
+}
+
+.d {
+  color: rgb(180,170,150);
+}
+
+.e {
+  color: rgb(115,114,107);
+}
+
+.f {
+  color: rgb(200,78,62)
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.up {
+  text-transform: uppercase;
+}
+
+.down {
+  text-transform: lowercase;
+}
+
+/* introduction */
+
+#intro {
+  background: url(../images/intro2.png) no-repeat 50% 0; 
+  clear: both; 
+  color: rgb(79,74,63); 
+  margin: 1em auto 0 auto; 
+  height: 16em; 
+  padding: 3.5em 0 0 0; 
+  position: relative; 
+  width: 88%; 
+  max-width: 1400px;
+}
+
+#intro h1 {
+  color:white;
+  font-size: 220%; 
+  line-height: 1.2; 
+  text-shadow: 0 1px 1px rgb(232,230,213);
+}
+
+#intro img {
+  display: inline; 
+  float: left; 
+  margin: 0 1em;
+}
+
+#intro a {
+  background: url(../images/btn_myWork.png) no-repeat 0 0; 
+  bottom: 1em; 
+  display: block; 
+  height: 86px; 
+  overflow: hidden; 
+  position: absolute; 
+  right: -3em; 
+  text-indent: -9999px; 
+  width: 84px;
+}
+
+#intro a:hover, #intro a:focus {
+  background-position: 0 -86px;
+}
+
+/* = Homepage
+================================================================================================================= */
+
+/* Services Intro */
+
+#service {
+  background: rgb(165,170,166) url(../images/patternGrey02.jpg); 
+  border-bottom: 2px solid rgb(152,157,153);
+}
+
+#service .group {
+  background: url(../images/beigeGradient.png) no-repeat center top; 
+  overflow: hidden;
+}
+
+#service h2 {
+  font-size: 300%; 
+  letter-spacing: -1px; 
+  text-align: center; 
+  text-transform: uppercase; 
+  word-spacing: -1px;
+}
+
+#service h3 {
+  text-transform: uppercase;
+}
+
+#service img {
+  margin: auto;
+}
+
+#service .module {
+  background: rgb(210,213,213) url(../images/patternGrey01.jpg); 
+  border: 1px solid rgb(145,155,151); 
+  min-height: 26em;
+}
+
+#service .module:hover, #service .module:focus {
+  background: rgb(210,213,213) url(../images/patternGrey.jpg);
+}
+
+a.btn-large:link, a.btn-large:visited {
+	background: url(../images/btnLarge.png) no-repeat;
+  clear: both; 
+  color: rgb(255,255,240);
+	display: block;
+  float: right; 
+  font-size:110%;
+	line-height:60px;
+  margin-top: 1em; 
+	overflow: hidden;
+	padding-left:25px;
+  text-shadow: 0 1px 1px rgb(0,0,0); 
+  text-transform: uppercase;
+	width:208px;
+}
+
+a.btn-large:hover, a.btn-large:focus {
+	background-position: 0 -60px;
+}
+
+a.btn-small:link, a.btn-small:visited, a.btn-prev:link, a.btn-prev:visited, a.btn-next:link, a.btn-next:visited {
+	background: url(../images/btnSmall.png) no-repeat;
+  clear: both; 
+  color: rgb(255,255,240);
+	display: block;
+  float: right; 
+  font-size:100%;
+	line-height:41px;
+  margin-top: 1em; 
+	overflow: hidden;
+	padding-left:20px;
+  text-shadow: 0 1px 1px rgb(0,0,0); 
+  text-transform: uppercase;
+	width:66px;
+}
+
+a.btn-small:hover, a.btn-small:focus {
+	background-position: 0 -41px;
+}
+
+/* work Updates */
+
+#project {
+  background: rgb(177,170,160) url(../images/patternNew.jpg); 
+  border-top: 2px solid rgb(200,196,182); 
+  border-bottom: 1px solid rgb(244,235,212);
+}
+
+#listing {
+  background: url(../images/beigeGradient.png) no-repeat center top; 
+  overflow: hidden;
+}
+
+#listing h2 {
+  font-size: 300%; 
+  letter-spacing: -1px; 
+  text-align: center; 
+  text-transform: uppercase; 
+  word-spacing: -1px;
+}
+
+#listing h3 {
+  font-size: 110%; 
+  font-weight: bold;
+}
+
+#listing a.preview {
+  display: block; 
+  margin-bottom: 1em; 
+  padding: 0.25em;
+}
+
+#listing img {
+  overflow: hidden; 
+  width: 100%;
+}
+
+#listing .module {
+  background: rgb(228,223,216) url(../images/patternBeige.jpg); 
+  border: 1px solid rgb(158,154,148); 
+  min-height: 20em; 
+  position: relative;
+}
+
+#listing .module:hover, #listing .module:focus {
+  background: rgb(228,223,216) url(../images/patternBeige01.jpg);
+}
+
+#listing a.btn-small {
+  bottom: 1em; 
+  position: absolute; 
+  right: .75em;
+}
+
+#listing a.btn-large, #service a.btn-large {
+	position: relative;
+	right:1.5em;
+}
+
+/* Work Pages */
+
+#work {
+  background: rgb(232,230,215) url(../images/patternLight.jpg);
+}
+
+#work h1 {
+  font-size: 100%; 
+  font-weight: bold; 
+  margin: -.6em 0 1em 0; 
+  padding: 0; 
+  text-transform: uppercase;
+}
+
+#work #categories {
+  background: url(../images/blogLines.png) repeat-x top; 
+  border-bottom: 1px solid rgb(185,180,160); 
+  font-weight: bold; 
+  font-size: 90%; 
+  margin: 1em 0 0.5em 0;
+}
+
+#work #categories li {
+  display: inline; 
+  float: left; 
+  margin: 0 1em; 
+  text-shadow: 1px 1px 0 rgb(250,250,240);
+}
+
+#work #categories a {
+  display: block; 
+  float: left; 
+  line-height: 2; 
+  padding: 0 .5em; 
+  text-transform: uppercase;
+}
+
+#work #categories a:hover, #work #categories a:focus {
+  background: rgb(115,114,107); 
+  color: rgb(255,255,255); 
+  text-shadow: 0 1px 0 rgb(0,0,0);
+}
+
+#work #categories .selected a {
+  background: rgb(115,114,107); 
+  color: rgb(255,255,255); 
+  text-shadow: none;
+}
+
+#list {
+  font-size: 80%; 
+  font-weight: bold; 
+  text-transform: uppercase;
+}
+
+#list h2 {
+  font-size: 130%; 
+  font-weight: bold; 
+  margin-top: 0.25em;
+}
+
+#list .module {
+  margin: 0 2em 0 0; 
+  padding-left: 0;
+}
+
+#list li, .meta li, #taglist li {
+  background: url(../images/blogLines.png) repeat-x bottom; 
+  padding: .5em 0 .65em 0;
+}
+
+#list a:link, #list a:visited, .meta a:link, .meta a:visited, #taglist a:link, #taglist a:visited {
+  background: url(../images/star.png) no-repeat 1% 40%; 
+  color: rgb(97,97,95); 
+  display: block; 
+  padding: 0 .5em 0 2em;
+}
+
+#list a:hover, #list a:focus, .meta a:hover, .meta a:focus {
+  background: rgb(115,114,107) url(../images/starLight.png) no-repeat 1% 40%; 
+  color: rgb(255,255,240);
+}
+
+#detail {
+  position: relative;
+}
+
+#detail h1 {
+  margin-top: .2em;
+}
+
+#detail img {
+  margin: 0 0 1em 0;
+}
+
+#detail .module {
+  background: url(../images/blogLines.png) repeat-x bottom; 
+  padding: 0 0 1em 0;
+}
+
+#detail dl {
+  background: url(../images/blogLines.png) repeat-x bottom; 
+  float: right; 
+  margin: 1em 0; 
+  padding: 1em 0; 
+  width: 100%;
+}
+
+#detail dt {
+  clear: right; 
+  float: left; 
+  width: 50%;
+}
+
+#detail dd {
+  float: right; 
+  width: 50%;
+}
+
+#detail p, #work #detail h2 {
+  clear: both;
+}
+
+#work .paginate {
+  position: absolute; 
+  right: 0; 
+  top: -.75em;
+}
+
+#work .paginate a.btn-prev:link, #work .paginate a.btn-prev:visited, #work .paginate a.btn-next:link, #work .paginate a.btn-next:visited, #blog .paginate a.btn-small:link, #blog .paginate a.btn-small:visited {
+	background: url(../images/btnSmallB.png) no-repeat;
+  clear: none; 
+  color: rgb(138,134,128); 
+  float: left; 
+  margin-right: .5em;
+  text-shadow: 0 1px 1px rgb(255,255,255);
+}
+
+#work .paginate a.btn-prev:hover, #work .paginate a.btn-prev:focus, #work .paginate a.btn-next:hover, #work .paginate a.btn-next:focus, #blog .paginate a.btn-small:hover, #blog .paginate a.btn-small:focus {
+	background-position: 0 -41px;
+	color: rgb(255,255,240);
+	text-shadow: 0 1px 1px rgb(0,0,0);
+}
+
+#work .paginate a.btn-next:link, #work .paginate a.btn-next:visited {
+	background: url(../images/prevBtn.png) no-repeat;
+}
+
+#work .paginate a.btn-next:hover, #work .paginate a.btn-next:focus {
+	background-position: 0 -41px;
+}
+
+#work .paginate a.btn-prev:link, #work .paginate a.btn-prev:visited {
+	background: url(../images/nextBtn.png) no-repeat;
+}
+
+#work .paginate a.btn-prev:hover, #work .paginate a.btn-prev:focus {
+	background-position: 0 -41px;
+}
+
+#work .all {
+  clear: both;
+}
+
+#work .all h1 {
+  margin-bottom: 0;
+}
+
+#work .all dl, img#preview {
+  background: rgb(255,255,240) url(../images/patternNature02.jpg); 
+  border: 1px solid rgb(219,217,204); 
+  display: inline; 
+  float: left; 
+  margin: 1em 1em 0 0; 
+  padding: .8em;
+}
+
+#work .all dl {
+  width: 12%;
+}
+
+#work .all img {
+  width: 100%; 
+}
+
+.view-item a:link, .view-item a:visited {
+  background: rgb(115,114,107); 
+  color: rgb(232,230,213); 
+  display: block; 
+  margin: .75em auto 0 auto; 
+  padding: 0 0 .15em 0; 
+  text-align: center; 
+  width: 50%;
+}
+
+.view-item a:hover, .view-item a:focus {
+  background: rgb(194,193,182); 
+  color: rgb(68,68,68);
+}
+
+#work #folio {
+  background: rgb(255,255,245) url(../images/patternNature.jpg); 
+  margin: 0 0 1em 0; 
+  padding: 1em; 
+  width: 96%;
+}
+
+#work .btn {
+  float: left; 
+  margin: 0 0 1em 0;
+}
+
+/* = About Page
+================================================================================================================= */
+
+#about, #about-services, #contact {
+  background: rgb(133,131,114) url(../images/patternOlive.jpg); 
+  color: rgb(232,230,215); 
+  text-shadow: 0 1px 0 rgb(100,100,88);
+}
+
+#about h1, #about-services h1, #about h2, #about-services h2, #about h3, #about-services h3, #about h4, #about-services h4, #contact h1, #contact h2, #contact h3, #contact h4 {
+  text-shadow: 0 1px 1px rgb(33,33,33);
+}
+
+#about h1, #about-services h1, #contact h1, #contact h2 {
+  color: rgb(232,230,213);
+}
+
+#about h2, #about-services h2 {
+  color: rgb(224,230,185);
+}
+
+#about h3, #about-services h3, #contact h3 {
+  color: rgb(202,235,230);
+}
+
+#about #main, #about-services #main, #contact #main {
+  border-bottom: 1px solid rgb(107,106,94);
+}
+
+#about .module img {
+  background: rgb(119,117,106); 
+  border: 1px solid rgb(112,110,99); 
+  margin: 1em 0; 
+  padding: .5em; 
+  width: 93%;
+}
+
+#about .section-f .module, #about-services .section-g .module, #contact .module {
+  margin-left: 0; 
+  padding-left: 0;
+}
+
+#about-services p img {
+  margin: auto;
+}
+
+#about #main a:link, #about #main a:visited, #about-services #main a:link, #about-services #main a:visited, #contact #main a:link, #contact #main a:visited {
+  color: rgb(224,230,185);
+}
+
+#about #main a:hover, #about #main a:focus, #about-services #main a:hover, #about-services #main a:focus, #contact #main a:hover, #contact #main a:focus {
+  color: rgb(202,235,230);
+}
+
+/* Blog Pages */
+
+#blog {
+  background: rgb(232,230,215) url(../images/patternLight.jpg);
+}
+
+#blog #header-container {
+  border-bottom: 2px solid rgb(80,75,70);
+}
+
+#blog #wrap {
+  margin: 0;
+}
+
+#blog.single #wrap {
+  background: url(../images/starLine.png) no-repeat center top; 
+  padding-top: 2em;
+}
+
+#blog #main {
+  background: url(../images/vLine.png) repeat-x bottom; 
+  border: 0;
+}
+
+#blog .paginate {
+  background: url(../images/blogLines.png) repeat-x top; 
+  clear: both; 
+  overflow: hidden;
+}
+
+#blog .paginate .prev {
+  float: left;
+}
+
+#blog .paginate .next {
+  float: right;
+}
+
+#latest {
+  background: rgb(216,210,200) url(../images/patternNatur.jpg); 
+  border-bottom: 1px solid rgb(170,165,160);
+}
+
+#latest .group {
+  background: url(../images/beigeGradient.png) no-repeat center top; 
+  overflow: hidden;
+}
+
+#latest h1 {
+  font-weight: bold;
+}
+
+#latest img {
+  float: right; 
+  width: 70%;
+}
+
+#entries h1 {
+  font-weight: bold; 
+  font-size: 130%; 
+  padding-bottom: 1em; 
+  margin-top: 0em;
+}
+
+#entries h2 {
+  margin: 0; 
+  padding: 0;
+}
+
+.read-more {
+  display: block; 
+  margin-top: .5em;
+}
+
+#article .meta {
+  background: none; 
+  margin-top: 1.5em; 
+  padding-top: .75em;
+}
+
+.meta {
+  background: url(../images/blogLines.png) repeat-x top; 
+  padding-top: 2em; 
+  position: relative;
+}
+
+.meta li, #taglist li {
+  background: url(../images/blogLines.png) repeat-x bottom; 
+  font-weight: bold; 
+  font-size: 80%; 
+  line-height: 2; 
+  list-style: none; 
+  padding: .2em 0; 
+  text-transform: uppercase;
+}
+
+.meta .date, .publishinfo .date, #blog-updates .date {
+  background: rgb(115,114,107); 
+  color: rgb(232,230,213); 
+  font-size: 80%; 
+  padding: .15em 1em; 
+  position: absolute; 
+  top: -10px; 
+  right: -30%; 
+  z-index: 1;
+}
+
+.publishinfo .date {
+  right: auto; 
+  left: -28%; 
+  top: -18px;
+}
+
+#article {
+  margin-top: .75em;
+}
+
+#article h1 {
+  background: url(../images/blogLines.png) repeat-x bottom; 
+  font-weight: bold; 
+  font-size: 120%; 
+  padding-bottom: 1em; 
+  margin-top: -.75em;
+}
+
+#article h2 {
+  font-size: 130%; 
+  font-weight: bold;
+}
+
+#article h3 {
+  font-size: 140%; 
+  font-weight: bold;
+}
+
+.publishinfo {
+  display: block; 
+  padding-top: .5em; 
+  position: relative; 
+  text-align: center;
+}
+
+.publishinfo dl {
+  overflow: hidden; 
+  text-align: center;
+}
+
+.publishinfo .cat {
+  text-align: center;
+}
+
+.publishinfo .cat a:link, .publishinfo .cat a:visited {
+  background: rgb(194,193,182); 
+  color: rgb(68,68,68); 
+  display: inline-block; 
+  font-size: 80%; 
+  font-weight: bold; 
+  margin: .5em; 
+  padding: .25em .75em; 
+  text-transform: uppercase;
+}
+
+.publishinfo .cat a:hover, .publishinfo .cat a:focus {
+  background: rgb(121,121,116); 
+  color: rgb(255,255,240);
+}
+
+.publishinfo a#tweet-me {
+  background: url(../images/tweetBird.png) no-repeat; 
+  display: block; 
+  height: 50px; 
+  overflow: hidden; 
+  position: absolute; 
+  right: 0; 
+  text-indent: -999em; 
+  bottom: -.125em; 
+  width: 50px;
+}
+
+#article-body {
+  background: url(../images/blogLines.png) repeat-x top; 
+  padding-top: 1em;
+}
+
+.excerpt {
+  background: url(../images/blogLines.png) repeat-x top;
+}
+
+.excerpt h2 {
+  font-size: 140%; 
+  font-weight: bold;
+}
+
+.excerpt h3 {
+  font-size: 130%; 
+  font-weight: bold; 
+  margin-top: .5em;
+}
+
+.related-content {
+  background: rgba(174,173,164,.2); 
+  border: 1px solid rgb(178,174,155); 
+  margin-bottom: 1em; 
+  padding: .5em 1em 1em 1em;
+}
+
+.related-content li {
+  background: url(../images/arrow.png) no-repeat left center; 
+  padding-left: 1.5em;
+}
+
+/* Comment section */
+
+#commentform h2 {
+  text-transform: lowercase; 
+  font-size: 180%; 
+  font-weight: bold;
+}
+
+#commentlist {
+  background: url(../images/starLine.png) no-repeat top center; 
+  font-size: 90%;
+}
+
+#commentlist.module {
+  margin: 0; 
+  padding: 2em 1em 0 1em;
+}
+
+#commentlist .gravatar {
+  float: left; 
+  padding: 1em;
+}
+
+.comment-entry {
+  background: rgba(234,233,225, .3); 
+  border: 1px solid rgb(212,211,197); 
+  margin: 1em 0; 
+  overflow: hidden; 
+  padding: .5em 0 1em 0;
+}
+
+.comment-entry div {
+  float: left; 
+  padding-right: 1em; 
+  width: 80%;
+}
+
+/* Asides */
+
+#aside {
+  margin-top: .175em;
+}
+
+#aside h2 {
+  background: url(../images/blogLines.png) repeat-x bottom; 
+  font-size: 140%; 
+  font-weight: bold; 
+  padding: 0 0 .25em 0; 
+  text-transform: lowercase;
+}
+
+#aside h3 {
+  font-size: 100%; 
+  line-height: 1.2; 
+  margin: .5em 0;
+}
+
+#aside img {
+  width: 100%;
+}
+
+#tweets {
+  color: rgb(97,97,95);
+}
+
+#tweets h2 {
+  margin-top: -.2em;
+}
+
+#tweets p {
+  background: url(../images/starLine.png) no-repeat bottom center; 
+  font-size: 90%; 
+  padding-bottom: 1.5em;
+}
+
+#extras {
+  background: rgb(174,173,164) url(../images/patternNatur.jpg);
+}
+
+#extras h2 {
+  font-size: 140%; 
+  font-weight: bold; 
+  padding-bottom: .5em;
+}
+
+#extras h3 {
+  font-size: 140%;
+}
+
+#extras img#preview {
+  margin-top: 0;
+}
+
+#extras .module h2 {
+  margin-top: -.25em;
+}
+
+#taglist {
+  float: left; 
+  font-size: 100%; 
+  width: 100%;
+}
+
+#taglist li {
+  background: url(../images/vLine.png) repeat-x bottom; 
+  float: left; 
+  line-height: 1.4; 
+  margin: 0; 
+  padding: 0 0 .5em 0; 
+  position: relative; 
+  width: 33%; 
+  z-index: 1;
+}
+
+#taglist li a:link, #taglist a:visited {
+  float: left; 
+  margin: 0; 
+  padding: 0 0 0 2em; 
+  width: 80%;
+}
+
+#taglist li a:hover, #taglist li a:focus {
+  color: rgb(200,78,62);
+}
+
+#taglist li span {
+  display: block; 
+  float: right; 
+  position: absolute; 
+  top: 0; 
+  right: 0; 
+  width: 10%; 
+  z-index: 2;
+}
+
+/* Blog Listings on Homepage */
+
+#blog-updates {
+  background: rgb(216,210,200) url(../images/patternBeige01.jpg); 
+  border-bottom: 2px solid rgb(228,224,217);
+}
+
+#blog-updates .module {
+  position: relative;
+}
+
+#blog-updates .date {
+  color: rgb(255,255,240); 
+  right: 0; 
+  top: -1.7em;
+}
+
+#blog-updates h2 {
+  background: url(../images/vLine.png) repeat-x bottom center; 
+  font-size: 300%; 
+  letter-spacing: -1px; 
+  margin: 0 .5em; 
+  padding-bottom: .125em;
+}
+
+#blog-updates h2 span.a {
+  padding-right: 1px;
+}
+
+#blog-updates h3 {
+  font-size: 110%; 
+  font-weight: bold;
+}
+
+#blog-updates a.more {
+  background: url(../images/arrow.png) no-repeat 100% 60%; 
+  padding-right: 1.5em;
+}
+
+/* 404 Page */
+
+#page404 #main {
+  padding: 5% 0;
+}
+
+#page404 #main h1 {
+  font-size: 600%; 
+  text-align: center;
+}
+
+#page404 #main p {
+  font-size: 250%; 
+  line-height: 1.1;
+}
+
+#page404 span {
+  color: rgb(200,78,62); 
+  font-size: 200%;
+}
+
+/* footer section */
+
+#footer {
+  background: rgb(145,141,134) url(../images/grid10.png); 
+  border-bottom: 3px solid rgb(88,86,82); 
+  border-top: 2px solid rgb(129,126,119); 
+  color: rgb(232,230,215); 
+  height: 2.5em; 
+  padding-top: 3.5em; 
+  position: relative; 
+  z-index: 100;
+}
+
+#footer ul {
+  background: url(../images/subNav.png) no-repeat left center; 
+  padding: .75em 1em 0 1em; 
+  height: 40px; 
+  overflow: visible; 
+  position: absolute; 
+  right: 0; 
+  top: -6px; 
+  width: 30%; 
+  z-index: 1000;
+}
+
+#footer li {
+  float: left; 
+  line-height: 2; 
+  margin: 0 1em; 
+  text-shadow: 0 1px 1px rgb(33,33,33);
+}
+
+#footer a {
+  color: rgb(232,230,213); 
+  text-transform: uppercase;
+}
+
+#footer a:hover, #footer a:focus {
+  color: rgb(255,255,255);
+}
+
+#footer p {
+  background: url(../images/rockateeSmall.png) no-repeat right bottom;
+}
+
+/* = Forms
+================================================================================================================= */
+
+/* Contact */
+
+#contact .module {
+  margin-left: 0; 
+  padding-left: 0;
+}
+
+#contact form label {
+  display: block; 
+  line-height: 2; 
+  text-shadow: 0 1px 1px rgb(58,58,58); 
+  width: 10em;
+}
+
+#contact form input {
+  padding: .15em; 
+  width: 16em;
+}
+
+#contact form .txt {
+  float: left; 
+  margin-top: .5em;
+}
+
+#contact form select {
+  text-transform: none;
+}
+
+#contact form .submit, #commentform .submit {
+  background: rgb(200,78,62); 
+  border: 0; 
+  color: rgb(232,230,213); 
+  font-weight: bold; 
+  padding: .5em 0; 
+  text-transform: uppercase; 
+  width: 6em;
+}
+
+#contact .hiddenFields, #commentform .hiddenFields {
+  background: none;
+}
+
+#contact form .submit:hover, #contact form .submit:focus {
+  background: rgb(105,102,90);
+}
+
+#commentform form, #contact form {
+  font-size: 80%; 
+  font-weight: bold; 
+  text-transform: uppercase;
+}
+
+#commentform div, #contact form div {
+  background: url(../images/blogLines.png) repeat-x top; 
+  overflow: hidden; 
+  padding: .5em 0; 
+  width: 100%;
+}
+
+#contact form div {
+  background: url(../images/darkLine.png) repeat-x top;
+}
+
+#contact input.txt, #contact textarea {
+  background: rgb(147,144,135); 
+  border: 1px solid rgb(123,120,112); 
+  color: rgb(232,230,213); 
+  font-size: 140%;
+}
+
+#contact textarea {
+  font-size: 180%;
+}
+
+#contact textarea:hover, #contact textarea:focus, #contact .txt:hover, #contact .txt:focus {
+  background: rgb(159,156,146);
+}
+
+#commentform label {
+  display: block; 
+  line-height: 2; 
+  text-shadow: 0 1px 1px rgb(255,255,255); 
+  width: 30%;
+}
+
+#commentform input.txt {
+  padding: .15em; 
+  width: 50%;
+}
+
+#commentform input.txt, #commentform textarea, #search .txt {
+  background: rgb(245,245,230); 
+  border: 1px solid rgb(178,174,155); 
+  font-size: 130%;
+}
+
+#commentform textarea, #contact textarea {
+  width: 98%;
+}
+
+#commentform textarea:hover, #commentform textarea:focus, #commentform input:hover, #commentform .txt:focus, #search .txt:hover, #search .txt:focus {
+  background: rgb(255,255,255);
+}
+
+#commentform textarea {
+  font-size: 180%;
+}
+
+#commentform .submit {
+  margin-top: 1em;
+}
+
+#search {
+  margin: 1em 0; 
+  position: relative;
+}
+
+#search fieldset {
+  border: 0;
+}
+
+#search .txt {
+  font-size: 110%; 
+  padding: .15em 0 .15em .5em; 
+  width: 94%;
+}
+
+.search-submit {
+  background: url(../images/searchBtn.png) no-repeat; 
+  border: 0; 
+  cursor: default; 
+  display: block; 
+  height: 24px; 
+  overflow: hidden; 
+  position: absolute; 
+  right: -2px; 
+  text-indent: -9999em; 
+  top: 0em; 
+  width: 24px;
+}
+
+#contact #client-sheet h2 {
+  margin-bottom: .75em;
+}
+
+#contact #client-sheet a:link, #contact #client-sheet a:visited {
+  background: rgb(150,170,167); 
+  border: 1px solid rgb(123,119,113); 
+  color: rgb(232,230,213); 
+  display: block; 
+  font-size: 140%; 
+  font-weight: normal; 
+  line-height: 1.2; 
+  padding: 1em; 
+  text-align: center;
+}
+
+#contact #client-sheet a:hover, #contact #client-sheet a:focus {
+  background: rgb(232,230,213); 
+  color: rgb(138,134,128); 
+  text-shadow: 0 1px 1px rgb(255,255,255);
+}
+
+/* networking */
+
+#social-links {
+  height: 50px; 
+  position: absolute; 
+  right: 1em; 
+  top: 2em; 
+  z-index: 1000;
+}
+
+#social-links li {
+  display: inline; 
+  float: left; 
+  margin-right: .5em;
+}
+
+#social-links a {
+  display: block; 
+  height: 50px; 
+  text-indent: -999em; 
+  width: 50px;
+}
+
+#social-links a:hover, #social-links a:focus {
+  background-position: 0 -50px;
+}
+
+#linkedIn {
+  background: url(../images/inIcon.png) no-repeat;
+}
+
+#twitter {
+  background: url(../images/twitterIcon.png) no-repeat;
+}
+
+#facebook {
+  background: url(../images/facebookIcon.png) no-repeat;
+}
+
+/* split until these CSS three features are no longer a fork but a standard */
+
+#service .module, #project .module, #nav a:hover, #nav a:focus, #list a:hover, #list a:focus, #categories .selected a, #categories a:hover, #categories a:focus, .meta a:hover, .meta a:focus, .related-content, .comment-entry, .view-item a {
+  -webkit-border-radius: 4px; 
+  -moz-border-radius: 4px; 
+  border-radius: 4px;
+}
+
+#contact input, #contact textarea, #contact legend, #client-sheet, #client-sheet a, .meta a:hover, .meta a:focus, .meta .date, #commentform .txt, #commentform textarea, .code {
+  -webkit-border-radius: 6px; 
+  -moz-border-radius: 6px; 
+  border-radius: 6px;
+}
+
+.meta .date, .publishinfo .date, #blog-updates .date, .publishinfo .cat a, a.btn, #contact .submit, #commentform .submit, #search .txt {
+  -webkit-border-radius: 14px; 
+  -moz-border-radius: 14px; 
+  border-radius: 14px;
+}
+
+a.btn, #contact .submit {
+  -webkit-border-radius: 24px; 
+  -moz-border-radius: 24px; 
+  border-radius: 24px;
+}

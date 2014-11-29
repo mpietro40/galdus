@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>
+Questinario raccolta dati creazione rete
+</title>
+<link rel="stylesheet" href="style.css">
+<script src="./Questinario raccolta dati creazione rete_files/jquery.min.js"></script>
+<style>
+/*caratteristiche dello stile di questo form*/
+section{
+  width:70%;
+  margin:auto;
+  padding:10px;
+}
+.centrato{
+  width:800px;
+}
+form#payment{
+  width:750px;
+}
+fieldset ol li{
+  width:97%;
+}
+form#payment label{
+  width:700px;
+}
+input{
+text-align:right;
+}
+</style>
+
+</head>
+<body>
+<section>
+<div class="centrato">	
+<h1>Progettare una rete</h1>
+<h5>Prima di realizzare una rete è necessario raccogliere tutte le informazione importanti che servono a realizzare la rete necessaria al cliente.<form id="payment" method="POST" action="http://galdusmaffi.tk/Galdus/Esercitazioni/form/FormNetwork.html#">
+
+<fieldset>
+<legend>Le prime imformazione da raccoglie sono:</legend>
+<ol>
+<li>
+<td class=dim><label id="name">1.	Quanto è estesa la superficie dove da realizzare.<td><input id="Cognome" name="classe" type="text" placeholder="scrivere qui" required=""></label><br>
+<br>
+
+</li>
+<li>
+<label id="Cognome">2.	Il numero di edifici,stanze sono coinvolte nella rete.<input id="Cognome" name="classe" type="text" placeholder="scrivere qui" required=""></label><br>
+<br>
+
+</li>
+<li>
+<label id="sedi">3.	Il tipo di materiale usato per la costruzione degli edifici dove sarà realizzata la rete.</label><input id="Cognome" name="classe" type="text" placeholder="scrivere qui" required=""><br>
+<br>
+
+</li>
+<li>
+<label id="DataCompilazione">4.	Capire se esiste gia una rete qual è la sua topoligia. <input id="Cognome" name="classe" type="text" placeholder="scrivere qui" required=""></label><br>
+<br>
+
+</li>
+<li>
+<label id="Compilazione">5.	Raccogliere tutte le informazione dei device coinvolte nella rete in particolare:<input id="Cognome" name="classe" type="text" placeholder="scrivere qui" required=""><br>
+<br>
+a) tipo di processore e il suo clock.<input id="Cognome" name="classe" type="text" placeholder="scrivere qui" required=""><br>
+b) dimensione degli hard disk delle parti di partizione.<input id="Cognome" name="classe" type="text" placeholder="scrivere qui" required=""><br>
+c) la quantità di memoria,ram disponibile.<input id="Cognome" name="classe" type="text" placeholder="scrivere qui" required=""><br>
+d) il sistema operativo installato.<input id="Cognome" name="classe" type="text" placeholder="scrivere qui" required=""><br>
+e)tipo di scheda di rete installata e le sue caratteristiche.<input id="Cognome" name="classe" type="text" placeholder="scrivere qui" required=""><br>
+f) quale protocollo di rete è utilizzato.<input id="Cognome" name="classe" type="text" placeholder="scrivere qui" required=""><br>
+
+
+</label><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+</li>
+<li>
+<label id="DataCompilazione">6.	Della rete devo conoscere anche la disponibilità di stampanti,a quali computer sono collegati,se hanno la disponibilità di rete o moduli wi-fi.<input id="Cognome" name="classe" type="text" placeholder="scrivere qui" required=""></label><br>
+<br>
+
+</li>
+
+
+<li>
+<label id="DataCompilazione">7.	Quali altri device sono presenti nel ufficio e devono essere connessi. <input id="Cognome" name="classe" type="text" placeholder="scrivere qui" required=""></label><br>
+<br>
+
+</li>
+
+
+<li>
+<label id="DataCompilazione">8.	Quali sono software sono utilizzate in ufficio.<input id="Cognome" name="classe" type="text" placeholder="scrivere qui" required=""></label><br>
+<br>
+
+</li>
+
+
+<li>
+<label id="DataCompilazione">9.	Quali driver e dischi di installazione sono dispomìnibili in azienda.<input id="Cognome" name="classe" type="text" placeholder="scrivere qui" required=""></label><br>
+<br>
+
+</li>
+</ol>
+</fieldset>
+<script> 
+$(document).ready ( function () {
+            $("#btn1").click ( function () {
+              var resultVal = 0.0;
+              var objRegExp = '\s+';
+               $(".test").each ( function() {
+                    var temp = $(this).val();
+                    if(!isNaN(temp) && temp) //se non e' un numero non lo sommo
+                       resultVal += parseFloat ( temp.replace(/\s/g,'').replace(',','.'));
+                });
+                //alert ( resultVal );
+                $(".risu").val(""+resultVal);
+                
+            });
+        });
+</script>
+</form>	
+</div>
+</section>
+
+</body></html>

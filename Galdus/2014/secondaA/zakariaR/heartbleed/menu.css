@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+	background:#4B4C07;
+}
+#container {
+    text-align: left;
+    width: 960px;
+    margin: 0 auto;
+}
+#section {
+float: center;
+width: 980px;
+margin: 0px -10px auto;
+background-color:#BAD810;
+	}
+/* STYLES GENERAUX
+ * ------------------------------------------------------------------------------------------
+ */
+body {
+    font-family: "Trebuchet MS", Trebuchet, Arial, sans-serif;
+    font-size: 100.01%;
+    text-align: center;
+	color: black;
+}
+#top, #main, #footer {
+	clear: both;
+	width: 960px;
+}
+#top, #main-menu, #main, #footer {
+	float: left;
+}
+blockquote  {
+	margin-left: 2em;
+}
+
+
+/* HEADER
+ * ------------------------------------------------------------------------------------------
+ */
+#logo a {
+	display: block;
+	text-indent: -99999px;
+	text-decoration: none;
+	width: 528px;
+	height: 158px;
+}
+#main-menu {
+	width: 528px;
+	height: 52px;
+	background: #000;
+}
+#main-menu-items {
+	list-style-type: none;
+	margin: 14px 0 0 40px;
+}
+#main-menu-items li {
+	display: inline;
+	padding-left: 12px;
+	background: url("../img/sep_menu.gif") no-repeat 3px 6px;
+}
+#main-menu-items li a {
+	color: #abc184;
+	font-size: .9em;
+	font-weight: bold;
+	text-decoration: none;
+}
+#main-menu-items li a:hover {
+	color: #effcb0;
+	text-decoration: none;
+	border-bottom: 1px dashed;
+}
+#main-menu-items .first, 
+#footer-menu .first {
+    background: none;
+}
+#main-photo {
+	float: right;
+	width: 432px;
+	height: 210px;
+}
+footer {
+text-align:right;
+font-size: 30px;
+color:red;
+background-color:black;
+font-family:Kunstler Script;
+}

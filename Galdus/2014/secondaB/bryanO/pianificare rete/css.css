@@ -1,0 +1,43 @@
+body{
+background:gray;
+}
+
+
+#titolo{
+font-family:bookman old style;
+font-size:2em;
+color:red;
+text-align:center;
+}
+
+nav{
+float:left;
+}
+
+
+#contenuto{
+font-family:bookman old style;
+font-size:18px;
+text-align:center;
+width:77%;
+height:auto;
+color:white;
+font-family:bookman old style;
+font-size:20px;
+background-color: rgba(9, 8, 8, 0.86); /*dim the background*/
+opacity:0.8.5;
+filter:alpha(opacity=60);
+}
+
+#sotto-titolo{
+font-family:bookman old style;
+font-size:1em;
+color:red;
+text-align:center;
+}
+
+aside{
+float:right;
+width:20%;
+
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Hyperlink</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<link rel="StyleSheet" href="./uno.css" type="text/css" media="screen">
+</head>
+<body>
+<a name="inizio"></a>
+<img src="./immagini/intestazione.jpg" align="right" height="52"
+ width="461" alt=""><br>
+<h2>Hyperlink</h2>
+<p>Un hyperlink &egrave; un collegamento tra una risorsa Web e un'altra. Sebbene si tratti di un concetto semplice, costituisce uno dei punti di forza del successo del Web.</p>
+<p>Un collegamento ha due terminali, chiamati <b>ancore</b>, e una direzione, dalla risorsa sorgente a quella di destinazione.</p>
+<p>Il comportamento di default di un collegamento, ottenibile selezionandolo mediante, ad esempio, il mouse, consiste nel recuperare e presentare la risorsa Web indicata dall'URI, che &egrave; a sua volta contenuto nell'ancora sorgente.</p>
+<hr>
+<h3>URI</h3>
+<p>Ogni risorsa Web viene identificata univocamente per
+mezzo di un <b>Uniform (o Universal) Resource Identifier (URI)</b>.
+Gli URI sono composti da tre parti, separate da <font
+ face="Courier New">/</font>:</p>
+<ol>
+  <li>Il protocollo utilizzato per accedere alla risorsa</li>
+  <li>L&#8217;indirizzo, simbolico o numerico, del calcolatore che ospita la
+risorsa, eventualmente seguito dall'indicazione di una porta diversa da
+quella di default (80 per i server HTTP).</li>
+  <li>Il nome della risorsa, dato come un percorso</li>
+</ol>
+<pre>type://&lt;hostname&gt;[:port]/&lt;path&gt;</pre>
+<p>Il seguente URI:</p>
+<pre>http://www.ing.unipi.it/TIA/index.html</pre>
+<p>viene interpretato come la richiesta di recuperare, usando il protocollo HTTP, un documento HTML, accessibile attraverso il percorso <tt>/TIA</tt> sul server avente
+indirizzo simbolico <tt>www.ing.unipi.it</tt>.</p>
+<p>&nbsp;Altri possibili protocolli sono:</p>
+<pre>ftp://     news://      telnet://</pre>
+<pre>file://    gopher://    mailto:</pre>
+<p>Gli URI possono essere assoluti (o completi), come quelli mostrati
+precedentemente, oppure relativi.</p>
+<p>Gli URI relativi si riferiscono a
+documenti residenti sul server di origine del documento corrente, e
+possono avere riferimenti relativi anche nella componente percorso. Vengono risolti in URI completi usando un URI di base.</p>
+<hr>
+<h3>Collegamenti esterni</h3>
+<p>Per inserire un collegamento ipertestuale in un documento Web si usa
+l'elemento <b>ancora</b>, delimitato dal tag <b>&lt;a&gt;</b>.
+L'attributo <b>
+href</b> specifica l'URI del documento di destinazione:</p>
+<pre> &lt;a href="www.ing.unipi.it/ing_inf/index.html"&gt;link&lt;/a&gt;</pre>
+<p>Nella pagina verr&agrave; visualizzata l'ancora, costituita in questo
+caso dal testo compreso fra i tag,
+sottolineato e in colore diverso. Il contenuto dell'elemento ancora
+pu&ograve; essere un altro elemento, ad esempio un'immagine:<br>
+</p>
+<pre>&lt;a href="www.pippo.com"&gt;&lt;img src="./pippo.jpg"&gt;&lt;/a&gt;<br></pre>
+<p>Selezionando l'ancora si comunica al browser la nostra
+intenzione di seguire il collegamento.</p>
+<p>Omettendo hostname&nbsp; il documento di destinazione &egrave; nello
+stesso server del documento sorgente:</p>
+<pre>/ing_inf/index.html</pre>
+<p>Il percorso pu&ograve; essere relativo: <b>.</b> indica la
+directory del documento sorgente (quello in cui compare l'ancora sorgente), <b>. . </b>&nbsp;la directory padre.</p>
+<p>E' bene usare percorsi relativi per facilitare la pubblicazione
+dell'albero dei documenti sul server.</p>
+<p>Con riferimento al frammento di file system illustrato sotto, per inserire nel documento <tt>a.html</tt> un collegamneto a
+<tt>index1.html</tt> useremo:</p>
+<center><img src="./immagini/gerarchia.jpg" height="163" width="367" alt=""></center>
+<p>
+<pre> ./users/elisa/index1.html</pre>
+<p>Mentre per inserire in <tt>index1.html</tt> un collegamneto
+alla risorsa
+<tt>b.gif</tt> useremo:</p>
+<pre> ../../image/b.gif </pre>
+<hr>
+<h3>Collegamenti interni</h3>
+<p> I collegamenti interni permettono di spostarsi su frammenti diversi dello stesso documento. Un esempio di utilizzo &egrave; quello
+di mettere un collegamneto in fondo alla pagina per tornare all'inizio. La sintassi &egrave;:</p>
+<pre> &lt;a href="#inizio"&gt;torna in cima&lt;/a&gt;</pre>
+<p> Chiaramente dovremo definire l'ancora di destinazione, usando un elemento ancora con l'attributo <tt>name</tt>:</p>
+<pre> &lt;a name="inizio"&gt;inizio pagina&lt;/a&gt;</pre>
+<p>Si pu&ograve; usare lo stesso mecanismo anche per posizionarsi in un
+determinato frammento di in una pagina diversa:</p>
+<pre> &lt;a href="./altra.html#mezzo"&gt;link&lt;/a&gt;</pre>
+<p> Aprir&agrave; la pagina <tt>altra.html</tt> nella posizione indicata da:</p>
+<pre> &lt;a name="mezzo"&gt;met&agrave; pagina&lt;/a&gt;</pre>
+
+<hr style="width: 100%; height: 2px;">
+<h3>Esempio</h3>
+
+<a name="punto"></a>
+<pre>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt; Collegamenti interni: &lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;a name="inizio"&gt;inizio pagina&lt;/a&gt;
+    1&lt;br&gt;2&lt;br&gt;3&lt;br&gt;
+    4&lt;br&gt;5&lt;br&gt;6&lt;br&gt;
+    7&lt;br&gt;8&lt;br&gt;9&lt;br&gt;
+    10&lt;br&gt;11&lt;br&gt;12&lt;br&gt;
+    13&lt;br&gt;14&lt;br&gt;15&lt;br&gt;
+    16&lt;br&gt;17&lt;br&gt;18&lt;br&gt;
+    19&lt;br&gt;20&lt;br&gt;21&lt;br&gt;
+    22&lt;br&gt;23&lt;br&gt;24&lt;br&gt;
+    25&lt;br&gt;26&lt;br&gt;27&lt;br&gt;
+    28&lt;br&gt;29&lt;br&gt;30&lt;br&gt;
+    31&lt;br&gt;32&lt;br&gt;33&lt;br&gt;
+    34&lt;br&gt;35&lt;br&gt;36&lt;br&gt;
+    37&lt;br&gt;38&lt;br&gt;39&lt;br&gt;
+    &lt;a href="#inizio" &gt;vai all'inizio della pagina&lt;/a&gt;       
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<center> <a href="hyperlink.html#punto"
+ onclick="window.open('./esempi/cinque.html','', config='toolbar=1,menubar=1,scrollbars=1,resizable=1,width=600 ,height=500,  ' )">
+<img src="./immagini/risultato.jpg" border="0" height="35" width="135" alt=""></a></center>
+<hr style="width: 100%; height: 2px;">
+<h3>Posta elettronica</h3>
+<p>Un'ancora particolare che si incontra frequentemente
+nelle pagine web &egrave; quella relativa ad un indirizzo di posta
+elettronica.<br>
+La sintassi &egrave; la seguente: </p>
+<pre> &lt;a href="mailto:nome.utente@provider.it"&gt;e-mail&lt;/a&gt;</pre>
+<br>
+<br>
+<table align="center" border="0">
+  <tbody>
+    <tr>
+      <td> <a href="iltesto.html" target="main"> <img
+ src="./immagini/precedente.jpg" border="0" height="34" width="135" alt=""></a></td>
+      <td> <a href="hyperlink.html#inizio" target="main"> <img
+ src="./immagini/inizio.jpg" border="0" height="33" width="135" alt=""></a></td>
+      <td> <a href="liste.html" target="main"> <img
+ src="./immagini/successiva.jpg" border="0" height="34" width="135" alt=""></a></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

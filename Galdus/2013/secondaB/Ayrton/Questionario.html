@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Questionario</title>
+<style>
+table,td ,th{
+border:solid 1px white;
+}
+table{
+border-collapse:collapse;
+}
+body{
+background:#D0D0D0;
+text-align center
+}
+h1{
+color:#FFFFFF;
+}
+body{
+text-align:center;
+}
+.centrata{
+margin:auto;
+}
+.sinistra{
+text-align:left;
+}
+</style>
+</head>
+<body>
+
+<form>
+<h1> Questionario sull'uso dell'energia </h1>
+<table class=centrata>
+<tr>
+<th>
+Sesso
+</th>
+<td>
+<select name=sesso>
+<option value=''></option>
+<option value='maschio'>Maschio</option>
+<option value='femmina'>Femmina</option>
+</select>
+</td>
+</tr>
+<tr>
+<th>
+Elettrodomestici Posseduti
+</th>
+<td class=sinistra>
+<input name='elettrodomestico' type="checkbox" value='Lavatrice'>Lavatrice <br>
+<input name='elettrodomestico' type="checkbox" value='Frigorifero'>Frigorifero<br>
+<input name='elettrodomestico' type="checkbox" value='Fornello'>Fornello<br>
+<input name='elettrodomestico' type="checkbox" value='Microonde'>Microonde<br>
+<input name='elettrodomestico' type="checkbox" value='Console'>Console<br>
+<input name='elettrodomestico' type="checkbox" value='Aspirapolvere'>Aspirapolvere<br>
+</td>
+</tr>
+<tr>
+<th>Tipo Riscaldamento
+</th>
+<td class=sinistra>
+<input name='riscaldamento' type="radio" value='Centralizzato'>Centralizzato<br>
+<input name='riscaldamento' type="radio" value='Privato'>Privato<br>
+</td>
+</tr>
+<tr>
+<th>Descrizione Riscaldamento
+</th>
+<td>
+<textarea rows="5" cols="40">
+</textarea>
+</td>
+<tr>
+<th>Indirizzo
+<td>
+<input name='Indirizzo' type="text"
+</th>
+</td>
+</table>
+</form>
+</html> 

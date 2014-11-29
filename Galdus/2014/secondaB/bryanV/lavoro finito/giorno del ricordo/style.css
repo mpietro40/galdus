@@ -1,0 +1,154 @@
+body {
+font-size: 13px;
+font-family: Verdana, sans-serif;
+line-height: 1.6;
+color: #000000;
+background-color: transparent;
+background-image: url(http://wallpicshd.com/wp-content/uploads/2013/04/Best-Skull-Wallpaper-For-Dekstop.jpg);
+background-repeat: repeat-y;
+background-position: top center;
+}
+
+#header {
+color: #a4a4a4;
+background-color: transparent;
+
+background-image: url("http://wallpicshd.com/wp-content/uploads/2013/04/Best-Skull-Wallpaper-For-Dekstop.jpg");
+min-height: 0px;
+
+background-repeat: no-repeat;
+background-position: top center;
+}
+
+#wrap {
+background-color: transparent;
+background-image: url('http://www.thegoldcarpet.net/wp-content/uploads/2013/10/legno-sfondi-grigio-chiaro-lo-stesso-modello-trame-foto-hd-per-il-270843.jpg');
+
+
+}
+
+#content {
+
+
+
+
+}
+
+#sidebar {
+color: #000000;
+background-color: transparent;
+background-image: url('http://wallpicshd.com/wp-content/uploads/2013/04/Best-Skull-Wallpaper-For-Dekstop.jpg');
+background-repeat: no-repeat;
+background-position: top center;
+}
+
+h1 {
+color: #000000;
+font-size: 48px;
+font-family: Verdana, sans-serif;
+}
+
+h2 {
+color: #961b1b;
+font-size: 22px;
+}
+
+a {
+color: #e6e6e6;
+}
+
+/* --- border --- */
+
+#header, #content, #sidebar, #footer, ul.nav > li > a, ul.nav li ul {
+border-color: 'border-box-content','border-box-sidebar','background-box-content','background-box-sidebar';
+}
+
+/* --- nav sidebar --- */
+div#sidebar ul.nav, div#sidebar ul.nav a {
+color: #000000;
+}
+div#sidebar ul.nav a:hover {
+color: #cccccc;
+}
+div#sidebar ul.nav > li > a {
+background-color: transparent;
+}
+
+/* border custom nav sidebar */
+div#sidebar ul.nav > li > a, div#sidebar ul.nav li ul {
+border-color: #ffffff;
+}
+
+/* --- nav header --- */
+div#header ul.nav, div#header ul.nav a {
+color: #ffffff;
+}
+div#header ul.nav a:hover {
+color: #000000;
+}
+div#header ul.nav > li > a,  div#header ul.nav li ul {
+background-color: #161616;
+}
+/* border custom nav header */
+div#header ul.nav > li > a, div#header ul.nav li ul {
+border-color: #313131;
+}
+
+
+
+/* :styles */
+
+h2 {font-weight:normal}
+
+#header, #content .widget, #sidebar .widget {
+border-width: 1px;
+border-style: solid;
+padding:10px;
+}
+
+#header {
+border-color:#a4a4a4;
+}
+
+#content .widget, #footer {
+border-color:#a4a4a4;
+background-color: transparent;
+}
+
+#sidebar .widget {
+border-color:#a4a4a4;
+background-color: transparent;
+}
+
+#content .title, #sidebar .title {
+border:none;
+padding:0;
+background:transparent
+} 
+
+#header .title {
+border:none;
+background:transparent
+}
+
+div#header ul.nav a {
+border-right-width: 1px;
+border-right-style: solid;
+}
+
+div#header ul.nav li ul {
+border-style: solid;
+border-width: 1px;
+}
+
+div#header ul.nav li ul, div#sidebar ul.nav li ul {
+list-style-type:square; /* static list type */
+}
+
+#footer {
+font-size: 90%;
+}
+
+#footer .widget {
+padding: 10px;
+}

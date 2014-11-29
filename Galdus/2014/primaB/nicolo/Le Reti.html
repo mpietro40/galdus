@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>LE RETI</title>
+<style> 
+table td,th{
+border:solid 2px white;
+width:50px;
+height:50px;
+}
+body{
+background-color:LIGHTBLUE;
+}
+</style>
+</head>
+<body background="file:///C:/Documents%20and%20Settings/Corso-83008/Documenti/Downloads/sfondo.jpg">
+<h1> Topologie di rete </h1><table>
+<tbody><tr>
+<td>  NOME </td>
+<td> IMG </td>
+<td> DESCRIZIONE </td>
+<td> VANTAGGI E SVANTAGGI </td>
+</tr>
+<tr>
+<td> rete punto a punto </td>
+<td> <img src="punto a punto.jpg" width="180" height="180"> </td>
+<td> una rete punto a punto è realizzata unendo ogni device della rete con un cavo </td>
+<td> <h2> Vantaggi </h2> 
+1) Ogni nodo può parlare direttamente con tutti gli altri--
+2) è una rete molto veloce
+<h2> Svantaggi</h2>
+1) il costo della rete è molto alto -
+2) sono necessare dei device speciali cioè con tante schede di rete </td>
+</tr>
+<tr>
+<td> Rete a stella </td>
+<td> <img src="rete a stella.jpg" width="180" height="180"> </td>
+<td>  Una rete a stella funziona collegando tutti i device a un punto centrale.Questo nodo centrale può essere un computer speciale o un HUB o uno switch    </td>
+<td> <h2> VANTAGGI </h2>
+1) è una rete semplice da realizzare --
+2) è molto economica
+<h2> Svantaggi </h2>
+1) Nel caso si rompa il nodo centrale la rete non funziona più
+2) tutte le comunicazioni passano nel nodo centrale che se non è ben programmato lascia vedere i dati agli altri nodi
+</td></tr>
+<tr>
+<td> rete ad Anello </td>
+<td><img src="anello.jpg" widht="180" height="180"></td>
+</td><td>  la rete ad anello prevede che ogni nodo sia collegato ad altri due
+</td><td> <h2>  Vantaggi </h2>
+1) è una rete semplice--
+2) una rete semplice da espandere
+<h1> Svantaggi </h1>
+1) la rottura di un nodo blocca tutta la comunicazione
+2) per parlare tra i nodi (a e b) potrebbe essere necessario passare per tutti gli altri nodi della rete
+</td></tr>
+<tr>
+<td> rete a Bus </td> 
+<td> <img src="bus.jpg" widht="180" height="180"> </td>
+</td><td> Tutti i nodi sono collegati tra di loro per mezzo di un bus, cioè un canale che possiede due estremità e n accessi ad esso. Le due estremità sono chiuse con dei terminatori. </td>
+<td> <h2> VANTAGGI </h2> 
+1) è semplice da usare
+2) è economica
+<h2> SVANTAGGI </h2>
+1) la rottura di un terminatore può bloccare la rete 
+2) la rottura di un bus blocca tutta al comunicazione </td>
+</tr>
+<tr>
+<td>rete ad   Albero </td>
+<td> <img src="albero.jpg" widht="180" height="180"> </td>
+</td><td>  Questo tipo di topologia è una variante di rete magliata non completamente connessa, che si può modellizzare anche come un insieme di reti a stella interconnesse tra loro in modo gerarchico. Nodi e canali sono disposti in modo ramificato; questa topologia è la preferita per le reti WAN anche perchè comporta costi minori, tuttavia se si guasta un canale o un nodo viene compromessa la funzionalità di parte della rete o dell'intera rete (se si è guastato il nodo o il canale d'origine). Su questa topologia di rete si basa Internet </td>
+<td> <h2> VANTAGGI </h2>
+1) è adatta a gestire piccoli gruppi che devono condividere risorse
+2)la rottura di un nodo consente ad altri pezzi di rete di funzionare
+<h2> SVANTAGGI </h2>
+1) è una rete complicata da realizzare e mantenere
+2) l' aggiunta di un nodo può richiedere configurazioni complesse </td>
+</tr>
+</tbody></table>
+<p>&nbsp; </p>
+<h1> Tipologie di rete </h1>
+<table> 
+<tbody><tr>
+<th>  NOME </th>
+<th> IMG </th>
+<th> DESCRIZIONE </th>
+<th> VANTAGGI E SVANTAGGI </th>
+</tr>
+<tr>
+<td> LAN </td>
+<td><img src="lan.jpg"></td>
+<td> è una rete informatica di collegamento tra più computer, estendibile anche a dispositivi periferici condivisi, che copre un'area limitata, come un'abitazione, una scuola, un'azienda o un complesso di edifici adiacenti</td>
+<td> </td> 
+</tr>
+<tr>
+<td> MAN </td>
+<td><img src="man.jpg"></td>
+<td> La Metropolitan Area Network (MAN) (spesso detta in italiano rete in area metropolitana o più semplicemente rete metropolitana) è una tipologia di rete di telecomunicazioni con un'estensione limitata a perimetro metropolitano. L'interconnessione di più MAN dà vita a reti WAN. </td> 
+<td><h2>Vantaggi</h2>Consente di condividere risorse aziendali anche tra sedi diverse<br>E' una rete sicura <h2>Svantaggi</h2>E' una rete complicata e costosa<br> Non e' sempre possibile realizzarla </td>
+</tr>
+<tr>
+<td> CAN </td>
+<td><img src="can.jpg"</td>
+<td>Serve per collegare diverse unità di controllo elettronico (ECU)</td>
+<td><h2>Vantaggi</h2>normalmente piu' sicura di una lan<br>consente la condivisione di risorse aziendali senza accesso ad internet<h2>Svantaggi</h2>normalmente piu' costosa delle altre<br>piu' complessa delle altre</td>
+</tr>
+<tr>
+<td> WAN </td>
+<td><img src="wan.jpg"></td>
+<td>La rete di comunicazione geografica, in sigla WAN (dall'acronimo inglese "Wide Area Network"), anche abbreviata in rete geografica, e' una tipologia di rete di computer che si contraddistingue per avere un'estensione territoriale pari a una o più regioni geografiche (quindi superiore sia a quella della rete locale che a quella della rete metropolitana) </td>
+<td><h2>Vantaggi</h2>Consente di realizzare una rete parallela <br> E' una rete sicura<h2>Svantaggi</h2>Ha dei costi proibitivi<br>E' una rete complicata da relizzare e da gestire </td>
+</tr>
+<tr>
+<td> WLAN </td>
+<td><img src="wlan.jpg"></td>
+<td>In informatica e telecomunicazioni il termine wireless (dall'inglese senza fili) indica una comunicazione tra dispositivi elettronici che non fa uso di cavi. Per estensione sono detti wireless i rispettivi sistemi o dispositivi di comunicazione che implementano tale modalità di comunicazione. I sistemi tradizionali basati su connessioni cablate sono invece detti wired. </td>
+<td><h2>Vantaggi</h2>E' una rete che si basa sul uso di componenti wi-fi<br>E' una rete semplice da realizzare e gestire<h2>Svantaggi</h2>E' la rete piu' facile da realizzare<br>E' una rete poco sicuro</td>
+</tr>
+</tbody></table>
+</body></html>

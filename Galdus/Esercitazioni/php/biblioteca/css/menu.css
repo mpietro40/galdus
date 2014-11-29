@@ -1,0 +1,72 @@
+#cssmenu ul,
+#cssmenu li,
+#cssmenu span,
+#cssmenu a {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+#cssmenu .has-sub {
+  z-index: 1;
+}
+#cssmenu .has-sub:hover > ul {
+  display: block;
+}
+#cssmenu .has-sub ul {
+  display: none;
+  position: absolute;
+  width: 180px;
+  top: 100%;
+  left: 0;
+}
+#cssmenu .has-sub ul li {
+  *margin-bottom: -1px;
+    width: 180px;
+}
+#cssmenu .has-sub ul li a {
+  border-bottom: 1px dotted #ec6f73;
+  filter: none;
+  font-size: 12px;
+  display: block;
+  line-height: 100%;
+  padding: 10px;
+  width: 160px;
+  background: transparent url('http://galdusmaffi.tk/images/menu_o/off.gif') repeat-x top left;
+}
+
+  #cssmenu ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  position: relative;
+  display: block;
+  height: 36px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  background: transparent url('http://galdusmaffi.tk/images/menu_o/off.gif') repeat-x top left;
+  font-family: Helvetica, Arial, Verdana, sans-serif;
+  border-bottom: 4px solid #FF9900;
+  border-top: 1px solid #FFCC33;
+  width: auto;
+}
+#cssmenu li {
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+#cssmenu li a {
+  display: block;
+  float: left;
+  color: #6d7078;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 20px 0 20px;
+  height: 24px;
+  background: transparent url('http://galdusmaffi.tk/images/menu_o/divider.gif') no-repeat top right;
+}
+#cssmenu li a:hover {
+  background: transparent url('http://galdusmaffi.tk/images/menu_o/hover.gif') no-repeat top right;
+  color: #ed1722;
+}

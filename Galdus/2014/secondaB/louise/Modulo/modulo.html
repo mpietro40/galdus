@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+<title>Modulo Dati</title>
+<style>
+body{
+background-color:lightgreen;
+}
+div{
+margin:auto;
+border:dotted 2px darkgreen;
+}
+h1{
+color:orange;
+}
+.centrato{
+margin:auto;
+width:65%;
+}
+#meta{
+width:70%;
+margin:auto;
+text-align:center;
+}
+#trenta{
+height:35px;
+}
+tr{
+border:solid 1px green;
+}
+</style>
+</head>
+<body>
+<div class="centrato">
+<h1>Esempio di modulo inserimento dati</h1>
+<form action="http://mp1979.altervista.org/querystring.php" method="get">
+<table>
+<tr id "trenta">
+<td width=100>Nome</td>
+<td><input type="text" name="Nome"/></td>
+</tr>
+
+<tr id="trenta">
+<td>Cognome</td>
+<td><input type="text" name="cognome"/></td>
+</tr>
+
+<tr id="trenta">
+<td>Data di nascita</td>
+<td><input type="text" name="data"/></td>
+</tr>
+
+<tr id="trenta">
+<td>Sesso</td>
+<td>
+<input type="radio" name="Sesso" value="M">Maschio</input>
+&nbsp;&nbsp;
+<input type="radio" name="Sesso" value="F">Female</input>
+</td>
+</tr>
+
+<tr id="trenta">
+<td>Provincia</td>
+<td>
+<select name="provincia">
+<option value="AR">Arezzo</option>
+<option value="FI">Firenze</option>
+<option value="GR">Grosseto</option>
+<option value="LI">Livorno</option>
+<option value="LU">Lucca</option>
+<option value="MI">Milano</option>
+<option value="MS">Massa-Carrara</option>
+<option value="PC">Piacenza</option>
+<option value="PI">Pisa</option>
+<option value="PS">Pistoia</option>
+<option value="PO">Prato</option>
+<option value="SI">Siena</option>
+</select>
+</td>
+</tr>
+
+<tr id="trenta">
+<td>Interessa</td>
+<td>
+<input type="checkbox" name="interesse1"
+value="musica">Musica</input>
+<input type="checkbox" name="interesse2"
+value="sport">Sport</input>
+<input type="checkbox" name="intresse3"
+value="cinema">Cinema</input>
+</td>
+</tr>
+
+<tr>
+<td>Commenti</td>
+<td>
+<textarea name="commenti" cols="48" rows="18">
+scrivi qui in commento...</textarea>
+</td>
+</tr>
+<tr id="trenta">
+<td>
+</td>
+<td id="meta">
+<input type="reset" value="Cacella"/>
+<input type="submit" value="Invia">
+</td>
+</tr>
+</table>
+
+</form>
+</body>
+</html>

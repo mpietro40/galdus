@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Classificazione delle reti in base alla topologia</title>
+<style>
+body{
+ background:#F4ED7C;
+ font-family:verdana;
+ font-size:18px;
+ color:blue;
+}
+#contenuto{
+  align:center;
+  width:800px;
+}
+</style>
+</head>
+<body>
+<div id=contenuto>
+<h1>
+Classificazione in base alla topologia
+</h1>
+Due sono le topologie principali, in base alla tecnologia assunta come modalità per il trasferimento
+dei dati: reti punto a punto e reti broadcast.
+Le reti punto a punto (point-to-point) consistono in un insieme di collegamenti tra coppie di
+elaboratori, che formano grafi di vario tipo (stella, anello, albero, grafo completo, anelli secanti
+ecc.). Per passare da una sorgente ad una destinazione, l'informazione deve attraversare diversi
+elaboratori intermedi. La strada che i dati devono seguire per arrivare correttamente a destinazione,
+è data dai protocolli di routing. Il routing è l'insieme delle problematiche relative al corretto ed
+efficace instradamento sulla rete dei dati.
+Le reti broadcast invece sono formate da un unico mezzo fisico condiviso da più elaboratori, dove i
+messaggi inviati da un elaboratore vengono ricevuti da tutti gli altri. All'interno del messaggio vi è
+una parte relativa all'indirizzo del destinatario, in modo che tutte le altre macchine in ascolto
+possano scartare il messaggio in arrivo. Alcune reti prevedono indirizzi speciali di tipo broadcast e
+multicast. Il broadcast permette di inviare messaggi a tutte le stazioni collegate al mezzo fisico,
+mentre il multicast permette di farlo solo ad un gruppo di stazioni, ma non a tutte. Un esempio di
+una tale rete è la comunissima Ethernet.
+Le moderne reti broadcast sono realizzate con una topologia fisica a stella (point-to-point), in cui
+tutti gli elaboratori sono connessi ad un punto di concentrazione, dove un apparato attivo (switch o
+hub) crea l'illusione che siano tutti connessi allo stesso mezzo fisico. Talvolta si usa definire questi
+apparati centrostella, appunto perché si trovano al centro della rete a stella.
+</div>
+</body>
+</html>

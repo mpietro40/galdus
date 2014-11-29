@@ -1,0 +1,69 @@
+/* Jomari don't copy*/
+
+#sfondo {
+	background-size: 100%;
+	background-attachment:fixed;
+	background-image: url("sfondo.jpg")
+
+}
+body{
+color:white;
+}
+
+h1{
+color:red;
+}
+
+#div{
+font-size:14;
+font-weight:bold;
+}
+
+#diverror{
+font-size:14;
+font-weight:bold;
+overflow:auto;
+height:600px;
+}
+
+#fondo {
+font-size: 85%;
+text-align: center;
+margin-top: 250px;
+float: top;
+}
+
+h3{
+color:blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Jomari don' copy */

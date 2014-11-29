@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="Gerald Joshua" CONTENT="Lavoro"> 
+<title> Gerald.Chillax.D </title>
+<link rel="stylesheet" href="CSS/mio.css" type="text/css" />
+
+</head>
+<body>
+<div class=centrato>
+
+</div>
+<div class="centrato">
+<div id="navigation">
+			<ul>
+            		<li><a href="Home.html"> Home </a></li>  
+                <li><a href="page1.html"> NAS </a></li>
+                <li><a href="page2.html"> SAN </a></li>
+                <li><a href="page3.html"> Differenza Tra NAS è SAN </a></li>
+                <li><a href="page4.html"> ISO </a></li>
+                <li><a href="page5.html"> ANSI</a></li>
+                <li><a href="page6.html"> IEEE</a></li>
+                 
+			</ul>
+	</div>    
+  
+<br>
+
+</h1>
+<br>
+<u> <h1> ISO/OSI </h1> </u>
+<br>
+<div class="contenuto5">
+<br>
+Nei primi anni '80 fu sviluppato un modello di riferimento per le reti detto Open Systems Interconnection, ovvero un insieme di indicazioni e di regole non in possesso esclusivo di alcuna organizzazione ma di pubblico dominio.
+
+Il modello OSI riprende una precedente proposta dell'ISO (International Organization for Standardization), quindi l'acronimo utilizzato è ISO/OSI.
+Il modello ISO/OSI suddivide la progettazione di una rete in sette livelli funzionali separati, detti Layer, oguno dei quali ha proprie caratteristiche e si occupa di un particolare aspetto del protocollo di comunicazione. Ogni livello utilizza i servizi del layer sottostante in modo trasparente, (ovvero senza conoscere il funzionamento interno) e fornisce i propri servizi a quello superiore. Ogni livello di un nodo comunca virtualmente con l'equivalente livello dell'altro nodo, anche se solo i layer più bassi (livello Fisico) sono realmente in contatto tra loro.
+Il modello ISO/OSI (che attualmente è solo un riferimento per il progetto di una rete, non una struttura da applicare rigorosamente) definisce esclusivamente quali sono le funzioni di ogni livello, senza indicare le tecnologie di costruzione. <br>
+
+Livello Fisico
+Il layer fisico si occupa di trasmettere i dati sui canali di comunicazione e comprende i dispositivi Hardware necessari alle connesioni, nonché la definizione delle grandezze fisiche utilizzate e delle regole di handshaking. Fanno parte di questo livello le tecnologie RS232, Ethernet, Token Ring e i protocolli dei modem.
+
+Livello di Linea
+Il Data-Link layer raggruppa i dati ricevuti dal network layer in strutture di bit (dette frame) compatibili con il livello fisico, e viceversa. Inoltre si occupa delle operazioni di verifica ed eventuali correzioni degli errori presenti nel protocollo. Fanno parte del Layer Data-Link i protocolli BSC e HDLC.
+
+Livello di Rete
+Il Network Layer determina il modo in cui i frame vengono instradati dal trasmettitore al ricevitore, (routing dei dati) ricercando i percorsi migliori (non solo dal punto di vista delle distanze) all'interno della rete con particolari Algoritmi di Instradamento; il livello, in tal modo, controlla l'intero percorso dei messaggi dal trasmettitore al ricevitore. Gli algoritmi di Instradamento sono di tipo Statico (basano le proprie scelte su informazioni memorizzate in un archivio, solo periodicamente aggiornato) o Dinamico (utilizzano misure e stime del traffico sulla rete, in modo da instradare i dati sui percorsi che di volta in volta sembrano più promettenti).
+Il Network Layer fornisce al livello superiore (trasporto) una connessione end-to-end tra i due elaboratori coinvolti nello scambio dei dati. Compito del Network Layer è anche la misurazione del traffico attraverso i singoli tratti attraversati.
+
+Livello Trasporto
+Il Transport Layer provvede al trasferimento dei messaggi sulla rete (senza che gli utenti, ovvero i livelli superiori, debbano essere a conoscenza della sua struttura) procedendo in tre fasi:
+1.   realizzazione della connessione
+2.  trasferimento dei dati
+3.  rimozione della connessione.
+La connessione è generalmente riservata per tutta la durata della comunicazione (commutazione di circuito), ma il livello può dividere il messaggio in pacchetti da inoltrare con percorsi distinti (commutazione di pacchetto).
+
+Livello Sessione
+Ogni volta che un utente si collega alla rete, deve generalmente effettuare il Login (cioè fornire Account e Password): ogni singolo Login viene anche chiamato Sessione di lavoro, e dura fino alla disconnessione dell'utente dalla rete.
+Per ogni Login il Session Layer si occupa di negoziare tra i due nodi e fissare i parametri del colloquio (velocità, controllo, errori, tipo di trasferimento simplex, half-duplex o full-duplex, ecc..) ed in seguito di verifcare che questi parametri siano ancora ottimali, modificandoli in caso contrario.
+
+Livello Presentazione
+Il Presentation Layer determina il modo con cui le informazioni appaiono all'utente, controllandone la sintassi e la semantica, cioè eseguendo conversioni di codici e di formati da un sistema operativo all'altro.
+Compito del sesto livello è anche di crittografare eventualmente i messaggi per motivi di sicurezza.
+
+Livello Applicazioni
+L'Application Layer si occupa di fornire agli utenti il mezzo per accedere alle reti, funzionando da interfaccia tra il sistema informativo e il mondo reale. Alcune delle funzioni fornite sono:
+* Trasferimento file tra nodi.
+* Gestione di messaggi (come la posta elettronica).
+* Scambio risultati tra programmi (Applicazioni Client-Server).
+* Visualizzazioni di pagine informative.
+<br>
+<br>
+</div>
+</body>
+</html>

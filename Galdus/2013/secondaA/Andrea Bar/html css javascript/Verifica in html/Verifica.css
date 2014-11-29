@@ -1,0 +1,14 @@
+p { text-align: center; }
+h2 { text-align: center; }
+table { text-align: center;
+border-collapse:collapse;
+margin: auto;}
+table, td, th
+{
+border:2px solid black;
+}
+th
+{
+background-color:silver;
+color:black;
+} 

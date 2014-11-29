@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="css/jhef.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Flux Slider Demo &#0187; Hardware accelerated image transitions using CSS3</title>
+		<!--[if lte IE 8]>
+ 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" href="css/demo.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		
+		<!-- Use Zepto for best performance on WebKit based browser -->
+		<!-- <script src="js/zepto/zepto.js" type="text/javascript" charset="utf-8"></script> -->
+		
+		<!-- Use jQuery for best compatibility with other CSS3 enabled browsers -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script src="js/flux.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" charset="utf-8">
+			$(function(){
+				if(!flux.browser.supportsTransitions)
+					alert("Flux Slider requires a browser that supports CSS3 transitions");
+					
+				window.f = new flux.slider('#slider', {
+					pagination: true
+				});
+			});
+		</script>
+	</head>
+	<body>
+
+<div id="topribbon">
+<div id="wrapper">
+<div id="masthead">
+
+	<div id="top"> 
+			
+		<div class="date-stamp">
+			<span class="day">31 </span>
+			<span class="mony"> Mar  </span>
+			<span class="dname"> 2014 </span>
+		</div>
+		
+		<h1 class="logo"><a href="index1.html" title="JSciko">Il Mio Stage</a></h1>
+		
+		
+	</div>
+	
+	<div id="botmenu">
+		<div id="submenu" class="menu-menu-ciko-container"><ul id="menu-menu-ciko" class="sfmenu"><li id="menu-item-561" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-561"><a href="index.html">Home</a></li>
+<li id="menu-item-563" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-563"><a href="index1.html">Dove era?</a></li>
+<li id="menu-item-261" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-261"><a href="pagina2.html">Cosa mi è piaciuto?</a></li>
+<li id="menu-item-445" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-445"><a href="pagina3.html">Cosa non mi è piaciuto?</a></li>
+<li id="menu-item-445" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-445"><a href="pagina4.html">Cosa avrei avrei voluto fare?</a></li>
+<li id="menu-item-445" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-445"><a href="pagina5.html">Rullino Fotografico</a></li>
+</ul></div>		<div id="search">
+	<form method="get" id="searchform" action="index1.html" >
+	<input id="s"  type="text" name="s" onfocus="if(this.value=='search site'){this.value=''};" onblur="if(this.value==''){this.value='Cerca sul sito'};" value="" />
+	<input id="searchsubmit" type="submit" value="" />
+	</form>
+</div>
+<div class='clear'></div>	
+	
+	</div>
+
+	<section class="container">
+			
+			<div id="slider">
+				<img src="images/finestage.jpg" alt="Prestare Attenzione" width=750 height=900/>
+				<img src="images/img1.jpg" alt="" />
+				<img src="images/img2.jpg" alt="" />
+				<img src="images/img3.jpg" alt="" />
+			</div>
+			
+		</section>
+	</body>
+</html>

@@ -1,0 +1,67 @@
+body{
+  color:#00FFFF;
+  background:url("../img/aaa.jpg");
+}
+h1{ 
+  font-size:20px;
+  text-align:center;
+} 
+div.centrato{
+   text-align:center;
+}
+
+table.centrata{
+  margin-left:auto;
+  margin-right:auto;
+}
+table, td { 
+  border: solid 3px white;
+}
+table { 
+  border-collapse: collapse; 
+}
+table{
+  text-align:center;
+}
+
+#cssmenu ul {
+  list-style-type:none;
+  width:auto;
+  position:relative;
+  display:block;
+  height:33px;
+  font-size:.6em;
+  background: #76B3F1 url(../img/wer.jpg) repeat-x top left;
+  font-family:Verdana,Helvetica,Arial,sans-serif;
+  border:1px solid #000;
+  margin:0;
+  padding:0;
+}
+
+#cssmenu li {
+  display:block;
+  float:left;
+  margin:0;
+  padding:0;
+}
+
+#cssmenu li a {
+  float:left;
+  color:#A79787;
+  text-decoration:none;
+  height:24px;
+  padding:9px 15px 0;
+  font-weight:normal;
+}
+
+#cssmenu li a:hover,.current {
+  color:#fff;
+  background: #000000 url(../img/guitar.jpg) repeat-x top left;
+  text-decoration:none;
+}
+
+#cssmenu .current a {
+  color:#fff;
+  font-weight:700;
+}
+/* Start http://www.cursors-4u.com */ body, a:hover {cursor: url(http://cur.cursors-4u.net/cursors/cur-1/cur1.ani), url(http://cur.cursors-4u.net/cursors/cur-1/cur1.png), progress !important;} /* End http://www.cursors-4u.com */

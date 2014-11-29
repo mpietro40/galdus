@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>alessio canfora</title>
+<script>
+var dimensione= 10;
+function aumenta(valore){ 
+if(valore==2){
+dimensione=dimensione +10;
+document.getElementById("pagina").style.fontSize=dimensione+"px";
+}
+if(valore==1) {
+dimensione=dimensione -10;
+document.getElementById("pagina").style.fontSize=dimensione+"px";
+}
+}
+function colora(scelta){
+if(scelta==1){
+document.getElementById("pagina").style.backgroundColor="red";
+document.getElementById("pagina").style.color="orange";
+}
+if(scelta==2){
+document.getElementById("pagina").style.backgroundColor="yellow";
+document.getElementById("pagina").style.color="lime";
+}
+if(scelta==3){
+document.getElementById("pagina").style.backgroundColor="lime";
+document.getElementById("pagina").style.color="red";
+}
+}
+</script>
+
+<style>
+body{ /*background: black;*/
+}
+body{
+color:blue
+}
+body{
+background:#000000;
+}
+table,td{
+border: solid 3px blue ;
+color:blue
+}
+table{
+border-collapse:collapse;
+}
+</style>
+</head>
+
+<body id=pagina>
+<div id= "telaio">
+<div id="testata"></div>
+<div id="centrale"><p>&nbsp;</p>
+
+<h1>i tablet</H1>
+
+                                    
+<table border="1" >
+<tr>
+<td>Il tablet PC (lett. PC tavoletta) è un computer portatile che grazie alla presenza di uno o più digitalizzatori (digitizers, in inglese) permette all'utente di interfacciarsi con il sistema direttamente sullo schermo mediante una penna e, in particolari modelli, anche le dita. Il tablet PC è di fatto un normale Personal Computer portatile con capacità di input diverse.
+
+Il termine "tablet PC" è diventato popolare dal 2000 a seguito della presentazione da parte di Bill Gates di una serie di dispositivi che rispondevano a particolari specifiche Microsoft[1][2] ma al momento attuale con questo termine si riferisce a ogni tablet PC indifferentemente dal sistema operativo utilizzato[3]. Se utilizzato con la maiuscola (Tablet PC), il termine è generalmente utilizzato per indicare i tablet PC che rispondono a particolari specifiche Microsoft e che permettono all'utente, grazie alle funzionalità integrate in diversi sistemi operativi Windows, l'utilizzo di inchiostro digitale e del riconoscimento della scrittura.
+    <br>
+
+</td>
+
+</tr>
+<tr>
+<td>
+<img src="img/ipad3.jpg">
+<a href="pagina2.html">ipad 3</a>
+</td>
+
+</tr>
+
+<tr>
+<td>
+<img src="img/SA.JPG">
+<a href='pagina3.html'>samsung galaxy tab</a>
+</tr>
+
+<tr>
+<td>Pagina di Alessio Canfora fatta il 3 ottobre 2012</td>
+
+
+</tr>
+</table>
+
+<input name=red value=red type=button onclick="colora(1);">
+<input name=yellow value=yellow type=button onclick="colora(2);">
+<input name=green value=green type=button onclick="colora(3)";>
+<input type=Button name="<" value="<" onclick="aumenta(1)";>
+<input type=Button name=">" value=">" onclick="aumenta(2)";>
+</body>
+</html> 

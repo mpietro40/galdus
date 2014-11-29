@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>jacopo caretti</title>
+<style type="text/css">
+table, td
+{
+border: solid 1px black;
+}
+table
+{
+border-collapse:collapse;
+}
+</style>
+<script language=javascript>
+function esegui(scelta) 
+{
+alert ("colore" +scelta);
+if(scelta==1)
+document.bgColor="#ff0000";
+
+if(scelta==2)
+document.bgColor="#0000ff";
+
+if(scelta==3)
+document.bgColor="#008800";
+}
+</script>
+</head>
+<body>
+<table>
+<tr>
+<td>abcdefg</td>
+<td>hijklmno</td>
+</tr>
+<tr>
+<td>pqrst</td>
+<td>uvxyz</td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form>
+<input type="button" name="red" value="red" onclick="esegui(1);">
+<input type="button" name="blue" value="blue" onclick="esegui(2);">
+<input type="button" name="green" value="green" onclick="esegui(3);">
+<p>testo in corsivo</p>
+</body>
+</html>

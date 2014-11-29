@@ -1,0 +1,21 @@
+
+header{background-color:#272737;color: #FFCC00}
+h1,h2{margin: 0;padding:0}
+h1{padding-left:10px;font: bold 2.3em/80px; text-align:center}
+h2{color: #AD6003;font-size: 1.5em}
+footer a{color:#fff;font-weight: bold;text-decoration: underline}
+
+/*stili specifici per il layout*/
+nav{float: left;width: 220px;;padding: 1em 0 0 5px}
+aside{float: right;width: 170px;;padding: 1em 5px}
+section{margin:0 200px 10px 230px;padding: 1em 10px;background-color: #ADD23D;height:95%;}
+footer{clear:both; text-align:center; padding: 5px 0;
+    background-color: #272737; color: #606060}
+
+/*stili per la navigazione*/
+nav ul{margin: 0;padding: 0; list-style-type: none}
+nav li{margin: 0;padding: 0}
+nav a{color:#196003;font: normal bold 1.2em/1.4em text-decoration: none}
+nav a:hover{color: #AD6003;text-decoration: underline}
+nav a#activelink{color: #196003;text-decoration: none}
+nav p{font-size: 90%}

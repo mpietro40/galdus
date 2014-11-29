@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>questionario sull'uso dell'energia</title>
+<style>
+body{ 
+background:MEDIUMSEAGREEN;
+color:LIGHTSKYBLUE;
+/*text-align:center;*/
+}
+ table, td,th {
+ border: solid 2px blue;
+ color:AQUA;
+ }
+ table{
+ border-collapse:collapse;
+ }
+
+ .testorosso{
+ font-weight:bold;
+ color:red;
+ text-aling:left;
+ }
+  .testoverde{
+ font-weight:bold;
+ color:green;
+ text-aling:left;
+ }
+ table.center {margin:auto;
+ }
+.sinistra{
+text-aling:left;
+}
+h1{
+text-align:center;
+}
+</style>
+</head>
+
+
+<body>
+<form method='get' action='http://maffi.eu5.org/Galdus/Test/test.php'>
+<h1>QUESTIONARIO SULL'USO DELL'ENERGIA</h1>
+<table class="center">
+<tr> <th>sesso</th> <td><select name='sesso'> <!-- [size='45'] [onchange='gestore(...)'] -->
+<option value = 'z' ></option>
+<option value = 'm' >Maschio</option>
+<option value = 'f' >Femmina</option>
+</select>
+</td>
+<tr class=sinistra> <th>elettrodomestici posseduti</th>
+<td><input type="checkbox" name="vehicle" value="lavatrice">lavatrice<br>
+<input type="checkbox" name="vehicle" value="tv">tv<br>
+<input type="checkbox" name="vehicle" value="lavstovielie">lavastovilie<br>
+<input type="checkbox" name="vehicle" value="computer">computer<br>
+<input type="checkbox" name="vehicle" value="console">console ps3<br>
+<input type="checkbox" name="vehicle" value="microonde">microonde<br>
+<input type="checkbox" name="vehicle" value="foon">foon<br>
+<input type="checkbox" name="vehicle" value="dvd">dvd<br>
+<input type="checkbox" name="vehicle" value="frigo">frigo<br>
+</td>
+<tr> <th>riscaldamento</th> <td>
+<input type="radio" name="riscaldamento" value="centralizzato"> centralizzato<br>
+<input type="radio" name="riscaldamento" value="privatizzato" > privatizzato<br>
+<tr> <th>descrizione riscaldamento</th> <td><textarea></textarea></td>
+<tr> <th>indirizzo</th> <td><input type=text></td>
+<tr> <th colspan=2><input type=submit value='invia dati'>
+<input type=reset value='annulla'>
+</th> </tr>
+</td>
+</table>
+</form>
+</body>
+</html> 
+

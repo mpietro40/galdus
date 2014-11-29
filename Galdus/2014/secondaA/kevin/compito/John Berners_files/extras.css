@@ -1,0 +1,140 @@
+/*
+	Additional CSS definitions used on both the front end and CMS.
+
+	This also contains the Ajax error handling CSS.
+
+	v1.02 - Password strength-o-meter.
+	v1.01 - Initial version.
+*/
+
+/*** Generic text colors ***/
+.green { color:#00964D; }
+.amber { color:#F99115; }
+.red { color:#FF0000; }
+.grey { color:#C0C0C0; }
+
+
+/*** No script ***/
+.noscript {
+	border: 4px solid #FF0000;
+	color:#FF0000;
+	background-color:#FFF;
+	font-weight:bold;
+	padding:8px;
+	text-align:center;
+}
+.noscript p {
+	font-size:1.2em !important;
+	color:#FF0000 !important;
+}
+
+
+/*** Password strength-o-meter ***/
+div.passwordstrength {
+	width:320px;
+	height:16px;
+	background-color:#EEE;
+	text-align:center;
+	color:#FFF;
+	font-weight:bold;
+	border:1px solid #000;
+}
+
+div.passwordstrength span.passwordstrengthsegment1 {
+	display:block;
+	float:left;
+	width:80px;
+	height:16px;	
+	background-color:#FF0000;
+}
+
+div.passwordstrength span.passwordstrengthsegment2 {
+	display:block;
+	float:left;
+	width:80px;
+	height:16px;	
+	background-color:#F99115;
+}
+
+div.passwordstrength span.passwordstrengthsegment3 {
+	display:block;
+	float:left;
+	width:80px;
+	height:16px;	
+	background-color:#ffd625;
+}
+
+div.passwordstrength span.passwordstrengthsegment4 {
+	display:block;
+	float:left;
+	width:80px;
+	height:16px;	
+	background-color:#00964D;
+}
+
+
+/*** Maintenance mode ***/
+.maintenance {
+	background-color:#DC4557;
+	color:#FFF;
+	padding:6px;
+	font-weight:bold;
+	font-size:1.2em;
+	text-align:center;
+	border:4px solid #D6263B;
+}
+
+
+/*** Ajax failure related ***/
+#ajaxoverlay {
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:90;
+	width:100%;
+	height:500px;
+	background-color:#000;
+	filter:alpha(opacity=50);
+	opacity:0.5;
+}
+
+body >#ajaxoverlay{
+	position:fixed;
+	top:0;
+	left:0;
+} 
+
+#ajaxmodalmessage {
+	color:#000;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:100;
+	height:200px;
+	width:400px;
+	background-color:#FFF;
+	border:2px solid #000;
+	padding:0px;
+	margin:0px;
+	background-image:url(/images/cms/error_dialog.jpg);
+	background-position:top left;
+	background-repeat:no-repeat;
+	overflow:hidden;
+}
+
+#ajaxmodalmessage h1 {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:18px
+}
+
+#ajaxmodalmessage p {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+#ajaxmodalmessage span {
+	font-weight:bold;
+	text-decoration:underline;
+	color:#000000;
+	cursor:pointer;
+}

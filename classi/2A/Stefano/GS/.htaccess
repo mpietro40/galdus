@@ -1,0 +1,18 @@
+AddDefaultCharset UTF-8
+Options -Indexes
+
+# blocks direct access to the XML files - they hold all the data!
+<Files ~ "\.xml$">
+</Files>
+<Files sitemap.xml>
+</Files>
+
+RewriteEngine on
+
+# Usually it RewriteBase is just '/', but 
+# replace it with your subdirectory path
+RewriteBase /GS/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule /?([A-Za-z0-9_-]+)/?$ index.php?id=$1 [QSA,L]

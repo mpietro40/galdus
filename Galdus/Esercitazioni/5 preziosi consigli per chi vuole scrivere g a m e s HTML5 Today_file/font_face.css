@@ -1,0 +1,27 @@
+@font-face {
+	font-family: EnigmaticRegular;
+	src:url(Enigma__2-webfont.eot?) format("eot"), url(Enigma__2-webfont.woff) format("woff"), url(Enigma__2-webfont.ttf) format("truetype"), url(Enigma__2-webfont.svg#webfontQ7zAMGTP) format("svg");
+}
+@font-face {
+	font-family: EnigmaticItalic;
+	src:url(Enigma_2i-webfont.eot?) format("eot"), url(Enigma_2i-webfont.woff) format("woff"), url(Enigma_2i-webfont.ttf) format("truetype"), url(Enigma_2i-webfont.svg#webfontDwA7PyAQ) format("svg");
+}
+@font-face {
+	font-family: EnigmaticBold;
+	src:url(EnigmaB_2-webfont.eot?) format("eot"), url(EnigmaB_2-webfont.woff) format("woff"), url(EnigmaB_2-webfont.ttf) format("truetype"), url(EnigmaB_2-webfont.svg#webfontuvI74Fbp) format("svg");
+}
+@font-face {
+	font-family: RedOctoberRegular;
+	src:url(red_october-regular-webfont.eot);
+}
+@font-face {
+	font-family: RedOctoberRegular;
+	src:url(webfont/red_october-regular-webfont.eot);
+}
+@font-face {
+	font-family: Droid Serif;
+}
+@font-face {
+	font-family: ArvoRegular;
+	src:url(Arvo-Regular-webfont.eot?) format("eot"), url(Arvo-Regular-webfont.woff) format("woff"), url(Arvo-Regular-webfont.ttf) format("truetype"), url(Arvo-Regular-webfont.svg#webfontomnSZCTO) format("svg");
+}

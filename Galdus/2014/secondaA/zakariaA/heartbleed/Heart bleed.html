@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="Pagina 1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="Pagina2.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" href="Pagina3.css" type="text/css" charset="utf-8" />
+	<link rel="stylesheet" href="Pagina4.css" type="text/css" charset="utf-8" />
+
+	<style type="text/css">
+		body{
+			font-family: 'belligerent_madnessregular';
+			}
+		
+	</style>
+
+	<title>Singola pagina con menu</title>
+	
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function() {
+			$('#container').easyTabs({defaultContent:1});
+		});
+	</script>
+</head>
+
+<body>
+<img src="heartbleed.png" />
+<div id="container">
+	<div id="header">
+		Heart bleed</div>
+	<ul class="tabs">
+		<li><a href="#specimen">Cos'è</a></li>
+		<li><a href="#layout">Contromisure</a></li>
+		
+	</ul>
+	
+	<div id="main_content">
+
+		
+		<div id="specimen">
+		    <img src="heartbleed1.jpg" />
+	        Cos'è
+		    Heartbleed è un bug di sicurezza che si trova nella libreria crittografica open-source, OpenSSL, ampiamente utilizzata per implementare il protocollo Transport Layer Security.
+			<br>
+			Heartbleed è registrato nel sistema Common Vulnerabilities and Exposures con il codice CVE-2014-0160.
+			<br>
+			Questa vulnerabilità è dovuta dall'assenza di controlli nella gestione dell'estensione heartbeat del protocollo TLS. Una versione corretta di OpenSSL è stata rilasciata il 7 Aprile 2014, mentre la notizia della vulnerabilità veniva diffusa.
+            <br>
+   		    Prima del 7 Aprile, si stima che circa il 17% ovvero mezzo milione di server web sicuri, certificati da autorità fidate, siano stati vulnerabili all'attacco, permettendo il furto delle chiavi private del server e delle password e cookie degli utenti.
+			<br>
+			Il giorno della notizia, il Tor Project ha consigliato a chiunque cerchi forte anonimato o privacy, di non utilizzare Internet per alcuni giorni, finché la situazione non si sia ristabilita.
+			<br>
+            Stando alle dichiarazioni della Electronic Frontier Foundation il bug avrebbe causato molti meno danni se la maggior parte dei siti avesse supportato la perfect forward secrecy, in quanto le sessioni precedenti ad un attacco Heartbleed, sarebbero rimaste indecifrabili.
+			<br>
+			La Free Software Foundation ha fatto notare che è stato possibile individuare e correggere la vulnerabilità solo grazie al fatto che OpenSSL è FOSS, ed ha dichiarato che il software libero è fondamentale per garantire il corretto funzionamento dell'intera rete Internet.
+			<br>
+			La notizia di tale bug pur essendo emersa nel 2014, era stata già scoperta dalla NSA nel 2012, la quale avrebbe sfruttato tale falla per controllare criminali e terroristi.
+            <br>
+			<img src="Heartbleed2.jpg" />
+			<br>
+            Oltre alle comunicazioni software anche la veicolazione hardware può aver subito l'influenza di tale vulnerabilità, in particolar modo i router, alcuni produttori hanno dichiarato come alcuni hardware di loro produzione siano affetti da questo problema e che potrebbe essere necessario la loro sostituzione
+			Il Bug Heartbleed è una grave vulnerabilità nel popolare OpenSSL libreria software di crittografia.
+            <br>
+			Questa debolezza permette di rubare le informazioni protette, in condizioni normali, dalla crittografia SSL / TLS utilizzato per fissare il Internet. 
+			<br>
+			SSL / TLS fornisce la sicurezza della comunicazione e privacy su Internet per applicazioni quali web, email, instant messaging (IM) e alcune reti private virtuali (VPN).
+			<br>
+            Il bug Heartbleed consente a chiunque su Internet per leggere la memoria dei sistemi protetti dalle versioni vulnerabili del software OpenSSL. 
+            <br>
+            Questo compromette le chiavi segrete utilizzate per identificare i fornitori di servizi e per crittografare il traffico, i nomi e le password degli utenti e il contenuto effettivo. 
+            <br>
+            Ciò consente agli aggressori di spiare le comunicazioni, rubare dati direttamente dai servizi e utenti e di impersonare servizi e degli utenti.
+            <br>
+		</div>
+				
+		<div id="layout">
+		    <img src="OpenSLL.jpg" />
+			<br>
+			Contromisure
+			Finché la versione vulnerabile di OpenSSL è in uso può essere abusato. 
+			<br>
+			fisso OpenSSL è stato rilasciato e ora deve essere distribuito. 
+			<br>
+			Fornitori di sistemi operativi e la distribuzione, venditori di elettrodomestici, fornitori di software indipendenti devono adottare la correzione e informare i loro utenti. 
+			<br>
+			Fornitori di servizi e gli utenti devono installare la correzione come diventa disponibile per i sistemi operativi, dispositivi di rete e software che utilizzano.
+			Come fare a capire se il vostro server virtuale VPS Linux necessita di essere patchato?
+			<br>
+			Verifichiamolo qui:
+            <br>
+            Eseguite l’accesso via shell al vostro VPS Digitate il comando “openssl version” e premete invio.
+			<br>
+			Se il vostro server virtuale linux restituirà in output una delle versioni affette dal bug, occorrerà porvi rimedio con una patch Se disponete di un VPS Linux full managed, sicuramente il vostro provider avrà già provveduto ad eseguire le opportune verifiche di sistema e ad eventualmente applicare la patch necessaria.
+			<br>
+			<img src="OpenSSL1.jpg" />
+			<br>
+            Bisognerebbe modificare la password dei propri servizi (posta elettronica, sito della banca, etc) periodicamente e senza usare password mnemoniche (nome del cane, del figlio, date di nascita, etc) perchè più facili da intercettare.
+			<br>
+			Perciò seguite queste semplici regole:
+            <br>
+		    Lunghezza minima: 8 caratteri alfanumerici
+			<br>
+            Utilizzare almeno un carattere MAIUSCOLO
+            <br>
+            Utilizzare almeno un carattere MINUSCOLO
+            <br>
+            Utilizzare almeno un carattere speciale tra cui #, $. %, &, etc
+            <br>
+            Ricordate che la sicurezza del vostro server virtuale VPS Linux è importante.
+            <br>
+			
+		</div>
+
+    	</div>
+	<div id="footer">
+		<p>&copy;2014 Anouaf Zakaria.</p>
+	</div>
+</div>
+<img src="heartbleed1.png" />
+</body>
+</html>

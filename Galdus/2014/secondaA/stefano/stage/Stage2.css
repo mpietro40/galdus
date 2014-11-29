@@ -1,0 +1,19 @@
+#menu ul {list-style-type:none; /* Nessuno stile applicato alla lista */
+margin: 2px;
+padding:0;
+}
+#menu li {
+border-bottom: 1px solid #696969;
+margin: 0px;
+padding: 0px;
+width: 140px;
+}
+#menu a {
+text-decoration:none; /* Nessuna decorazione */
+color:#fff; /* Colore Link */
+background:#909090; /* Colore sfondo */
+padding:3px; /* Distanza tra gli elementi */
+display: block;
+}
+#menu a:hover {background:#007fff; /* Sfondo */
+}

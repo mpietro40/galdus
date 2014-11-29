@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang"it">
+<head>
+<style type="text/css">
+body{
+text-align:center;
+}
+#div1 {
+width:500px;
+height:300px;
+padding-left:10px;
+padding-top:80px;
+background-image:url(scheda.jpg);
+background-repeat:no-repeat;
+}
+#drag2{
+width:190px;
+height:190px;
+
+}
+</style>
+<script>
+function permettiTrascinamento (ev)
+{
+ev.preventDefault ();
+}
+function trascina (ev)
+{
+ev.dataTransfer.setData("text",ev.target.id);
+}
+function rilascia (ev)
+{
+ev.preventDefault ();
+var data=ev.dataTransfer.getData("text");
+ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+<h2>Trascina gli elementi verso la scheda madre</h2>
+<table align="center">
+<tr>
+<td><div id="div1" ondrop="rilascia(event)"
+ondragover="permettiTrascinamento(event)"></div></td>
+</tr>
+</table>
+<img id="drag1" src="schedaaudio.jpg" draggable="true"
+ondragstart="trascina(event)">
+<img id="drag2" src="schedavideo.jpg" draggable="true"
+ondragstart="trascina(event)">
+<img id="drag3" src="harddisck.jpg" draggable="true"
+ondragstart="trascina(event)">
+</body>
+</html>
+

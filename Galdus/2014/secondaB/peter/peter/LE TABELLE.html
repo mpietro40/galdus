@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>LE TABELLE</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<link rel='stylesheet' href='3colonneColorGaldus.css' type='text/css' />
+<link rel="stylesheet" href="menu_style.css" type="text/css" />
+
+<style>
+
+
+/*cambio stile menu verticale specifico per la pagina */
+div#navigation a{
+font-size:12px;
+color:#ADD23D;
+font-weight: bold; 
+text-decoration: none
+}
+</style>
+<script language="javascript" src="/js/js.js"></script>
+</head>
+<body>
+<div id="container">
+<div id="header">
+<h1>peter mosaad</h1>
+</div>
+<div id="navigation">
+<table border=0 cellspacing=7 align="center">
+<tr><td>
+<a href="introduzione.html" target="main" >
+<img src="image/introduzione.jpg" border="0" align="middle" width="136" height="37" alt="introduzione"></a>
+</td></tr>
+<tr><td>
+<a href="iltesto.html" target="main" >
+<img src="image/iltesto.jpg" border="0" align="middle" width="135" height="36" alt="iltesto"></a>
+</td></tr>
+<tr><td>
+<a href="hyperlink.html" target="main" >
+<img src="image/hyperlink.jpg" border="0" align="middle" width="135" height="36" alt="hyperlink"></a>
+ </td></tr>
+<tr><td>
+<a href="liste.html" target="main">
+<img src="image/liste.jpg" border="0" align="middle" width="136" height="37" alt="liste"></a>
+ </td></tr>
+<tr><td>
+<a href="tabelle.html" target="main">
+<img src="image/tabelle.jpg" border="0" align="middle" width="136" height="37" alt="tabelle"></a>
+ </td></tr>
+<tr><td>
+<a href="mappe.html" target="main">
+<img src="image/mappe.jpg" border="0" align="middle" width="136" height="37" alt="mappe"></a>
+ </td></tr>
+<tr><td>
+<a href="frame.html" target="main">
+<img src="image/frame.jpg" border="0" align="middle" width="136" height="37" alt="frame"></a>
+ </td></tr>
+<tr><td>
+<a href="forms.html" target="main">
+<img src="image/form.jpg" border="0" align="middle" width="134" height="36" alt="forms"></a>
+ </td></tr>
+<tr><td>
+<a href="css.html" target="main">
+<img src="image/css.jpg" border="0" align="middle" width="136" height="37" alt="css"></a>
+ </td></tr>
+<!-- <tr><td>
+<a href="tag.html" target="main">
+<img src="image/tag.jpg" border="0" align="middle" width="136" height="37" alt="tag"></a>
+ </td></tr>
+<tr><td>
+<a href="bibliografia.html" target="main">
+<img src="image/bibliografia.jpg" border="0" align="middle" width="134" height="35" alt="bibliografia"></a>
+ </td></tr>
+<tr><td>
+<a href="../tesi.pdf" target="main">
+<img src="image/download.jpg" border="0" align="middle" width="134" height="36" alt="tesi"></a>
+</td></tr> -->
+<tr><td>
+<p><a href="elenco.php" target="new" style="font-size:10px;color:green;font-weight:bold;">elenco file</a>  </p>
+</td></tr>
+</table>
+
+
+</div>
+</div>
+<div id="content">
+<img src="image/intestazione.jpg" align="right" height="52"
+ width="461" alt=""><br>
+
+<h2>TABELLE</h2>
+<p>Le tabelle, insieme ai frame, permettomo di strutturare il documento in modo tale da renderne pi&ugrave; facile la consultazione.
+Con il tag: </p>
+<pre>&lt;table&gt;</pre>
+<p>e i relativi attributi &egrave; possibile costruire tabelle
+organizzate in righe e colonne, del tutto simili a quelle degli editor
+di testo o dei fogli elettronici.<br>
+</p>
+<p>Per inserire le righe che compongono la tabella si usa il tag
+<tt>&lt;tr&gt;</tt> (Table Row); all' interno
+dell'elemento riga, per ciascuna colonna si ripete il tag <tt>&lt;td&gt; ... &lt;/td&gt;</tt> .<br>
+</p>
+<p>Per creare celle con il testo in grassetto si usa il tag <tt>&lt;th&gt;</tt> (Table Header) al posto di <tt>&lt;td&gt;</tt>
+.<br>
+</p>
+<h3>Esempio</h3>
+<pre>&lt;html&gt;<br>&lt;head&gt;<br>&lt;title&gt;Le Tabelle&lt;/title&gt; <br>&lt;head&gt;
+&lt;body&gt;<br>&lt;table border&gt; <br>        &lt;tr&gt;<br>                &lt;td&gt;uno&lt;/td&gt;&lt;td&gt;due&lt;/td&gt;<br>        &lt;/tr&gt;<br>        &lt;tr&gt;<br>                &lt;td&gt;tre&lt;/td&gt;&lt;td&gt;quattro&lt;/td&gt;<br>        &lt;/tr&gt;<br>        &lt;tr&gt;<br>                &lt;td&gt;cinque&lt;/td&gt;&lt;td&gt;sei&lt;/td&gt;&lt;td&gt;otto&lt;/td&gt;<br>        &lt;/tr&gt;<br>&lt;/table&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;  <br></pre>
+<center> <a href="tabelle.html#punto1"
+ onclick="window.open('./esempi/sette.html','', config='toolbar=1,menubar=1,scrollbars=1,resizable=1,width=600 ,height=500,  ' )"><img
+ src="image/risultato.jpg" border="0" height="35" width="135" alt=""></a></center>
+<hr style="width: 100%; height: 2px;">
+<h3>Attributi di tabella</h3>
+<pre>&lt;table [align="center" | "left" | "right"] [border ="n"] <br>[cellpadding="n"]  [width="nn%"] [cellspacing="n"]&gt; ...&lt;/table&gt;<br> </pre>
+<p>Con l'attributo BORDER possiamo assegnare lo spessore del bordo,
+specificato da un numero: BORDER="2". Tale valore si applica solo al
+bordo esterno: se si omette l'attributo la tabella non avr&agrave;
+bordo.<br>
+</p>
+<p>Con l'attributo ALIGN si specifica l'allineamento della tabella.<br>
+</p>
+<p>Per ottenere bordi interni pi&ugrave; spessi, &egrave; necessario
+associare a TABLE l'attributo CELLSPACING seguito dal valore numerico
+desiderato.<br>
+<br>
+Per dare pi&ugrave; spazio al testo all'interno di una singola cella
+si usa CELLPADDING, seguito dal valore numerico desiderato.<br>
+</p>
+<p> Con le Netscape Extensions possiamo inserire un valore di larghezza
+percentuale rispetto alla larghezza della pagina visualizzata dal
+browser, si realizza con WIDTH=80%. <br>
+</p>
+<hr style="width: 100%; height: 2px;">
+<h3>Attributi di riga</h3>
+<pre>&lt;tr [align="left" | "center" | "right"] <br>[valign="top" |"center" | "bottom"] &gt; ... &lt;/tr&gt;<br></pre>
+<p>Le righe possono essere allineate sia orizzontalmente che
+verticalmente.</p>
+<hr style="width: 100%; height: 2px;">
+<h3>Attributi di cella<br>
+</h3>
+<pre>&lt;td [align="left" | "center" | "right"] <br>[valign="top" |"center" | "bottom"] [nowrap]<br> [colspan=n] [rowspan=n]&gt; ... &lt;/td&gt;<br></pre>
+<p>E' possibile variare il numero di celle in ogni singola riga, usando l'attributo COLSPAN seguito dal numero di colonne
+desiderato.</p>
+<p>Anche l'altezza delle righe pu&ograve; essere variata tramite
+l'attributo ROWSPAN seguito dal
+numero di righe desiderato.<br>
+</p>
+<a name="punto2"></a>
+<hr style="width: 100%; height: 2px;">
+<h3>Esempio</h3>
+<pre>&lt;html&gt;<br>&lt;head&gt;<br>&lt;title&gt;Le Tabelle&lt;/title&gt; <br>&lt;body&gt;<br> <br>&lt;table border="2"&gt; <br>        &lt;tr&gt;<br>                &lt;td colspan="3" align="center"&gt;uno&lt;/td&gt; <br>        &lt;/tr&gt;<br>        &lt;tr&gt;<br>                &lt;td&gt;tre&lt;/td&gt;&lt;td&gt;quattro&lt;/td&gt;&lt;td&gt;cinque&lt;/td&gt;<br>        &lt;/tr&gt;<br>        &lt;tr&gt;<br>                &lt;td&gt;sei&lt;/td&gt;&lt;td&gt;sette&lt;/td&gt;&lt;td&gt;otto&lt;/td&gt;<br>        &lt;/tr&gt;<br>&lt;/table&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;  <br></pre>
+<center> <a href="tabelle.html#punto2"
+ onclick="window.open('./esempi/otto.html','', config='toolbar=1,menubar=1,scrollbars=1,resizable=1,width=600 ,height=500,  ' )"><img
+ src="image/risultato.jpg" border="0" height="35" width="135" alt=""></a></center>
+<a name="punto3"></a>
+<hr style="width: 100%; height: 2px;">
+<h3>Esempio riassuntivo</h3>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Le Tabelle&lt;/title&gt;
+&lt;body&gt;
+&lt;table border="2" align="center" cellpadding="4" cellspacing="4"&gt;
+    &lt;tr&gt;
+        &lt;th colspan="3" align="center"&gt;orizzontale&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th rowspan="2"&gt;verticale&lt;/th&gt;
+        &lt;td&gt;quattro&lt;/td&gt;&lt;td&gt;cinque&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;sei&lt;/td&gt;&lt;td&gt;sette&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;
+</pre>
+<center> <a href="tabelle.html#punto3"
+ onclick="window.open('./esempi/nove.html','', config='toolbar=1,menubar=1,scrollbars=1,resizable=1,width=600 ,height=500,  ' )"><img
+ src="image/risultato.jpg" border="0" height="35" width="135" alt=""></a></center>
+<hr>
+
+<h3> Altri elementi per le tabelle </h3>
+<p>Per inserire una didascalia sopra la tabella:</p>
+<pre>&lt;caption&gt;descrizione...&lt;/caption&gt; </pre>
+<p>deve essere inserito subito sotto il tag &lt;table&gt; .</p>
+<p>Le righe possono essere raggruppate in una delle seguenti sezioni:</p>
+<pre>&lt;thead&gt;   &lt;/thead&gt; </pre>
+<pre>&lt;tfoot&gt;   &lt;/tfoot&gt; </pre>
+<pre>&lt;tbody&gt;   &lt;/tbody&gt; </pre>
+<p>Sono utili per tabelle molto ampie che si estendono su pi&ugrave;
+pagine. Le sezioni comprese in tfoot e thead vengono automaticamente
+riprodotte in ogni pagina, mentre della sezione compresa in tbody viene
+fatto lo scrolling.</p>
+<p>Si possono raggruppare logicamente le colonne di una tabella e
+assegnare uno spessore predefinito:</p>
+<pre> &lt;colgroup [span="n"] [width="n"]&gt;...&lt;/colgroup&gt; </pre>
+<p>span indica il numero di colonne nel gruppo.<br>
+E' possibile anche assegnare ad una colonna attributi individuali: </p>
+<pre> &lt;col [span="n"] [width="n"]&gt;...&lt;/col&gt; </pre>
+<br>
+<br>
+<br>
+<table align="center" border="0">
+  <tbody>
+    <tr>
+      <td> <a href="liste.html" target="main"><img
+ src="image/precedente.jpg" border="0" height="34" width="135" alt=""></a></td>
+      <td> <a href="tabelle.html#inizio" target="main"><img
+ src="image/inizio.jpg" border="0" height="33" width="135" alt=""></a></td>
+      <td> <a href="mappe.html" target="main"><img
+ src="image/successiva.jpg" border="0" height="34" width="135" alt=""></a></td>
+    </tr>
+
+
+&agrave;
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>	
+<br>
+</div>
+<div id="footer"><!-- Begin Shinystat code -->
+<script type="text/javascript" src="http://codice.shinystat.com/cgi-bin/getcod.cgi?USER=galdusmaffi"></script>
+<noscript>
+<a href="http://www.shinystat.com" target="_top">
+<img src="http://www.shinystat.com/cgi-bin/shinystat.cgi?USER=galdusmaffi" alt="Free hit counter" border="0" /></a>
+</noscript>
+<!-- End Shinystat code -->
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+</div>
+
+</body>
+</html>

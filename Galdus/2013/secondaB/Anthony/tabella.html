@@ -1,0 +1,74 @@
+<!Doctype html>
+<head>
+<title ="anthony briones"> </title>
+<style>
+body{ 
+background:#000000;
+color:yellow;
+}
+ table, td,th {
+ border: solid 1px orange;
+ color:white;
+ }
+ table{
+ border-collapse:collapse;
+ }
+ </style>
+<script language=javascript>
+function colora(scelta){
+if(scelta==1){
+document.getElementById('pagina').style.backgroundColor='red';
+document.getElementById('pagina').style.color='white';
+}
+if(scelta==2){
+document.getElementById('pagina').style.backgroundColor='blue';
+document.getElementById('pagina').style.color='pink';
+}
+if(scelta==3){
+document.getElementById('pagina').style.backgroundColor='green';
+document.getElementById('pagina').style.color='grey';
+}
+}
+var dimensione=10;
+function aumenta (valore) {
+if(valore==1){
+dimensione=dimensione+10;
+document.getElementById('pagina').style.fontSize=dimensione+'px';
+}
+if(valore==2){dimensione=dimensione-10;
+document.getElementById('pagina').style.fontSize=dimensione+'px';
+}
+} 
+</script>
+</head>
+<body id=pagina>
+anthony briones
+<table>
+<tr>
+<td> NOME</td>
+<td> COGNOME </td>
+<td> E-MAIL </td>
+<td> CELL </td>
+<td> FB </td>
+<td> FOTO </td>
+</tr>
+<tr>
+<td> ANTHONY </td>
+<td> BRIONES </td>
+<td> .... </td>
+<td> .... </td>
+<td> .... </td>
+<td> $_$ </td>
+
+</tr>
+</table>
+<input name="<" value="<" type="Button" onclick='aumenta(2)';>
+<input name="red" value="red" type="button" onclick="colora(1)";>
+<input name="blue" value="blue" type="button" onclick="colora(2)";>
+<input name="green" value="green" type="button" onclick="colora(3)";>
+<input name=">" value=">" type="Button"  onclick='aumenta(1)';>
+
+</body>
+</html>
+
+	

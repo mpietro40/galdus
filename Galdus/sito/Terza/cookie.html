@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+  <!-- ATTENZIONE DA INSERIRE PER EVITARE CHE LA PAGINA SIA CACHATA -->
+  <meta http-equiv="Cache-Control" content="no-cache"/>
+  <meta http-equiv="Expires" content="Mon, 07 May 2012 12:00:00 GMT"/>
+  
+  <title>Cambio immagine con javascript</title>
+
+<script type="text/javascript">
+function getCookie(c_name)
+{
+var i,x,y,ARRcookies=document.cookie.split(";");
+for (i=0;i<ARRcookies.length;i++)
+  {
+  x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+  y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+  x=x.replace(/^\s+|\s+$/g,"");
+  if (x==c_name)
+    {
+    return unescape(y);
+    }
+  }
+}
+
+/*Funzione che setta il valore del cookie da mettere in tutte le pagine dove voglio inserire qualcosa*/
+function setCookie(c_name,value,exdays)
+{
+var exdate=new Date();
+exdate.setDate(exdate.getDate() + exdays);
+var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+document.cookie=c_name + "=" + c_value;
+}
+
+/*Funzione che legge il valore del cookie da mettere nella pagina dove devo leggere*/
+function checkCookie() {
+var pag1=getCookie("pagina1");
+var pag2=getCookie("pagina2");
+var pag3=getCookie("pagina3");
+if (pag1!=null && pag1!="")  {
+  movepic("pagina1",'images/visited.jpg');
+  }
+if (pag2!=null && pag2!="") {
+  movepic("pagina2",'images/visited.jpg');
+  }
+
+if (pag3!=null && pag3!="")  {
+  movepic("pagina3",'images/visited.jpg');
+  }
+ 
+
+}
+function movepic(img_name,img_src) {
+  document[img_name].src=img_src;
+  }
+
+
+</script>
+</head>
+<body onload="checkCookie()">
+<div class="banner0">
+</div>
+<div class="contenuto0">
+In questa pagina voglio far vedere come sia possibile grazia a javascript, modificare alcune caratteristiche
+della pagina una volta che l'utente fa alcune azioni.
+ <p>&nbsp;</p>
+<img name="pagina1" src="images/freccino_in.jpg" alt="" border="0"><a href="setcookie1.html">primo link</a> <p>
+<img name="pagina2" src="images/freccino_in.jpg" alt="" border="0"><a href="setcookie2.html">secondo link</a> <p>
+<img name="pagina3" src="images/freccino_in.jpg" alt="" border="0"><a href="setcookie3.html">terzo link</a> <p>
+</div>
+</body>
+</html>

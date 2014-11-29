@@ -1,0 +1,10 @@
+body {
+color:"green";
+font-family:"comic Sans MS";
+ 
+font-size:11px;
+}
+body{ background: url(images/sfondo.jpg);
+ background-repeat: no-repeat;
+ background-color: black;
+height=1}

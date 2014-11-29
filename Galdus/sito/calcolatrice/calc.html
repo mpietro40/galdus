@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+  <title>Esempio di pagina con funzioni JavaScript</title>
+  <style>
+  body{
+    background-color:#9ACD32;
+    font-size:14px;
+    color:#DF7401;
+    text-align:center;
+
+  }
+  .centrato{
+    margin:0 auto;
+  }
+  label{
+    color:#B45F04;
+    text-decoration:underline;
+    font-weight:900;
+    width:200px;
+  }
+  </style>
+  <script language="JavaScript">
+/* precaricamento immagini
+  var operaz = new Array();
+  operaz[0] = new Image();
+  operaz[0].src = "blank.jpg";
+  operaz[1] = new Image();
+  operaz[1].src = "piu.jpg";
+  operaz[2] = new Image();
+  operaz[2].src = "meno.jpg";
+  operaz[3] = new Image();
+  operaz[3].src = "per.jpg";
+  operaz[4] = new Image();
+  operaz[4].src = "diviso.jpg";
+*/
+// Calcolo risultato operazione aritmetica
+
+function calcola1(){
+
+//alert("entrato");
+var indice = document.f1.op.selectedIndex;
+var segno = document.f1.op[document.f1.op.selectedIndex].value;
+var n1 = eval(document.f1.num1.value);
+var n2 = eval(document.f1.num2.value);
+//alert(segno);
+if(segno=="+")
+document.f1.risu.value = n1+n2;
+else if(segno=="-")
+document.f1.risu.value = n1-n2;
+else if(segno=="*")
+document.f1.risu.value = n1*n2;
+else if(segno=="/")
+document.f1.risu.value = n1/n2;
+
+/*switch (indice){
+case 1:
+document.f1.risultato.value = n1 + n2;
+break;
+case 2:
+document.f1.risultato.value = n1 - n2;
+break;
+case 3:
+document.f1.risultato.value = n1 * n2;
+break;
+case 4:
+document.f1.risultato.value = n1 / n2;
+break;
+
+}
+*/
+
+//document.simbolo.src = operaz[indice].src;
+
+}
+</script>
+</head>
+<body>
+<div class='centrato'><h1>Esempio calcoli aritmetici</h1></div>
+<div class='centrato'>
+<!--img src="blank.jpg" name="simbolo" alt="simbolo operazione" width="46" height="46" border="0" -->
+<form name="f1">
+
+<br>
+
+<h2> Primo modo con css e html </h2>
+<label>Primo numero: </label>
+<input type="text" name="num1" size="5">
+<br>
+<label>Secondo numero: </label>
+<input type="text" name="num2" size="5">
+<br>
+<label>Scegli l'operazione: </label>
+<select name="op">
+<option></option>
+<option value="+">Addizione</option>
+<option value="-">Sottrazione</option>
+<option value="*">Moltiplicazione</option>
+<option value="/">Divisione</option>
+</select>
+<br>
+<label>Risultato</label>
+<input type="text" name="risu" size="5">
+<br>
+<input type="reset" value="Azzera"> &nbsp;
+<input type="button" value="Calcola" onClick="calcola1()">
+</form>
+<hr>
+
+<script type="text/javascript">
+   var data = new Date();
+   document.write("Oggi e' "+data);
+</script>
+
+</body>
+</html>

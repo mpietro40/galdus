@@ -1,0 +1,1899 @@
+<!doctype html>
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="Template"
+content="C:\PROGRAMMI\MICROSOFT OFFICE\OFFICE\html.dot">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>Il protocollo HTTP</title>
+</head>
+
+<body background="http.gif">
+
+<p><a name="p1"></a><b>1 Introduzione</b></p>
+
+<p>Un protocollo è un insieme di regole che
+permettono di trovare uno standard di comunicazione tra diversi
+computer attraverso la rete, dove per rete si intende un insieme
+di due o più computer connessi tra di loro ed in grado di
+condividere informazioni. Quando due o più computer comunicano
+tra di loro si scambiano una serie di informazioni. Per potersi
+scambiare informazioni, i vari computer devono avere dei
+protocolli che permettano di attribuire ad un determinato comando
+un significato univoco per tutte le macchine.</p>
+
+<p>Un protocollo descrive: </p>
+
+<p>&#149;&nbsp;il formato che il messaggio deve
+avere </p>
+
+<p>&#149;&nbsp;il modo in cui i computers devono
+scambiarsi messaggi </p>
+
+<p>Ogni protocollo viene riferito ad una
+particolare attività, come ad esempio spedire messaggi
+attraverso la rete, stabilire connessioni remote, oppure
+trasferire files.</p>
+
+<p>Pensiamo ad un messaggio di posta elettronica.
+Sia il formato del messaggio, sia il modo in cui viaggia
+attraverso la rete sono governati da un protocollo.&nbsp;Il
+protocollo assicura che il messaggio sia formattato e trasmesso
+correttamente dal mittente al destinatario (che in questo caso
+sono computer).</p>
+
+<p>Esiste un protocollo diverso per ogni tipologia
+di servizio di rete. Per esempio la connessione ad Internet è
+basata sulla famiglia di protocolli TCP/IP. </p>
+
+<p>Altri protocolli utilizzati sono: </p>
+
+<p>&#149;&nbsp;Simple Mail Transfer Protocol (SMTP)
+- per la gestione dei messaggi di posta elettronica </p>
+
+<p>&#149;&nbsp;File Transfer Protocol (FTP) - per
+il trasferimento di files tra macchine remote </p>
+
+<p>&#149;&nbsp;Hypertext Transfer Protocol (HTTP)
+- per la trasmissione di informazioni attraverso il WEB </p>
+
+<p>&#149;&nbsp;Network News Transfer Protocol (NNTP)
+- per la gestione dei gruppi di discussione</p>
+
+<p>&#149;Gopher permette un servizio di
+informazione distribuita ed organizzata ad albero, consistente in
+una serie di menu e files interconnessi tra loro </p>
+
+<p>&#149;WAIS - Wide Area Information System -
+permette la ricerca ed il recupero in data base connessi in rete</p>
+
+<p>WWW è interfacciato con un certo numero di
+server che colloquiano attraverso protocolli standard TCP/IP ed
+altri che si servono di standard più ad alto livello come il
+nuovo HTTP (HyperText Transfer Protocol) creato apposta per il
+trasferimento del formato HTML (HyperText Marked Language).&nbsp;</p>
+
+<p>Tutti i clients e servers Web devono essere
+capaci di gestire questo protocollo affinché possano scambiarsi
+i documenti ipermediali, per questa ragione i Web servers sono
+anche chiamati HTTP servers. </p>
+
+<p align="center"><img src="cl-sr.gif" width="539" height="162"></p>
+
+<p>L'HTTP è un protocollo &quot;stateless&quot; (senza
+memoria) che permette sia la ricerca che il recupero dell'informazione
+in maniera veloce, e permette quindi di seguire i rimandi
+ipertestuali . La scelta di un protocollo &quot;stateless&quot;,
+cioè di un protocollo che non &quot;conserva memoria&quot; della
+connessione fatta, è stata necessaria affinché fosse possibile
+saltare velocemente da un server ad un altro attraverso i &quot;links&quot;
+ipertestuali. </p>
+
+<p>HTTP ad ogni richiesta effettua una nuova
+connessione al server che viene chiusa al termine del
+trasferimento dell'oggetto richiesto (pagina HTML, immagine, ecc.).</p>
+
+<p>È gestito da un software (server HTTP)
+residente sugli host che intendono essere fornitori di
+informazioni. Chi vuole accedere alle informazioni fornite dal
+server HTTP deve utilizzare un software client (browser) in grado
+di interpretare le informazioni inviate dal server.</p>
+
+<p>IL SERVER, informalmente, è un programma che
+&quot;gira&quot; in attesa di una richiesta di connessione sul
+suo socket (la porta assegnatagli, tipicamente la 80). Il
+protocollo viene utilizzato da un processo daemon (cioè sempre
+in esecuzione)</p>
+
+<p>Questo protocollo è invocato da TCP/IP ogni
+qualvolta l'URL (che è una stringa che specifica la risorsa a
+cui riferirci) istanziata contiene nel primo campo la parola http.
+I comandi utilizzati per comunicare con esso sono detti Metodi. </p>
+
+<p>Un server WWW ha il compito (potenzialmente
+computazionalmente dispendioso) di rispondere a tutte le
+richieste che giungono dalla rete. Basti pensare che server WWW
+di siti professionali raggiungono facilmente le 300.000 richieste
+al giorno.</p>
+
+<p>Per aumentare l&#146;efficienza si è
+progettato una nuova versione del protocollo HTTP . E&#146; la
+versione 1.1, attualmente in fase di proposizione come standard,
+che permette di utilizzare la stessa connessione TCP/IP per
+effettuare operazioni multiple.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><a name="p2"></a><b>2 Fasi di comunicazione</b></p>
+
+<p><font color="red">L'acquisizione del documento da parte del
+client può essere schematizzata in quattro fasi : </p>
+
+<ul>
+    <li>CONNESSIONE : Il client crea una
+        connessione TCP-IP con il server usando il suo nome di
+        dominio (o il numero IP) ed il numero della porta di
+        trasmissione; se non viene fornito il numero di porta, il
+        protocollo assume per default che il numero sia 80. </li>
+    <li>RICHIESTA DOCUMENTO : Il client invia la
+        richiesta di un documento mediante una riga di caratteri
+        ASCII terminata da una coppia di caratteri CR-LF (Carriage
+        Return, Line Feed). </li>
+    <li>RISPOSTA : La risposta inviata dal server
+        è un messaggio in linguaggio HTML nel quale è contenuto
+        il documento richiesto (o un messaggio d'errore). </li>
+    <li>SCONNESSIONE : Il server subito dopo aver
+        spedito il documento si sconnette. Comunque anche il
+        client può interrompere la connessione in ogni momento,
+        in questo caso il server non registrerà nessuna
+        condizione d'errore.</li>
+</ul>
+</font>
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><a name="p3"></a><b>3 Indirizzi Internet</b></p>
+
+<p>I così detti &quot;indirizzi IP&quot; di
+Internet, ovvero i dati identificativi univoci che tutti gli
+elaboratori collegati a Internet devono avere sono gestiti
+essenzialmente dal protocollo IP. Questi indirizzi sono formati
+da quattro ottetti, ognuno dei quali può rappresentare un numero
+da 0 a 255. Per descriverli non si usa però un numero tra zero e
+quattro miliardi, ma una tecnica diversa: ogni indirizzo è
+indicato con una sequenza di quattro numeri, ognuno
+corrispondente a un ottetto e quindi compreso tra 0 e 255,
+separati da un punto. Per esempio un indirizzo di Internet
+potrebbe essere 10.0.231.32. Questo perché gli indirizzi di
+Internet sono raggruppati, per motivi di gestione, in varie
+classi:</p>
+
+<p>&#149;classi A: sono quelle in cui il primo
+ottetto è compreso tra 0 e 126; </p>
+
+<p>&#149;classi B: i primi due ottetti sono
+compresi tra 128.1 e 191.254; </p>
+
+<p>&#149;classi C: i primi tre ottetti sono
+compresi tra 192.0.1 e 223.255.254; </p>
+
+<p>&#149;classi D: sono quelle compresi tra 224.0.0.0
+e 239.255.255.254: vengono utilizzati per le attività in
+multicasting; </p>
+
+<p>&#149;classi E: sono riservate a
+sperimentazioni di protocolli e non possono essere utilizzati dai
+normali utenti. </p>
+
+<p>Gli indirizzi attualmente in uso sono
+prevalentemente quelli di classe A, B e C. Questi indirizzi non
+sono mai dati singolarmente, ma per motivi di organizzazione di
+rete sono dati in blocchi di indirizzi adiacenti. Per la
+precisione, tutti gli indirizzi di classe A con lo stesso primo
+ottetto appartengono allo stesso ente, e lo stesso per gli
+indirizzi di classe B con i primi due ottetti uguali o per gli
+indirizzi di classe C con tre ottetti uguali. Per esempio, fanno
+parte di uno stesso blocco (di classe A) gli indirizzi da 10.0.0.0
+a 10.255.255.255, gli indirizzi (di classe B) da 137.144.0.0 a
+137.144.255.255 e gli indirizzi (di classe C) da 192.168.32.0 a
+192.168.32.255.</p>
+
+<p>Come detto, il raggruppamento degli indirizzi
+in blocchi è richiesto da esigenze di gestione di Internet;
+infatti in questo modo dagli ottetti iniziali di un indirizzo è
+possibile individuare l'ente proprietario, e questo rende più
+facile tentare di raggiungere l'elaboratore cercato: infatti in
+genere basta raggiungere l'ente proprietario che si occuperà di
+far giungere il messaggio a destinazione. Si ha però la
+sgradevole conseguenza che molti indirizzi rimangono inutilizzati:
+se un ente possiede una classe B con 65 536 indirizzi ma solo 500
+elaboratori, gli altri 65 036 indirizzi non possono essere
+utilizzati da nessun altro.</p>
+
+<p>&nbsp;</p>
+
+<p><a name="p31"></a><b>3.1 Il Dns</b></p>
+
+<p>L'uso degli indirizzi di Internet, ottimale per
+gli elaboratori, è invece piuttosto scomodo per le persone. Da
+questa considerazione è nata l'esigenza di sviluppare un
+meccanismo che permettesse di utilizzare nomi identificativi più
+semplici. Il sistema realizzato è il Domain Name System (Dns),
+che è un servizio distribuito su rete attraverso varie macchine
+server.</p>
+
+<p>L'idea del Dns è semplice: si dà un nome agli
+elaboratori presenti in rete che si vuole raggiungere e si
+predispongono delle macchine in grado di individuare l'indirizzo
+corrispondente al nome dato. Affinché questo meccanismo funzioni
+è necessario che i nomi siano definiti in maniera omogenea. A
+questo scopo è stata definita la struttura dei domini.</p>
+
+<p>Ogni nome di elaboratore su Internet va
+definito come una serie di &quot;parole&quot; separate da punti.
+Queste parole formano una gerarchia: la prima parola individua l'elaboratore,
+la seconda individua la struttura a cui l'elaboratore fa
+riferimento, la terza ancora la struttura che sta sopra e così
+via fino all'ultima parola che rappresenta il dominio di primo
+livello. Per esempio il nome di dominio www.dia.unisa.it dice che
+si tratta dell'elaboratore di nome www, appartenente alla
+struttura dia (dipartimento di informatica e applicazioni), che
+fa riferimento alla struttura unisa (Università di Salerno) che
+fa riferimento a it (Italia).</p>
+
+<p>Ogni macchina in Internet deve far riferimento
+a un suo server Dns. Il server Dns funziona in questo modo: se
+conosce la macchina www.dia.unisa.it ne restituisce l'indirizzo
+IP. Se non la conosce cerca un altro Dns in grado di possedere
+questa informazione. Nell'esempio descritto, volendo raggiungere
+www.dia.unisa.it, il Dns a cui l'elaboratore si rivolge
+innanzitutto verifica se conosce l'indirizzo del Dns del dia.unisa.it.
+Va notato che ogni dominio deve obbligatoriamente avere un Dns
+per poter funzionare in rete. Se il Dns locale conosce il Dns del
+&quot;dia&quot; il problema è risolto. Altrimenti verifica se è
+in grado di raggiungere il Dns di unisa.it e, se nemmeno questo
+è possibile, cerca il Dns del dominio di primo livello it. Dato
+che i domini di primo livello sono in numero limitato e sono
+definiti sulla base di regole internazionali, questi domini sono
+sempre raggiungibili. Da questi Dns si può allora ricostruire la
+catena fino a ottenere l'indirizzo IP della macchina cercata. Una
+volta che l'indirizzo sia noto, si utilizzano i normali
+meccanismi di Internet per comunicare.</p>
+
+<p>Alcuni domini a tre lettere sono:</p>
+
+<ul>
+    <li>com per aziende commerciali; </li>
+    <li>edu per strutture educative americane,
+        soprattutto universitarie. </li>
+    <li>gov per enti governativi americani (per
+        esempio whitehouse.gov); </li>
+    <li>int per enti internazionali (per esempio
+        eu.int è il dominio dell'Europa Unita che probabilmente
+        verrà sostituito da eu); </li>
+    <li>mil per enti militari americani; </li>
+    <li>net per fornitori di reti; </li>
+    <li>org per organizzazioni (per esempio
+        unicode.org).</li>
+</ul>
+
+<p>Alcuni domini a due lettere sono:</p>
+
+<ul>
+    <li>au per l'Australia (l'Austria è &quot;at&quot;);
+        </li>
+    <li>es per la Spagna; </li>
+    <li>de per la Germania; </li>
+    <li>fr per la Francia; </li>
+    <li>it per l'Italia; </li>
+    <li>uk (United Kingdom) per il Regno Unito;</li>
+</ul>
+
+<p>è stato inoltre proposto, per l'Europa unita,
+l'introduzione del nuovo codice a due lettere eu.</p>
+
+<p>&nbsp;</p>
+
+<p><a name="p32"></a><b>3.2 Url, urn e uri</b></p>
+
+<p>&nbsp;In Internet è necessario avere un metodo
+per far riferimento alle varie risorse disponibili. Internet è
+infatti di un sistema client-server in cui ogni cliente utilizza
+le risorse rese disponibili dai vari server. Ogni risorsa
+necessaria deve essere quindi rintracciabile e soprattutto
+descrivibile per poter essere raggiunta. Per raggiungere le varie
+risorse è stato definito, inizialmente nell'ambito del Web, un
+meccanismo basato su apposite descrizioni delle risorse detto url.
+Questo meccanismo si è poi evoluto negli attuali urn e uri.</p>
+
+<p>&nbsp;</p>
+
+<p><a name="p321"></a><b>3.2.1 Url</b></p>
+
+<p>Una url è un Uniform Resource Locator.
+Permette cioè di localizzare le risorse attraverso un metodo
+uniforme. Tutte le url (così come le uri) condividono un'unica
+sintassi: sono formate da un nome di uno schema seguito dai due
+punti e da una descrizione della risorsa. Il modo in cui la
+risorsa è descritta dipende dallo schema. Molti schemi
+condividono la stessa modalità di descrizione della risorsa; in
+questi schemi la risorsa è individuata dalle seguenti parti:</p>
+
+<p>&#149;il nome di un server, sotto forma di una
+descrizione di dominio, preceduto da una doppia barra inclinata
+&quot;//&quot;; </p>
+
+<p>&#149;un percorso che localizza la risorsa sul
+server, eventualmente diviso in più parti separate da una barra
+inclinata &quot;/&quot;; </p>
+
+<p>&#149;il nome della risorsa; </p>
+
+<p>&#149;un eventuale nome di frammento, ovvero di
+una piccola parte della risorsa, preceduto da un diesis &quot;#&quot;;
+</p>
+
+<p>&#149;una eventuale interrogazione (o query)
+relativa alla risorsa, preceduta da un punto interrogativo &quot;?&quot;.
+</p>
+
+<p>Esempio: http://www.dia.unisa.it/glossario/indice.html;
+</p>
+
+<p>Alcuni schemi utilizzano descrizioni diverse.
+Il più importante è quello della posta elettronica, in cui la
+risorsa è individuata dal nome di una mailbox utente, seguito da
+un carattere ad &quot;@&quot;, seguito dal nome del server sotto
+forma di nome di dominio.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><a name="p322"></a><b>3.2.2 Urn e uri</b></p>
+
+<p>Le url non sono sufficienti per gestire tutte
+le situazioni. In particolare le url fanno riferimento a risorse
+che possono dinamicamente cambiare. Per cercare di superare
+questo limite sono state definiti gli urn. Urn significa Uniform
+Resource Name, e di fatto può essere ricondotto a un particolare
+schema, dove il nome dello schema è urn seguito dai due punti e
+da una descrizione dell'urn. </p>
+
+<p>Un uri, infine, o Uniform Resouce Identifier,
+è un identificatore di risorse che può essere o un url o un urn.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><a name="p4"></a><b>4 Come avviene la
+comunicazione su Internet</b></p>
+
+<p>Una volta dati gli indirizzi di Internet
+bisogna avere un protocollo per descrivere come un messaggio può
+essere inviato dall'uno all'altro o, più precisamente, da una
+macchina con un indirizzo a una con un altro. Il protocollo più
+usato che descrive questo meccanismo è il Tcp. I messaggi
+vengono quindi messi in pacchetti in grado di essere trasportati
+su Internet attraverso un percorso definito dai router. Questi
+sono elaboratori che collegano le varie parti di Internet e
+contengono delle informazioni su dove, presumibilmente, potrebbe
+essere un indirizzo di una data classe. Quando arriva loro un
+messaggio, cercano di ritrasmetterlo più o meno verso il
+destinatario (cercando di escludere i percorsi dove già
+viaggiano troppi pacchetti o quelli in cui si hanno degli errori).
+Ogni router, in un'interpretazione ottimale, fa avvicinare il
+messaggio al destinatario fino a quando viene raggiunto un router
+posto sulla stessa rete locale che può quindi far arrivare l'informazione
+alla destinazione finale.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><a name="p5"></a><b>5 Proxy, Gateway e Tunnel&nbsp;</b></p>
+
+<p>Abbiamo detto sopra che l&#146;HTTP è un
+protocollo client/server.</p>
+
+<p>Un cliente manda una richiesta ad un server,
+fornendogli un uri che localizza la risorsa sul server, per poi
+ricevere un risposta da quest&#146;ultimo.</p>
+
+<p>Nel caso più semplice si apre una singola
+connessione attraverso un socket che connette il client (browser)
+con il server http.</p>
+
+<p>Una situazione più complicta avviene quando
+vengono coinvolti&nbsp;:</p>
+
+<ul>
+    <li>Proxy&nbsp;: è un programma che si trova
+        intermediamente tra il client ed il server e simula
+        entrambi. Il client inoltra la richiesta al proxy e
+        questo la invia al server,poi il server inoltra la
+        risposta al proxy e questo la invia al client. Un &quot;transparent
+        proxy&quot; è un proxy che non modifica i dati che gli
+        arrivano, mentre un &quot;non-transparent proxy&quot;
+        modifica le richieste e le risposte aggiungendo loro
+        altre informazioni inerenti al client o al server oppure
+        per una riduzione di protocollo oppure per fungere da
+        filtro. </li>
+    <li>Gateway&nbsp;: è un server che funge da
+        server originario ricevendo la richiesta per poi
+        rispondere. Il client richiedente potrebbe non essere
+        consapevole di stare in comunicazione con un gateway. Il
+        gateway viene utilizzato per interconnettere reti locali
+        diverse in modo da permettere lo scambio di informazioni
+        tra di loro. </li>
+    <li>Tunnel&nbsp;: è un programma
+        intermediario che serve per unire due connessioni senza né
+        cambiare i messaggi né capirli. Si potrebbe immaginarlo
+        come un firewall.</li>
+</ul>
+
+<p>Per ridurre il traffico sulla rete e per
+velocizzare i trasferimenti più frequenti, sono stati introdotti
+i Proxy Server che generalmente supportano una cache memory. I
+dati che attraversano il Proxy server, vengono memorizzati su una
+memoria di massa in modo da poter essere restituiti il più
+rapidamente possibile durante successive richieste identiche. </p>
+
+<p>L'idea alla base del &quot;Caching&quot; é
+semplice: archiviare il documento ricevuto in un file locale per
+usarlo di nuovo, senza che sia necessario riconnettersi al server
+remoto quando quel documento sará nuovamente richiesto.</p>
+
+<p><img src="fig5.gif" width="550" height="229"></p>
+
+<p><i>Caching Proxy: il documento richiesto é ricevuto dal
+server remoto ed archiviato sul Proxy server locale per essere
+poi riutilizzato.</i></p>
+
+<p><img src="fig6.gif" width="534" height="225"></p>
+
+<p><i>se una versione aggiornata del documento richiesto viene
+trovata sulla cache del Proxy server, allora la connessione al
+server remoto non é necessaria. </i></p>
+
+<p>A questo punto ci viene naturale una domanda:
+per quanto tempo si puó tenere un documento nella cache e
+ritenerlo aggiornato? A questo punto interviene il protocollo
+HTTP che nell'header dei pacchetti, che spiegerò successivamente,
+pone diversi campi contenenti informazioni riguardo l'età e la
+data di ultima modifica di un documento.</p>
+
+<p>Le interazioni con i Gateway avvengono mediante
+le specifiche Common Gateway Interface (GCI).</p>
+
+<p align="center"><img src="cgi-sche.jpg"
+width="414" height="293"></p>
+
+<p>&nbsp;</p>
+
+<p><a name="p6"></a><b>6 Messaggi</b></p>
+
+<p>Gli oggetti implicati nella comunicacine client/server
+prendono il nome di messaggi. La richiesta di un client e la
+risposta di un server sono messaggi. Essi sono trasmessi in un
+formato simile a quello usato per le E-mail che prende il nome di
+<em>Multipurpose Internet Mail Extensions </em>(MIME).</p>
+
+<p>Il server deve comunicare al client il tipo
+MIME utilizzato nella risposta e il client deve comunicare,
+attraverso il campo <em>accept, </em>al server quali formati può
+gestire.</p>
+
+<p>Per indicare il tipo di formato MIME utilizzato
+si utilizzano delle estensioni che sono:</p>
+
+<table border="1">
+    <tr>
+        <td><p align="left"><strong><u>Tipo MIME </u></strong></p>
+        </td>
+        <td><strong><u>Estensioni </u></strong></td>
+        <td><strong><u>Descrizione </u></strong></td>
+    </tr>
+    <tr>
+        <td><strong>application/postscript </strong></td>
+        <td><strong>ps eps</strong></td>
+        <td><strong>PostScript. </strong></td>
+    </tr>
+    <tr>
+        <td><strong>application/rtf </strong></td>
+        <td><strong>rtf </strong></td>
+        <td><strong>Rich Text Format. </strong></td>
+    </tr>
+    <tr>
+        <td><strong>application/x-tex </strong></td>
+        <td><strong>tex </strong></td>
+        <td><strong>Documento TeX/LaTeX. </strong></td>
+    </tr>
+    <tr>
+        <td><strong>audio/basic </strong></td>
+        <td><strong>au snd </strong></td>
+        <td><strong>File audio. </strong></td>
+    </tr>
+    <tr>
+        <td><strong>audio/x-wav </strong></td>
+        <td><strong>wav </strong></td>
+        <td><strong>File audio. </strong></td>
+    </tr>
+    <tr>
+        <td><strong>image/gif </strong></td>
+        <td><strong>gif </strong></td>
+        <td><strong>Immagine GIF. </strong></td>
+    </tr>
+    <tr>
+        <td><strong>image/jpeg </strong></td>
+        <td><strong>jpeg jpg </strong></td>
+        <td><strong>Immagine JPEG. </strong></td>
+    </tr>
+    <tr>
+        <td><strong>image/tiff </strong></td>
+        <td><strong>tiff tif </strong></td>
+        <td><strong>Immagine TIFF. </strong></td>
+    </tr>
+    <tr>
+        <td><strong>image/x-xwindowdump </strong></td>
+        <td><strong>xwd </strong></td>
+        <td><strong>Immagine X Window Dump. </strong></td>
+    </tr>
+    <tr>
+        <td><strong>text/html </strong></td>
+        <td><strong>html htm </strong></td>
+        <td><strong>Testo formattato in HTML. </strong></td>
+    </tr>
+    <tr>
+        <td><strong>text/plain </strong></td>
+        <td><strong>txt </strong></td>
+        <td><strong>Testo puro. </strong></td>
+    </tr>
+    <tr>
+        <td><strong>video/mpeg </strong></td>
+        <td><strong>mpeg mpg mpe </strong></td>
+        <td><strong>Animazione MPEG. </strong></td>
+    </tr>
+    <tr>
+        <td><strong>video/quicktime </strong></td>
+        <td><strong>qt mov </strong></td>
+        <td><strong>Animazione Quicktime. </strong></td>
+    </tr>
+</table>
+
+<p>I tipi MIME, come si può ben vedere, sono
+organizzati mediante due parole chiavi separate da una barra
+obliqua. Esse indicano il tipo ed il sottotipo. </p>
+
+<p>&nbsp;</p>
+
+<p><a name="p7"></a><strong>7 </strong><b>Richiesta</b></p>
+
+<p>Una volta che si è instaurata una connessione
+tra il browser ed il server, tramite il protocollo http il client
+effettua la sua richiesta.</p>
+
+<p>In questo protocollo per dare una certa
+formattazione alla richiesta e alla risposta vengono usati dei
+caratteri speciali&nbsp;: CR LF e SP (Carriage Return, Line Feed,
+Space).</p>
+
+<p>La richiesta di un client ha la seguente
+struttura&nbsp;:</p>
+
+<p>Request-Line + </p>
+
+<p>((general header field <i>or </i>request header
+field <i>or </i>entity header field) CRLF) </p>
+
+<p>CRLF </p>
+
+<p>[corpo del messaggio]</p>
+
+<p>Il corpo del messaggio è costituito dai dati
+effettivi da trasmettere: input di programmi o informazioni da
+salvare sul server destinatario per conto del client.</p>
+
+<p>&nbsp;</p>
+
+<p><a name="p71"></a><b>7.1 Request line</b></p>
+
+<p>Ha la seguente struttura&nbsp;:</p>
+
+<p>Metodo SP Request-URI SP Versione-HTTP CRLF</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><a name="p711"></a><b>7.1.1 Metodi</b></p>
+
+<p>I metodi indicano l&#146;operazione che deve
+essere eseguita sulla risorsa identificata dal Request-URI.</p>
+
+<p>Nel campo <i>Metdo</i> della<i> Request-Line</i>
+appare uno solo dei seguenti metodi&nbsp;:</p>
+
+<p>&quot;OPTIONS&quot;, &quot;GET&quot; ,&quot;HEAD&quot;,
+&quot;POST&quot;, &quot;PUT&quot; ,&quot;DELETE&quot; ,&quot;TRACE&quot;,
+&quot;CONNECT&quot;.</p>
+
+<p>IL metodo utilizzato viene riconosciuto dal
+server se è implementato su di esso altrimenti il server
+restituisce un intero che indica la non implementazioe del metodo
+specificato.</p>
+
+<p>Il metodo &quot;GET&quot; è sempre supportato
+da qualsiasi server mentre gli altri sono opzionali.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><a name="p712"></a><b>7.1.2 Request-URI</b></p>
+
+<p>Il Request-URI (Uniform Resource Identifier)
+indica la risorsa su cui applicare la richiesta.</p>
+
+<p>In questo campo può apparire una delle
+seguenti opzioni&nbsp;:</p>
+
+<p>&quot;*&quot;, absoluteUri, AbsolutePath.</p>
+
+<p>L&#146;asterisco &quot;*&quot; indica che la
+richiesta non deve essere applicata ad una particolare risorsa,
+ma al server stesso.</p>
+
+<p>L&#146;absolurìteURI è usato quando la
+richiesta è stata fatta ad un proxy, per questo si indica sia il
+Dns che il path della risorsa.</p>
+
+<p>L&#146;absolutePath invece viene usato per
+inoltrare la richiesta ad un server o ad un gateway.</p>
+
+<p>Esso indica solo il path della risorsa sul
+server originario ed il Dns del server viene scritto nel campo
+&quot;Host&quot; nel <i>Request-header -field</i> .</p>
+
+<p>Si noti che se l&#146;absolute path è vuoto
+gli viene assegnato per defoult lo &quot;/&quot; per indicare la
+root del server.</p>
+
+<p>&nbsp;</p>
+
+<p><a name="p713"></a><b>7.1.3 Versione HTTP</b></p>
+
+<p>Nella comunicazione Client/Server è necessario
+che sia chiaro la versione del protocollo usato per convenire sul
+formato del messaggio.</p>
+
+<p>Nella prima linea del messaggio nel campo HTTP-Version
+field abbiamo&nbsp;:</p>
+
+<p>&quot;HTTP&quot; &quot;/&quot; 1*digit &quot;.&quot;
+1*digit Es.&nbsp;: HTTP/1.1</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><a name="p8"></a><b>8 Risposta</b></p>
+
+<p>Una volta ricevuta la richiesta il server
+risponde con un messaggio di risposta.</p>
+
+<p>Esso ha il seguente formato&nbsp;:</p>
+
+<p>Status-Line +</p>
+
+<p>( (general-header <i>or </i>response-header<i>
+or</i> entity header) CRLF)</p>
+
+<p>CRLF</p>
+
+<p>[ corpo del messaggio ]</p>
+
+<p>Il corpo del messaggio contiene i dati
+effettivamente richiesti dal client: i documenti ipertestuali.</p>
+
+<p>&nbsp;</p>
+
+<p><a name="p81"></a><b>8.1 Status Line</b></p>
+
+<p>Ha la seguente struttura&nbsp;:</p>
+
+<p>Versione-HTTP SP Status-Code SP Reason-Phrase
+CRLF</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><a name="p811"></a><b>8.1.1 Status-Code e
+Reason-Phrase</b></p>
+
+<p>Lo Status-Code è un codice a tre cifre che ha
+la funzione di fornire al client delle informazioni di stato
+riguardo all&#146;esito della ricezione della richiesta.</p>
+
+<p>Associato ad ogni codice abbiamo la &quot;reason-Phrase&quot;
+che è una piccola descrizione del significato del codice
+destinata all&#146;uso umano.</p>
+
+<p>Il primo digit dello Status-Code definisce 5
+classi di risposta, mentre gli ultimi due digit non hanno nessuna
+categorizzazione.</p>
+
+<p>-1xx&nbsp;: Informazione - richiesta ricevuta e
+continuo processo</p>
+
+<p>-2xx&nbsp;: Successo - L&#146;azione è stata
+ricevuta, capita e accettata</p>
+
+<p>-3xx&nbsp;: Ridirezione - C&#146;è bisogno di
+altre informazioni per completare la richiesta</p>
+
+<p>-4xx&nbsp;: Client Error - Errori nella
+richiesta</p>
+
+<p>-5xx. Server Error - Il server fallisce</p>
+
+<p>&nbsp;</p>
+
+<p>Più in dettaglio&nbsp;:</p>
+
+<table border="2" bordercolor="#808080">
+    <tr>
+        <td><strong>CODICE</strong></td>
+        <td><strong>FRASE</strong></td>
+    </tr>
+    <tr>
+        <td>100</td>
+        <td>Continue</td>
+    </tr>
+    <tr>
+        <td>101</td>
+        <td>Switching Protocols</td>
+    </tr>
+    <tr>
+        <td>200</td>
+        <td>OK</td>
+    </tr>
+    <tr>
+        <td>201</td>
+        <td>Created</td>
+    </tr>
+    <tr>
+        <td>202</td>
+        <td>Accepted</td>
+    </tr>
+    <tr>
+        <td>203</td>
+        <td>Non-Authoritative Information</td>
+    </tr>
+    <tr>
+        <td>204</td>
+        <td>No Content</td>
+    </tr>
+    <tr>
+        <td>205</td>
+        <td>Reset Content</td>
+    </tr>
+    <tr>
+        <td>206</td>
+        <td>Partial Content</td>
+    </tr>
+    <tr>
+        <td>300</td>
+        <td>Multiple Choices</td>
+    </tr>
+    <tr>
+        <td>301</td>
+        <td>Moved Permanently</td>
+    </tr>
+    <tr>
+        <td>302</td>
+        <td>Found</td>
+    </tr>
+    <tr>
+        <td>303</td>
+        <td>See Other</td>
+    </tr>
+    <tr>
+        <td>304</td>
+        <td>Not Modified</td>
+    </tr>
+    <tr>
+        <td>305</td>
+        <td>Use Proxy</td>
+    </tr>
+    <tr>
+        <td>307</td>
+        <td>Temporary Redirect</td>
+    </tr>
+    <tr>
+        <td>400</td>
+        <td>Bad Request</td>
+    </tr>
+    <tr>
+        <td>401</td>
+        <td>Unauthorized</td>
+    </tr>
+    <tr>
+        <td>402</td>
+        <td>Payment Required</td>
+    </tr>
+    <tr>
+        <td>403</td>
+        <td>Forbidden</td>
+    </tr>
+    <tr>
+        <td>404</td>
+        <td>Not Found</td>
+    </tr>
+    <tr>
+        <td>405</td>
+        <td>Method Not Allowed</td>
+    </tr>
+    <tr>
+        <td>406 </td>
+        <td>Not Acceptable</td>
+    </tr>
+    <tr>
+        <td>407</td>
+        <td>Proxy Authentication Required</td>
+    </tr>
+    <tr>
+        <td>408</td>
+        <td>Request Time-out</td>
+    </tr>
+    <tr>
+        <td>409</td>
+        <td>Conflict</td>
+    </tr>
+    <tr>
+        <td>410</td>
+        <td>Gone</td>
+    </tr>
+    <tr>
+        <td>411</td>
+        <td>Length Required</td>
+    </tr>
+    <tr>
+        <td>412</td>
+        <td>Precondition Failed</td>
+    </tr>
+    <tr>
+        <td>413</td>
+        <td>Request Entity Too Large</td>
+    </tr>
+    <tr>
+        <td>414</td>
+        <td>Request-URI Too Large</td>
+    </tr>
+    <tr>
+        <td>415</td>
+        <td>Unsupported Media Type</td>
+    </tr>
+    <tr>
+        <td>416</td>
+        <td>Requested range not satisfiable</td>
+    </tr>
+    <tr>
+        <td>417</td>
+        <td>Expectation Failed</td>
+    </tr>
+    <tr>
+        <td>500</td>
+        <td>Internal Server Error</td>
+    </tr>
+    <tr>
+        <td>501</td>
+        <td>Not Implemented</td>
+    </tr>
+    <tr>
+        <td>502</td>
+        <td>Bad Gateway</td>
+    </tr>
+    <tr>
+        <td>503</td>
+        <td>Service Unavailable</td>
+    </tr>
+    <tr>
+        <td>504</td>
+        <td>Gateway Time-out</td>
+    </tr>
+    <tr>
+        <td>505</td>
+        <td>HTTP Version not supported</td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><a name="p9"></a><b>9 Campi del messaggio</b></p>
+
+<p align="center"><img src="preshttp.gif"
+width="572" height="364"></p>
+
+<p>&nbsp;</p>
+
+<p><b>General header field</b></p>
+
+<p>Questi campi sono generali nel senso che sono
+applicabili sia alla richiesta che alla risposta del server. Essi
+vengono applicati solo al messaggio trasmesso&nbsp;:</p>
+
+<p>Cache-control, Connection, Date,Pragma, Trailer,
+Transfer-Encoding, Upgrae, Via, Warning. </p>
+
+<p>&nbsp;</p>
+
+<p><b>Request header field</b></p>
+
+<p>I request-header-field passano al server
+ricevente delle informazioni addizionali inerenti alla richiesta
+ed al client stesso.</p>
+
+<p>Esse sono&nbsp;:</p>
+
+<p>Accept, Accept-charset,Accept-Encoding, Accept-Language,
+Autorization, Expect, From, Host, If-Match, If-Modified-Since, If-None-Match,
+If-Range, If-Unmodified-Since, Max-Forwards, Proxy-Autorization,
+Range, Referer, TE, User-Agent.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;<b>Response header field </b></p>
+
+<p>Questi campi servono per passare al client
+ulteriori informazioni che non possono risiedere nello <i>Status-Code
+</i>.</p>
+
+<p>Essi sono&nbsp;:</p>
+
+<p>Accept-Ranges, Age, Etag, Location, Proxy-Authenticate,
+Retri-After, Server, Vary, WWW-Authenticate.</p>
+
+<p>&nbsp;</p>
+
+<p><b>Entity header field</b></p>
+
+<p>Questi campi danno delle informazioni inerenti
+all&#146;entità da trasferire identificata dalla richiesta&nbsp;:</p>
+
+<p>Allow, Content-Encoding, Content-Language,
+Content-Length, Content-Location, Content-MD5, Content-Range,
+Content-Type,, Expires, Last-Modified, extension-header. </p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><a name="p10"></a><b>10 Definizioni metodi</b></p>
+
+<p>&nbsp;</p>
+
+<p><b><i>OPTION</i></b></p>
+
+<p>Il metodo OPTION rappresenta una richiesta di
+informazioni inerenti alle opzioni di comunicazione disponibili
+sul canale definito dal Request-URI. Queste opzioni sono riferite
+alla risorsa da utilizzare o alle capacità del server.</p>
+
+<p>&nbsp;<b><i>GET</i></b></p>
+
+<p>Il metodo GET tende di recuperare le
+informazioni localizzate dal Request-URI. Se il Request-URI fa
+riferimento ad un processo che produce dati, saranno restituiti
+dalla risposta i dati prodotti da questo processo.</p>
+
+<p>Questo metodo diventa un &quot;GET condizionale&quot;
+se nel messaggio di richiesta ci sono i campi If-Modified-Since,
+If-Unmodified-Since, If-Match, If-None-Match, o If-Range. Quindi
+la risposta sarà limitata solo a ciò che è definito nei campi
+suddetti riducendo l&#146;uso della rete e il traffico di dati
+superflui.</p>
+
+<p>Anche con l&#146;inclusione dei campi del
+&quot;Range header&quot; il metodo riduce il traffico sulla rete
+diventando un &quot;GET parziale&quot;, cioè si richiede solo
+parte dell&#146;entità che può essere trasferita.</p>
+
+<p><b><i>HEAD</i></b></p>
+
+<p>Il metodo HEAD è identico al GET eccetto il
+fatto che il server non deve ritornare il corpo del messaggio.
+Questo metodo è usato per ottenere informazioni inerenti all&#146;entità
+riferita dalla richiesta senza trasferire l&#146;entità stessa.
+Il metodo viene usato spesso per testare links ipertestuali, per
+testare la loro accessibilità e le loro recenti modifiche.</p>
+
+<p><b><i>&nbsp;POST</i></b></p>
+
+<p>Con il metodo POST il client può spedire al
+server una serie di coppie <em>nome=valore </em>che corrispondono
+all'input del programma indicato nella request-URI. Ovviamente il
+programma residente sul server girerà sul server stesso per poi
+restituire l'output sottoforma di risposta.</p>
+
+<p>Questo metodo serve anche a far sì che il
+server accetti l&#146;entità contenuta nella richiesta per
+ampliare la risorsa identificata dal Request-Uri.</p>
+
+<p>Spesso è usato per effettuare annotazioni
+sulle risorse già esistenti o estendere dei database. La
+funzione che deve essere svolta in seguito al metodo POST, è
+determinata dal server.</p>
+
+<p>&nbsp;<b><i>PUT</i></b></p>
+
+<p>Il metodo PUT serve per allocare nuove risorse
+sul server passategli dal client.</p>
+
+<p>Le nuove risorse sono memorizzate in relazione
+al Request-URI. Se una risorsa già esiste in corrispondenza all&#146;URI
+specificato, la nuova risorsa verrà considerata come un
+aggiornamento della prima. Il server restituisce al client delle
+informazioni di stato sempre tramite lo Status-Code.</p>
+
+<p>&nbsp;<b><i>DELETE</i></b></p>
+
+<p>Il metodo DELETE richiede che il server
+ricevente elimini la risorsa specificata dal Request-URI. Il
+client non ha nessuna garanzia che l&#146;operazione vada in
+porto, anche se lo Status-Code restituito indica successo, perché
+il server può eliminare la risorsa oppure la può spostare in
+una locazione inacessibile.</p>
+
+<p><b><i>TRACE</i></b></p>
+
+<p>Il metodo TRACE indica la richiesta di alcuni
+dati sul canale per testare e diagnosticare informazioni. Il
+ricevente può essere sia il server originale che il primo proxy
+o gateway sul canale.</p>
+
+<p><b><i>CONNECT</i></b></p>
+
+<p>In genere questo metodo viene usato per
+instaurare una semplice connessione con un proxy.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><a name="p11"></a><b>11 Definizione header
+field</b></p>
+
+<p><a name="p111"></a><b>11.1 Request header field</b></p>
+
+<p><b><i>Accept</i></b></p>
+
+<p>Questo campo è usato per indicare quei &quot;media-type&quot;
+accettati come risposta, cioè i tipi MIME che il client può
+gestire. I tipi di dati accettati sono specificati in sequenza
+proprio in questo campo. Se la richiesta è priva di questo campo
+significa che il client accetta almeno i tipi MIME text/plain e
+text/html. Se invece il server non può mandare una risposta
+adeguata manda uno Status-Code di 406 (Not acceptable).</p>
+
+<p><b><i>Accept-Charset</i></b></p>
+
+<p>E&#146; identico al campo <i>accept </i>solo
+che inerente ai caratteri.</p>
+
+<p><b><i>Accept-Encoding</i></b></p>
+
+<p>Il &quot;Content-coding&quot; indica un
+processo di codifica che è applicata all&#146;entità (l&#146;oggetto
+che deve essere realmente trasferito). In genere sono processi di
+compressione dati (gzip, compress, ecc.).</p>
+
+<p>L&#146;entità è ricevuta dal client in forma
+codificata e quest&#146;ultimo provvrde a decodificarla. </p>
+
+<p>Il campo specificato agisce esattamente come l&#146;<i>accept</i>
+solo che è in riferimento alle content-codings. Quindi questo
+campo indica i processi di codifica che il client può
+riconoscere nella risposta del server.</p>
+
+<p><b><i>Accept-Language</i></b></p>
+
+<p>Anche questo campo si comporta come l&#146;<i>accept</i>
+solo che è riferito ai linguaggi naturali dedicati all&#146;uso
+umano. Più precisamente indica in quale lingua si deve
+comunicare all&#146;utente del client.</p>
+
+<p><b><i>Autorization</i></b></p>
+
+<p>Se il server necessita di identificare gli
+utenti autorizzati all&#146;accesso ad una particolare risorsa,
+nella richiesta si devono specificare i vari elementi di
+autenticazione utente proprio in questo campo.</p>
+
+<p><b><i>Expect</i></b></p>
+
+<p>Questo campo è utilizzato quando il client
+richiede particolari operazioni al server. Se quest&#146;ultimo
+non le può supportare deve restituire l&#146;appropriato Status-Code.</p>
+
+<p><b><i>From</i></b></p>
+
+<p>Questo campo, se dato, contiene l&#146;indirizzo
+e-mail dell&#146;utnte per usi umani. Potrebbe avere anche dei
+fini non umani come per esempio l&#146;identificazione della
+sorgente in caso di una richiesta invalida oppure non voluta.
+Questo campo non è fornito in una richiesta senza l&#146;approvazione
+dell&#146;utente per fini di privacy.</p>
+
+<p><b><i>Host</i></b></p>
+
+<p>Questo campo specifiva l&#146;Internet Host e
+il numero della porta attraverso la quale comunicare col server.
+L&#146;Host indica il nome del server o del gateway come
+specificato nell&#146;URL. </p>
+
+<p>Host = &quot;Host&quot; &quot;:&quot; host [
+&quot;:&quot; port ] ; </p>
+
+<p>Il campo Host senza la specificazione della
+prta indica la porta di defaul che è l&#146;80. Per esempio&nbsp;:</p>
+
+<p>http://www.w3.org/pub/WWW/</p>
+
+<p>corrisponde a&nbsp;:</p>
+
+<p>GET /pub/WWW/ HTTP/1.1</p>
+
+<p>Host: www.w3.org</p>
+
+<p>Questo campo deve essere sempre specificato
+affinchè la richiesta vada in porto.</p>
+
+<p><b><i>If-Match</i></b></p>
+
+<p>Questo campo contiene alcune etichette da
+applicare all&#146;entità da ottenere per poi permettere al
+client di effettuare dei confronti e riconoscere questa tra le
+altre entità che provengono dalla stessa risorsa.</p>
+
+<p><b><i>&nbsp;If-Modified-Since</i></b></p>
+
+<p>Questo campo contiene una data ed indica al
+serevr di restituire una data risorsa solo se è stata modificata,
+altrimenti non c&#146;è la necessità di una nuova trasmissione.
+In questo caso il server restituisce lo Status Code 304 (not
+modified) senza trasmettere nessun corpo del messaggio.</p>
+
+<p><b><i>If-None-Match</i></b></p>
+
+<p>Questo campo è il contrario di <i>If-Match</i>.
+Il client può verificare che nessuna delle entità ottenute dal
+server facciano parte di quelle specificate in questo campo.</p>
+
+<p><i>If-None-Match </i>può essere associato
+anche al metodo PUT in modo da evitare che il client modifichi
+involontariamente una risorsa sul server.</p>
+
+<p><b><i>If-Range</i></b></p>
+
+<p>Se un client cha una copia parziale di un&#146;entità
+nella propria cache può richiedere la porzione restante dell&#146;entità
+con l&#146;utilizzo del metodo GET unito a questo campo.</p>
+
+<p>Se invece il client sa che l&#146;entità è
+stata modificata (con <i>If-Modified-Since</i>) allora questo
+campo indica al server di mandargli l&#146;intero paccetto.</p>
+
+<p><b><i>If-Unmodified-Since</i></b></p>
+
+<p>Come per il campo <i>If-Modified-Since, </i>questo
+contiene una data. Se la risorsa specificata non è stata
+modificata dalla data presente nel campo, il server effettua la
+risposta normalmente come se questo campo non esistesse,
+altrimenti restituisce uno Status-Code pari a 412 (Precondition
+Field).<i> </i></p>
+
+<p><b><i>Max-Forwards</i></b></p>
+
+<p>Questo campo contiene un numero decimale
+indicante il rimanente numero di volte che un messaggio può
+essere inoltraro. Questo campo, associato con il metodo TRACE e
+OPTION, innesta un meccanismo che limita il numeri di proxy e
+gateway che possono mandare la richiesta al server destinatario.
+Se l&#146;inero specificato è &quot;0&quot; la richiesta non
+viene inoltrata, altrimenti ogni volta che si effettua una
+spedizione l&#146;intero specificato nel campo viene decrementato
+di 1.</p>
+
+<p><b><i>Proxy-Autorization</i></b></p>
+
+<p>Questo campo contiene dei parametri che
+permettono l&#146;autenticazione del client e l&#146;autorizzazione
+ad operare da parte del proxy in questione.</p>
+
+<p><b><i>&nbsp;Range</i></b></p>
+
+<p>Il client con questo campo informa il server di
+quale range di bytes del corpo dell&#146;entità (cioè dell&#146;informazione
+da trasferire) necessita. Cioè il client ha la facoltà di
+ottenere solo una o più porzioni dell&#146;entità richiesta. Il
+tutto va in porto solo se il server supporta questa operazione. </p>
+
+<p><b><i>&nbsp;Referer </i></b></p>
+
+<p>Specifica l&#146;indirizzo (URI) della risorsa
+a cui si deve far riferimento. Questo permette al server di
+generare dei link per la manipolazione più efficiente dei dati.</p>
+
+<p><b><i>TE</i></b></p>
+
+<p>In questo campo si specificano i valori di
+&quot;tranfer-coding&quot; accettati nella risposta dal client,
+essendo questo un campo inerente solo alla richiesta.</p>
+
+<p>Il transfer-coding è riferito all&#146;intero
+corpo del messaggio.</p>
+
+<p>I valori di &quot;transfer-coding&quot; sono
+usati per indicare il tipo di codifica (compressione) del corpo
+del messaggio usata nel trasferimento. Essi sono utilizzati per
+rendere la comunicazione più sicura ed efficiente.</p>
+
+<p><b><i>User-Agent</i></b></p>
+
+<p>Contiene solo delle informazioni riguardo
+&quot;l&#146;user-agent &quot;, cioè il browser, che effettua la
+richiesta. Queste informazioni riguardano il nome e la versione
+dell'applicativo che svolge la funzione di client.</p>
+
+<p>Sono usate per fini statistici e per il
+riconoscimento automatico del client nella risposta.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><b><i>&nbsp;</i></b><a name="p112"></a><font
+size="4"><b>11.2 Response header field</b></p>
+
+<p><b><i>Accept-Ranges</i></b></p>
+
+<p>Come abbiamo visto nel campo <i>Range </i>il
+client definisce dei ranges sull&#146;entità richiesta.</p>
+
+<p>Il campo <i>Accept-Ranges </i>indica quale di
+questi ranges sono stati accettati e computati.</p>
+
+<p><b><i>Age</i></b></p>
+
+<p>Questo campo contiene un intero positivo
+indicante il tempo (in secondi) trascorso da quando il server
+originario ha inviato la risposta.</p>
+
+<p>&nbsp;<b><i>ETag </i></b></p>
+
+<p>Questo cmpo contiene i valori di alcune
+etichette applicate all&#146;entità restituita. Comparando
+queste etichette si possono distinguere entità diverse anche se
+quest&#146;ultime, per qualche motivo, molti attributi (Data,
+Last-Modified, ecc.) identici.</p>
+
+<p>Questi valori sono in relazione alle altre
+etichette usate nei campi <i>if-Match </i>e<i> if-none-Match </i>nel
+header field della richiesta.</p>
+
+<p><b><i>Location</i></b></p>
+
+<p>Indica al ricevente di ridirezionare la
+richiesta ad una locazione diversa da quella specificata dal
+Request-URI. Di solito viene usata per indicare la locazione di
+una nuova risorsa. Se la nuova risorsa è stata creata dalla
+richiesta, si avrà in aggiunta anche uno Status-code 201 (Created).
+Il campo consiste di un singolo URI assoluto. </p>
+
+<p><b><i>Proxy-Authenticate</i></b></p>
+
+<p>Indica una serie di parametri e scemi di
+autentificazione del proxy emerso dal Request-URI. Esso viene
+usato quando c&#146;è la necessità che il proxy venga
+riconosciuto ed è sempre associato ad uno Status-Code 407(Proxy
+Authentication Required).</p>
+
+<p><b><i>Retry-After</i></b></p>
+
+<p>E&#146; usato quando il servizio è
+momentaneamente non disponibile. Esso indica quanto tempo deve
+attendere il client prima di rispedire la richiesta. Il tempo è
+indicato sottoforma di una data oppure tramite un intero
+indicante i secondi di attesa.</p>
+
+<p><b><i>Server</i></b></p>
+
+<p>Contiene parametri che specificano il softwere
+utilizzato dal server.</p>
+
+<p>Se la risposta è inoltrata ad un proxy, quest&#146;ultimo
+non modifica questo campo, ma potrebbe aggiungere il campo <i>Via</i>
+nel General header<i>.</i></p>
+
+<p><b><i>WWW-Authenticate</i></b></p>
+
+<p>Questo indica una serie di scemi e parametri
+per l&#146;autentificazione del Request-URI.</p>
+
+<p>Esso deve essere incluso in un messaggio di
+risposta 401 (Unauthorized).</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><a name="p113"></a><b>11.3 General header field</b></p>
+
+<p><b><i>Cache-Control</i></b></p>
+
+<p>Questo campo specifica delle direttive riguardo
+i meccanismi di cacheing lungo il canale di comunicazione. Questi
+meccanismi sorvolano gli algoritmi di cacheing di default. Queste
+direttive sono unidirezionali nel senso che i meccanismi
+applicati per la richiesta non per forza devono essere applicati
+per la risposta. Queste direttive devono essere applicate a tutti
+i riceventi lungo il canale (proxy o gateway).</p>
+
+<p>In linea generale una risposta è &quot;cacheable&quot;
+se può essere memorizzata, tramite un particolare programma
+locale, in modo che la cache mantenga una copia di tale risposta
+per velocizzare i tempi di ritrasmissione in caso più richieste
+identiche.</p>
+
+<p><b><i>Connection</i></b></p>
+
+<p>Questo campo contiene opzioni sul tipo di
+connessione da implementare.</p>
+
+<p>Se l&#146;opzione specificata in questo campo
+è&nbsp;<i>&quot;close&quot; </i>significa che dopo la sessione
+request/response la connessione verrà automaticamente chiusa. In
+caso contrario la connessione sarà considerata &quot;persistente&quot;.
+Se il protocollo non supporta quest&#146;ultimo tipo di
+connessione, nel campo <i>connection</i> di ogni messaggio deve
+essere specificata l&#146;opzione <i>close.</i></p>
+
+<p><b><i>Date</i></b></p>
+
+<p>Questo campo indica la data in cui il messaggio
+è stato originato.</p>
+
+<p><b><i>Pragma</i></b></p>
+
+<p>Questo campo fornisce direttive di
+comportamento, inerente al protocollo, ai ricevitori lungo il
+canale.</p>
+
+<p>Questo campo viene inoltrato senza modifiche
+anche dai proxy e dai gateway lungo il canale per rendere tali
+direttive applicabili a tutti i ricevitori.</p>
+
+<p>Un esempio può essere la &quot;non-cacheabilità&quot;
+di un messaggio, nel senso che deve essere inoltrato senza
+mantenere una copia nella memoria locale del trasmettitore.</p>
+
+<p><b><i>Trailer</i></b></p>
+
+<p>Questo camo indica il set di campi specificati
+nel trailer del messaggio in modo che il ricevente sa quali campi
+aspettarsi.</p>
+
+<p><b><i>Transfer-Encoding</i></b></p>
+
+<p>Indica il tipo di trasformazione applicata all&#146;intero
+messaggio per una corretta e sicura comunicazione trasmettitore/ricevente.
+Differisce da <i>Content-Coding </i>che è applicato solo all&#146;entità.</p>
+
+<p><b><i>Upgrade</i></b></p>
+
+<p>Il client usa questo campo per indicare quali
+protocolli supporta.</p>
+
+<p>Il server lo utilizza per indicare quale
+protocollo ha scelto accompagnato da un Status-code pari a 101 (Switching
+Protocols).</p>
+
+<p><b><i>Via</i></b></p>
+
+<p>Viene utilizzato dai proxy e dai gateway per
+indicare sia i riceventi intermedi sia i protocolli usati da essi.</p>
+
+<p><b><i>Warning</i></b></p>
+
+<p>Questo campo fornisce informazioni aggiuntive
+riguardo lo stato e le trasformazioni di un messaggio. Di solito
+viene utilizzato per indicare possibili mancanze nelle opzioni di
+cacheing o di trasformazioni del messaggio.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><a name="p114"></a><b>11.4 Entity header field</b></p>
+
+<p>Questi campi sono riferiti al &quot;entity-body&quot;
+cioè al corpo dell&#146;informazione (provenienti da una data
+risorsa) che il client ha effettivamente richiesto o, se esso non
+è presente, sono riferiti all&#146;intera risorsa definita dalla
+richiesta.</p>
+
+<p>Queste informazioni sono opzionali.</p>
+
+<p><b><i>&nbsp;Allow</i></b></p>
+
+<p>Questo campo ha il compito di specificare la
+lista dei metodi supportati dalla risorsa definita nel Request-URI.</p>
+
+<p>Se il server non supporta determinati metodi,
+nella risposta avremo i metodi attualmente supportati con un
+Status-Code pari a 405 (Method Not Allowed).</p>
+
+<p><b><i>Content-Encoding</i></b></p>
+
+<p>Questo specifica il tipo di codifica applicata
+solo all&#146;entity-body e quali meccanismi di decodifica
+applicare per ottenere il tipo di dati definito nel &quot;Content-Type&quot;.</p>
+
+<p>In genere la codifica usata corrisponde ad un
+particolare tipo di compressione dati.</p>
+
+<p><b><i>Content-Laguage </i></b></p>
+
+<p>Indca in quale/i lingua/e è scritta l&#146;entità
+trasferita. Questo campo è prettamente rivolto all&#146;uso
+umano e permette all&#146;utente di identificare e differenziare
+l&#146;entità in accordo con il proprio linguaggio preferito. </p>
+
+<p>&nbsp;<b><i>Content-Length</i></b></p>
+
+<p>Questo campo indica la lungezza dell&#146;
+entity-body. Essa viene specificata con un numero decimale che
+indica il numero dei bytes.</p>
+
+<p><b><i>Content-Location</i></b></p>
+
+<p>Questo campo viene usato per indicare la
+locazione dell&#146;entità associata alla risorsa definita dal
+Request-URI. Viene usata quando una o più entità associata alla
+risorsa hasnno locazioni diverse da essa.</p>
+
+<p><b><i>Content-MD5</i></b></p>
+
+<p>Questo campo ha lo scopo di indicare l&#146;applicazione
+dell&#146;algoritmo di compressione MD5 per poi effettuare il
+check di integrità del messaggio da parte del ricevente.Solo il
+client o il server possono generare questo campo, mentre proxy e
+gateway no. Il check è applicato a tutto l&#146;entiy-body
+tenendo conto anche dei Content-Encoding applicati, senza però
+includere i Transfer-Coding che sono applicati all&#146;intero
+corpo del messaggio. Essi devono prima essere rimossi.</p>
+
+<p><b><i>Content-Range </i></b></p>
+
+<p>Questo campo è spedito sempre insieme ad una
+entità parziale per indicare dove il range di bytes che quest&#146;ultima
+occupava nell&#146;intera entità.</p>
+
+<p><b><i>Content-Type</i></b></p>
+
+<p>Indoca il tipo e il sottotipo MIME dei dati
+inseriti nell&#146;entity-body.</p>
+
+<p><b><i>Expires</i></b></p>
+
+<p>Indica la data dopo la quale la risposta è
+considerata vecchia.</p>
+
+<p>Il server applica questo campo ad una risposta
+quando sa che la risorsa inerente non verrà modificata per un
+certo periodo di tempo.</p>
+
+<p>Il motivo dell&#146;esistenza di questo campo
+consiste nel fatto che una cache può restituire una stessa
+risposta, senza contattare il server, per richieste multiple
+successive prima che la risorsa venga modificata. </p>
+
+<p><b><i>&nbsp;Last-Modified</i></b></p>
+
+<p>Indica semplicemente a quando risale l&#146;ultima
+modifica apportate all&#146;entità.</p>
+
+<p><b><i>extension-header</i></b></p>
+
+<p>Indica dei campi cambiare il protocollo usato.addizionali
+che possono essere aggiunti dal trasmettitore senza </p>
+
+<p>Non c&#146;è però la certezza che il
+ricevitore riconosca questi ulteriori campi.</p>
+
+<p>&nbsp;</p>
+
+<p><a name="p12"></a><strong>12 Un esempio di
+transizione HTTP</strong></p>
+
+<p>Supponiamo che un utente debbe recuperare una
+risorsa posta su un server Web il cui URL è <em>http://www.host.it/path/doc.html</em></p>
+
+<p>1. Il browser inizia analizzando l'URL e scopre
+che:</p>
+
+<dir>
+    <li><h4>il protocollo da usare per la comunicazione con il
+        server è l'HTTP </h4>
+    </li>
+    <li><h4>l'URL contiene un indirizzo host di Internet <i>www.host.it</i>
+        che deve essere convertito in indirizzo IP numerico </h4>
+    </li>
+    <li><h4>la risorsa è <i>/path/doc.html</i> ed è nel formato
+        HTML </h4>
+    </li>
+</dir>
+
+<p>2. Il browser &quot;domanda al DNS di
+convertire l' indirizzo host in indirizzo IP numerico.</p>
+
+<p>3. Il DNS replica con un indirizzo IP numerico,
+per esempio <em>131.114.189.11</em></p>
+
+<p>4. Il browser stabilisce una connessione con il
+server sulla porta <em>TCP 80 </em>il cui indirizzo IP è <em>131.114.189.11
+</em>. </p>
+
+<p>5. A questo punto il browser compone la
+richiesta secondo il formato HTTP e la invia al server:</p>
+
+<p><i>GET /path/doc.html HTTP/1.0</i> </p>
+
+<p><i>User-Agent: Internet Explorer/3.02</i> </p>
+
+<p><i>Accept: text/plain</i> </p>
+
+<p><i>Accept: text/html</i> </p>
+
+<p><i>Accept: image/*</i> </p>
+
+<p>&nbsp;</p>
+
+<p>6. Il server riceve la richiesta ed analizza la
+prima parte <em>(GET /path/doc.html HTTP/1.0)</em></p>
+
+<ul>
+    <li><h4>Il comando <i>GET </i>dice al server di individuare e
+        leggere il file e restituirlo al client. </h4>
+    </li>
+    <li><h4>L'analisi di <i>/path/doc.html</i> dice al server il
+        percorso, il nome del file e il formato del documento (HTML).
+        </h4>
+    </li>
+    <li><h4><i>L'HTTP/1.0</i> dice quale protocollo di
+        comunicazione usare per &quot;colloquiare&quot; con il
+        client. </h4>
+    </li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>7. Il server, se necessario, analizza il resto
+della richiesta. In questo caso estrapola le seguenti
+informazioni:</p>
+
+<p>&nbsp;</p>
+
+<ul>
+    <li><h4>il client accetta normale testo, testo formattato
+        HTML e qualsiasi codifica digitale dimmagine (<i>text/plain,
+        text/html, image/*) </i></h4>
+    </li>
+</ul>
+
+<ul>
+    <li><h4>Il software del client è <i>Internet Explorer/3.02</i>
+        </h4>
+    </li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>8. Se non ci sono stati errori, il server
+esegue il metodo richiesto: cerca il file avvalendosi del file
+system del sistema operativo e:</p>
+
+<ul>
+    <li><u>se il file è stato trovato</u> il
+        server invia una risposta del tipo:</li>
+</ul>
+
+<p><i>HTTP/1.0 200 document follows</i> </p>
+
+<p><i>Server: NCSA/2.4</i> </p>
+
+<p><i>Date: sab, 20 gen 1997, 23:20:02 GMT</i> </p>
+
+<p><i>Content-Type: text/html</i> </p>
+
+<p><i>Content-length: 2024</i> </p>
+
+<p><i>Last-Modified: ven, 19 gen 1997, 23:40:02 GMT</i> </p>
+
+<p>&nbsp; <i>&lt;corpo del documento&gt;</i> </p>
+
+<p>&nbsp;questa risposta dice al browser che è
+andato tutto bene (codice di stato 200) che il software
+utilizzato è <em>NCSA/2.4</em>, la data di invio del documento
+è <i>sab, 20 gen 1997, 23:20:02 GMT</i> ,
+il documento è nel formato HTML, la lungezza del documento è di
+<em>2024 Kb</em> e la data di ultima modifica è <i>ven,
+19 gen 1997, 23:40:02 GMT.</i> </p>
+
+<ul>
+    <li>&nbsp;<u>se il file non è stato trovato o
+        c'è qualche errore</u>, il server invia una risposta che
+        spiega l'errore. Nel caso che il file non è stato
+        trovato la risposta potrebbe essere del tipo:</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p><i>HTTP/1.0 404 Not found</i> </p>
+
+<p><i>Server: NCSA/2.4</i> </p>
+
+<p><i>Date: sab, 20 gen 1997, 23:20:02 GMT</i> </p>
+
+<p><i>Content-Type: text/html</i> </p>
+
+<p><i>Content-length: 0</i> </p>
+
+<p>bbsp; </p>
+
+<p>9. Il server dopo la risposta chiude la
+connessione.</p>
+
+<p>10. Il browser dopo aver memorizzato ed
+analizzato la risposta, mostra sullo schermo il documento
+utilizzando l'applicazione opportuna.</p>
+
+<p>&nbsp;</p>
+
+<p>C'è da aggiungere che se il documento HTML
+avesse contenuto delle immaggini in-line, il browser, per il
+recupero di ognuna di esse, avrebbe dovuto stabilire una nuova
+connessione TCP con il server e ripetere ogni passo.</p>
+
+<p><a name="p13"></a><b>13 Considerazioni sulla
+sicurezza</b></p>
+
+<p><a name="p131"></a><b>13.1 Autenticazione degli
+accessi</b></p>
+
+<p>HTTP prevede un semplice meccanismo di
+autorizzazione che viene usato dal server per rifiutare una
+client-request, e al client per fornire un'autenticazione delle
+informazioni. </p>
+
+<p>La risposta &quot;401 Unauthorized&quot; è
+utilizzato dal server per indicare all'user agent che l'accesso
+può avvenire solo su autorizzazione. Il messaggio di richiesta
+successivo deve includere il campo <em>WWW-Authenticate</em> che
+contiene l' autorizzazione, e i parametri necessari per accedere
+alla risorsa richiesta. Si indica con <i>challenge</i> il
+meccanismo applicato dal server per gestire l'accesso alla
+risorsa , il quale è individuato da : </p>
+
+<blockquote>
+    <pre>challange  = auth-scheme 1*LWS realm[&quot;,&quot;1#auth-param]</pre>
+    <pre>realm      = &quot;Realm&quot; &quot;=&quot;quoted-string</pre>
+</blockquote>
+
+<p>L'indicazione del REALM è necessaria in tutti
+gli schemi di autenticazione aventi lo scopo di permettere il
+collegamento anche se limitato. Il valore del realm aggiunto all'indicazione
+dell'URL della radice del server individua lo spazio d'autorizzazione.
+Quindi è possibile avere spazi d'autorizzazione diversi e quindi
+partizionare e proteggere risorse diverse. Il realm è una
+stringa definita dal server d'origine, la quale può avere una
+semantica addizionale rispetto allo schema di autenticazione.</p>
+
+<p>Il cliente spedisce le credenziali attraverso
+il campo Authorization, individuando il realm che garantisce l'accesso
+alla risorsa richiesta. Il dominio al quale il client può
+accedere con delle determinate credentials è individuato dallo
+spazio d'autorizzazione.Se la richiesta è autenticata le
+credentials possono essere riutilizzate per tutte le altre
+richieste che hanno per oggetto lo stesso spazio d'autorizzazione.
+</p>
+
+<p>Il protocollo HTTP non restringe al solo
+livello applicativo il meccanismo di autenticazione degli accessi,
+meccanismi diversi si trovano al livello di trasporto, attraverso
+l'incapsulazione dei messaggi, e/o attraverso ulteriori campi che
+specificano e autenticano altre informazioni. </p>
+
+<p>Uno schema di autenticazione di base è il così
+detto &quot;Basic&quot;. Questo schema è basato sul modello che
+il client deve autenticare se stesso con un USER-ID e la sua
+PASSWORD per ogni realm. Il server eseguirà la richiesta se e
+solo se può convalidare l'USER-ID e la PASSWORD per il dominio
+della risorsa richiesta. E' ovvio che l'
+autenticazione del cliente con questo sistema, non garantisce che
+l'Entity Body sia trasferito con un meccanismo di codifica.</p>
+
+<p>&nbsp;</p>
+
+<p><a name="p132"></a><strong>13.2 Proxy come
+Firewall</strong></p>
+
+<p><b>Sicurezza in Ingresso</b>: di solito un
+Proxy Server viene realizzato assieme ad un Firewall, o é esso
+stesso un Firewall, cioè un sistema concepito per filtrare il
+traffico di pacchetti che accedono ad una sottorete, con il fine
+di evitare intrusioni indesiderate o collegamenti non consentiti.
+Anche il più semplice Proxy Firewall (o Application Proxy)
+permette di eseguire una serie di controlli a livello di
+indirizzo IP (filtraggio di Pacchetto) e di inibire o abilitare
+un subset di comandi HTTP in modo da prevenire ogni attacco da
+parte di utenti non autorizzati.</p>
+
+<p><b>Sicurezza in uscita</b>: l'utilizzo di un
+Proxy può permettere di mascherare indirizzi IP esterni alla
+rete. Per qualche motivo l'amministratore potrebbe non volere che
+certi indirizzi IP esterni siano visibili dalla propria rete.
+Alcuni Proxy Server, compreso il W3C_HTTPD, permettono, tramite
+il comando FAIL, di inibire il traffico verso gli indirizzi IP
+specificati. </p>
+
+<p>Infine c'è la possibilità di restringere l'utilizzo
+dei proxy solo a pochi host definiti preventivamente nel
+Protection Setup. Con la direttiva PROTECT una URL può essere
+protetta ed utilizzata solo da host fidati.</p>
+
+<p><a name="p133"></a><strong>13.3 Considerazioni
+generali</strong></p>
+
+<p>Facendo viaggiare le informazioni in chiaro,
+oltre a rendere più vulnerabili gli host ad attacchi, si rischia
+di perdere anche sulla privacy:</p>
+
+<p>- Un utente che riesce a catturare un messaggio
+su Internet, attraverso il campo <em>server</em>, nell'header,
+potrebbe risalire al tipo di softwere specifico che gira sul
+server. Ovviamente attaccare un server HTTP conoscendo come è
+organizzato è molto più facile che farlo senza avere nessuna
+informazione su di esso! </p>
+
+<p>- Un utente maleintenzionato che riesce a
+risalire ai campi <em>From, User-Agent </em>e <em>Accept-Language
+</em>di un messaggio, mette in discussione sia la sicurezza dell
+host che ha spedito il massaggio che la privacy del messaggio.
+Infatti questi campi rendono noto sia il tipo di browswer che
+gira sul client, che informazioni private come l' e-mail e il
+gruppo etnico di appartenenza dell'utente.</p>
+
+<p>-se un utente dovesse essere capace di
+intrufolarsi in un proxy dotato di cache, potrebbe risalire ad
+informazioni riguardo anche a connessioni ormai completate.
+Infatti questo tipo di proxy mantiene le informazioni nella cache
+anche quando una richiesta è stata completata e quindi quando il
+client crede che le proprie informazioni non esistano più nella
+rete.</p>
+
+<p>Per ovviare a tutto questo è stato introdotto
+il Secure HyperText Transfer Protocol (S-HTTP) che rende la
+comunicazione più sicura incrementando la confidenzialità, l'autenticità
+e l'integrità dei documenti. Questo protocollo, infatti,
+fornisce essenzialmente dei meccanismi per la manipolazione delle
+chiavi e degli algoritmi di crittografia dei documenti.</p>
+
+<p>&nbsp;</p>
+
+<p><a name="p14"></a><strong>14 Riferimenti</strong></p>
+
+<p><strong>[RFC 2616] </strong><a
+href="Rifer/rfc2616.txt" target="new"><font
+size="4"><strong>rfc2616.txt</strong></a></p>
+<p><strong>Hypertext Transfer Protocol --
+HTTP/1.1</strong></p>   
+<p><strong></strong>&nbsp;</p> 
+
+<p><a 
+href="http://www.w3.org/Protocols/"
+target="_alink"><font 
+size="4"><strong>http://www.w3.org/Protocols</strong></a></p>   
+<p><strong>L'HTTP con alcuni rfc</strong></p> 
+ 
+<p><strong></strong>&nbsp;</p>
+
+<p><a
+href="http://www.mlab.disco.unimib.it/reti/http/tsld001.htm"
+target="_alink"><font
+size="4"><strong>http://www.mlab.disco.unimib.it/reti/http/tsld001.htm</strong></a></p>
+ 
+<p><strong>Concetti base HTTP</strong></p>
+
+<p><strong></strong>&nbsp;</p>
+
+<p><a
+href="http://mail.apsoftware.it/applus/docs/INET/contents.htm"
+target="_clink"> <font
+size="4"><strong>http://mail.apsoftware.it/applus/docs/INET/contents.htm</strong></a></p>
+ 
+<p><strong>Internet e Servizi</strong></p>
+
+ 
+<p><strong></strong>&nbsp;</p>
+
+<p><a
+href="Rifer/03http.htm" target="_dlink"><font
+size="4"><strong>http.html</strong></a></p>
+
+<p><strong>I server WWW e l'HTTP</strong></p>
+
+<p><strong></strong>&nbsp;</p>
+
+<p><a
+href="Rifer/04http.htm"
+target="_elink"><font
+size="4"><strong>http.html</strong></a></p>
+ 
+<p><strong>IL Protocollo HTTP</strong></p>
+
+<p><strong></strong>&nbsp;</p>
+
+
+
+<p><a href="http://www.spider-team.com/Int11.htm" target="_glink"><font
+size="4"><strong>http://www.spider-team.com/Int11.htm</strong></a></p>
+
+ <p><strong>L'URL</strong></p>
+
+<p><strong></strong>&nbsp;</p>
+
+<p><a href="http://free.systemy.it/appunti/AL-6.19.95.html"
+target="_hlink"><font
+size="4"><strong>http://free.systemy.it/appunti/AL-6.19.95.html</strong></a></p>
+ 
+<p><strong>Server Apache e l'HTTP</strong></p>
+
+<p><strong></strong>&nbsp;</p>
+
+
+<p><a href="Rifer/capitolo.htm"
+target="_olink"><font
+size="4"><strong>Protocolli.html</strong></a></p>
+ 
+<p><strong>I protocolli del Web</strong></p>
+
+<p><strong></strong>&nbsp;</p>
+
+<p><a
+href="http://www.dsi.unive.it/~franz/reti/so/http/accsic.htm"
+target="_qlink"><font
+size="4"><strong>http://www.dsi.unive.it/~franz/reti/so/http/accsic.htm</strong></a></p>
+ 
+<p><strong>Autenticazione degli accessi </strong></p>
+
+<p><strong></strong>&nbsp;</p>
+
+<p><a href="http://www.html.it/apache/" target="_plink"><font
+size="4"><strong>http://www.html.it/apache/</strong></a></p>
+ 
+<p><strong>Tutorial Apache</strong>&nbsp;</p>
+
+<p>&nbsp;</p>
+</body>
+</html>

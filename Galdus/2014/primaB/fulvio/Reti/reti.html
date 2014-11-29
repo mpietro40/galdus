@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+<title>LE RETI</title>
+<meta charset="UTF-8">
+<style>
+body{
+background-color:gold;
+}
+table, td
+{
+border:3px solid green;
+}
+th
+{
+background-color:green;
+color:white;
+
+</style>
+</head>
+<body>
+<div align="center" /><h1>TOPOLOGIE DI RETE</h1></div>
+<table>
+
+<tr>
+<th><h3>Nome</h3></th>
+<th><h3>Immagine</h3></th>
+<th><h3>Descrizione</h3></th>
+<th><h3>Vantaggio</h3></th>
+<th><h3>Svantaggio</h3></th>
+</tr>
+
+<tr>
+<td><h3>Rete punto a punto</h3></td>
+<td><div align="center"/><img src="images/499.gif"/></div></td>
+<td><h3>Una rete punto a punto è realizzata unendo ogni device della rete con un cavo.</h3></td>
+<td>
+<h3>1- Ogni nodo può parlare direttamente con tutti gli altri.</h3>
+<h3>2- E' una rete molto veloce.</h3></td>
+<td><h3>1- Il costo della rete è molto alto.</h3>
+<h3>2- Sono necessari dei device speciali, cioè con tante schede di rete.</h3>
+</tr>
+
+<tr>
+<td><h3>Rete a stella</h3></td>
+<td><div align="center"/><img src="images/499.jpg" /></td></div>
+<td><h3>Una rete a stella funziona collegando tutti i device a un punto centrale. Questo nodo centrale può essere un computer speciale o un hub o uno switch.</h3></td>
+<td><h3>1- è una rete molto semplice.</h3>
+<h3>2- E' una rete molto economica.</h3>
+<td><h3>1- Nel caso si rompa il computer centrale tutti gli altri nodi smettono di comunicare.</h3>
+<h3>2- Tutte le comunicazioni passano nel nodo centrale che se non è ben programmato lascia vedere i dati agli altri nodi.</h3>
+</tr>
+
+<tr>
+<td><h3>Rete ad anello</h3></td>
+<td><div align="center"/><img src="images/anello.png" /></div></td>
+<td><h3>Prevede che ogni nodo sia collegato ad altri due.</h3></td>
+<td><h3>1- E' una rete semplice.</h3>
+<h3>2- E' una rete semplice da espandere.</h3>
+</td>
+<td><h3>1- La rottura di un nodo blocca tutta la comunicazione.</h3>
+<h3>2- Per parlare tra due nodi potrebbe essere necessario passare per tutti gli altri nodi della rete.</h3>
+</td>
+</tr>
+<tr>
+<td><h3>Rete a bus</h3></td>
+<td><img src="images/501.jpg"/></td>
+<td><h3>La rete a bus è basata su un cavo speciale che collega tutti i device</h3></TD>
+<td><h3>1- E' una rete semplice da utilizzare</h3>
+<h3>2- E' economica</h3></td>
+<td><h3>1- La rottura di un terminatore può bloccare la rete</h3>
+<h3>2- La rottura del bus può bloccare tutta la rete</h3></td>
+</tr>
+<tr>
+<td><h3>Rete ad albero</h3></td>
+<td><div align="center"/><img src="images/albero.png"/></div></td>
+<td><h3>E' una rete in cui sono definitedelle gerarchie cioè un nodo può essere padre di altri nodi. 
+Ogni nodo è collegato ad almeno un altro nodo che può vedere pezzi di rete maggiori</h3></td>
+<td><h3>1- E' adatta a gestire piccoli gruppi che devono condividere risorse</h3>
+<h3>2- La rottura di un nodo consente ad altri pezzi di rete di funzionare</h3></td>
+<td><h3>1- E' una rete complicata da realizzare e mantenere</h3>
+<h3>2- L'aggiunta di un nodo può richiedere configurazioni complesse</h3>
+</td>
+</tr>
+</table>
+
+<p>&nbsp;</p>
+
+<h1><div align="center"/>Tipologie di rete</h1></div>
+<table>
+<tr>
+<th><h3>Nome</h3></th>
+<th><h3>Immagine</h3></th>
+<th><h3>Descrizione</h3></th>
+<th><h3>Vantaggio</h3></th>
+<th><h3>Svantaggio</h3></th>
+</tr>
+<tr>
+<td><h3>Lan</h3></td>
+<td><img src="images/lan.jpg"/></td>
+<td><h3>Local Area Network è una rete informatica di collegamento tra più computer che ciopre un'area limitata</h3></td>
+<td><h3>1- E' una rete semplice</h3>
+<h3>2- E' una rete economica</h3></td>
+<td><h3>1- E' adatto solo per piccole aree</h3>
+<h3>2- Ha una sicurezza limitata</h3>
+</td>
+</tr>
+<tr>
+<td><h3>Can</h3></td>
+<td><img src="images/can.gif"/></td>
+<td><h3>Campus Area Network è una rete che serve a collegare edifici relativamente vicini, normalmente collega sottoreti Lan</h3></td>
+<td><h3>1- E' normalmente più sicura di una lan</h3>
+<h3>2- Consente la condivisione di risorse aziendali senza accesso a internet</td>
+<td><h3>1- E' normalmente più costosa</h3>
+<h3>2- E' normalmente più complessa da gestire</h3></td>
+</h3>
+</tr>
+<tr>
+<td><h3>Man</h3></td>
+<td><img src="images/MAN.jpg"/></td>
+<td><h3>La Metropolitan Area Network è una rete che serve a collegare reti ad una distanza non molto elevata</td></h3>
+<td><h3>1- Permette di condividere risorse azinedali anche tra sedi diverse</h3>
+<h3>2- E' una rete sicura</h3></td>
+<td><h3>1- E' una rete complicata e costosa</h3>
+<h3>2- Non è sempre possibile realizzarla</h3>
+</td>
+</tr>
+<tr>
+<td><h3>Wan</h3></td>
+<td><img src="images/wan.gif"/></td>
+<td><h3>E' una rete che copre regioni vaste della terra</h3></td>
+<td><h3>1- Consente di realizzare una rete parallela ad internet</h3>
+<h3>2- E' una rete sicura</h3></td>
+<td><h3>1- Ha dei costi elevatissimi</h3>
+<h3>2- E' una rete complicata da realizzare e da gestire</h3></TD>
+</tr>
+<tr>
+<td><h3>Wlan</h3></td>
+<td><img src="images/wlan.jpg"/></td>
+<td><h3>E' una rete che si basa sull'uso di componenti wifi</td></h3>
+<td><h3>1- E' una rete semplice da realizzare e gestire</h3>
+<h3>2- E' la rete più economica da realizzare</h3>
+</td>
+<td><h3>1- E' una rete poco sicura</h3>
+<h3>2- Le prestazioni offerte non sono molto buone</h3></td>
+</tr>
+</BODY>
+</html>

@@ -1,0 +1,32 @@
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;I Forms&lt;/title&gt; 
+&lt;body&gt;
+ &lt;form action="http://www.esempio.com/cgi-bin/esempio.cgi" method="post"&gt;
+ 
+        &lt;p  align="left"&gt;TEXT:&lt;br&gt;
+                &lt;input type="text" size="20"&gt;
+        &lt;p  align="left"&gt;RADIO:&lt;br&gt;
+                &lt;input type="radio" name="uno" value="uno1"&gt;Prima opzione&lt;br&gt;
+                &lt;input type="radio" name="uno" value="uno2"&gt;Seconda opzione&lt;br&gt;
+                &lt;input type="radio" name="uno" value="uno3"&gt;Terza opzione&lt;br&gt;
+        &lt;p  align="left"&gt;CHECKBOX:&lt;br&gt;
+                &lt;input type="checkbox" name="uno"  &gt;Prima opzione&lt;br&gt;
+                &lt;input type="checkbox" name="due" &gt;Seconda opzione&lt;br&gt;
+                &lt;input type="checkbox" name="tre" &gt;Terza opzione&lt;br&gt;
+        &lt;p  align="left"&gt;SELECT:&lt;br&gt;
+                &lt;select name="uno"  &gt; 
+                &lt;option&gt;uno&lt;/option&gt;
+                &lt;option&gt;due&lt;/option&gt;
+                &lt;option&gt;tre&lt;/option&gt;
+                &lt;option&gt;quattro&lt;/option&gt;
+                &lt;/select&gt;
+        &lt;p  align="left"&gt;RESET:&lt;br&gt;
+                &lt;input type="reset" value="cancella tutto"&gt;
+         &lt;p  align="left"&gt;SUBMIT:&lt;br&gt;
+                &lt;input type="submit" value="spedisci i dati"&gt;
+ 
+&lt;/form&gt;  
+		 
+&lt;/body&gt;
+&lt;/html&gt;  

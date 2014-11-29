@@ -1,0 +1,10 @@
+document.write("<div id='cssmenu'> ");
+document.write("<ul>");
+document.write("<li><a href='database.html#'><span>Home</span></a></li> ");
+document.write("<li><a href='createDB.html'><span>creare il file</span></a> </li> ");
+document.write("<li><a href='creaTabella.html'><span>creare la tabella</span></a> </li>  ");
+document.write("<li><a href='insertData.html'><span>Inserimento dati</span></a></li> ");
+document.write("<li><a href='showData.html'><span>Visualizzazione dati</span></a></li> ");
+document.write(" <li><a href='deleteData.html'><span>Cancellazione dati</span></a></li> ");
+document.write("</ul> ");
+document.write("</div>  ");

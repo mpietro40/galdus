@@ -1,0 +1,46 @@
+<html>
+<head>
+<script language="javascript">
+function addizione()
+{
+a= eval(operazioni.add1.value)
+b= eval(operazioni.add2.value)
+// non so se fa vedere l'intera scritta: document + punto + getElementById + punto + value
+document.getElementById("ris").value = eval(a+b)
+alert(a+b)
+}
+function sottrazione()
+{
+a= eval(operazioni.add1.value)
+b= eval(operazioni.add2.value)
+document.getElementById("ris").value =eval(a-b)
+alert(a-b)
+}
+function divisione(
+{
+a= eval(operazioni.add1.value)
+b= eval(operazioni.add2.value)
+document.getElementById("ris").value =eval(a/b)
+alert(a/b)
+}
+function moltiplicazione(
+{
+a= eval(operazioni.add1.value)
+b= eval(operazioni.add2.value)
+document.getElementById("ris").value = eval(a*b)
+alert(a*b)
+}
+</script>
+</head>
+<body>
+<form name="operazioni">
+<input type="text" name="add1" size="10" >
+<input type="text" name="add2" size="10" ><br>
+<input type="button" name="+" value="+" onClick="addizione()">
+<input type="button" name="-" value="-" onClick="sottrazione()">
+<input type="button" name="/" value="/" onClick="divisione()">
+<input type="button" name="*" value="*" onClick="moltiplicazione()">
+<input id="ris" type="text" name="risultato" size="10" style="text-align:right">
+</form>
+</body>
+</html>

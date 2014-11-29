@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Frame</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<link rel="StyleSheet" href="./uno.css" type="text/css" media="screen">
+</head>
+<body>
+<a name="inizio"></a>
+<img src="./immagini/intestazione.jpg" align="right" height="52"
+ width="461" alt=""><br>
+<h2>Moduli</h2>
+<p><br>
+I moduli, o form, rendono interattive le pagine Web. Attraverso essi
+&egrave; infatti possibile per il browser interagire con l'utente e
+trasferire
+informazioni al server, dove possono essere utilizzate per
+creare dinamicamente pagine personalizzate (sulla base, per esempio,
+dei risultati di una ricerca su database o di altre azioni eseguite sul
+lato server).</p>
+<hr >
+<p>Per creare un elemento modulo si usa il tag:</p>
+<pre>&lt;form action="URI" method="post" | "get"&gt;....&lt;/form&gt;<br></pre>
+<p>L'attributo ACTION specifica l'URI della risorsa a cui il browser
+invier&agrave; i dati. METHOD indica il metodo utilizzato nella trasmissione 
+dei dati:</p>
+<ul>
+  <li>GET, le informazioni vengono appese in coda all' URI; </li>
+  <li>POST &egrave; usato per spedire messaggi pi&ugrave; lunghi e
+quando sono presenti caratteri non ASCII. </li>
+</ul>
+<p>Nel modulo possono essere
+usati
+altri elementi, ma non &egrave; consentito l'annidamento di moduli.</p>
+<hr>
+<p>Un modulo pu&ograve; contenere pi&ugrave; elementi INPUT, aventi
+diverse funzioni,
+definiti nel modo seguente:</p>
+<pre>
+&lt;input type="text"|"password"|"radio"|"checkbox"|
+                    "submit"|"reset"|"button"|"image"
+           name="string" [value="string"] [checked] [size="n"]
+           [maxlength="n"] [src="URL"]
+           [align="top"|"middle"|"left"|"right"] &gt;</pre>
+<p>I tipi e le funzioni degli elementi INPUT, definiti dall'attributo
+TYPE, sono:</p>
+<ul>
+  <li>TEXT: crea un campo per l'immissione di una stringa. L'attributo
+SIZE definisce la dimensione del campo, ma resta comunque possibile
+inserire
+stringe di dimensione maggiore fino al valore definito da MAXLENGTH(in
+tal caso il testo scorrer&agrave;). L'attributo VALUE permette di
+inizializzare il campo.
+  </li>
+  <li>PASSWORD: funziona come TEXT, con la differenza
+che il testo &egrave; offuscato da asterischi. <span
+ style="text-decoration: underline;">L'invio dei dati avviene
+per&ograve; in
+chiaro, dunque non &egrave; assicurata la confidenzialit&agrave;.</span>
+  </li>
+  <li>RADIO: crea un gruppo
+di voci di selezione mutuamente esclusive. Il gruppo &egrave; definito
+dall'attributo NAME, che deve avere lo stesso valore per ogni
+voce appartenente al gruppo, mentre VALUE &egrave; diverso per
+ogni voce. Il dato inviato &egrave; costituito dalla coppia NAME+VALUE.
+  </li>
+  <li>CHECKBOX: crea una singola voce di selezione; se selezionata,
+ritorna NAME=on. </li>
+  <li>SUBMIT: crea un pulsante che mostra il testo definito
+dall'attributo VALUE. Quando premuto, il browser invia i dati secondo
+il metodo specificato le form. </li>
+  <li>RESET: crea un pulsante che mostra il testo definito
+dall'attributo VALUE. Quando premuto, il browser ripristina i valori di
+default in tutti gli elementi del modulo. </li>
+  <li>IMAGE: serve per inserire un'immagine che ha la funzione di un
+bottone. </li>
+</ul>
+<hr>
+<pre>&lt;select name="string" &gt;......&lt;/select&gt;</pre>
+<p>crea un menu di voci opzionali. Le singole voci sono definite
+dall'elemento &lt;option&gt;: </p>
+<pre>&lt;option value="string" [selected] &gt; ...... &lt;/option&gt;</pre>
+<p> Se una voce &egrave; SELECTED, sar&agrave; quella selezionata per
+default.</p>
+<pre><br></pre>
+<hr>
+<pre>&lt;textarea name="string" rows="n" cols="n"&gt;.......&lt;/textarea&gt;</pre>
+<p>crea un'area di testo su pi&ugrave; righe, utile per immettere
+pi&ugrave; stringhe di testo (es.&nbsp; commenti, proposte). Le
+dimensioni dell'area di testo sono definite dagli attributi COLS e
+ROWS.</p>
+<a name="punto1"></a>
+<hr>
+<h3>Esempio</h3>
+<pre>&lt;html&gt;<br>&lt;head&gt;<br>  &lt;title&gt;I Forms&lt;/title&gt; <br>&lt;/head&gt;<br>&lt;body&gt;<br>  &lt;form action="http://www.esempio.com/cgi-bin/esempio.cgi"<br>    method="post"&gt;<br>    &lt;p align="left"&gt;TEXT:&lt;/p&gt;<br>      &lt;input type="text" value="Testo di default" size="20"&gt;<br>    &lt;p align="left"&gt;RADIO:&lt;/p&gt;<br>      &lt;input type="radio" name="uno" value="uno1" checked&gt;Prima opzione&lt;br /&gt;<br>      &lt;input type="radio" name="uno" value="uno2"&gt;Seconda opzione&lt;br /&gt;<br>      &lt;input type="radio" name="uno" value="uno3"&gt;Terza opzione&lt;br /&gt;<br>    &lt;p align="left"&gt;CHECKBOX:&lt;/p&gt;<br>      &lt;input type="checkbox" name="uno"&gt;Prima opzione&lt;br /&gt;<br>      &lt;input type="checkbox" name="due"&gt;Seconda opzione&lt;br /&gt;<br>      &lt;input type="checkbox" name="tre"&gt;Terza opzione&lt;br /&gt;<br>    &lt;p align="left"&gt;SELECT:&lt;/p&gt;<br>      &lt;select name="uno"&gt; <br>        &lt;option value="uno" selected&gt;uno&lt;/option&gt;<br>        &lt;option value="due"&gt;due&lt;/option&gt;<br>        &lt;option value="tre"&gt;tre&lt;/option&gt;<br>        &lt;option value="quattro"&gt;quattro&lt;/option&gt;<br>      &lt;/select&gt;<br>    &lt;p align="left"&gt;RESET:&lt;/p&gt;<br>      &lt;input type="reset" value="cancella tutto"&gt;<br>    &lt;p align="left"&gt;SUBMIT:&lt;/p&gt;<br>      &lt;input type="submit" value="spedisci i dati"&gt;<br>  &lt;/form&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;  <br></pre>
+<center> <a href="forms.html#punto1"
+ onclick="window.open('./esempi/sedici.html','', config='toolbar=1,menubar=1,scrollbars=1,resizable=1,width=600 ,height=500,  ' )"><img
+ src="./immagini/risultato.jpg" border="0" height="35" width="135" alt=""></a>
+</center>
+<br>
+<br>
+<br>
+<table align="center" border="0">
+  <tbody>
+    <tr>
+      <td> <a href="frame.html" target="main"><img
+ src="./immagini/precedente.jpg" border="0" height="34" width="135" alt=""></a></td>
+      <td> <a href="forms.html#inizio" target="main"><img
+ src="./immagini/inizio.jpg" border="0" height="33" width="135" alt=""></a></td>
+      <td> <a href="css.html" target="main"><img
+ src="./immagini/successiva.jpg" border="0" height="34" width="135" alt=""></a></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

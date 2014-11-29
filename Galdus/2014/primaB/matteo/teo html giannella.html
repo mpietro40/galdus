@@ -1,0 +1,63 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-12502">
+<meta name ="generator" content="PSpad editor,www.pspad.com">
+<title>MATTEO GIANNELLA</title>
+<script language="JavaScript">
+// alert("entrato");
+var indice=document.f1.operazione.selectedindex;
+var segno=document.f1.operazione(document.f1.operazione.selectedindex).value;
+var n1=eval(document.f1.primo.value);
+var n2=eval(document.f1.secondo.value)
+//alert(segno);
+if(segno=="+"
+document.f1.risultato.value=n1+n2;
+else if (segno=="-")
+document.f1.risultato.value=n1-n2
+else if (segno=="*"
+document.f1.risultato.value=n1*n2
+else if (segno=="/"
+document.f1.risultato.value=n1/n2
+/*switch (indice)
+case 1:
+document.f1.risultato.value=n1+n2
+break;
+case 2:
+document.f1.risultato.value=n1-n2
+break
+case 3:
+document.f1.risultato.value=n1*n2;
+break;
+case 4:
+document.f1.risultato.value=n1/n2;
+break;
+}
+*/
+}
+// reset modulo
+function azzera(){
+document.f1.reset();
+writeData();
+//alert("Azzera operazione");
+}
+//stampa la data
+function writeData(){
+var data=new Date();
+document.data1.oggi.value="oggi e'"+data"
+}
+</script>
+</head>
+<body bgcolor=#FEBBEE" onland="writeData()">
+<div align="center"><h1>Esempio calcoli aritmetici</h1></div>
+<br> 
+<div align="center">
+<form name="datal">
+<input type="text" name="oggi" size="40"/>
+</form>
+</div>
+<br>
+<!--Acquisizione degli input dell'utente -->
+<FORM name="f1">
+<table>
+<tr>
+<td><

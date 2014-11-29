@@ -1,0 +1,25 @@
+Adaptation pour GetSimple par jlm http://www.studiobox.fr
+
+IMPORTANT: seul obligation créer un composant avec 
+le titre theslide 
+
+et le contenu
+<li><img src="<?php get_theme_url(); ?>/images/1.jpg" width="600" height="300" alt="photo_one" /></li>
+<li><img src="<?php get_theme_url(); ?>/images/2.jpg" width="600" height="300" alt="photo_two" /></li>
+<li><img src="<?php get_theme_url(); ?>/images/3.jpg" width="600" height="300" alt="photo_three" /></li>
+<li><img src="<?php get_theme_url(); ?>/images/4.jpg" width="600" height="300" alt="photo_four" /></li>
+<li><img src="<?php get_theme_url(); ?>/images/5.jpg" width="600" height="300" alt="photo_five" /></li>
+<li><img src="<?php get_theme_url(); ?>/images/6.jpg" width="600" height="300" alt="photo_six" /></li>
+
+Adaptated for GetSimple by jlm http://www.studiobox.fr
+
+IMPORTANT: Only obligation to create a component with 
+the title theslide
+
+and content
+<li><img src="<?php get_theme_url(); ?>/images/1.jpg" width="600" height="300" alt="photo_one" /></li>
+<li><img src="<?php get_theme_url(); ?>/images/2.jpg" width="600" height="300" alt="photo_two" /></li>
+<li><img src="<?php get_theme_url(); ?>/images/3.jpg" width="600" height="300" alt="photo_three" /></li>
+<li><img src="<?php get_theme_url(); ?>/images/4.jpg" width="600" height="300" alt="photo_four" /></li>
+<li><img src="<?php get_theme_url(); ?>/images/5.jpg" width="600" height="300" alt="photo_five" /></li>
+<li><img src="<?php get_theme_url(); ?>/images/6.jpg" width="600" height="300" alt="photo_six" /></li>

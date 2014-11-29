@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Heartbleed | contromisure</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="menu.css" media="screen" /> 
+</head>
+<body>
+<div id="container">
+<div id="top">
+<div id="logo">
+<br/>
+<br/>
+<h1> &nbsp &nbsp &nbsp Heartbleed </h1>
+<p> &nbsp </p>
+
+<p> &nbsp </p>
+</div>
+<div id="main-photo"><img src="contromisure.jpg" width="432" height="210" alt="Menu :"></div>
+<div id="main-menu">
+<ul id="main-menu-items">
+<li class="first"><a href="cosa.html">Cos'è Heartbleed ?</a></li>
+<li><a href="contromisure.html">Contromisure</a></li>
+</ul>
+</div>
+</div>
+<div id="section">
+<p>Heartbleed, mai nome fu più azzeccato per un bug, scoperto dopo due anni. L’affare ormai è noto: qualche giorno fa, un gruppo di ricercatori finlandesi che lavorano per Codeminomicon, società che produce sistemi di sicurezza di Saratoga, assieme a due ingegneri di Google,  hanno individuato l’errore, che potenzialmente, ha permesso l'appropriazione di dati sensibili tramite tutte le applicazioni e i siti che usano la certificazione Open SSL, impiegata da circa i 2/3 dei siti.
+Le notizie sulla portata del bug si susseguono, ma in pratica, come ci si può difendere? Come si può correre ai ripari? Con i nostri sistemisti, abbiamo steso una serie di suggerimenti tecnici e specifici, tagliati sulle esigenze dei sistemi informativi aziendali di fronte a questo bug:</p> <br/>
+<p>In condizioni normali, quando si visita un sito protetto con un sistema SSL, il computer provvede a mandare periodicamente un breve messaggio di controllo al server cui si è collegato tramite la connessione sicura, per essere certo che sia ancora online e funzionante. Quelli di Codenomicon e di Google Security hanno scoperto che una falla permette di inviare un falso messaggio breve di controllo al server, facendogli credere di essere il computer della connessione sicura e ottenendo in questo modo i dati presenti nella memoria temporanea del server (RAM).
+All’interno della RAM si possono trovare informazioni molto importanti sugli utenti che sono collegati al server. Un utente malintenzionato potrebbe scoprire le password degli account di diversi servizi, altre informazioni personali e potrebbe raccogliere altri dati sensibili come i numeri delle carte di credito. La vulnerabilità potrebbe essere sfruttata per ottenere le chiavi che servono per decodificare i messaggi criptati scambiati tra il proprio computer e il server cui si è collegato, utilizzando OpenSSL. In questo caso, un utente malintenzionato potrebbe avere ampio accesso agli account del computer verso cui ha condotto l’attacco. Secondo gli esperti di sicurezza informatica, basta avere un minimo di dimestichezza con i linguaggi di programmazione per imparare a sfruttare la vulnerabilità.</p><br/>
+<p>Heartbleed, che letteralmente significa “cuore sanguinante”, è stata scoperta da un gruppo di ricercatori della società di sicurezza informatica finlandese Codenomicon e, separatamente, da Google Security, la divisione della società che indaga sulla presenza di possibile falle nei propri sistemi informatici. Dopo avere scoperto il problema, i ricercatori si sono coordinati con il gruppo di sviluppo di OpenSSL per trovare insieme una soluzione e averla da subito pronta al momento dell’annuncio della vulnerabilità. Per spiegare che cos’è Heartbleed e come bisogna procedere per sistemare le cose, è stato creato un sito apposta.</p>
+<p>Chi ha tempo aspetti tempo
+Non procedere al cambio forsennato di tutte le password, o meglio, dei sistemi dove ancora non è stato dichiarato il grado di vulnerability o non sono stati rilasciati i patch. Sarebbe il modo più veloce per servire i nostri dati su un piatto d’argento all’hacker di turno.
+Due chiavi son meglio di una
+Nel caso il sito e l’applicazione siano stati fixati, procedere dove possibile, all’introduzione di un 2FA (Two Factors Authentication)
+Testa i tuoi sistemi
+Un primo test sulla vulnerabilità dei nostri server può essere fatto a questo <a href="http://filippo.io/Heartbleed/">URL</a></p>
+</div>
+<footer>
+Zakaria Rahman <br/>
+2 ^A info
+</footer>
+</body>
+</html>

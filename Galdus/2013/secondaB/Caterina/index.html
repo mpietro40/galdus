@@ -1,0 +1,103 @@
+<html>
+<head>
+<title>Caterina Quispe Grimaldo-Java e Javascript</title> 
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+<script>
+var dimensione=10;
+function aumenta(valore){
+if (valore==2){
+dimensione=dimensione+10;
+document.getElementById("pagina").style.fontSize=dimensione+"px";
+}
+if (valore==1){
+dimensione=dimensione-10;
+document.getElementById("pagina").style.fontSize=dimensione+"px";
+}
+}
+function colora(scelta){
+if(scelta==1){
+document.getElementById("pagina").style.backgroundColor="red";
+document.getElementById("pagina").style.color="#000098";
+}
+if(scelta==2){
+document.getElementById("pagina").style.backgroundColor="blue";
+document.getElementById("pagina").style.color="Lime";
+}
+if(scelta==3){
+document.getElementById("pagina").style.backgroundColor="orange";
+document.getElementById("pagina").style.color="#ff3399";
+}}
+
+</script>   
+<style>
+body{
+background:#000000;
+}
+body{
+color:#7FFFD4;
+/*
+background:aqua;
+*/
+}
+table,td,th{
+border:solid 2px aqua;
+color:aqua;
+}
+table {
+border-collapse:collapse;
+}
+</style>
+
+</head>
+<body>
+<div id="telaio">
+<div id="testata"></div>
+    <div id="centrale"><p>&nbsp;</p>
+
+ <h1>Javascript-Java </h1> 
+
+
+
+<body id=pagina>
+<table border="1">
+
+    <tr>
+       <td><img src='Images/javascript.png' width="200" height="200" /> 
+</td>
+       
+      </tr>
+      <tr> <td>JavaScript è un linguaggio di scripting orientato agli oggetti comunemente usato nei siti web. Fu originariamente sviluppato da Brendan Eich della Netscape Communications con il nome di Mocha e successivamente di LiveScript, ma in seguito è stato rinominato "JavaScript" ed è stato formalizzato con una sintassi più vicina a quella del linguaggio Java di Oracle.</td>       </tr> 
+       <tr><td><img src="Images/java.jpg" width="155" height="155" /></td>      </tr>
+      <tr> <td>Java è un linguaggio di programmazione orientato agli oggetti, creato da James Gosling e altri ingegneri di Sun Microsystems. Java è un marchio registrato di Oracle.
+
+Un buon punto di partenza per imparare Java è il tutorial ufficiale.
+
+</td>       </tr>
+       <tr><td>Pagina di Caterina Quispe Grimaldo,verifica del 3 ottobre 2012</td>      </tr>
+       
+      </tr> 
+        
+
+      
+
+
+ </table>
+ <a href="pagina.html">Javascript</a><p>
+<a href="pagina2.html">Java</a><p>
+   <input name=Red value=Red type=button onclick="colora(1)";>
+   <input name=Blue value=Blue type=button onclick="colora(2)";>
+   <input name=Orange value=Orange type=button onclick="colora(3)";>
+    <input type=button name="<" value="<"onclick="aumenta(1)";>
+    <input type=button name=">" value=">"onclick="aumenta(2)";>
+ 
+</body>
+</html>
+
+       
+      
+       
+       
+      
+      
+    

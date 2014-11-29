@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Creare una tabella con molti input </title>
+<script> 
+  function apriLinea(){
+     document.write("<tr>");
+  }
+  function chiudiLinea(){
+     document.write("</tr>");
+  }
+  function scriviInput(){
+     document.write("<input type='text' name='' size='10'/>");
+  }
+  var tipiElettro=new Array("Televisore","PC","Stereo","Lavatrice","Lavastoviglie","Stampante","Frigorifero","Lampadine","PlayStation","Lettori dvd","Modem");
+  
+  function scriviElettro(indice){
+ 
+     document.write(tipiElettro[indice]);
+  
+  }
+</script>
+<style> 
+html, body{
+  padding:0;
+  margin:0;
+  background-color:#000000;
+  color:#ffffff;
+}
+ 
+/* Permettiamo ai nostri nuovi elementi di essere mostrati in modo chiaro */  
+ 
+nav, article, footer, address {  
+  display: block;  }  
+ 
+header { 
+  margin:0;
+  padding:0;
+  display: block; 
+  font-size: 24px; 
+  font-weight: bold; 
+  text-align:center;
+  background-color:#7496DE;
+ 
+}
+section{
+  margin: auto;
+  position: relative;
+  left:10%;
+}
+ 
+ 
+nav{
+  background-color:#ffffff;
+  font-size: 16px; 
+  font-weight: bold; 
+  text-align: left;
+  width:250px;
+}
+footer{
+  background-color:#7496DE;
+  font-size: 12px; 
+  font-weight: italic; 
+  text-align: right;
+  width:100%;
+  position:absolute;
+  bottom:0;
+  padding:3px;
+}
+ 
+table, th, td{
+  border:solid 1px #999999;
+  padding:2px;
+}
+table{
+  border-collapse:collapse;
+}
+td{
+  text-align:center;
+ 
+}
+.destra{
+  text-align:right;
+}
+</style>
+</head>
+    <body>
+       <header>
+           <h1>Titolo del sito</h1>
+       </header>
+       <nav>
+         <ul>
+            <li>Tabella consumi rilevati</li>
+            <li>Tabella consumi previsti</li>
+            <li>Tabella fasce orarie</li>
+          </ul>
+        </nav>
+        <section>
+            <h1>titolo pagina</h1>
+            <article>
+                <p>
+                
+                <script>
+                document.write("<table>");
+                for(ii=0;ii<11;ii++){
+                  if(ii==0){
+                    
+                    apriLinea();
+                    
+                    document.write("<th>");
+                    document.write("Elettrodomestico");
+                    document.write("</th><th>");
+                    document.write("Consumo nominale");
+                    document.write("</th><th>");
+                    document.write("Prima settimana");
+                    document.write("</th><th>");
+                    document.write("Seconda settimana");
+                    document.write("</th><th>");
+                    document.write("Terza settimana");
+                    document.write("</th><th>");
+                    document.write("Quarta settimana");
+                    document.write("</th><th>");
+                    document.write("Totale");
+                    document.write("</th>");
+                    
+                    chiudiLinea();
+                    
+                  } else {
+                    apriLinea();
+                    document.write("<th>");
+                    scriviElettro(ii);
+                    document.write("</th><td>");
+                    scriviInput();
+                    document.write("</td><td>");
+                    scriviInput();
+                    document.write("</td><td>");
+                    scriviInput();
+                    document.write("</td><td>");
+                    scriviInput();
+                    document.write("</td><td>");
+                    scriviInput();
+                    document.write("</td><td>");
+                    scriviInput();
+                    document.write("</td>");
+                    chiudiLinea();
+                  }
+                }
+                apriLinea();
+                document.write("<th colspan=6 class='destra'>Totale</th><td>");
+                scriviInput();
+                document.write("</td>");
+                chiudiLinea();
+                document.write("</table>");
+                </script>
+                </p>
+            </article>
+        </section>
+        <footer>
+            <p>&copy;ASHLEY RIOUX </p>
+        </footer>
+    
+
+</body>
+</html>

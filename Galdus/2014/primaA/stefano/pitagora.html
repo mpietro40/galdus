@@ -1,0 +1,66 @@
+<!doctype html>
+<html> 
+<head> 
+<title>Pitagora</title> 
+<script>
+function calcola1(){
+alert('cateto1');
+var C1=document.f1.ct1.value;
+var C2=document.f1.ct2.value;
+alert('cateto2'+C1);
+var risultato=Math.sqrt(C1*C1+C2*C2);
+alert('risultato'+risultato);
+document.f1.ipo.value=risultato;
+}
+</script>
+<style>
+body{
+background-color:blue;
+}
+h1{
+text-align:center;
+font-family:Harlow Solid Italic;
+font-size:60px;
+}
+h2{
+color:#FFF
+}
+body{
+text-align:center;
+font-family:Harlow Solid Italic;
+font-size:45px;
+}
+table{
+margin:auto;
+text-align:center;
+}
+</style>
+</head> 
+<body>
+<h1>Pitagora</h1>
+<form name=f1>
+<table>
+<tr>
+<td><input type=text name=ct1>
+</td>
+<td>Cateto 1</td>
+</tr>
+<tr>
+<td><input type=text name=ct2>
+</td>
+<td>Cateto 2</td>
+</tr>
+<tr>
+<td><input type=text name=ipo>
+</td>
+<td>Ipotenusa</td>
+</tr>
+<tr>
+<td><input type='button' name='calcola' value='calcola' onclick='calcola1()'>
+</td>
+<td>Calcola</td>
+</tr>
+</table>
+</form>
+</body>
+</html>

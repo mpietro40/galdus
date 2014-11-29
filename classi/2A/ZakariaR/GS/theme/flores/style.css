@@ -1,0 +1,93 @@
+body {
+    background:url('http://classi.galdusmaffi.tk/2A/ZakariaR/GS/data/uploads/images/hitb.jpg') no-repeat top center;
+	color:brown;
+}
+h1, h2, h3{
+    font-family: 'Lusitana', serif;
+    color: brown;
+	text-align:center;
+}
+p{
+    font-size: 16px;
+    color: brown;
+    background-image:url("http://classi.galdusmaffi.tk/2A/ZakariaR/GS/data/uploads/images/pback.jpg");
+	opacity:0.6;
+}
+a, a:hover{
+    color:#db6e35;
+}
+span{
+    color:#307d34;
+}
+.header {
+}
+.menu{
+    background: url('img/menu.png') no-repeat bottom left;
+    height:90px;
+	font-size:12px;
+}
+.navbar{
+    background: url('http://classi.galdusmaffi.tk/2A/ZakariaR/GS/data/uploads/images/menub.jpg') no-repeat top right;
+    height: 100px;
+}
+.nav{
+    background: #55482b;
+    width:83%;
+    height:50px;
+    padding: 0 10px;
+    margin:47px 0 0 93px !important;
+    border-radius:7px;
+    box-shadow:inset 0px 1px 0px 0px #887f6a;
+    border:1px solid #55482b;
+}
+@media(max-width:979px){
+    .nav{
+        margin:0 0 0 90px !important;
+        width:76%;
+        height:auto;
+        box-shadow:none;
+    }
+}
+.nav li a{
+    padding:15px 20px !important;
+    color: #e7e2d1 !important;
+}
+.nav li a:hover, .nav li.current, .nav li.current a{
+    background: #3d321b !important;
+}
+.content{
+    background:url('http://classi.galdusmaffi.tk/2A/ZakariaR/GS/data/uploads/images/back.jpg');
+	color:brown;
+    padding:30px 0;
+    margin-top:100px;
+    border-radius: 15px; 
+    box-shadow: 0 0 20px #666;
+}
+@media(max-width:767px){
+    .content{
+        padding:30px;
+        margin-top:10px;
+    }
+}
+.coluna-lateral{
+    padding: 20px;
+    border-left: 2px dotted #887f6a;
+}
+.footer{
+    background:#54472a url('img/footer.png') repeat-x top left;
+    min-height:100px;
+    margin-top:20px;
+    padding: 20px 0;
+	text-align:left;
+}
+.footer p{
+    color: #eee;
+	text-align:left;
+	
+}
+@media(max-width:767px){
+    .footer{
+        padding:30px;
+		text-align:right;
+    }
+}

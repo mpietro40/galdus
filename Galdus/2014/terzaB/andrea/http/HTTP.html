@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1> <font size=6 HTTP </font> </h1>
+<title>HTTP</title>
+</head>
+<style>
+body{
+background:#009FFF;
+background-image: url(img/sfondo.jpg);
+}
+table, td{
+border: solid 1px green;
+color: #000000
+}
+table{
+border-collapse:collapse
+}
+</style>
+<img src="img/http.jpg"width="500" height="330" > <img src="img/http2.jpg"width="500" height="330" > <img src="img/http3.jpg"width="300" height="330" >
+<p>che cos'è l'http? <p> 
+<P> <font size="5"> <font color="#DC143C"> L'HyperText Transfer Protocol ovvero HTTP, tradotto in italiano protocollo di trasferimento di un ipertesto è usato come principale sistema per la trasmissione d'informazioni sul web ovvero in un'architettura tipica client-server. Le specifiche del protocollo sono gestite dal World Wide Web Consortium. Un server HTTP generalmente resta in ascolto delle richieste dei client sulla porta 80 usando il protocollo TCP a livello di trasporto.</font> </font> </p> 
+<P> <Font Size="6"> La Storia Dell'HTTP  </font> </p>
+<p> <font size="4"> <font color="#0999FF"> La prima versione dell'HTTP, la 0.9, risale alla fine degli anni ottanta e costituiva, insieme con il linguaggio HTML e gli URL, il nucleo base del World Wide Web (WWW) global information initiative sviluppata da Tim Berners-Lee al CERN di Ginevra per la condivisione delle informazioni tra la comunità dei fisici delle alte energie. La prima versione effettivamente disponibile del protocollo, la HTTP/1.0, venne implementata dallo stesso Berners-Lee nel 1991 e proposta come RFC 1945 all'ente normatore IETF nel 1996.
+Con la diffusione di NCSA Mosaic, un browser grafico di facile uso, il WWW conobbe un successo crescente e divennero evidenti alcuni limiti della versione 1.0 del protocollo, in particolare:
+l'impossibilità di ospitare più siti web sullo stesso server (virtual host);
+il mancato riuso delle connessioni disponibili;
+l'insufficienza dei meccanismi di sicurezza.
+Il protocollo venne quindi esteso nella versione HTTP/1.1, presentato come RFC 2068 nel 1997 e successivamente aggiornato nel 1999 come descritto dal RFC 2616 </font> </font> </p>
+<p> <font size="6"> Come Funziona L'HTTP </font> </p>
+<p> <font size="3"> L'HTTP funziona su un meccanismo richiesta/risposta (client/server): il client esegue una richiesta e il server restituisce la risposta. Nell'uso comune il client corrisponde al browser ed il server al sito web. Vi sono quindi due tipi di messaggi HTTP: messaggi richiesta e messaggi risposta.
+HTTP differisce da altri protocolli di livello 7 come FTP, per il fatto che le connessioni vengono generalmente chiuse una volta che una particolare richiesta (o una serie di richieste correlate) è stata soddisfatta. Questo comportamento rende il protocollo HTTP ideale per il World Wide Web, in cui le pagine molto spesso contengono dei collegamenti (link) a pagine ospitate da altri server diminuendo così il numero di connessioni attive limitandole a quelle effettivamente necessarie con aumento quindi di efficienza (minor carico e occupazione) sia sul client che sul server. Talvolta però pone problemi agli sviluppatori di contenuti web, perché la natura senza stato (stateless) della sessione di navigazione costringe ad utilizzare dei metodi alternativi per conservare lo stato dell'utente, tipicamente basati sui cookie.</font> </p>
+<p> <font size="6"> Esempi di messaggi Richiesta - Risposta HTTP </P> </font>
+<p> <font size="5"> <font color="#DC143C"> Richiesta :  </p> </font> </font>
+<p> <font size="4"> <font color="#DC143C"> GET /wiki.com/Pagina_principale HTTP/1.1   </p> </font> </font
+<p> <font size="4"> <font color="#DC143C">Connection: Keep-Alive  </p> </font> </font
+<p> <font size="4"> <font color="#DC143C">User-Agent: Mozilla/5.0 (compatible; Konqueror/3.2; Linux) (KHTML, like Gecko)  </p> </font> </font
+<p> <font size="4"> <font color="#DC143C">Accept: text/html, image/jpeg, image/png, text/*, image/*, */*  </p> </font> </font
+<p> <font size="4"> <font color="#DC143C">Accept-Encoding: x-gzip, x-deflate, gzip, deflate, identity  </p> </font> </font
+<p> <font size="4"> <font color="#DC143C">Accept-Charset: iso-8859-1, utf-8;q=0.5, *;q=0.5   </p> </font> </font
+<p> <font size="4"> <font color="#DC143C">Accept-Language: en  </p> </font> </font
+<p> <font size="4"> <font color="#DC143C">Host: it.wikipedia.org </p> </font> </font>
+<p> </p>
+<p> </p>
+<p> <font size="5"> <font color="#00FF00"> Risposta </p> </font> </font>
+<p> <font size="4"> <font color="#00FF00">HTTP/1.0 200 OK  </p> </font> </font>
+<p> <font size="4"> <font color="#00FF00">Date: Mon, 28 Jun 2004 10:47:31 GMT  </p> </font> </font>
+<p> <font size="4"> <font color="#00FF00">Server: Apache/1.3.29 (Unix) PHP/4.3.4  </p> </font> </font>
+<p> <font size="4"> <font color="#00FF00">X-Powered-By: PHP/4.3.4  </p> </font> </font>
+<p> <font size="4"> <font color="#00FF00">Vary: Accept-Encoding,Cookie  </p> </font> </font>
+<p> <font size="4"> <font color="#00FF00">Cache-Control: private, s-maxage=0, max-age=0, must-revalidate  </p> </font> </font>
+<p> <font size="4"> <font color="#00FF00">Content-Language: it  </p> </font> </font>
+<p> <font size="4"> <font color="#00FF00">Content-Type: text/html; charset=utf-8  </p> </font> </font>
+<p> <font size="4"> <font color="#00FF00">Age: 7673  </p> </font> </font>
+<p> <font size="4"> <font color="#00FF00">X-Cache: HIT from wikipedia.org  </p> </font> </font>
+<p> <font size="4"> <font color="#00FF00">Connection: close  </p> </font> </font>
+</body>
+</html>

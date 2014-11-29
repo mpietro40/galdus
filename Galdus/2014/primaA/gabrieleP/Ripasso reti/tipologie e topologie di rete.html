@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>Tipologie topologie di rete</title>
+<style>
+body { 
+background-color:red;
+color:white;
+}
+table, th {
+border: 1px solid black;
+background-color:black;
+}
+th {
+background-color:green;
+color:yellow;
+}
+td, tr {
+border: 1px solid black;
+color:white;
+background-color:limegreen;
+}
+h2 {
+color:darkred;
+}
+h1 {
+text-align:center;
+color:darkblue;
+font-size:50px
+}
+h3 {
+color:lightblue;
+}
+h4 {
+color:red;
+}
+</style>
+</head>
+<body>
+<div class="centrale">
+<h1>Topologie di rete </h1>
+<table>
+<tr>
+<th>Nome</th>
+<th>Descrizione</th>
+<th>Immagine</th>
+<th>Vantaggi e svantaggi</th>
+</tr>
+<tr>
+<td> <p align="center">Rete full connecting <br>
+(punto a punto)</td>
+<td>Una rete si definisce full connecting (punto a punto), quando tutti i device collegati alla rete <br>
+hanno un cavo per ogni nodo della rete. <br>
+Cio&egrave quando ogni computer o device può parlare direttamente con tutti gli altri computer. </td>
+<td> <img src='e.png' height=145px> </td>
+<td> <h2> VANTAGGI: </h2>1. In caso di un guasto su un cavo, tutti gli altri computer possono parlarsi. <br>
+2. Ogni computer può parlare con un altro computer in un solo passo. 
+<h2> SVANTAGGI: </h2> 1. Se la rete diventa grande il costo diventa enorme. <br>
+2. I computer che possono partecipare a questa rete sono speciali, cio&egrave, possono <br> gestire tante schede di rete. 
+ </td>
+ </tr>
+<tr>
+<td><p align="center">Rete a stella </td>
+<td>Una rete si definisce a stella, quando tutti i device sono collegati ad un unico computer universale. <br>
+Cio&egrave quando ogni computer o device può parlare ad un unico computer. </td>
+<td><img src='a.png' height=145px> </td>
+<td> <h2> VANTAGGI: </h2>1. &Egrave una rete semplice. <br> 2. &Egrave adatta a tutti i normali computer.<br>
+3. &Egrave facile aggiungere nuovi elementi alla rete. 
+<h2> SVANTAGGI: </h2> 1. Questa rete ha un singolo punto di fallimento (SPOF), cio&egrave se <br> si rompe il nodo centrale 
+nessuno più riesce a comunicare. <br> 2. Il numero di nodi della rete dipende dalle caratteristiche del nodo centrale.
+<br>3. L'uso di un'app &egrave pericoloso perch&eacute consente a uno degli altri nodi collegati di leggere i messaggi scambiati.  </td>
+</tr>
+<tr>
+<td><p align="center">Rete ad anello</td>
+<td>Una rete ad anello &egrave quella rete in cui ogni nodo &egrave collegato a due altri nodi, normalmente questa rete ha un verso di comunicazione </td>
+<td><img src='i.png' height=145px></td>
+<td><h2> VANTAGGI: </h2>1. &Egrave una rete espandibile e semplice. 
+<h2> SVANTAGGI: </h2> 1. Se si rompe un nodo o un cavo la rete &egrave bloccata. <br> 2. Per poter usare la rete bisogna aspettare il proprio turno.
+</td>
+</tr>
+<tr>
+<td><p align="center"> Rete a Bus </td>
+<td> Una rete a Bus &egrave quella rete in cui tutti i nodi sono collegati ad un cavo speciale, chiamato Bus. <br>
+Questo cavo consente a tutti i nodi di coomunicare conemporaneamente senza dover aspettare un turno. </td>
+<td><img src='u.png' height=105px> </td>
+<td><h2> VANTAGGI:</h2> 1. &Egrave facile aggiungere nuovi nodi. <br> 2. I computer collegati sono semplici.
+<h2> SVANTAGGI: </h2> 1. La rottura del bus blocca tutta la rete. <br> 2. Il traffico causato da un nodo pu&ograve rallentare tutti gli altri. </td>
+</tr>
+<tr>
+<td><p align="center">Rete ad albero </td>
+<td>La rete ad albero &egrave una rete in cui alcuni nodi si comportano da responsabili di un pezzo della rete. </td>
+<td><img src='o.png' height=105px> </td>
+<td><h2>VANTAGGI: </h2>1. &Egrave una rete semplice in cui &egrave possibile definire dei ruoli. <br> 2. I nodi si possono facilmente aggiungere con un impatto limitato al nodo padre. <br>
+<h2> SVANTAGGI: </h2>1. La comunicazione tra due nodi pu&ograve richiedere molti passi. <br>2. La rottura di un nodo blocca tutte le comunicazioni a valle.  </td>
+</tr>
+</table>
+<h3> Suddivisione in base all'estensione: </h3>
+<h1> Tipologie di rete </h1>
+<table>
+<tr>
+<th>Nome</th>
+<th>Descrizione</th>
+<th>Immagine</th>
+<th>Vantaggi e svantaggi</th>
+</tr>
+<tr>
+<td><p align="center">LAN </td>
+<td>La rete LAN (Local Area Network) &egrave una rete che copre una stanza o al massimo un edificio. </td>
+<td><img src='à.png' height=270px> </td>
+<td><h2>VANTAGGI: </h2>1. &Egrave una rete economica. <br>2. &Egrave una rete semplice da realizzare.
+<h2> SVANTAGGI: </h2>1. Per come &egrave costruita non pu&ograve essere molto estesa. <br>2. Normalmente &egrave poco sicura. </td>
+</tr>
+<tr>
+<td><p align="center">CAN </td>
+<td>Una rete CAN (Campus Area Network) &egrave una rete che serve ad unire pi&ugrave reti in uno o pi&ugrave edifici.  </td>
+<td><img src='è.jpg' height=103px> </td>
+<td><h2>VANTAGGI: </h2> 1. Consente di condividere facilmente risorse aziendali senza accedere ad Internet. <br> 2. &Egrave normalmente pi&ugrave sicura.
+<h2> SVANTAGGI: </h2> 1. &Egrave pi&ugrave costosa di una LAN. <br>2. &Egrave complicata da realizzare e mantenere. </td>
+</tr>
+<tr>
+<td><p align="center"> MAN </td>
+<td>La rete MAN (Metropolitan Area Network) &egrave una rete che copre una citt&agrave o parti di essa. </td>
+<td><img src='ì.jpg' height=215px> </td>
+<td><h2> VANTAGGI: </h2> 1. Risorse aziendali senza accesso ad Internet. <br> 2. &Egrave una rete sicura.
+<h2> SVANTAGGI: </h2> 1. Ha costi molto elevati. <br>2. &Egrave molto complicata da gestire. </td>
+</tr>
+<tr>
+<td><p align="center">WAN </td>
+<td>Una rete WAN (Wide Area Network) &egrave una rete in grado di coprire una o pi&ugrave regioni, in genere permette di connettere il MAN. </td>
+<td><img src='ì.gif' height=200px> </td>
+<td><h2>VANTAGGI: </h2> 1. Consente di avere una rete privata parallela ad internet.
+<h2>SVANTAGGI: </h2>1. Ha dei costi altissimi. <br> 2. La gestione di questa rete richiede tanti esperti. </td>
+</tr>
+<tr>
+<td><p align="center">WLAN </td>
+<td>Una rete WLAN (Wireless Local Area Network) indica una rete locale "senza fili", ovvero dei tipi di rete<br> che non hanno bisogno di collegamenti via cavo per collegarsi ad internet. </td>
+<td><img src='ù.png' height 55px> </td>
+<td><h2>VANTAGGI: </h2> 1. &Egrave molto semplice da realizzare. <br> 2. &Egrave molto economica. <br> 3. &Egrave facilissimo aggiungere nuovi nodi.
+<h2>SVANTAGGI: </h2>1. &Egrave poco sicura.<br>2. La velocit&agrave della rete &egrave limitata. </td>
+</tr>
+</table>
+<h4> Creato da Gabriele Palumbo </h4>
+</body>
+</html>

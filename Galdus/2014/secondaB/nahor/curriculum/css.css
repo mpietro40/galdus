@@ -1,0 +1,87 @@
+nav{
+	float:left;
+	width:20%;
+	text-align:right;
+}
+
+#bor{
+	border-right:1px solid black;
+	padding:5%;
+}
+
+#inizio{
+	margin-top:2%;
+}
+
+.titolo{
+	margin-top:20%;
+	font-weight:bold;
+}
+
+.contenuto{
+	margin-top:2%;
+}
+
+.contenuto-section{
+	padding:2px;
+}
+
+.titolino{
+	font-size:13px;
+	margin-bottom:10%;
+}
+
+section{
+	float:left;
+	padding:235px 16px;
+
+}
+
+.faq{
+	padding:80px 0 0 0;
+}
+
+.faq0{
+	padding:75px 0 0 0;
+}
+
+.faq1{
+	padding:45px 0 0 0;
+}
+
+.faq2{
+	padding:157px 0 0 0;
+}
+
+.faq3{
+	padding:4px 0 0 0;
+}
+
+.faq4{
+	padding:101px 0 0 0;
+}
+
+.faq5{
+	padding:110px 0 0 0;
+}
+
+.faq6{
+	padding:78px 0 0 0;
+}
+
+.faq7{
+	padding:63px 0 0 0;
+}
+
+.faq8{
+	padding:42px 0 0 0;
+}
+
+
+ul{
+	float:right;
+}
+
+td{
+	border-right:1px solid black;
+}

@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head><title>izador nogaj</title>izador nogaj
+<script language=javascript>
+function colore(scelta){
+if(scelta==1){
+document.getElementById('pagina').style.color='green';
+document.getElementById('pagina').style.backgroundColor='red';
+}
+if(scelta==2){
+document.getElementById('pagina').style.color='red';
+document.getElementById('pagina').style.backgroundColor='blue';
+}
+if(scelta==3){
+document.getElementById('pagina').style.color='yellow';
+document.getElementById('pagina').style.backgroundColor='green';
+}
+
+}
+var dimensione=10;
+function aumenta(valore){
+if(valore==1){
+dimensione=dimensione -10;
+document.getElementById('pagina').style.fontSize=dimensione+'px';
+}
+if(valore==2){
+dimensione=dimensione +10;
+document.getElementById('pagina').style.fontSize=dimensione+'px';
+}
+}
+</script>
+
+<style>
+body{background:black;
+}
+body{
+color:#ff0000
+}
+table,td{
+border: solid 1px green;
+color:#00ff00
+}
+table{
+border-collapse:collapse;
+}
+</style>
+</head>
+<body id=pagina>
+<table>
+    <tr>
+       <td>nome</td><td>cognome</td><td>e-mail</td><td>cell</td><td>facebook</td><td>foto</td>
+          </tr>
+
+   <tr>
+      <td>izador</td>
+      <td>nogaj</td>
+      <td>izzy1996@hotmail.it</td>
+      <td>3281033890</td>
+      <td>izador nogaj</td>
+      <td><img src='izador1.jpg'></td>
+
+   </tr>
+</table> 
+<input name=red value=red type=button onclick= 'colore(1)';> 
+<input name=blue value=blue type=button onclick= 'colore(2)';>
+<input name=green value=green type=button onclick= 'colore(3)';>
+<input type=button name='<' value='<' onclick= 'aumenta(1)';>
+<input type=button name='>' value='>'  onclick= 'aumenta(2)';>
+</body>
+</html>

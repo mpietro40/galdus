@@ -1,0 +1,84 @@
+<!doctype html>
+<head>
+<title>Componenti reti</title>
+<link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<style>
+#img1 {
+width:800px;
+height:400px;
+}
+</style>
+<script>
+$('#cssmenu').prepend('<div id="indicatorContainer"><div id="pIndicator"><div id="cIndicator"></div></div></div>');
+    var activeElement = $('#cssmenu>ul>li:first');
+
+    $('#cssmenu>ul>li').each(function() {
+        if ($(this).hasClass('active')) {
+            activeElement = $(this);
+        }
+    });
+
+
+	var posLeft = activeElement.position().left;
+	var elementWidth = activeElement.width();
+	posLeft = posLeft + elementWidth/2 -6;
+	if (activeElement.hasClass('has-sub')) {
+		posLeft -= 6;
+	}
+
+	$('#cssmenu #pIndicator').css('left', posLeft);
+	var element, leftPos, indicator = $('#cssmenu pIndicator');
+	
+	$("#cssmenu>ul>li").hover(function() {
+        element = $(this);
+        var w = element.width();
+        if ($(this).hasClass('has-sub'))
+        {
+        	leftPos = element.position().left + w/2 - 12;
+        }
+        else {
+        	leftPos = element.position().left + w/2 - 6;
+        }
+
+        $('#cssmenu #pIndicator').css('left', leftPos);
+    }
+    , function() {
+    	$('#cssmenu #pIndicator').css('left', posLeft);
+    });
+
+
+	$('#cssmenu>ul>.has-sub>ul').append('<div class="submenuArrow"></div>');
+	$('#cssmenu>ul').children('.has-sub').each(function() {
+		var posLeftArrow = $(this).width();
+		posLeftArrow /= 2;
+		posLeftArrow -= 12;
+		$(this).find('.submenuArrow').css('left', posLeftArrow);
+
+	});
+
+	$('#cssmenu>ul').prepend('<li id="menu-button"><a>Menu</a></li>');
+	$( "#menu-button" ).click(function(){
+    		if ($(this).parent().hasClass('open')) {
+    			$(this).parent().removeClass('open');
+    		}
+    		else {
+    			$(this).parent().addClass('open');
+    		}
+    	});
+</script>
+</head>
+<body>
+<script src="js/menu.js"></script>
+<div id="img"><img src="img/modem.jpg" id="img1"></div>
+<a id="fatto"><h1>Come è fatto</h1></a>
+<p>
+
+Il compito di un modem è quello di effettuare il collegamento, attraverso la tradizionale linea telefonica analogica, tra il computer da cui parte la richiesta di connessione ad Internet ed il Service Provider che fornisce la connettività. Il modem si incarica di codificare i dati digitali del computer utilizzato per la connessione in dati analogici affinché questi possano essere inviati lungo il normale doppino telefonico. Una volta raggiunta la destinazione, i dati analogici saranno poi decodificati in dati digitali. Per navigare in Internet con l'ADSL è necessario avere un modem ADSL, che è diverso dai modem Pstn (Public Switched Telephon Network) utilizzati per navigare sulle comuni linee telefoniche. L'ADSL consente di raggiungere velocità molto superiori rispetto a quelle ottenute collegandosi con un tradizionale modem analogico.
+</p>
+<a id="arrivato"><h1>A cosa serve</h1></a>
+<p>
+Il modem è quel dispositivo che permette la connessione alla rete e l'invio di pacchetti di dati che viaggiano comunemente con protocollo TCP/IP. I modem di oggi sono già predisposti per lavorare con protocolli ADSL2/2+, cioè con velocità molto grandi che però non sono ancora presenti o messi a disposizione da tutti i provider di servizi ADSL. Senza un modem il collegamento alla rete non può avvenire.
+</p>
+</body>
+</html>

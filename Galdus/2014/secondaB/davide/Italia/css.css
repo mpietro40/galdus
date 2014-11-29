@@ -1,0 +1,22 @@
+html, body{
+padding:0;
+margin:0;
+}
+
+#sfondo{
+background-size: 100%;
+background-attachment: fixed; 
+background: url('sfondo.jpg');
+
+}
+
+h1{
+color:Black;
+text-align:center;
+padding:0;
+margin:0;
+}
+
+section{
+text-align:center;
+}

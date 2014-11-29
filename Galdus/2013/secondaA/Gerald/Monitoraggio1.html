@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" href="CSS/mio.css" type="text/css" />
+<meta name="Gerald Joshua" CONTENT="Monitoraggio"> 
+<title> Gerald.Chillax.D </title>
+<script> 
+  function apriLinea(){
+     document.write("<tr>");
+  }
+  function chiudiLinea(){
+     document.write("</tr>");
+  }
+  function scriviInput(){
+     document.write("<input type='text' name='' size='10'/>");
+  }
+  var tipiElettro=new Array("Televisore","PC","Stereo","Lavatrice","Lavastoviglie","Stampante","Frigorifero","Lampadine","PlayStation","Lettori dvd","Modem");
+  
+  function scriviElettro(indice){
+ 
+     document.write(tipiElettro[indice]);
+  
+  }
+</script>
+<style> 
+html, body{
+  padding:0;
+  margin:0;
+  background-color:#####;
+}
+ 
+/* Permettiamo ai nostri nuovi elementi di essere mostrati in modo chiaro */  
+ 
+nav, article, footer, address {  
+  display: block;  }  
+ 
+header { 
+  margin:0;
+  padding:0;
+  display: block; 
+  font-size: 24px; 
+  font-weight: bold; 
+  text-align:center;
+  background-color:#7496DE;
+ 
+}
+section{
+  margin: auto;
+  position: relative;
+  left:10%;
+}
+ 
+ 
+nav{
+  background-color:#7496DE;
+  font-size: 16px; 
+  font-weight: bold; 
+  text-align: left;
+  width:250px;
+}
+footer{
+  background-color:#7496DE;
+  font-size: 12px; 
+  font-weight: italic; 
+  text-align: right;
+  width:100%;
+  position:absolute;
+  bottom:0;
+  padding:3px;
+}
+ 
+table, th, td{
+  border:solid 1px #999999;
+  padding:2px;
+}
+table{
+  border-collapse:collapse;
+}
+td{
+  text-align:center;
+ 
+}
+.destra{
+  text-align:right;
+}
+</style>
+</head>
+    <body>
+    <div class="centrato">
+       <header>
+       <div id="header">
+       </div>
+       <div id="navigation">
+			<ul>
+            	<li><a href="Monitoraggio.html">Monitoraggio</a></li>
+                <li><a href="Monitoraggio1.html">Monitoragio1</a></li>
+				<li><a href="Monitoraggio2.html">Monitoragio2</a></li>
+                <li><a href="Monitoraggio3.html">Monitoragio3</a></li>
+				<li><a href="Monitoraggio4.html">Monitoragio4</a></li>
+				<li><a href=">Monitoraggio5.html">Monitoragio5</a></li>
+			</ul>
+	</div> 
+<embed src=http://flash-clocks.com/free-flash-clocks-blog-topics/free-flash-clock-36.swf width=200 height=200 wmode=transparent type=application/x-shockwave-flash></embed>   
+           <h1>Monitoraggio</h1>
+       </header>
+                
+                <script>
+                document.write("<table>");
+                for(ii=0;ii<11;ii++){
+                  if(ii==0){
+                    
+                    apriLinea();
+                    
+                    document.write("<th>");
+                    document.write("Elettrodomestico");
+                    document.write("</th><th>");
+                    document.write("Consumo nominale");
+                    document.write("</th><th>");
+                    document.write("Ore Totale Utilizzo");
+                    document.write("</th><th>");
+                    document.write("Totale Max");
+                    
+                    chiudiLinea();
+                    
+                  } else {
+                    apriLinea();
+                    document.write("<th>");
+                    scriviElettro(ii);
+                    document.write("</th><td>");
+                    scriviInput();
+                    document.write("</td><td>");
+                    scriviInput();
+                    document.write("</td><td>");
+                    scriviInput();
+                    chiudiLinea();
+                    
+                  }
+                }
+                
+                chiudiLinea();
+                document.write("</table>");
+                </script>
+                </p>
+            </article>
+        </section>
+Centro Formazione Professionale Galdus , Sede Via Pompeo Leoni 2
+</div>
+<script>
+// Set the number of snowflakes (more than 30 - 40 not recommended)
+var snowmax=35
+
+// Set the colors for the snow. Add as many colors as you like
+var snowcolor=new Array("#aaaacc","#ddddFF","#ccccDD")
+
+// Set the fonts, that create the snowflakes. Add as many fonts as you like
+var snowtype=new Array("Arial Black","Arial Narrow","Times","Comic Sans MS")
+
+// Set the letter that creates your snowflake (recommended:*)
+var snowletter="*"
+
+// Set the speed of sinking (recommended values range from 0.3 to 2)
+var sinkspeed=0.6
+
+// Set the maximal-size of your snowflaxes
+var snowmaxsize=22
+
+// Set the minimal-size of your snowflaxes
+var snowminsize=8
+
+// Set the snowing-zone
+// Set 1 for all-over-snowing, set 2 for left-side-snowing 
+// Set 3 for center-snowing, set 4 for right-side-snowing
+var snowingzone=3
+
+///////////////////////////////////////////////////////////////////////////
+// CONFIGURATION ENDS HERE
+///////////////////////////////////////////////////////////////////////////
+
+
+// Do not edit below this line
+var snow=new Array()
+var marginbottom
+var marginright
+var timer
+var i_snow=0
+var x_mv=new Array();
+var crds=new Array();
+var lftrght=new Array();
+var browserinfos=navigator.userAgent 
+var ie5=document.all&&document.getElementById&&!browserinfos.match(/Opera/)
+var ns6=document.getElementById&&!document.all
+var opera=browserinfos.match(/Opera/)  
+var browserok=ie5||ns6||opera
+
+function randommaker(range) {		
+	rand=Math.floor(range*Math.random())
+    return rand
+}
+
+function initsnow() {
+	if (ie5 || opera) {
+		marginbottom = document.body.clientHeight
+		marginright = document.body.clientWidth
+	}
+	else if (ns6) {
+		marginbottom = window.innerHeight
+		marginright = window.innerWidth
+	}
+	var snowsizerange=snowmaxsize-snowminsize
+	for (i=0;i<=snowmax;i++) {
+		crds[i] = 0;                      
+    	lftrght[i] = Math.random()*15;         
+    	x_mv[i] = 0.03 + Math.random()/10;
+		snow[i]=document.getElementById("s"+i)
+		snow[i].style.fontFamily=snowtype[randommaker(snowtype.length)]
+		snow[i].size=randommaker(snowsizerange)+snowminsize
+		snow[i].style.fontSize=snow[i].size
+		snow[i].style.color=snowcolor[randommaker(snowcolor.length)]
+		snow[i].sink=sinkspeed*snow[i].size/5
+		if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
+		if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+		if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+		if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+		snow[i].posy=randommaker(2*marginbottom-marginbottom-2*snow[i].size)
+		snow[i].style.left=snow[i].posx
+		snow[i].style.top=snow[i].posy
+	}
+	movesnow()
+}
+
+function movesnow() {
+	for (i=0;i<=snowmax;i++) {
+		crds[i] += x_mv[i];
+		snow[i].posy+=snow[i].sink
+		snow[i].style.left=snow[i].posx+lftrght[i]*Math.sin(crds[i]);
+		snow[i].style.top=snow[i].posy
+		
+		if (snow[i].posy>=marginbottom-2*snow[i].size || parseInt(snow[i].style.left)>(marginright-3*lftrght[i])){
+			if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
+			if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+			if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+			if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+			snow[i].posy=0
+		}
+	}
+	var timer=setTimeout("movesnow()",50)
+}
+
+for (i=0;i<=snowmax;i++) {
+	document.write("<span id='s"+i+"' style='position:absolute;top:-"+snowmaxsize+"'>"+snowletter+"</span>")
+}
+if (browserok) {
+	window.onload=initsnow
+}
+</script>
+</body>
+</html>

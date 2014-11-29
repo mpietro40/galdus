@@ -1,0 +1,80 @@
+img, iframe, object, embed, ymaps {
+	max-width : 100%!important;
+}
+img{
+	height : auto!important;
+}
+ .container{
+	width : 960px;
+	margin : 0px auto;
+}
+#slider img{
+	width : 900px;
+}
+.one-col,
+.one-second-col,
+.one-third-col,
+.one-quarter-col,
+.three-quarter-col,
+.two-thirds-col {
+  display: inline;
+  float: left;
+  margin : 0px 10px 20px;
+}
+.one-col{
+	width : 940px;
+}
+.one-second-col{
+	width : 460px;
+}
+.one-third-col{
+	width : 300px;
+}
+.one-quarter-col{
+	width : 220px;
+}
+.three-quarter-col{
+	width : 700px;
+
+}
+.two-thirds-col{
+	width : 620px;
+}
+
+.two-thirds-col .one-third-col{
+	padding : 0;
+	margin : 0px 10px;
+	background-color : transparent;
+}
+.three-quarter-col .one-quarter-col{
+	padding : 0;
+	margin : 0px 10px;
+	background-color : transparent;
+}
+.one-second-col .one-quarter-col{
+	padding : 0;
+	margin : 0px 10px;
+	background-color : transparent;
+}
+.margin-minus {
+	margin : 0px -10px;
+	padding : 0;
+	border : none;
+	overflow : hidden;
+	background-color : transparent;
+}
+.border{
+	padding : 20px;
+}
+.padding{
+	padding-left : 10px;
+	padding-right : 10px;
+}
+.gray{
+	padding : 10px;
+	-webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+	background-color : #F0E68C;
+}
+

@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Heartbleed | cos'è</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="menu.css" media="screen" /> 
+</head>
+<body>
+<div id="container">
+<div id="top">
+<div id="logo">
+<br/>
+<br/>
+<h1> &nbsp &nbsp &nbsp Heartbleed</h1>
+<p> &nbsp </p>
+
+<p> &nbsp </p>
+</div>
+<div id="main-photo"><img src="Heartbleed.jpg" width="432" height="210" alt="Menu :"></div>
+<div id="main-menu">
+<ul id="main-menu-items">
+<li class="first"><a href="cosa.html">Cos'è Heartbleed ?</a></li>
+<li><a href="contromisure.html">Contromisure</a></li>
+</ul>
+</div>
+</div>
+<div id="section">
+<p>Una grande vulnerabilità, chiamata Heartbleed (CVE-2014-0160), da almeno due anni sta mettendo a rischio i dati delle connessioni protette a milioni di siti online. Il problema riguarda il sistema per criptare le comunicazioni OpenSSL, utilizzato su circa due terzi dei server di Internet, i computer ai quali ci colleghiamo ogni giorno per leggere la posta, scambiarci messaggi su Facebook, accedere al nostro conto in banca o mandare un tweet. I responsabili di OpenSSL hanno diffuso lunedì 7 aprile un aggiornamento per risolvere la vulnerabilità, ma secondo gli esperti di sicurezza informatica potrebbero essere necessari mesi per mettere le cose a posto.</p> <br/>
+<h2>Heartbleed </h2>
+<p>In condizioni normali, quando si visita un sito protetto con un sistema SSL, il computer provvede a mandare periodicamente un breve messaggio di controllo al server cui si è collegato tramite la connessione sicura, per essere certo che sia ancora online e funzionante. Quelli di Codenomicon e di Google Security hanno scoperto che una falla permette di inviare un falso messaggio breve di controllo al server, facendogli credere di essere il computer della connessione sicura e ottenendo in questo modo i dati presenti nella memoria temporanea del server (RAM).
+All’interno della RAM si possono trovare informazioni molto importanti sugli utenti che sono collegati al server. Un utente malintenzionato potrebbe scoprire le password degli account di diversi servizi, altre informazioni personali e potrebbe raccogliere altri dati sensibili come i numeri delle carte di credito. La vulnerabilità potrebbe essere sfruttata per ottenere le chiavi che servono per decodificare i messaggi criptati scambiati tra il proprio computer e il server cui si è collegato, utilizzando OpenSSL. In questo caso, un utente malintenzionato potrebbe avere ampio accesso agli account del computer verso cui ha condotto l’attacco. Secondo gli esperti di sicurezza informatica, basta avere un minimo di dimestichezza con i linguaggi di programmazione per imparare a sfruttare la vulnerabilità.</p><br/>
+<h2>OpenSSL </h2>
+<p>Alcuni tipi di scambi di dati online, contenenti informazioni sensibili come un numero di carta di credito o la propria corrispondenza, hanno la necessità di essere criptati, resi cioè leggibili solamente dal mittente e dal ricevente grazie alla condivisione di un codice in comune. OpenSSL provvede a trasformare i dati del mittente in un messaggio codificato che può essere aperto e letto solamente dal ricevente. In questo modo, se qualcuno prova a spiare lo scambio di informazioni si ritrova davanti una grande quantità di codice criptato, illeggibile senza la giusta chiave per interpretarlo.
+OpenSSL esiste dagli anni Novanta e fino a ora si era distinto come uno dei sistemi più affidabili per criptare le comunicazioni online. Società piccole e grandi, molto grandi, di Internet lo usano da tempo per mantenere la sicurezza delle informazioni che sono scambiate sui loro server. I browser indicano di solito nella barra degli indirizzi se ci si trova su un sito protetto, mostrando l’icona di un lucchetto. Facebook, Google, Yahoo e molti altri utilizzano OpenSSL.
+lucchetto-siti </p><br/>
+<h2>Scoperta </h2>
+Heartbleed, che letteralmente significa “cuore sanguinante”, è stata scoperta da un gruppo di ricercatori della società di sicurezza informatica finlandese Codenomicon e, separatamente, da Google Security, la divisione della società che indaga sulla presenza di possibile falle nei propri sistemi informatici. Dopo avere scoperto il problema, i ricercatori si sono coordinati con il gruppo di sviluppo di OpenSSL per trovare insieme una soluzione e averla da subito pronta al momento dell’annuncio della vulnerabilità. Per spiegare che cos’è Heartbleed e come bisogna procedere per sistemare le cose, è stato creato un sito apposta.
+</div>
+<footer>
+Zakaria Rahman <br/>
+2 ^A info
+</footer>
+</body>
+</html>

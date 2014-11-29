@@ -1,0 +1,66 @@
+  html,body{margin:10px; padding: 10px}
+body{ background:#CCFF67;}
+a:link {color:#669900;} 
+a:visited {text-decoration: none; color:#6699FF;}
+a:hover {color: red;}
+
+  body {
+	text-align: center; /* IE5.x */
+	padding: 0;
+	margin: 0;
+	}
+ 
+#telaio {
+	width:100%;
+	margin: 0px;
+	border:1px solid gray;
+	line-height:150%;
+	color: black;
+	background-color: #ffffcc;
+	text-align: left; /* IE5.x */
+	}
+ 
+#testata {
+	font-size: 170%;
+  text-align: center;
+	}
+ 
+ 
+#fondo {
+	font-size: 85%;
+	text-align: center;
+  margin-top: 320px;
+  float: top;
+	}
+ 
+ 
+#testata, #fondo {
+	padding:0.5em;
+	color:white;
+	background-color: #cc9900;
+	clear:left;
+	}
+ 
+ 
+#sinistro {
+	/*float:left; */
+	width:180px;
+	margin: 0px;
+	padding: 5px;
+  vertical-align: center;
+	}
+ 
+#centrale {
+	position: absolute;
+  top: 60px;  
+  margin-left: 190px;
+  border-left:1px solid gray;
+  text-align: justify;
+	padding:10px;
+	}
+  
+  ul
+  {
+   list-style-image: url('images/punto.jpg')
+  }
+

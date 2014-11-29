@@ -1,0 +1,132 @@
+body{
+  background-image:url('Nelson-Mandela.jpg');
+    background-color:#CFCFCF;
+}
+body{
+            font-family:Arial;
+        }
+        .header
+        {
+            width:300px;
+            height:56px;
+            position:absolute;
+            top:0px;
+            left:37%;
+            background:#fff;
+			opacity:0.80;
+			filter:alpha(opacity=30);
+        }
+        a.back{
+            width:256px;
+            height:73px;
+            position:fixed;
+            bottom:15px;
+            right:15px;
+            background:#fff url(codrops_back.png) no-repeat top left;
+        }
+        .scroll{
+            width:133px;
+            height:61px;
+            position:fixed;
+            bottom:15px;
+            left:150px;
+            background:#fff url(scroll.png) no-repeat top left;
+        }
+        .info{
+            text-align:right;
+
+        }
+        .home{
+           background:#fff url(codrops_back.png) no-repeat top left;
+        
+        }
+ul#navigation {
+    position: fixed;
+    margin: 0px;
+    padding: 0px;
+    top: 10px;
+    left: 0px;
+    list-style: none;
+    z-index:9999;
+}
+ul#navigation li {
+    width: 100px;
+}
+ul#navigation li a {
+    display: block;
+    margin-left: -2px;
+    width: 100px;
+    height: 70px;    
+    background-color:#CFCFCF;
+    background-repeat:no-repeat;
+    background-position:center center;
+    border:1px solid #AFAFAF;
+    -moz-border-radius:0px 10px 10px 0px;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -khtml-border-bottom-right-radius: 10px;
+    -khtml-border-top-right-radius: 10px;
+    opacità : 0.6 ;
+    Filtro: progid: DXImageTransform.Microsoft.Alpha (opacità = 60 );
+}
+    ul # navigazione li a {
+    Display : block ;
+    margin-left : 85px- ;
+    width : 100px ;
+    height : 70px ;
+    background-color : # CFCFCF ;
+    background-repeat : no-repeat ;
+    background-position : Centro  Centro ;
+    border : 1px  solido  # AFAFAF ;
+    -Moz- border-radius : 0px  10px  10px  0px ;
+    -Webkit-border-bottom-right-radius: 10px ;
+    -Webkit-border-top-right-radius: 10px ;
+    -KHTML-border-bottom-right-radius: 10px ;
+    -KHTML-border-top-right-radius: 10px ;
+    opacità : 0.6 ;
+    Filtro: progid: DXImageTransform.Microsoft.Alpha (opacità = 60 );
+
+    /*-moz-box-shadow: 0px 4px 3px #000;
+    -webkit-box-shadow: 0px 4px 3px #000;
+    */
+    opacity: 0.6;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+}
+ul#navigation .pagina a{
+    background-image: url('menu.jpg');
+}
+ul#navigation .home a{
+    background-image: url('BIOGRAFIA.jpg');
+}
+ul#navigation .about a      {
+    background-image: url('nobel.jpg');
+}
+ul#navigation .search a      {
+    background-image: url('46664.jpg');
+}
+ul#navigation .photos a      {
+    background-image: url('nelsonday.jpg');
+}
+ul#navigation .rssfeed a   {
+    background-image: url('obama.jpg');
+}
+
+#content {
+margin: 0 180px 5px 220px;
+padding: 1em 10px;
+background-color: #ADD23D;
+width: 900px;
+}
+
+$ ( funzione () {
+ $ ( '# navigazione> li' ). hover (
+  funzione  () {
+   $ ( 'a' , $ ( questo ).) stop () animare ({. 'marginLeft' : '-2px' }, 200);
+  },
+  funzione  () {
+   $ ( 'a' , $ ( questo ).) stop () animare ({. 'marginLeft' : '-85px' }, 200);
+  }
+ );
+});
+
+

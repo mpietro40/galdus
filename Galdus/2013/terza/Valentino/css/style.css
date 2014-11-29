@@ -1,0 +1,8 @@
+html,body{margin:10px; padding: 10px}
+body{ background:blue;
+color:red;
+font-size:85px;}
+a:link {color:#669900;} 
+a:visited {text-decoration: none; color:#6699FF;}
+a:hover {color: red;}
+table {     border: 1px solid #000;     background-color: #ccc; }   tr {     background-color:black; } 

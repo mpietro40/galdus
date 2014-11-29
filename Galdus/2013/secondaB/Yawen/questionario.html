@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Questionario sull'uso di energia(yawen)</title>
+<style>
+div.centrato { text-align: center; }
+table.centrata { margin-left:auto; margin-right:auto; }
+p.thicker{
+font-weight:1000;
+} 
+p.thicker {font-weight:900;}
+body{
+color:black ;
+background:LIGHTSKYBLUE;
+}
+table,td{
+border: solid 3px blue ;
+/*color:green;*/
+}
+table{
+border-collapse:collapse;
+}
+</style>
+<script>
+function cambia(){
+window.location='index.html';
+}
+</script>
+</head>
+<body id=pagina>
+<form method='get' action='http://maffi.eu5.org/Galdus/Test/test.php'>
+<div id="telaio">
+<div id="testata">
+<h1 align=center>Questionario sull'uso di energia</h1>
+<div class="centrato">
+<table class="centrata">
+<tr>
+<td>sesso</td>
+<td><select name=sesso>
+<option value=''></option>
+<option value='maschio'>maschio</option>
+<option value='femmina'>femmina</option>
+<option value='altro'>altro</option></td>
+</tr>
+<tr>
+<th>eletrodomestici posseduti</th>
+<td>
+  <input type="checkbox" name="vehicle" value="lavastoviglie">lavastoviglie<br>
+  <input type="checkbox" name="vehicle" value="aspirapolvere">aspirapolvere<br>
+  <input type="checkbox" name="vehicle" value="televisione">televisione<br>
+  <input type="checkbox" name="vehicle" value="computer">computer<br>
+  <input type="checkbox" name="vehicle" value="lavatrice">lavatrice<br>
+  <input type="checkbox" name="vehicle" value="frigorifero">frigorifero<br>
+  <input type="checkbox" name="vehicle" value="luce">luce<br>
+</td></tr>
+<tr>
+<td>riscardamento</td>
+<td>
+  <input type="radio" name="vehicle" value="centralizzto">cetralizzato<br>
+  <input type="radio" name="vehicle" value="privato">privato<br>
+</td></tr>
+<tr>
+<th>descrizione riscaldamento</th>
+<td><textarea></textarea></td>
+</tr>
+<tr>
+<td>indirizo</td>
+<td><input type=text name=via></td>
+</tr> 
+<tr>
+<th colspan=2>
+ <input type=submit value='invia dati'>
+ <input type=reset value='annulla'>
+</tr>
+</table>
+<input type=button name=controli value=home onclick=cambia();></input>
+</form>
+</body>
+</html>

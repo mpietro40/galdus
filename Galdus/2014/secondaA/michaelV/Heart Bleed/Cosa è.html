@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="easytabs.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" href="specimen_stylesheet.css" type="text/css" charset="utf-8" />
+	<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+
+	<style type="text/css">
+		body{
+			font-family: 'belligerent_madnessregular';
+			}
+			
+	</style>
+
+	<title>HEART BLEED</title>
+	
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function() {
+			$('#container').easyTabs({defaultContent:1});
+		});
+	</script>
+</head>
+
+<body>
+<div id="container">
+	<div id="header">
+		 HEART BLEED </div>
+	<ul class="tabs">
+		<li><a href="#Cosaè">Cosa è</a></li>
+		<li><a href="#Contromisure">Contromisure</a></li>
+		
+	</ul>
+	
+	<div id="main_content">
+<div id="Cosa è">
+ <img src="heartbleed.jpg">
+		Lo hanno chiamato Heartbleed, cioè “cuore sanguinante”. E il nome pare proprio azzeccato. Perché il bug che ha colpito oltre due terzi dei server cui si appoggiano i siti Web di tutto il mondo sembra proprio un attacco al cuore di Internet. Un attacco dissanguante, storico, senza precedenti. Nella notte fra il 7 e l’8 aprile del 2014 abbiamo scoperto che il sistema OpenSSL, quello col lucchetto che compare nel browser e che ci fa sentire invincibili e inattaccabili, non è poi così sicuro. Dal dicembre 2011 una falla, Heartbleed appunto, lo ha reso penetrabile, spalancando le porte ai cybercriminali sempre in cerca di identità da rubare e conti correnti da prosciugare. Cosa sia successo in questi ventotto mesi è difficile stabilirlo con certezza. La NSA si è chiamata fuori, e le grandi aziende coinvolte (da Google a Facebook) hanno cercato di spegnere sul nascere le preoccupazioni degli utenti, invitandoli però a cambiare password. Poco, troppo poco per far dormire sonni tranquilli. Chi può garantire a un comunissimo utente di Facebook, di Yahoo o di GMail che i suoi dati non siano stati rubati, che la sua identità non sia finita nelle mani di un criminale informatico senza scrupoli? In Rete si sono da subito create due fazioni: una più garantista, l’altra più allarmista. Secondo la prima, la falla (immediatamente risolta con una nuova release di OpenSSL) avrebbe esposto sì le connessioni, ma non così tanto da mettere a rischio i dati sensibili. I più allarmati, invece, sono profondamente convinti che “Heartbleed” abbia seriamente messo a rischio le chiavi segrete, le password e i dati sensibili. A sostegno della seconda ipotesi è giunto il primo arresto di un cracker che, in Canada, ha sfruttato Heartbleed per entrare nell’archivio dell’Agenzia delle Entrate e tirare giù un migliaio di dati.
+
+C’è da dire che di risposte ufficiali e credibili, come spesso accade in questi casi, non ce ne sono. E molto probabilmente non ce ne saranno. Non resta, dunque, che capire quali possano essere le contromisure più idonee da adottare dal punto di vista delle aziende, anche ad attacco ormai consumato.Innanzitutto una ventata di tranquillità arriva dal fatto che OpenSSL ha reso immediatamente disponibile la versione aggiornata (la 1.0.1g ) che chiude la falla. Quindi è doveroso che tutte le aziende che forniscono servizi aggiornino  la libreria, o che ricompilino quella in uso eliminando la parte che ha causato la falla. E’ necessario, poi, sostituire il certificato digitale. Quello in uso potrebbe essere compromesso perché la chiave privata potrebbe essere stata sottratta. E’ consigliabile anche un reset delle sessioni attive, che in sostanza “slogga” gli utenti loggati. Infine, sarebbe opportuno suggerire agli utenti di cambiare password.
+Rispetto al cambio delle password, molte aziende lo hanno richiesto. E rimane comunque una buona prassi periodica. I colossi californiani, però, se pur finiti nella falla dell’OpenSSL non hanno dato alcun suggerimento ai loro utenti. Forse sarebbe stato sinonimo di debolezza, e avrebbe scatenato il panico. Ma se fosse stato realmente necessario non lo sapremo mai. 
+		</div>
+
+		
+		
+
+
+	<div id="footer">
+		
+	</div>
+</div>
+</body>
+</html>

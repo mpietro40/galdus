@@ -1,0 +1,47 @@
+/*stili per il layout fluido*/
+html,body{margin: 0;padding:0}
+body{font-family: verdana;
+	font-size: 80%;
+	background-image:url('images/sfondo.jpg');
+	background-color: #90BD09;}
+div#container{background-color: #90BD59;}
+
+/*stili generici, su header e footer*/
+div#header{background-color:#272737;color: #FFCC00}
+h1,h2{margin: 0;padding:0}
+h1{padding-left:10px;font: bold 2.3em/80px; text-align:center}
+h2{color: #AD6003;font-size: 1.5em}
+div#footer a{color:#fff;font-weight: bold;text-decoration: underline}
+
+/*stili specifici per il layout*/
+div#navigation{float: left;width: 200px;\width:210px;w\idth:200px;padding: 1em 0 0 5px}
+div#extra{float: right;width: 160px;\width:170px;w\idth:160px;padding: 1em 5px}
+div#content{margin:0 180px 5px 220px;padding: 1em 10px;background-color: #ADD26D;height:90%;}
+div#footer{clear:both; text-align:center; padding: 5px 0;
+    background-color: #272737; color: #606060}
+
+/*stili per la navigazione*/
+div#navigation ul{margin: 0;padding: 0; list-style-type: none}
+div#navigation li{margin: 0;padding: 0}
+div#navigation a{color:#196003;font: normal bold 1.2em/1.4em text-decoration: none}
+div#navigation a:hover{color: #AD6003;text-decoration: underline}
+div#navigation a#activelink{color: #196003;text-decoration: none}
+div#navigation p{font-size: 90%}
+
+/*stili per la sezione extra*/
+div#extra div.newsbox{font-size: 90%;margin-bottom: 2em}
+div#extra div.newsbox h2{color: #AD6003;font-size: 1.2em}
+div#extra div.newsbox p{margin: 0}
+
+/* FINE MODIFICA */
+a#viewcss{color: #00f;font-weight: bold}
+
+/* tabella*/
+table,th,td{
+	border:1px solid #123456;
+	}
+	
+table,th,td{
+	padding:5px;
+	border-collapse:collapse;
+	}

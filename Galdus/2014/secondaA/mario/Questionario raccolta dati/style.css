@@ -1,0 +1,45 @@
+.border_radius { border-radius: 0px 0px 0px 0px; }
+.border-radius { border-radius: 0px; }
+.border-radius { 
+  border-radius: 10px; 
+  -moz-border-radius: 10px; /* firefox */
+  -webkit-border-radius: 10px; /* safari, chrome */
+}
+#ombra
+{
+    font: bold 25px 'times new roman';
+    text-shadow: 3px 3px 5px #E0E0E0;
+}
+addEvent(window, 'load', initCorners);
+     
+function initCorners() {
+    var settings = {
+        tl: { radius: 20 },
+        tr: { radius: 20 },
+        bl: { radius: 20 },
+        br: { radius: 20 },
+        antiAlias: true
+    }
+         
+    curvyCorners(settings, "#round"); //#round corrisponde all'id del div
+} 
+<!--[if IE]>
+<script type="text/javascript" src="curvycorners.js"></script>
+<script type="text/javascript">
+ 
+addEvent(window, 'load', initCorners);
+ 
+function initCorners() {
+    var settings = {
+        tl: { radius: 20 },
+        tr: { radius: 20 },
+        bl: { radius: 20 },
+        br: { radius: 20 },
+        antiAlias: true
+    }
+     
+    curvyCorners(settings, "#round");
+}
+ 
+</script>
+<![endif]-->

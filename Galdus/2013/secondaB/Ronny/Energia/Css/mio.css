@@ -1,0 +1,13 @@
+html,body{margin:10px; padding: 10px}
+body{ background:#CCFF67;
+color:blue;
+}
+a:link {color:#669900;} 
+a:visited {text-decoration: none; color:#6699FF;}
+a:hover {color: red;}
+table, th, td{
+border: solid 8px black;
+}
+table{
+border-collapse:collapse;
+}

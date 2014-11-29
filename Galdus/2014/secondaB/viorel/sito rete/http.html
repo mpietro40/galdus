@@ -1,0 +1,212 @@
+<html>
+<head>
+<script language="JavaScript" type="text/javascript">
+<!-- 
+// SCRIPT EDITE SUR L'EDITEUR JAVASCRIPT http://www.editeurjavascript.com
+// Prelevato ed illustrato su HTTP://Web-Link.it
+
+if (document.getElementById)
+	{
+	fromPub = 0;
+	iVolePub = new Image;
+	iVolePub.src = "images2.jpg";
+	offsetyPub=0;
+	HauteurPub = 0;
+	place = fromPub;
+	xpub = 4;
+	ypub = 4;
+	}
+
+function RandomDep()
+	{
+	numimagePub= Math.round(Math.random()*8);
+	numimagePub ++;
+	return(numimagePub);
+	}
+
+function VolimPub()
+	{
+	if(document.all)
+		{
+		EcranlargPub = document.body.clientWidth-iVolePub.width;
+		EcranhautPub = document.body.clientHeight-iVolePub.height;	
+		}
+	else
+		{
+		EcranlargPub = screen.width-100;
+		EcranhautPub = screen.height-100;
+		}
+	if (document.getElementById)
+		{
+		if (place > EcranlargPub)
+			xpub = (-(RandomDep()));
+		if (place < fromPub)
+			xpub = RandomDep();
+		document.getElementById("pubBulle").style.left = (place = place + xpub);
+		document.getElementById("pubBulle").style.top = (HauteurPub += ypub)+offsetyPub;
+		if (HauteurPub>EcranhautPub)
+			ypub = (-(RandomDep()));
+		if (HauteurPub<0)
+			ypub = RandomDep();
+		tempo36 = setTimeout('VolimPub()', 50);
+		}
+	}
+
+function OffSet()
+	{
+	if (navigator.appName=="Microsoft Internet Explorer")
+   		offsetyPub = document.body.scrollTop;
+	}
+window.onload = VolimPub;
+onscroll = OffSet;
+// end  -->
+</script>	  
+<title>La rete</title>
+<body background='images.jpg'>
+<script language="JavaScript" type="text/javascript">
+<!-- 
+if (document.getElementById)
+	{
+	document.write('<DIV ID="pubBulle" STYLE="position:absolute; top:200px; left:-100px; z-indexpub:10"><IMG SRC="'+iVolePub.src+'" BORDER=0 HSPACE=0><\/DIV>');
+	}
+// prelevato su web-link.it -->
+</script>	
+<marquee align="middle" direction="right"scrolldelay="5"><h1><center><font color="lime"> HTTP</font></center></h1></marquee>
+ 
+<div align='center' style='padding:4px;'>
+<table border='10'> <td> 
+    <span style="background-color:chartreuse; border:2px solid black; padding:4px;   width:150px"><a href='Larete.html'>HOME</a></span>
+    <span style="background-color:chartreuse; border:2px solid black; padding:4px;   width:150px"><a href='Protocollo.html'>Protocollo</a></span>
+    <span style="background-color:chartreuse; border:2px solid black; padding:4px;   width:150px"><a href='Requisiti.html'>Requisiti</a></span>
+    <span style="background-color:chartreuse; border:2px solid black; padding:4px;   width:150px"><a href='#'>Componenti</a></span>
+    <span style="background-color:chartreuse; border:2px solid black; padding:4px;   width:150px"><a href='http.html'>HTTP</a></span>
+	</div>
+</table>
+<hr/>
+<p align='justify'>
+<font color="white">
+<table background="images1.jpg" border="10">
+<td>
+<font color="white">
+100 Continue:<p>
+    Il server ha ricevuto l'header della richiesta e il client deve procedere ad inviare il corpo della richiesta (solitamente nelle richieste di tipo POST).<p>
+101 Switching Protocols:<p>
+    Il richiedente ha richiesto di cambiare il protocollo in uso e il server e a conoscenza di cio che dovra fare.<p>
+
+2xx Success<p>
+
+L'azione e stata ricevuta con successo, compresa ed accettata.<p>
+
+200 OK:<p>
+    Risposta standard per le richieste HTTP andate a buon fine.<p>
+201 Created:<p>
+202 Accepted:<p>
+    La richiesta di elaborazione e stata accettata ma non e ancora terminata.<p>
+203 Non-Authoritative Information<p>
+204 No Content<p>
+205 Reset Content<p>
+206 Partial Content<p>
+207 Multi-Status<p>
+    In caso di risposte XML, quando piu azioni possono essere richieste, i dettagli dei singoli stati sono dati nel corpo della risposta. Vedi WebDAV (RFC 4918) per le specifiche associate.<p>
+
+3xx Redirezione<p>
+
+Il client deve eseguire ulteriori azioni per soddisfare la richiesta.<p>
+
+300 Multiple Choices<p>
+301 Moved Permanently:<p>
+    Questa e tutte le future richieste andranno dirette ad un altro URI (specificato nell'header Location).<p>
+302 Found:<p>
+    Questo e il codice piu usato ma anche un classico esempio di non aderenza agli standard nella pratica quotidiana. Infatti, le specifiche di HTTP/1.0 (RFC 1945) richiederebbero che il client esegua redirezioni temporanee (la descrizione originale era "Moved Temporarily"), ma i più diffusi browser l'hanno implementata come 303 descritta di seguito. Percio, HTTP/1.1 ha aggiunto i codici di stato 303 e 307 per distinguere tra i due comportamenti. Comunque, la maggior parte delle applicazioni e dei framework web ancora usano il codice di stato 302 come se fosse il 303.<p>
+303 See Other (da HTTP/1.1):<p>
+    La risposta alla richiesta puo essere trovata sotto un'altra URI usando il metodo GET.<p>
+304 Not Modified<p>
+305 Use Proxy (da HTTP/1.1):<p>
+    Molti client HTTP (come Mozilla ed Internet Explorer) non gestiscono correttamente le risposte con questo codice di stato.<p>
+306 Switch Proxy:<p>
+    Non più usato.<p>
+307 Temporary Redirect (da HTTP/1.1):<p>
+    In quest'occasione, la richiesta dovrebbe essere ripetuta con un'altra URI, ma successive richieste possono essere ancora dirette a quella originale. In contrasto con 303, la richiesta di POST originale deve essere reiterata con un'altra richiesta di tipo POST.<p>
+
+308 Permanent Redirect (approvato come RFC sperimentale):<p>
+    Questa richiesta e le future dovrebbero essere fatte verso un altro URI. Le risposte 307 e 308 (come proposta) dovrebbero comportarsi similmente alla 302 e la 301, ma non prevedono un cambiamento di metodo.<p>
+
+4xx Client Error<p>
+
+La richiesta e sintatticamente scorretta o non puo essere soddisfatta.<p>
+
+400 Bad Request:<p>
+    La richiesta non puo essere soddisfatta a causa di errori di sintassi.<p>
+401 Unauthorized:<p>
+    Simile a 403/Forbidden, ma pensato per essere usato quando l'autenticazione e possibile ma è fallita o non puo essere fornita. Vedi anche basic access authentication e digest access authentication.<p>
+402 Payment Required:<p>
+    L'intendimento originale prevedeva un suo utilizzo per realizzare meccanismi di digital cash/micropagamento, ma questo non si e mai verificato ed il codice non e mai stato utilizzato.<p>
+403 Forbidden:<p>
+    La richiesta e legittima ma il server si rifiuta di soddisfarla. Contrariamente al codice 401 Unauthorized, l'autenticazione non ha effetto.<p>
+404 Not Found:<p>
+    La risorsa richiesta non e stata trovata ma in futuro potrebbe essere disponibile.<p>
+405 Method Not Allowed:<p>
+    La richiesta è stata eseguita usando un metodo non permesso. Ad esempio questo accade quando di usa il metodo GET per inviare dati da presentare con un metodo POST.<p>
+406 Not Acceptable:<p>
+    La risorsa richiesta e solo in grado di generare contenuti non accettabili secondo la header Accept inviato nella richiesta.<p>
+407 Proxy Authentication Required<p>
+408 Request Timeout:<p>
+    Il tempo per inviare la richiesta e scaduto e il server ha terminato la connessione.<p>
+409 Conflict<p>
+410 Gone:<p>
+    Indica che la risorsa richiesta non e piu disponibile e non lo sarà piu in futuro.<p>
+411 Length Required:<p>
+    La richiesta non specifica la propria dimensione come richiesto dalla risorsa richiesta.<p>
+412 Precondition Failed<p>
+413 Request Entity Too Large:<p>
+    La richiesta e piu grande di quanto il server possa gestire.<p>
+414 Request-URI Too Long:<p>
+    L'URI richiesto e troppo grande per essere processato dal server.<p>
+415 Unsupported Media Type:<p>
+    L'entita della richiesta e di un tipo non accettato dal server o dalla risorsa richiesta.<p>
+416 Requested Range Not Satisfiable<p>
+417 Expectation Failed<p>
+418 I'm a teapot:<p>
+    Questo e un tipico pesce d'aprile dell'IETF (RFC 2324). Non si aspettano implementazioni in alcun server HTTP.<p>
+426 Upgrade Required (RFC 2817):<p>
+    Il client dovrebbe cambiare il protocollo ed usare ad esempio il TLS/1.0.<p>
+449 Retry With:<p>
+    Estensione di Microsoft: The request should be retried after doing the appropriate action.<p>
+
+451 Unavailable For Legal Reasons (Internet draft):<p>
+    Stato non obbligatorio utilizzato quando l'accesso alla risorsa e limitato per ragioni legali come censura o mandati governativi. Probabilmente fa riferimento alla novella distopistica Fahrenheit 451.<p>
+
+5xx Server Error<p>
+
+Il server ha fallito nel soddisfare una richiesta apparentemente valida.<p>
+
+500 Internal Server Error:<p>
+    Messaggio di errore generico senza alcun dettaglio.<p>
+501 Not Implemented:<p>
+    Il server non e in grado di soddisfare il metodo della richiesta.<p>
+502 Bad Gateway<p>
+503 Service Unavailable:<p>
+    Il server non e al momento disponibile. Generalmente e una condizione temporanea.<p>
+504 Gateway Timeout<p>
+505 HTTP Version Not Supported:<p>
+    Il server non supporta la versione HTTP della richiesta.<p>
+509 Bandwidth Limit Exceeded:<p>
+    Questo codice di stato, benche usato da molti server, non e un codice di stato ufficiale in quanto non e specificato in alcuna RFC.<p>
+
+Voci correlate:<p>
+
+    HTTP<p>
+    URL<p>
+    HTML<p>
+    XHTML<p>
+    HTML5<p>
+    World Wide Web Consortium<p>
+    302 Google Jacking<p>
+
+</font>
+</p>
+<hr/>
+</table>
+</body>
+</head>
+</html>

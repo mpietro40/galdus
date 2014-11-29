@@ -1,0 +1,42 @@
+<html>
+<head>
+<style>
+.codice{
+color:red;
+font-size:16px;
+}
+</style>
+<link href="../database/xampp.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+Questa pagina contiene il codice sorgente dell'esercizio
+<span class=codice><br>
+&lt;!doctype html&gt;<br />
+&lt;html&gt;<br />
+&lt;body&gt;<br />
+<br />
+&lt;?php <br />
+<br />
+$l1=$_POST[&quot;lato1&quot;];<br />
+$l2=$_POST[&quot;lato2&quot;];<br />
+if($l1==$l2)<br />
+$msg=&quot; e' un quadrato &quot;;<br />
+else<br />
+$msg=&quot; e' un rettangolo &quot;;<br />
+<br />
+$area=$l1*$l2;<br />
+$perimetro=($l1+$l2)*2;<br />
+<br />
+?&gt;<br />
+<br />
+Carissimo &lt;?php echo $_REQUEST[&quot;name&quot;]; ?&gt;!&lt;br&gt;<br />
+la figura di cui hai inserito i lati:&lt;br&gt;<br />
+&lt;?php echo $msg; ?&gt;!&lt;br&gt;<br />
+la sua area vale: &lt;?php echo $area; ?&gt; ed il perimetro &lt;?php echo $perimetro; ?&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt; <br />
+
+</span>
+<a href="index.html">Torna indietro</a>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+<title>ULTIMO LAVORO</title>
+<style>
+
+#menu02o ul{
+margin:0;
+padding-left: 0;
+list-style: none;
+}
+#menu02o li{
+font-size: 1em;
+display: inline;
+margin: 0px;
+padding: 0px;
+}
+#menu02o a:link, #menu02o a:visited{
+float:left;
+background: url(image/menu2b.jpg) center top no-repeat;
+background-color: #DFDBDB;
+color: black;
+margin: 0em;
+padding: 0.3em 1.5em 0.3em 1.5em;
+text-decoration:none;
+font-weight:bold;
+border-right: 1px solid #fff;
+}
+#menu02o a:hover, #menu02o a:focus, #menu02o a:active{
+color: #fff;
+background: url(image/menu2b.jpg) center top no-repeat;
+background-color: blue;
+}
+#contenuto{
+float:bottom;
+}
+header{
+width:100%;
+background-color:white;
+height:30px;
+padding:5px;
+text-align:center
+}
+h1{
+color:white;
+font-family:arial black;
+font-size:50px;
+}
+h2{
+color:blakc;
+font-family:arial black;
+font-size:15x;
+margin-right:30px; 
+margin-left:30px; 
+}
+h3{
+color:white;
+font-family:algerian;
+font-size:20x;
+margin-top:10px; 
+margin-right:30px; 
+margin-bottom:10px;
+margin-left:30px; 
+
+}
+.centrato{
+  width:30%;
+  margin:auto;
+}
+</style>
+</head>
+<body>
+<body background="img.jpg">
+<h1 align="center">TIPI DI RETE</h1>
+<header>
+<div id="menu02o">
+ <ul>
+  <li><a href="home.html">Home</a></li>
+  <li><a href="cloud.html">Cloud</a></li>
+  <li><a href="storia.html">Storia Di Internet</a></li>
+ <li><a href="pitagora.html">Pitagora</a></li>
+ </ul>
+</div>
+</header>
+</style>
+<script>
+function calcola1(){
+alert('ciao');
+var c1=document.f1.ct1.value;
+var c2=document.f1.ct2.value;
+alert('cateto1'+c1);
+var risultato=Math.sqrt(c1*c1+c2*c2);
+alert('risultato'+risultato);
+document.f1.ipo.value=risultato;
+}
+
+</script>
+</head>
+<body> 
+
+<h1>Il teorema di Pitagora</h1>
+<form name=f1>
+<table>
+<img src="pitagora.jpg" width=250px height=250px><p>
+<br>
+<td><input type=text name=ct1>
+</td>
+<td><h3>Cateto1</h3></td>
+</tr>
+<br>
+<td><input type=text name=ct2>
+</td>
+<td><h3>Cateto2</h3></td>
+</tr>
+<br>
+<td><input type=text name=ipo>
+</td>
+<td><h3>Ipotenusa</h3></td>
+</tr>
+<tr>
+<td><input type=button name=calcola value=calcola onclick=calcola1();>
+</td>
+<td><h3>Calcola</h3></td>
+</center>
+</tr>
+<h2></h2>
+<h3> <br>
+</h3>
+</body>
+</html>

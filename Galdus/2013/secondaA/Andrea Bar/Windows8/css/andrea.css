@@ -1,0 +1,10 @@
+body{
+background-image:url("../img/Windows-8.jpg");
+color:red;
+}
+table,td,th{
+border:solid 1px blue;
+}
+table{
+border-collapse:collapse;
+}

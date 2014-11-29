@@ -1,0 +1,127 @@
+  * {
+     margin: 0px;
+     padding: 0px;
+   }
+    ul{
+	background-color:grey;
+	color:green;
+	   }
+   body {
+     margin: 0px auto;
+      width: 87%;
+     font-family: Arial, Helvetica, sans-serif;
+     background:url("m.jpg");
+   }
+   
+   body.a{
+     margin: 0px auto;
+     width: 87%;
+     font-family: Arial, Helvetica, sans-serif;
+     background: url("sfondo.jpg") top left no-repeat;
+   }
+
+   a {
+     color:#grey; 
+     text-shadow:1px 1px 1px #cccccc;
+   }
+
+   p {
+     text-align:justify;
+   }
+
+   header, footer, aside, section {
+     display: block;
+   }
+   section{
+   float:left;
+   width: 920px;
+ 
+   }
+
+   h1 {
+     font-size: 26px;
+     line-height: 40px;
+     padding: 18px 0;
+	 font-family:arial black;
+	  text-align:center;
+	  color:#FACC2E;
+   }
+   
+    h2{
+     font-size: 26px;
+     line-height: 40px;
+     padding: 18px 0;
+	 color:white;
+   }
+   
+   
+   h4{
+
+	 font-family:Trebuchet MS;
+	 color:#FFB700;
+   }
+
+
+   aside {
+     display: table-cell;
+	 float:right;
+     width: 300px;
+  background:url("g.jpg");
+   
+   }
+
+   .bpage div {
+     -webkit-column-count: 2px;
+     -moz-column-count: 2;
+     -moz-column-gap: 22px;
+     -webkit-coulmn-gap: 22px;
+   }
+
+   aside ul {
+     -moz-border-radius: 11px;
+     -webkit-border-radius: 11px;
+
+     margin: 22px 0 0 22px;
+     padding: 11px 22px;
+	 color:white; 
+   }
+    
+   #im1 {
+     margin: 6px auto;
+     -moz-border-radius: 10px;
+     -webkit-border-radius: 10px;
+     background: url("test.jpg");
+     height: 250px;
+     width: 600px;
+   }
+
+   footer {
+     clear:both;
+	 position:relative;
+	 background:black;
+     border-top:1px solid #cccccc;
+     padding:10px;
+     -moz-border-radius-topleft: 5px;
+     -moz-border-radius-topright: 5px;
+     text-align: center;
+     color: #ffffff;
+   }
+   
+
+   #im2{
+     margin: 6px auto;
+     -moz-border-radius: 10px;
+     -webkit-border-radius: 10px;
+     background: url("musica.jpg");
+     height: 250px;
+     width: 600px;
+   }  
+
+   #im3{
+     margin: 6px auto;
+     -moz-border-radius: 10px;
+     -webkit-border-radius: 10px;
+     background: url("loading.gif");
+     height: 250px;
+     width: 600px;
+   }   

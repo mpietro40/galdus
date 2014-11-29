@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>bryan garcia</title>
+<script>
+var dimensione= 10;
+function aumenta(valore){ 
+if(valore==2){
+dimensione=dimensione +10;
+document.getElementById("pagina").style.fontSize=dimensione+"px";
+}
+if(valore==1) {
+dimensione=dimensione -10;
+document.getElementById("pagina").style.fontSize=dimensione+"px";
+}
+}
+function colora(scelta){
+if(scelta==1){
+document.getElementById("pagina").style.backgroundColor="red";
+document.getElementById("pagina").style.color="orange";
+}
+if(scelta==2){
+document.getElementById("pagina").style.backgroundColor="yellow";
+document.getElementById("pagina").style.color="lime";
+}
+if(scelta==3){
+document.getElementById("pagina").style.backgroundColor="lime";
+document.getElementById("pagina").style.color="red";
+}
+}
+</script>
+<style>
+body{ /*background: black;*/
+}
+body{
+color:blue
+}
+body{
+background:#000000;
+}
+table,td{
+border: solid 3px blue ;
+color:blue
+}
+table{
+border-collapse:collapse;
+}
+</style>
+</head>
+<body id=pagina>
+
+ Tabella Bryan Garcia
+<table border="1" >
+<tr>
+<td>NOME</td>
+<td>COGNOME</td>
+<td>e-MAIL</td>
+<td>CELLULARE</td>
+<td>FACEBOOK</td>
+<td>FOTO</td>
+</tr>
+<tr>
+<td>Bryan</td>
+<td>Garcia</td>
+<td>mrbryan12@live.it</td>
+<td>3457048830</td>
+<td>Bryan Garcia Martinez</td>
+<td></td>
+</tr>
+</table>
+<input name=red value=red type=button onclick="colora(1);">
+<input name=yellow value=yellow type=button onclick="colora(2);">
+<input name=green value=green type=button onclick="colora(3)";>
+<input type=Button name="<" value="<" onclick="aumenta(1)";>
+<input type=Button name=">" value=">" onclick="aumenta(2)";>
+</body>
+</html> 
+

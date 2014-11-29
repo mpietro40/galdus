@@ -1,0 +1,204 @@
+/*stili per il layout fluido*/
+html,body{margin: 0;padding:0}
+body{font-family: verdana;
+	font-size: 80%;
+	/*background-image:url('images/sfondo.jpg');*/
+	background-color: #A9F5BC;
+	height:80%;}
+container{background-color: #90BD09;}
+
+/*stili generici, su header e footer*/
+header{background-color:#BCF5A9;color: #FFCC00}
+h1,h2{margin: 0;padding:0}
+h1{padding-left:10px;font: bold 2.3em/80px; text-align:center}
+h2{color: #AD6003;font-size: 1.5em}
+footer a{color:#fff;font-weight: bold;text-decoration: underline}
+
+/*stili specifici per il layout*/
+nav{float: left;width: 20%;padding: 1em 0 0 5px}
+aside{float: right;width: 15%;padding: 1em 5px}
+section{margin:0 200px 2px 230px;padding: 1em 5px;background-color: lightgreen;height:100%;}
+footer{clear:both; text-align:center; padding: 5px 0;background-color: #272737; color: #606060;
+	position:absolute; bottom:0;width:100%;height:40px;}
+
+/*stili per la navigazione*/
+nav ul{margin: 0;padding: 0; list-style-type: none}
+nav li{margin: 0;padding: 0}
+nav a{color:#196003;font: normal bold 1.2em/1.4em text-decoration: none}
+nav a:hover{color: #AD6003;text-decoration: underline}
+nav a#activelink{color: #196003;text-decoration: none}
+nav p{font-size: 90%}
+p {
+	font-family: sans-serif,serif;
+	text-align: justify;
+        margin-left: 10%;
+	margin-right: 10%;
+	text-indent : 0%;
+}
+
+h2 {
+	font-family: sans-serif;
+	color: navy;
+	font-style: oblique;
+}
+h3 {
+	font-family: sans-serif;
+	color: blue;
+	font-style: oblique;
+	margin-left: 5%;
+}
+
+tt { 	font-family: "Courier New", monospaced;
+        font-size: medium;
+	FONT-WEIGHT: bold;  
+	color: navy;
+}
+pre {	font-family: "Courier New", monospaced;
+        font-size: medium;
+	FONT-WEIGHT: bold;  
+	color: navy;
+	margin-left: 8%;
+	margin-right: 10%;
+ 
+}
+
+ul {    font-family: sans-serif;
+	text-align: justify;
+        margin-left: 15%;
+        margin-right: 10%;
+}
+
+ol {    font-family: sans-serif;
+	text-align: justify;
+        margin-left: 15%;
+        margin-right: 10%;
+}
+
+dl {    font-family: sans-serif;
+	text-align: justify;
+        margin-left: 15%;
+        margin-right: 10%;
+}
+
+dt {  	FONT-WEIGHT: bold;  
+	 color: navy;
+}
+
+li {  	padding-top: 2%;
+}
+
+body { 	background-color: white;
+}
+nav {float: left;
+}
+
+  * {
+     margin: 0px;
+     padding: 0px;
+   }
+
+   body {
+     margin: 0px auto;
+     width: 960px;
+     font-family: Arial, Helvetica, sans-serif;
+     background: url("bg_body.jpg") top left no-repeat;
+   }
+
+   a {
+     color:#000000; 
+     text-shadow:1px 1px 1px #cccccc;
+   }
+
+   p {
+     text-align:justify;
+   }
+
+   header, footer, aside, section {
+     display: block;
+   }
+
+   h1 {
+     font-size: 26px;
+     line-height: 40px;
+     padding: 18px 0;
+   }
+
+   nav {
+     width: 77%;
+     height: 40px;
+     -moz-border-radius: 10px;
+     -webkit-border-radius: 10px;
+     background: #f3f3f3;
+     border: 1px solid #cccccc;
+     position: absolute;
+   }
+
+   nav ul {
+     list-style-image: none;
+     list-style-position: outside;
+     list-style-type: none;
+     margin: 0px auto;
+     width: 940px;
+   }
+
+   nav ul li {
+    float: left;
+   }
+
+   nav ul li a {
+     margin-right: 20px;
+     display: block;
+     line-height: 40px;
+   }
+
+   #content {
+     display: table;
+     margin-top: 40px;
+   }
+
+   #mcontent {
+     display: table-cell;
+     padding-right: 22px;
+     width: 620px;
+   }
+
+   aside {
+     display: table-cell;
+     width: 300px;
+     background: #f3f3f3;
+   }
+
+   .bpage div {
+     -webkit-column-count: 2px;
+     -moz-column-count: 2;
+     -moz-column-gap: 22px;
+     -webkit-coulmn-gap: 22px;
+   }
+
+   aside section {
+     -moz-border-radius: 11px;
+     -webkit-border-radius: 11px;
+     background: #e0e0e0;
+     margin: 22px 0 0 22px;
+     padding: 11px 22px;
+     width: 50%;
+   }
+
+   #im1 {
+     margin: 6px auto;
+     -moz-border-radius: 10px;
+     -webkit-border-radius: 10px;
+     background: url("test.jpg");
+     height: 250px;
+     width: 600px;
+   }
+
+   footer {
+     background: #666666;
+     border-top:1px solid #cccccc;
+     padding:10px;
+     -moz-border-radius-topleft: 5px;
+     -moz-border-radius-topright: 5px;
+     text-align: center;
+     color: #ffffff;
+   }

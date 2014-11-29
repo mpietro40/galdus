@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<h1><p align="center">Modello ISO/OSI</p></h1>
+<head>
+<title> TABELLA ISO/OSI</title>
+</head>
+<body>
+<table>
+<table width: 240px;
+<table weight: 205px;
+<table border="1">
+<tr>
+<td><h2>Livello 7 Application</h2></td>
+<td>Interfaccia di comunicazione con i programmi (Application Program Interface).</td>
+</tr>
+<tr>
+<td><h2>Livello 6 Presentation</h2></td>
+<td>Formattazione e trasformazione dei dati: codifica, decodifica, compressione, crittografia, ecc.</td>
+</tr>
+<tr>
+<td><h2>Livello 5 Session</h2></td>
+<td>Definisce le funzioni per l instaurazione, il mantenimento e la conclusione delle sessioni di comunicazione e la consegna delle informazioni all applicativo destinatario.</td>
+</tr>
+<tr>
+<td><h2>Livello 4 Transport</h2></td>
+<td>Definisce le funzioni per assicurare la corretta consegna del messaggio, per la rilevazione degli errori del livello precedente e l eventuale correzione.</td>
+</tr>
+<tr>
+<td><h2>Livello 3 Network</h2></td>
+<td>Definisce le funzioni di instradamento dei dati tra le reti.</td>
+</tr>
+<tr>
+<td><h2>Livello 2 Data-Link</h2></td>
+<td>E suddiviso in due sottolivelli. Il sottolivello MAC (Media Access Control) definisce le funzioni per la trasmissione dei dati sul mezzo fisico, l individuazione univoca della scheda di rete (MAC Address), la topologia della rete e la rilevazione degli errori eventualmente verificatisi a Livello 1. Il sottolivello LLC (Logical Link Control) definisce l identificazione dei protocolli di livello superiore e il relativo incapsulamento.</td>
+</tr>
+<tr>
+<td><h2>Livello 1 Physical</h2></td>
+<td>Definisce il mezzo fisico, il tipo di connettore e le specifiche elettriche per la trasmissione dei dati.</td>
+</tr>
+</table>
+</body>
+</html>

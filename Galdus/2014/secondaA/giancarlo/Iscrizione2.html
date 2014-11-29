@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title> Questionario </title>
+<Link rel='stylesheet' href='css/style.css'>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.3/jquery.min.js"></script>
+<style id="jsbin-css"></style>
+</head>
+<body>
+<div class="centrato">
+<h1>Questionario sull'uso dell html5</h1>
+<h5>Prova a creare questa pagine</h5>
+<form id=payment method="POST" action="#">
+<fieldset>
+<legend>Dati personali</legend>
+<ol>
+<li>
+<label form=name>Nome e Cognome</label>
+<input id=cognome name=classe type=text placeholder="classe" required autofocus>
+</li>
+<li>
+<label for=sesso>Sesso</label>
+<select name=sesso>
+<option value=''> </option>
+<option value='maschio'>Maschio</option>
+<option value='femmina'>Femmina</option>
+</select>
+</li>
+<li>
+<label form=datadinascita>Data di nascita</label>
+<input type=date name=datanascita>
+</li>
+<li>
+<label form=DataCompilazione>Data di compilazione </label>
+<input type=date name=born placeholder="66/mm/aaaa"required>
+</li>
+</ol>
+</fieldset>
+<fieldset>
+<ol>
+<li class=centrato>
+<input type=submit value='invia dati'/>
+<input type=reset value='annulla'/>
+</li>
+</ol>
+</fieldset>
+</form>
+</div>
+</body>
+</html>

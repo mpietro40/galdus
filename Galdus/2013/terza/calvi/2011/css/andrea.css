@@ -1,0 +1,36 @@
+html, body{
+        background-color: navy;
+	margin-left: .21cm;
+	margin-right: .21cm;
+	color: red;
+	font-family: garamond
+        font-weight:bold;
+	font-size: 60px;
+        text-align: center;
+
+	}
+
+a:visited{
+	text-decoration: none;
+	color: lime;
+	}
+
+a:hover{
+	color: darkmagenta;
+	text-decoration: none;
+	}
+a:hover {
+		color: orange;
+        }
+td{
+	font-family: "MS Sans Serif";
+	font-size: 12pt;
+        }	
+p {
+		font-style: italic;
+		font-weight: bold;
+		font-size: 30px;
+		font-family: arial;
+	}
+	
+

@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+<title>Pitagora</title>
+<style>
+body {
+background-color:lightgreen;
+font-family:verdana;
+margin:0px;
+}
+
+h1{
+text-align:center;
+}
+header {
+margin:0px;
+text-align:center;
+background-color:gold;
+text-align:center;
+}
+nav{
+  float:left;
+  width:200px;
+}
+section{
+  width:60%;
+  text-align:right;
+  margin:10px 0px 0px 10px;
+}
+footer{
+text-align:center;
+background-color:gold;
+position:fixed;
+margin-bottom:0px;
+width:100%;
+}
+</style>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+ <script>
+ function Pitagora() {
+ var c1=eval(document.f1.cat1.value);
+ var c2=eval(document.f1.cat2.value);
+ var ipo=eval(document.f1.ipot.value);
+ /*
+ alert(c1+isNaN(c1));
+ alert(c2+isNaN(c2));
+ alert(ipo+isNaN(ipo));
+ */
+ if (isNaN(c1)){
+    alert("C1 e' vuoto");
+  if (isNaN(c2)){
+    alert("almeno due valori da compilare A");
+	return;
+  } else if (isNaN(ipo)){
+      alert("almeno due valori da compilare B");
+	  return;
+  } else{
+      //Calcolo C1
+	  var r = Math.sqrt((ipo*ipo)-(c2*c2));
+      document.f1.ris.value=r;
+	  return;
+  }
+ } else {
+    alert("C1 e' pieno");
+   if (isNaN(c2)){
+    alert("C2 e' vuoto");
+    if (isNaN(ipo)){
+      alert("almeno due valori da compilare B");
+    } else{
+      //Calcolo C2
+	  var r = Math.sqrt((ipo*ipo)-(c1*c1));
+      document.f1.ris.value=r;
+	  return;
+    }
+   }
+    //alert("c1 e c2"+c1+c2); 
+    //Calcolo IPO
+    alert("C2 e' pieno");
+    var r = Math.sqrt((c2*c2)+(c1*c1));
+    document.f1.ris.value=r;
+	return;
+  }
+ }
+ </script>
+</head>
+<body>
+<header>
+<h1> PITAGORA </h1>
+</header>
+<nav>
+</nav>
+<section>
+<FORM NAME="f1"> 
+<label> 
+Cateto 1:</label><INPUT TYPE="text" NAME="cat1" Size="18"> 
+<br>
+<label> 
+Cateto 2:</label><INPUT TYPE="text" NAME="cat2" Size="18"> 
+<br><label> 
+ipo:</label><INPUT TYPE="text" NAME="ipot" Size="18"> 
+<br><label> 
+Risultato:</label><INPUT TYPE="text" NAME="ris" Size="18"> 
+<br>
+<input type="button" name="bn" value="Calcola" onClick="Pitagora()"> 
+
+</FORM> 
+
+</section>
+<footer>
+Created by Pietro Maffi
+</footer>
+</body>
+</html>

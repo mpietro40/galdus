@@ -1,0 +1,34 @@
+html,body{margin:10px; padding: 10px; }
+body{ background:#ccaa3f;
+border: 1px solid black;
+}
+font{color:DODGERBLUE;} 
+a:link {color:#669900;} 
+a:visited {text-decoration: none; color:#6699FF;}
+a:hover {color: red;}
+table, td, th
+{
+border:2px solid ;
+color:blue;
+
+}
+th
+{
+background-color:green;
+color:DODGERBLUE;
+} 
+td
+{
+background-color:MIDNIGHTBLUE;
+color:DODGERBLUE;
+}
+h1
+{
+Color:DODGERBLUE;
+}
+img{
+width:800px;
+height:600px;
+}
+li{
+text-align:Left;

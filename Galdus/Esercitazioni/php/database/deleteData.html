@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<style>
+.codice{
+color:red;
+font-size:16px;
+}
+table, td, tr, th{
+border: solid 2px blue;
+
+}
+table{
+border-collapse:collapse;
+}
+</style>
+<title>Eliminazione dei dati da una tabella</title>
+<link href="../xampp.css" rel="stylesheet" type="text/css">
+<link href="../css/style_o.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<script type="text/javascript" src="../menu/menuxampp.js"></script>
+&nbsp;<p>
+
+<h1>Di seguito il codice PHP per riaprire la connessione al DB ed elimina alcuni dati di esempio nel DB</h1>
+<div class="codice">
+&lt;?php<br />
+try<br />
+{<br />
+//create the database.<br />
+//this will generate the database file in the directory in which this script exists.<br />
+//If this file already exists, the database will be opened on this file.<br />
+$database = new SQLite3('mysqlitedb.sqlite3', 0666);<br />
+echo &quot;&lt;h2&gt;DB creato&lt;/h2&gt;&quot;;<br />
+}<br />
+catch(Exception $e)<br />
+{<br />
+die($e);<br />
+}<br />
+<br />
+//Inserisco i valori nella tabella "indirizzi" (PID INT NOT NULL , nome CHAR(40), cognome CHAR(40), indirizzo CHAR(40), citta CHAR(40), cap INT )<br />
+$query = &quot;DELETE FROM indirizzi WHERE PID=1 &quot;;<br />
+<br />
+// stampo la query che eseguiro'<br />
+echo &quot;&lt;h2&gt;Queste sono le query di cancellazione dati con id=1 &lt;/h2&gt;&quot;;<br />
+echo &quot;$query&quot;.&quot;&lt;br&gt;&quot;;<br />
+<br />
+if(!$database-&gt;exec($query)){<br />
+die();<br />
+}<br />
+print &quot;&lt;h2&gt;Dati eliminati per PID=1 &lt;/h2&gt;&quot;;<br />
+<br />
+?&gt;
+</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+<head></head>
+<body>
+<body bgcolor="#ffff00">
+<h1><p align="center">Sito HTTP Walter Garcia</p></h1>
+<p align="center"><img src="http.jpg"></p>
+<div>L'HyperText Transfer Protocol (HTTP) (protocollo di trasferimento di un ipertesto) e' usato come principale sistema per la trasmissione d'informazioni sul web ovvero in un'architettura tipica client-server.
+Le specifiche del protocollo sono gestite dal World Wide Web Consortium (W3C). Un server HTTP generalmente resta in ascolto delle richieste dei client sulla porta 80 usando il protocollo TCP a livello di trasporto.
+La prima versione dell'HTTP, la 0.9, risale alla fine degli anni 1980 e costituiva, insieme con il linguaggio HTML e gli URL, il nucleo base del World Wide Web (WWW) global information initiative sviluppata da Tim Berners-Lee al CERN di 
+Ginevra per la condivisione delle informazioni tra la comunita' dei fisici delle alte energie. La prima versione effettivamente disponibile del protocollo, la HTTP/1.0, venne implementata dallo stesso Berners-Lee nel 1991 e proposta come RFC 1945 all'ente normatore IETF nel 1996.
+L'HTTP funziona su un meccanismo richiesta/risposta (client/server): il client esegue una richiesta e il server restituisce la risposta. Nell'uso comune il client corrisponde al browser ed il server al sito web. Vi sono quindi due tipi di messaggi HTTP: messaggi richiesta e messaggi risposta.
+HTTP differisce da altri protocolli di livello 7 come FTP, per il fatto che le connessioni vengono generalmente chiuse una volta che una particolare richiesta (o una serie di richieste correlate) e' stata soddisfatta. Questo comportamento rende il protocollo HTTP ideale per il World Wide Web,
+ in cui le pagine molto spesso contengono dei collegamenti (link) a pagine ospitate da altri server diminuendo cosi' il numero di connessioni attive limitandole a quelle effettivamente necessarie con aumento quindi di efficienza (minor carico e occupazione) sia sul client che sul server.
+ Talvolta pero' pone problemi agli sviluppatori di contenuti web, perche' la natura senza stato (stateless) della sessione
+ di navigazione costringe ad utilizzare dei metodi alternativi per conservare lo stato dell'utente, tipicamente basati sui cookie.</div>
+ <p align="left"><img src="client.jpg"></p><div>Il client nel messaggio di richiesta puo' chiedere al server di effettuare una connessione persistente o non persistente. Se la connessione e' persistente, il file e le occorrenze verranno trasferiti in un'unica connessione TCP. Se la connessione e' non persistente, verra' stabilita una connessione TCP per il trasferimento del file richiesto e per ogni occorrenza trovata. 
+ Per ogni nuova connessione si impiegano: 2*RTT + T, dove T indica il tempo di trasferimento del file e RTT il round trip time, bisogna attendere un tempo RTT dal segmento di SYN inviato dal client al segmento di SYNACK inviato dal server e un altro tempo RTT dal segmento di ACK contenente l'HTTP REQUEST alla risposta del server contenente l'HTTP RESPONSE. 
+ Molti browser gestiscono le connessioni non persistenti aprendo diverse connessioni TCP in parallelo, guadagnando cosi' una banda maggiore nel collegamento.
+ Dal momento che tutto il traffico HTTP e' anonimo e in chiaro, sono state sviluppate diverse alternative per garantire differenti livelli di sicurezza, in termini di
+cifratura del traffico; verifica di integrita' del traffico; autenticazione del server; autenticazione dell'utente.
+La prima proposta venne direttamente da NCSA, con le versioni server 1.1 e client 2.2 che supportavano un meccanismo di autenticazione utente e cifratura dati basati su messaggi formato PEM e chiavi PGP.
+In seguito, sono state standardizzate due versioni sicure del protocollo HTTP chiamate SHTTP e HTTPS. La prima, 
+modellata sulla posta cifrata S/MIME, è ormai caduta in disuso e prevede meccanismi crittografici a livello di payload:
+ le richieste e gli header vengono scambiati in chiaro mentre il contenuto della pagina viene cifrato come una struttura MIME multipart.
+ Il meccanismo HTTPS, inventato da Netscape, usa invece il sottostante canale cifrato a livello di trasporto mediante SSL o TLS 
+ per impedire l'intercettazione di qualsiasi parte della transazione. Entrambi i protocolli possono garantire l'identità del mittente, 
+ma solo SHTTP e' in grado di garantire anche l'integrita' del contenuto dopo averlo, ad esempio, memorizzato su un disco.
+La fruizione nelle pagine WEB di materiale multimediale, quale audio o video viene gestito in modo del tutto analogo al download dei file, 
+tramite un caricamento progressivo o distribuzione progressiva, dove il file viene scaricato in modo progressivo dall'inizio alla fine 
+(tramite i protocolli Real Time Streaming Protocol e Real-time Transport Protocol) e nel caso il bit-rate sia eccessivo per la rete che lo 
+trasporta può verificarsi un continuo ricaricamento del buffer
+
+Per evitare questi inconvenienti esistono altri sistemi alternativi, che permettono l'adattamento del file alla rete dell'utente finale, 
+questi sistemi sono caratterizzati dai protocolli:
+
+Smooth Streaming, ideato da Microsoft
+HTTP Dynamic Streaming soluzione ideata da Adobe
+HTTP Live Streaming soluzione ideata da Apple
+Octoshape e' una piattaforma proprietaria di streaming multimediale, 
+che utilizza la tecnologia per offrire un throughput migliore e rompere la congestione nell'ultimo miglio. 
+Ha la possibilita' di utilizzare una suite di tecnologie multicast per ridurre al minimo la larghezza di banda per qualsiasi CDN, ISP, 
+emittente o del fornitore dell'ultimo miglio.
+Per contro queste soluzioni sono notevolmente piu' complesse rispetto alle tradizionali tecnologie di streaming. 
+Alcune delle considerazioni documentate riguardano lo stoccaggio, i costi aggiuntivi per la codifica e la difficoltà nel 
+mantenimento della qualita' globale. Ci sono state anche alcune dinamiche interessanti trovate intorno 
+alle interazioni complesse fra logica adattiva bit rate in competizione con complessa logica di controllo del flusso TCP.</div>
+</body>
+</html>

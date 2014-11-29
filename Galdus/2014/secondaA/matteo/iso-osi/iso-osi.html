@@ -1,0 +1,82 @@
+<html>
+<head>
+<style>
+body{
+table{
+height:300px;
+width:300px;
+}
+p{
+font-size:16px;
+}
+.rosso{
+background-color:red;
+}
+</head>
+</style>
+<body>
+<table>
+<table border="1">
+        <tr>
+        <td> <a href='#App'>Applicativo</a> </td>
+        </tr>
+        <tr>
+        <td> <a href='#App'>Presentazione</a> </td>
+        </tr>
+        <tr>
+        <td> <a href='#App'>Sessione</a> </td>
+        </tr>
+        <tr>
+        <td> <a href='#App'>Trasporto</a> </td>
+        </tr>
+        <tr>
+        <td> <a href='#App'>Rete</a> </td>
+        </tr>
+        <tr>
+        <td> <a href='#App'>Collegamento</a> </td>
+        </tr>
+        <tr>
+        <td> <a href='#App'>Fisico</a> </td>
+        </tr>
+</table>
+<h1> Applicativo </h1>
+Appicativo: Fornisce un insieme di protocolli che operano a stretto contatto con le applicazioni. È errato identificare un'applicazione utente come parte del livello applicazione.
+I protocolli delle applicazioni tipiche di questo livello realizzano operazioni 
+<a name='App'></a><h1> Presentazione </h1>
+<p> Presentazione:Esso consente di gestire la sintassi dell'informazione da trasferire. E sono previste tre diverse sintassi:
+astratta (definizione formale dei dati che gli applicativi si scambiano),
+concreta locale (come i dati sono rappresentati localmente)
+di trasferimento (come i dati sono codificati durante il trasferimento). </p>
+<a name='App'></a><h1> Sessione </h1>
+<p> Sessione: Esso consente di aggiungere, ai servizi forniti dal livello di trasporto, servizi più avanzati, quali la gestione del dialogo (mono o bidirezionale), la gestione del token (per effettuare mutua esclusione) o la sincronizzazione (inserendo dei checkpoint in modo da ridurre la quantità di dati da ritrasmettere in caso di gravi malfunzionamenti).
+Si occupa anche di inserire dei punti di controllo nel flusso dati: in caso di errori nell'invio dei pacchetti, la comunicazione riprende dall'ultimo punto di controllo andato a buon fine. </p>
+<a name='App'></a><h1> Trasporto </h1>
+<p> Trasporto: Si occupa di:
+stabilire, mantenere e terminare una connessione, garantendo il corretto e ottimale funzionamento della sottorete di comunicazione.
+controllo della congestione: evitare che troppi pacchetti dati arrivino allo stesso router contemporaneamente con effetto di perdita di pacchetti stessi.
+A differenza dei livelli precedenti, che si occupano di connessioni tra nodi contigui di una rete, il Trasporto (a livello logico) si occupa solo del punto di partenza e di quello finale.
+Si occupa anche di effettuare la frammentazione dei dati provenienti dal livello superiore in pacchetti, detti "segmenti" e trasmetterli in modo efficiente ed affidabile usando il livello rete ed isolando da questo i livelli superiori. Inoltre, si preoccupa di ottimizzare l'uso delle risorse di rete e di prevenire la congestione.
+La sua unità dati fondamentale è il messaggio.  </p>
+<a name='App'></a><h1> Rete </h1>
+<p> Rete: È responsabile di:
+routing: scelta ottimale del percorso di rete da utilizzare per garantire la consegna delle informazioni dal mittente al destinatario, scelta svolta dal router attraverso dei particolari algoritmi di Routing e tabelle di routing.
+conversione dei dati nel passaggio fra una rete ed un'altra con diverse caratteristiche, come il protocollo di rete utilizzato (internet-working). Deve, quindi:
+tradurre gli indirizzi di rete;
+valutare la necessità di frammentare i pacchetti dati se la nuova rete ha una diversa Maximum Transmission Unit (MTU);
+valutare la necessità di gestire diversi protocolli attraverso l'impiego di gateway.
+La sua unità dati fondamentale è il pacchetto. </p>
+<a name='App'></a><h1> Collegamento </h1>
+<p> Collegamento: Questo livello si occupa in primis di formare i dati da inviare attraverso il livello fisico, incapsulando il pacchetto proveniente dallo strato superiore in un nuovo pacchetto provvisto di un nuovo header (intestazione) e tail (coda), usati anche per sequenze di controllo. Questa frammentazione dei dati in specifici pacchetti è detta framing e i singoli pacchetti sono i frame.
+Come controllo di errore, per ogni pacchetto ricevuto, il destinatario invia al mittente un pacchetto ACK (acknowledgement, conferma) contenente lo stato della trasmissione: il mittente deve ripetere l'invio dei pacchetti mal trasmessi e di quelli che non hanno ricevuto riscontro/risposta. Per ottimizzare l'invio degli ACK, si usa una tecnica detta Piggybacking, che consiste nell'accodare ai messaggi in uscita gli ACK relativi ad una connessione in entrata, per ottimizzare l'uso del livello fisico. I pacchetti ACK possono anche essere raggruppati e mandati in blocchi.
+Questo livello si occupa anche di controllare il flusso di dati (controllo di flusso): in caso di sbilanciamento della velocità di trasmissione tra mittente e destinatario, si occupa di rallentare l'opera della macchina più veloce, accordandola all'altra e minimizzando così le perdite dovute a sovraccarico sul destinatario.
+La sua unità dati fondamentale è il frame. </p>
+<a name='App'></a><h1> Fisico </h1>
+<p> Fisico: Semplicemente: si occupa di controllare la rete, gli hardware che la compongono e i dispositivi che permettono la connessione.
+In questo livello si decidono:
+Le tensioni scelte per rappresentare i valori logici dei bit tramessi;
+La durata in microsecondi del segnale che identifica un bit;
+La modulazione e la codifica utilizzata;
+L'eventuale trasmissione simultanea in due direzioni (duplex);
+La forma e la meccanica dei connettori usati per collegare l'hardware al mezzo trasmissivo.</p>
+</body>
+</html>

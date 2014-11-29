@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<title>Jie Chen</title>
+<head>
+<style>
+/*cambio stile menu verticale specifico per la pagina */
+div#navigation a{
+font-size:12px;
+color:#FFCC33;
+font-weight: bold; 
+text-decoration: none
+}
+.folders{
+  margin:auto;
+}
+
+</style>
+
+</head>
+<body>
+
+<?php
+ini_set('include_path', '/home/galdusmaffi.tk/public/');
+include 'template/page1.php';
+ 
+?>
+<h2><font color="red">
+Esercizi CSS
+</h2></font>
+
+<ol>
+<li> Usando CSS fate in modo che il testo <b>non</b> in enfasi del seguente paragrafo 
+     compaia in enfasi e viceversa.
+     <BLOCKQUOTE>
+	Gli indirizzi <em>attualmente</em> in uso sono prevalentemente quelli di 
+        <em>classe</em> <b>A</b>, <b>B</b> e <b>C</b>. Questi indirizzi non sono <em>mai</em> dati 
+        singolarmente, ma per motivi di organizzazione di rete sono dati in <em>blocchi</em>
+        di indirizzi adiacenti.
+      </BLOCKQUOTE>
+<li> Usando CSS fate in modo che il seguente paragrafo allineato a destra, sia di 
+     colore verde, ma solo la parola <b>indirizzi</b> sia di colore rosso. Lo sfondo del
+     paragrafo deve essere di colore azzurro chiaro.
+     <BLOCKQUOTE>
+<body background-color="aqua"><span style="color:green">Gli <span style="color:red">indirizzi</span> attualmente in uso sono prevalentemente quelli di classe A, B e C. 
+        Questi <span style="color:red">indirizzi</span> non sono mai dati singolarmente, ma per motivi di organizzazione 
+        di rete sono dati in blocchi di <span style="color:red">indirizzi</span> adiacenti.
+     </BLOCKQUOTE></span>
+<li> Usando CSS fate in modo che la prima lettera del seguente paragrafo sia colorata 
+     di verde e sia grande il triplo delle lettere del paragrafo stesso.
+	<BLOCKQUOTE>
+	Il termine 'portale' &egrave; ormai divenuto una vera e propria 
+	'parola magica' all'interno della sempre pi&ugrave; vasta comunit&agrave; 
+        di utenti e operatori della rete Internet.
+	</BLOCKQUOTE>
+</ol>
+</body>
+</html>

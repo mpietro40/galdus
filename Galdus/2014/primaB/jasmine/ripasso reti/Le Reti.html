@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<title>Le Reti </title>
+<style>
+td{
+border:solid  black;
+width: 100px;
+height: 100px;
+}
+th{
+border:solid  black;
+width: 100px;
+height: 100px;
+}
+body{
+background-color:yellow;
+}
+</style>
+</head>
+<body>
+<h1>Topologie di rete</h1>
+<table>
+<tr>
+<td>NOME</td>
+<td>IMMAGINE</td>
+<td>DESCRIZIONE</td>
+<td>VANTAGGI/SVANTAGGI</td>
+</tr>
+<tr>
+<td>Rete punto a punto</td>
+<td><img src="a punto.jpg " ></td>
+<td>Una rete punto a punto e' realizzata unendo ogni device
+della rete con un cavo</td>
+<td> <h2>Vantaggi</h2>
+1.Ogni nodo puo' parlare direttamente  con tutti gli altri.
+2.E' una rete molto veloce.
+<h2>Svantaggi</h2>
+1.Il costo della rete e' molto alto.
+2.Sono necessari dei device speciali cioe' con tante schede di rete
+quanti sono i nodi della rete.</td>
+ </tr>
+ <tr>
+ <td>Rete a stella</td>
+ <td><img src="  stella ok.png"></td>
+ <td>Una rete a stella funziona collegando tutti i device a un punto centrale.
+Questo nodo centrale puo' essere un computer speciale o un hub o uno switch. </td>
+<td><h2>Vantaggi</h2>
+1.E' una rete semplice da realizzare.
+2.E' molto economica.
+<h2>Svantaggi</h2>
+1.Nel caso si rompa il nodo centrale la rete non funziona piu'.
+2.Tutte le comunicazioni passano nel nodo centrale che se non e'
+ben programmato lascia vedere i dati agli altri nodi.</td>
+</tr>
+<tr>
+<td>Anello</td>
+<td><img src="anello.png "></td>
+<td> La rete ad anello prevede che ogni nodo sia collegato
+ad altri due</td>
+<td> <h2>Vantaggi</h2>
+1.E' una rete semplice.
+2.E' una rete semplice da espandere
+<h2>Svantaggi</h2>
+1.La rottura di un nodo blocca tutta la comunicazione.
+2.Per parlare tra i due nodi potrebbe essere necessario passare
+per tutti gli altri nodi della rete.</td>
+</tr>
+<tr>
+<td>Bus</td>
+<td><img src="Bus.jpg "></td>
+<td>Tutti i nodi sono collegati tra loro tramite un bus.(un cavo speciale)
+con due terminatori. </td>
+<td> <h2>Vantaggi</h2>
+1.E' una rete semplice da realizzare.
+2.E' economica
+<h2>Svantaggi</h2>
+1.La rottura di un terminatore puo' bloccare la rerte.
+2.La rottura del bus blocca tutta la comunicazione.</td>
+</tr>
+<tr>
+<td>Albero</td>
+<td><img src="albero.png "></td>
+<td>Una rete ad albero e' una rete in cui sono definite delle
+gerarchie cioe' un nodo puo' essere padre di altri nodi.
+ Ogni nodo e' collegato ad almeno un altro nodo che puo' vedere 
+pezzi di rete maggiori.</td>
+<td><h2>Vantaggi</h2>
+1.E' adatta a gestire piccoli gruppi che devono condividere risorse.
+2.La rottura di un nodo consente ad altri pezzi di rete di funzionare.
+<h2>Svantaggi</h2>
+1.E' una rete complicata da realizzare e mantenere.
+2.L'aggiunta di un nodo può richiedere configurazioni complesse.</td>
+</tr>
+</table>
+</body>
+</html>

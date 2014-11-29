@@ -1,0 +1,79 @@
+<!doctype html>
+<head>
+<title>Componenti reti</title>
+<link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<script>
+$('#cssmenu').prepend('<div id="indicatorContainer"><div id="pIndicator"><div id="cIndicator"></div></div></div>');
+    var activeElement = $('#cssmenu>ul>li:first');
+
+    $('#cssmenu>ul>li').each(function() {
+        if ($(this).hasClass('active')) {
+            activeElement = $(this);
+        }
+    });
+
+
+	var posLeft = activeElement.position().left;
+	var elementWidth = activeElement.width();
+	posLeft = posLeft + elementWidth/2 -6;
+	if (activeElement.hasClass('has-sub')) {
+		posLeft -= 6;
+	}
+
+	$('#cssmenu #pIndicator').css('left', posLeft);
+	var element, leftPos, indicator = $('#cssmenu pIndicator');
+	
+	$("#cssmenu>ul>li").hover(function() {
+        element = $(this);
+        var w = element.width();
+        if ($(this).hasClass('has-sub'))
+        {
+        	leftPos = element.position().left + w/2 - 12;
+        }
+        else {
+        	leftPos = element.position().left + w/2 - 6;
+        }
+
+        $('#cssmenu #pIndicator').css('left', leftPos);
+    }
+    , function() {
+    	$('#cssmenu #pIndicator').css('left', posLeft);
+    });
+
+
+	$('#cssmenu>ul>.has-sub>ul').append('<div class="submenuArrow"></div>');
+	$('#cssmenu>ul').children('.has-sub').each(function() {
+		var posLeftArrow = $(this).width();
+		posLeftArrow /= 2;
+		posLeftArrow -= 12;
+		$(this).find('.submenuArrow').css('left', posLeftArrow);
+
+	});
+
+	$('#cssmenu>ul').prepend('<li id="menu-button"><a>Menu</a></li>');
+	$( "#menu-button" ).click(function(){
+    		if ($(this).parent().hasClass('open')) {
+    			$(this).parent().removeClass('open');
+    		}
+    		else {
+    			$(this).parent().addClass('open');
+    		}
+    	});
+</script>
+</head>
+<body>
+<script src="js/menu.js"></script>
+<div id="img"><img src="img/router.jpg"id="img0"></div>
+<a id="fatto"><h1>Come è fatto</h1></a>
+<p>
+Il router ha gli stessi componenti di un pc(CPU, memoria RAM, system bus e interfacce input/output) Hanno anche un sistema operativo
+al loro interno chiamato IoS, Internetwork Operating System. 
+</p>
+<div id="img"><img src="img/interno.jpg"></div>
+<a id="arrivato"><h1>A cosa serve</h1></a>
+<p>
+Il router serve ad instradare più richieste di connessione alla rete da parte di vari PC. Quindi il router è un dispositivo di rete per la connessione al WEB di più sistemi informatici.
+</p>
+</body>
+</html>

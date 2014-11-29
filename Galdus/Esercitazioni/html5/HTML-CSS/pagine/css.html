@@ -1,0 +1,408 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Frame</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<link rel="StyleSheet" href="./uno.css" type="text/css" media="screen">
+</head>
+<body>
+<a name="inizio"></a>
+<img src="./immagini/intestazione.jpg" align="right" height="52"
+ width="461" alt="">
+<h2>Cascading Stylesheets</h2>
+<h3>Introduzione</h3>
+<p>I fogli di stile a cascata (CSS), introdotti con HTML 4.0,
+costituiscono uno strumento potente e flessibile per controllare la
+presentazione dei documenti.&nbsp; </p>
+<p>I CSS semplificano notevolmente il lavoro di editing ed eliminano la
+ripetizione dei comandi. E' infatti possibile definire il layout delle
+pagine e l'aspetto di elementi ricorrenti all'interno del documento (ad
+esempio, dimensione, font e colori di testo e titoli). </p>
+<p>L'introduzione dei CSS ha reso obsoleti molti attributi degli
+elementi HTML.</p>
+<hr>
+<p>Uno stile &egrave; un insieme di regole che possono essere applicate
+ai vari elementi di un documento. Esistono tre modi per applicare gli
+stili: </p>
+<ul>
+  <li><b>Inline</b>: inserito in un tag HTML usando l'attributo <tt>style</tt>, si applica solo
+all'elemento definito dal tag.</li>
+  <li><b>Interno</b>: tramite l'elemento <tt>&lt;style&gt;</tt> incorporato nella sezione <tt>&lt;head&gt;</tt> del documento, si applica
+all' intera pagina. </li>
+  <li><b>Esterno</b>: contenuto in un file esterno (stylesheet, estensione <tt>.css</tt>) e
+incluso in ogni pagina a cui vogliamo sia applicato. </li>
+</ul>
+<p>Non tutti i browser riconoscono i CSS, che se non sono supportati
+vengono semplicemente ignorati. E' bene considerare questa
+eventualit&agrave; ed evitare di scrivere pagine illeggibili in assenza
+di stili.</p>
+<hr>
+<p>Gli stili sono applicati in cascata. Ci&ograve; significa che, se
+sono specificati pi&ugrave; stili per lo stesso elemento HTML, il
+formato usato dipende dalla sorgente del foglio di stile, nell'ordine
+definito dalla seguente scala di priorit&agrave; crescente:</p>
+<blockquote>
+  <ol>
+    <li>Browser default </li>
+    <li>Style Sheet esterno</li>
+    <li>Style Sheet interno (definito nell'elemento <tt>&lt;head&gt;</tt>) </li>
+    <li>Inline Style (definito nel tag tramite l'attributo <tt>style</tt>) </li>
+  </ol>
+</blockquote>
+<hr>
+<h3>Regole</h3>
+<p>Gli stili sono definiti da semplici regole. Una <i>regola</i>
+&egrave; composta da un <i>selettore</i> e da un insieme di
+dichiarazioni fra parentesi graffe. Ciascuna
+<i>dichiarazione</i> &egrave; composta da coppie <i>propriet&agrave;</i>:<i>valore
+</i>separate da punto e virgola.</p>
+<pre>selector {property:  value;  property:  value; .... </pre>
+<p>Esempio:</p>
+<pre>
+h2 {
+       font-family: sans-serif;
+       text-align: justify;
+       margin-left: 10%;
+       margin-right: 10%;
+}</pre>
+<hr>
+<h3>Esempio: Cambiare h2</h3>
+<a name="punto1"></a>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Stile 1&lt;/title&gt;
+  &lt;style&gt;
+  &lt;!--
+    h2 {
+           font-family: sans-serif;
+           color: red;
+           font-style: oblique;
+           text-align: center;
+           border: thin groove;
+    }
+  --&gt;
+  &lt;/style&gt;
+&lt;body&gt;
+  &lt;h2&gt;Stile 1&lt;/h2&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<center> <a href="css.html#punto1"
+ onclick="window.open('./esempi/dodici.html','', config='toolbar=1,menubar=1,scrollbars=1,resizable=1,width=600 ,height=500,  ' )">
+<img src="./immagini/risultato.jpg" border="0" height="35" width="135" alt=""></a></center>
+<p>E' consigliabile commentare l'elemento, cos&igrave; che possa essere ignorato dai
+browser che non supportano gli stili.</p>
+<hr>
+<h3>Esempio: Ridefinire h2 in cascata</h3>
+<a name="punto2"></a>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Stile 1&lt;/title&gt;
+  &lt;style&gt;
+    &lt;!--
+      h2 {
+            font-family: sans-serif;
+            color: red;
+            font-style: oblique;
+            text-align: center;
+            border: thin groove;
+      }
+    --&gt;
+  &lt;/style&gt;
+&lt;body&gt;
+  &lt;h2&gt;Stile 1&lt;/h2&gt;
+  &lt;h2 style="border: ridge; background: yellow; text-align:right" &gt;
+     Stile 2&lt;/h2&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<center> <a href="css.html#punto2"
+ onclick="window.open('./esempi/tredici.html','', config='toolbar=1,menubar=1,scrollbars=1,resizable=1,width=600 ,height=500,  ' )">
+<img src="./immagini/risultato.jpg" border="0" height="35" width="135" alt=""></a><br>
+</center>
+
+<p>Lo stile &egrave; stato definito in
+cascata tramite <u>l'attributo</u> <tt>style</tt>
+dell'elemento H2. Anche se utile, <em>questo
+modo di procedere &egrave;
+generalmente sconsigliato</em>.</p>
+
+<hr>
+<h3>Classi di stile</h3>
+<p>Le classi servono per applicare uno stile non a tutti gli elementi di un determinato selettore, ma soltanto ad alcuni di essi (quelli appartenenti alla cleasse):</p>
+<pre>selector.classname {property:  value;  property:  value; .... }</pre>
+<p>per applicare la classe:</p>
+<pre>&lt;selector class=classname&gt;</pre>
+<p>Esempio:</p>
+<pre>
+h2.uno {
+		font-family: sans-serif;
+		text-align: justify;
+		margin-left: 10%;
+		margin-right: 10%;
+}
+<br>
+&lt;h2 class="uno"&gt;Ora ha lo stile&lt;/h2&gt;
+&lt;h2&gt;Ora non ha lo stile&lt;/h2&gt;
+</pre>
+
+<hr>
+<h3>Classi anonime</h3>
+<p>Con le classi anonime &egrave; possibile definire uno stile
+generale (cio&egrave; non legato ad un selettore specifico) e applicarlo a qualunque elemento:</p>
+<pre>
+.uno {
+		font-family: sans-serif;
+		text-align: justify;
+		margin-left: 10%;
+		margin-right: 10%;
+}
+<br>
+&lt;h2 class="uno"&gt;Ora applico lo stile nel titolo&lt;/h2&gt;
+&lt;p class="uno"&gt;Ora applico lo stile nel paragrafo&lt;/h2&gt;
+</pre>
+<hr>
+<h3>Includere fogli di stile</h3>
+<p>Il metodo migliore, per chiarezza e per uniformit&agrave;, per
+applicare un foglio di stile &egrave; quello di importarne la
+definizione da un file esterno.</p>
+<p>Per collegare (importare) un file <tt>.css </tt>ad
+una pagina HTML si usa il seguente elemento nella sezione &lt;head&gt;:</p>
+<pre>
+&lt;link rel="StyleSheet" href="url" type="text/css" media="screen"&gt;
+</pre>
+<p><tt>rel</tt> indica il tipo di collegamento,
+<tt>href</tt> la locazione del foglio di stile,
+<tt>type</tt> il tipo MIME
+del file, <tt>media</tt> il modo in cui
+viene usato il documento (altre modalit&agrave; sono screen, printing e
+presentation).</p>
+<p>E' possibile importare pi&ugrave; fogli di stile, ricordando che i
+fogli sono applicati in cascata, ovvero che l'ultimo foglio&nbsp;
+incluso sovrascriver&agrave; quelli precedenti (limitatamente agli
+stili gi&agrave; definiti).</p>
+
+<hr>
+<h3>Propriet&agrave; e valori</h3>
+<h3>Font</h3>
+<p>Non tutte le piattaforme e, conseguentemente, non tutti i browser
+riescono a visualizzare tutti i tipi di font. E' quindi opportuno
+specificare font alternativi, oppure font generici come:
+SERIF (times), SAN-SERIF (arial), CURSIVE, FANTASY, MONOSPACED
+(courier), che tutti i sistemi riescono a visualizzare.</p>
+<pre>
+p {
+	font-family: "Times New Roman", Times, serif;
+}
+</pre>
+<p><tt>font-size</tt> specifica le dimensioni
+dei caratteri in valori assoluti, relativi o in percentuale; i valori
+assoluti sono x-small, small, medium, large, xlarge; i valori relativi sono larger, smaller (riferiti alle dimensioni del font della pagina in cui vengono
+incorporati).</p>
+<pre>
+font-size: [small | medium | large] | [smaller | larger]
+           | &lt;length&gt; | &lt;percentage&gt;
+
+font-style:  normal | italic | oblique
+</pre>
+<p><tt>font-weight</tt> specifica se il
+carattere deve essere normale, grassetto, grassetto pi&ugrave;
+marcato o pi&ugrave; sottile; pu&ograve; essere specificato anche
+numericamente:</p>
+<pre>
+font-weight:  normal | bold | bolder | lighter | 100 | 200 | 300 |<br>              400 | 500 | 600 | 700 | 800 | 900 <br></pre>
+<hr>
+<h3>Colori e sfondi</h3>
+<p>Con i fogli di stile &egrave; possibile ottenere un maggiore
+controllo sui colori, assegnando diversi colori ai singoli elementi che
+compongono la pagina.</p>
+<pre>background-color:    &lt;value&gt;  |  transparent </pre>
+<p>assegna un colore allo sfondo di un elemento.</p>
+<pre>background-image:  URL | none</pre>
+<p>inserisce un'immagine come sfondo di un elemento.</p>
+<p>Il colore di ogni attributo pu&ograve; essere cambiato:</p>
+<pre>color:  &lt;value&gt;</pre>
+<hr>
+<h3>Testo</h3>
+<pre>text-align:  left | right | center | justify </pre>
+<p><tt>text-indent</tt> crea un rientro nella
+prima riga di un paragrafo; usando un valore percentuale, lo spazio
+scala se la dimensione della finestra del browser viene
+modificata.</p>
+<pre>text-indent: length | percentage</pre>
+<pre>text-decoration:  none | underline | overline | line-through</pre>
+<p>se si vogliono i link senza sottolineature si pu&ograve; usare: </p>
+<pre>a:link, a:visited, a:active {text-decoration: none } </pre>
+<hr>
+<h3>Esempio riassuntivo</h3>
+<p>Nel seguente esempio si mostra l'uso dei CSS per la presentazione di
+questo documento:</p>
+<pre>
+p {
+	font-family: sans-serif;
+	text-align: justify;
+	margin-left: 10%;
+	margin-right: 10%;
+	text-indent : 0%;
+}
+h2 {
+	font-family: sans-serif;
+	color: navy;
+	font-style: oblique;
+}
+h3 {
+	font-family: sans-serif;
+	color: blue;
+	font-style: oblique;
+	margin-left: 5%;
+}
+pre {	
+	font-family: "Courier New", monospaced;
+	FONT-WEIGHT: bold;  
+	color: navy;
+	text-align: justify;
+	margin-left: 8%;
+	margin-right: 10%;
+}
+ul {    
+	font-family: sans-serif;
+	text-align: justify;
+        margin-left: 10%;
+        margin-right: 10%;
+}
+dl {    
+	font-family: sans-serif;
+	text-align: justify;
+        margin-left: 10%;
+        margin-right: 10%;
+}
+dt {  	
+	FONT-WEIGHT: bold; 
+	color: navy;
+}
+</pre>
+<a name="punto3"></a>
+<p>Questa &egrave; la pagina di esempio:</p>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;css&lt;/title&gt; 
+  &lt;link rel="StyleSheet" href="./uno.css" 
+        type="text/css" media="screen"&gt;
+&lt;/head&gt;
+&lt;body &gt;
+  &lt;h2&gt;Primo titolo&lt;/h2&gt;
+  &lt;h3&gt;Secondo titolo&lt;/h3&gt;
+  &lt;p&gt;Questo &egrave; il paragrafo utilizzato&lt;/p&gt;
+  &lt;pre&gt;	Questo &egrave; utilizzato 
+		per le parti di codice che non voglio 
+		siano formattate 
+  &lt;/pre&gt;
+  &lt;ul&gt;
+        &lt;li&gt;le liste 1&lt;/li&gt;
+        &lt;li&gt;le liste 2&lt;/li&gt;        
+        &lt;li&gt;le liste 3&lt;/li&gt;  
+  &lt;/ul&gt;
+
+  &lt;dl&gt;  &lt;dt&gt;uno&lt;/dt&gt; &lt;dd&gt;definizione1&lt;/dd&gt;
+        &lt;dt&gt;due&lt;/dt&gt; &lt;dd&gt;definizione2&lt;/dd&gt;
+        &lt;dt&gt;tre&lt;/dt&gt; &lt;dd&gt;definizione3&lt;/dd&gt;
+  &lt;/dl&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<center> <a href="css.html#punto3"
+ onclick="window.open('./esempi/quattordici.html','', config='toolbar=1,menubar=1,scrollbars=1,resizable=1,width=600 ,height=500,  ' )">
+<img src="./immagini/risultato.jpg" border="0" height="35" width="135" alt=""></a></center>
+<hr>
+<h3>Division</h3>
+<p>E' possibile considerare un blocco di elementi HTML come un singolo
+elemento, usando il tag <tt>&lt;div&gt;</tt>.
+E' poi possibile applicare una classe di stile a tutti gli elementi del
+blocco:</p>
+<pre>
+&lt;div class="uno"&gt;
+  &lt;p&gt;...&lt;/p&gt;
+  &lt;h1&gt;...&lt;/h1&gt;
+  &lt;pre&gt;...&lt;/pre&gt;
+&lt;/div&gt; 
+</pre>
+<p>Cos&igrave; si ha la possibilit&agrave; di trattare le divisioni
+come singole entit&agrave;, permettendo una migliore organizzazione
+della pagina. Sar&agrave; utile in DHTML.</p>
+<hr>
+<h3>Layer</h3>
+<p>Un modo per creare effetti dinamici consiste nell'usare i layer, i quali permettono di definire strati indipendenti e sovrapposti di testo o immagini. Per creare
+layer si pu&ograve; far ricorso alla propriet&agrave; <tt>z-index</tt> definita per lo stile di un <tt>div</tt>. Ad esempio:</p>
+<pre>z-index: n</pre>
+<p> permette di assegnare un
+ordine di sovrapposizione ai layer. Il layer pi&ugrave; basso appare
+sopra lo sfondo e ha
+<tt>z-index: 1</tt>; non c'&egrave; limite al
+numero di layer sovrapposti, anche se &egrave; consigliabile non
+superare 20. Le propriet&agrave;:</p>
+<pre>
+position: absolute | relative
+left: n
+top:  n
+</pre>
+<p>permettono di indicare la posizione del layer usando parametri
+espressi in pixel (default 0,0)</p>
+
+<p>mentre per indicare la dimensione del layer si usano le propriet&agrave;:</p>
+<pre>width:   n
+height:  n
+</pre>
+<a name="punto3"></a>
+<hr>
+<h3>Esempio di utilizzo di layer</h3>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Layers&lt;/title&gt; 
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;h1&gt;Layer applicati al testo.&lt;/h1&gt;
+
+  &lt;div style="z-index: 4; left: 50px; top: 50px;
+       position : absolute; background-color:blue;
+       color: white; font-size: 24pt"&gt;
+    &lt;p&gt;Questo &lt;br&gt;&egrave;&lt;br&gt;il&lt;br&gt;primo.&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div style="z-index: 3; left: 100px; top: 100px;
+       position : absolute;  background-color: green;
+       color: red;font-size: 24pt"&gt;
+    &lt;p&gt;Questo&lt;br&gt;&egrave;&lt;br&gt;il&lt;br&gt;secondo.&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div style="z-index:2; left: 200px; top: 200px;
+       position : absolute; background-color:red;
+       color: green; font-size: 24pt"&gt;
+    &lt;p&gt;Questo&lt;br&gt;&egrave;&lt;br&gt;il&lt;br&gt;terzo.&lt;/p&gt;
+  &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;  
+</pre>
+<center> <a href="css.html#punto4"
+ onclick="window.open('./esempi/quindici.html','', config='toolbar=1,menubar=1,scrollbars=1,resizable=1,width=600 ,height=500,  ' )">
+<img src="./immagini/risultato.jpg" border="0" height="35" width="135" alt=""></a></center>
+<hr>
+
+<table align="center" border="0">
+  <tbody>
+    <tr>
+      <td> <a href="forms.html" target="main"> <img
+ src="./immagini/precedente.jpg" border="0" height="34" width="135" alt=""></a></td>
+      <td> <a href="css.html#inizio" target="main"> <img
+ src="./immagini/inizio.jpg" border="0" height="33" width="135" alt=""></a></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+ <title>Modulo dati</title>
+ <style>
+ body{
+  background-color:lightgreen;
+ }
+ div{
+  margin:auto;
+  border:dotted 2xp darkgreen;
+ }
+ h1{
+  color:orange;
+ }
+ .centrato{
+  margin:auto;
+  width:65%;
+ }
+ #meta{
+  width:70%;
+  margin:auto;
+  ext-align:center;
+}
+#trenta{
+  height:35px;
+}
+tr{
+  border:solid lpx green;
+}
+ </style>
+</head>
+<body>
+<div class="centrato">
+ <h1>Esempio di modulo di inserimento dati</h1>
+ <form action="http://mp1979.altervista.org/querytring.php" method="get">
+  <table>
+  <tr id="trenta">
+   <td width=100>Nome</td>
+   <td><input type="text" name="nome"/></td>
+ </tr>
+ 
+ <tr id="trenta">
+   <td>Cognome</td>
+   <td><input type="text" name="data"/></td>
+ </tr>
+ 
+ <tr id="trenta">
+   <td>Sesso</td>
+   <td>
+     <input type="radio" name="sesso" value="M">Maschio</input>
+	 &nbsp;&nbsp;
+	 <input type="radio" name="sesso" value="F">Femmina</input>
+   </td>
+ </tr>
+ 
+ <tr id="trenta">
+   <td>Provincia</td>
+   <td>
+     <select name="provincia">
+	   <option value="AR">Arezzo</option>
+	   <option value="FI">Firenze</option>
+	   

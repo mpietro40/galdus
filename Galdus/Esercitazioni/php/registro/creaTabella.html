@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<head>
+<title>
+Script creazione database per esercitazione
+</title>
+<link href="css/menu.css" rel="stylesheet" type="text/css">
+<link rel='stylesheet' href='css/style.css'>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+</head>
+<body>
+<script type="text/javascript" src="js/menu.js"></script>
+<div class="centrato">	
+<h1>Script iniziale per connettersi al DB, quindi per creare la tabella su cui lavorare (va chiamato una sola volta) </h1>
+&lt;!doctype html&gt;<br />
+&lt;html&gt;<br />
+&lt;head&gt;<br />
+&lt;style&gt;<br />
+.codice{<br />
+color:red;<br />
+font-size:16px;<br />
+}<br />
+table, th, td, tr{<br />
+border: solid 2px blue;<br />
+}<br />
+table{<br />
+border-collapse:collapse;<br />
+}<br />
+&lt;/style&gt;<br />
+&lt;title&gt;Gestione di una rubrica&lt;/title&gt;<br />
+&lt;link href=&quot;xampp.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;<br />
+&lt;/head&gt;<br />
+<br />
+&lt;body&gt;<br />
+<br />
+&amp;nbsp;&lt;p&gt;<br />
+<br />
+&lt;?php<br />
+<br />
+try<br />
+{<br />
+//connect the database.<br />
+$conn=mysql_connect(&quot;localhost&quot;,&quot;root&quot;,&quot;&quot;);<br />
+echo &quot;&lt;h2&gt;DB connesso&lt;/h2&gt;&quot;;<br />
+//selezioniamo il database su cui lavorare<br />
+$sql = &quot;USE lpwDB&quot;;<br />
+$ok =mysql_query($sql,$conn);<br />
+if (!$ok)<br />
+  die(&quot;&lt;br&gt;imposs. selezionare DB: &quot;.mysql_error()); <br />
+else<br />
+  echo &quot;&lt;br&gt;selezionato il database su cui lavorare lpwDB&lt;br&gt;&quot;;<br />
+<br />
+//Add a new table to the database called agenda<br />
+$sql=&quot;CREATE TABLE agenda(<br />
+id int PRIMARY KEY,<br />
+nome varchar(32),<br />
+cognome varchar(32),<br />
+telefono varchar(16))&quot;;<br />
+<br />
+// stampa di controllo<br />
+echo &quot;query SQL: $sql&quot;;<br />
+//esecuzione della query<br />
+$ok= mysql_query($sql,$conn);<br />
+ if (!$ok) <br />
+  die(&quot;Errore query: &quot;.mysql_error());<br />
+ else{<br />
+  echo &quot;&lt;h2&gt;Tabella agenda creata&lt;/h2&gt;&quot;;<br />
+ }<br />
+<br />
+// Close the connection before leaving<br />
+mysql_close($conn);<br />
+echo &quot;&lt;h3&gt;Connessione chiusa&lt;h3&gt;&quot;;<br />
+<br />
+}catch(Exception $e) {<br />
+   die('Errore connessione DB');<br />
+}<br />
+?&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt; 
+</body>
+</html>

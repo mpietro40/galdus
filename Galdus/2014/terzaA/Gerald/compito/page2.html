@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="Gerald Joshua" CONTENT="Lavoro"> 
+<title> Gerald.Chillax.D </title>
+<link rel="stylesheet" href="CSS/mio.css" type="text/css" />
+
+</head>
+<body>
+<div class=centrato>
+
+</div>
+<div class="centrato">
+<div id="navigation">
+			<ul>
+            		<li><a href="Home.html"> Home </a></li>  
+                <li><a href="page1.html"> NAS </a></li>
+                <li><a href="page2.html"> SAN </a></li>
+                <li><a href="page3.html"> Differenza Tra NAS è SAN </a></li>
+                <li><a href="page4.html"> ISO </a></li>
+                <li><a href="page5.html"> ANSI</a></li>
+                <li><a href="page6.html"> IEEE</a></li>
+                 
+			</ul>
+	</div>    
+  
+<br>
+
+</h1>
+<br>
+<u> <h1> SAN </h1> </u>
+<br>
+<div class="contenuto2">
+<br>
+Storage Area Networks o, più brevemente, SAN, rappresenta un nuovo approccio per la gestione e l'accesso alle risorse di storage. Il concetto alla base delle soluzioni SAN è quello di applicare un modello di networking agli ambienti dedicati alla memorizzazione dei dati, spostando (per quanto possibile) sull'infrastruttura di rete i carichi di lavoro assolti altrimenti dai server.
+Nella SAN, le risorse di memorizzazione sono collegate tra loro in modo da formare una rete locale separata dalla LAN. La connessione alla LAN avviene attraverso un numero limitato di server, che non sono però più connessi direttamente a un sistema di storage, ma possono accedere alle risorse di memorizzazione disponibili attraverso una rete dedicata.
+La diffusione dell'e-business ha fatto emergere la necessità che le aziende devono poter accedere ai dati in modo rapido e sicuro, una necessità che si coniuga bene con la filosofia dell'architettura SAN, la quale permette di disporre di alte prestazioni e disponibilità, una scalabilità del sistema e una gestione semplificata.
+Tutto questo con le caratteristiche di connettività e accesso distribuito del network computing, attraverso un'architettura di rete dedicata alla gestione e archiviazione dei dati, in grado di non sovraccaricare i server nelle operazioni di scrittura e lettura dei dati, da e verso lo storage.
+Con l'architettura SAN è possibile ottenere:
+° una visione e gestione centralizzata di tutti i dati aziendali a livello di client, server, storage e nodi di rete
+° configurazioni cluster gestite centralmente e facilmente espandibili, sia dal punto di vista del numero di server (scalabilità), sia per l'espansione dello storage
+° una migliore capacità di gestione delle risorse in generale attraverso tool specifici sviluppati per l'architettura SAN
+° backup dei dati centralizzato, in grado di garantire elevate prestazioni e integrità dei dati (non ottenibili attraverso le classiche architetture che fanno capo alla LAN per il trasferimento dei dati durante le operazioni di archiviazione dei dati)
+° architetture e configurazioni per la gestione di notevoli quantità di dati e con elevati transfer rate
+L'uso di una SAN permette, di effettuare tutte le operazioni di memorizzazione dei dati senza coinvolgere il server e influenzare la LAN.
+In tal modo si conseguono vantaggi in termini di affidabilità: dovuta alla riduzione del numero di apparati di rete da controllare e gestire, scalabilità: grazie alla possibilità di aggiungere semplicemente risorse di storage senza dover stravolgere la struttura dell'hardware lato server, e prestazioni : tramite l'uso di protocolli e tecnologie dedicate.
+L'introduzione di un'architettura di rete per la memorizzazione dei dati migliora anche, in modo significativo, la flessibilità di configurazione dello storage, disaccoppiando le risorse di storage da un particolare server e permettendo, potenzialmente, di gestirle o configurarle con un impatto minimo sulle risorse dal lato server.
+Esistono diverse modalità per la realizzazione di una SAN, che riflettono le opzioni disponibili per la tecnologia Fibre Channel. Questo approccio modifica in modo sostanziale le impostazioni di memorizzazione. I vantaggi garantiti da un diverso approccio, vanno considerati congiuntamente alle prestazioni offerte dal principale sistema di trasporto utilizzato per la realizzazione di una SAN, ovvero Fibre Channel.
+SAN e Fibre Channel
+Uno degli aspetti di base quando si parla di storage SAN è rappresentato dalla relazione creatasi tra SAN e tecnologia trasmissiva Fibre Channel.
+Fibre Channel è una tecnologia standar (ANSI x3.230.1994), nata per il trasferimento dei dati ad alta velocità e in grado di offrire elevate prestazioni e livelli d'affidabilità. 
+La tecnologia Fibre Channel risolve numerosi problemi legati alla condivisione dello storage verso i server, permettendo la connessione dei dispositivi su lunghe distanze, fino a 10 Km senza l'uso di ripetitori con connessioni in fibra ottica e 30 metri con connessione in rame.
+Inoltre, l'affidabilità della connessione Fibre Channel è superiore a quella di Ethernet.
+Lo standard FC è in grado di raggiungere un data transfer rate di 250 Megabyte per secondo, in configurazione full duplex, e di trasportare informazioni con estrema velocità e con il minimo ritardo possibile. La futura evoluzione dello standard Fibre Channel prevede il trasferimento dati ad una velocità di 10 Gb secondo.
+Con l'utilizzo delle SAN è oggi possibile realizzare applicazioni che prelevano le informazioni direttamente dai dispositivi storage presenti all'interno della SAN, che finisce con il fornire prestazioni ad un livello notevolmente superiore rispetto alle usuali architetture di LAN. Un aiuto a capire il posizionamento prestazionale lo si ha se si considera non la velocità trasmissiva ma un altro parametro, il "time to send".
+Per copiare un 1 MB di dati, Fast Ethernet impiega 213 millisecondi; FDDI impiega 137 millisecondi mentre Fibre Channel solo 10 millisecondi.
+Un'architettura di storage centrata su SAN e su Fibre Channel presenta quindi indubbi vantaggi. Peraltro, questi si estendono anche alla topologia di rete realizzabile. In una configurazione SAN, le periferiche e i sistemi possono essere connessi ad anello o a stella utilizzando hub o switch, cosa che fa sì che ogni periferica sia raggiungibile in modo indipendente.
+Confronto tra un'architettura di storage tradizionale con una SAN
+Immaginiamo un'azienda con un locale adibito a CED in cui siano alloggiati 5 server. Ognuno di questi server utilizza dei controller SCSI per gestire le periferiche di data storage (Hard Disk, Nastri, Sistemi Ottici). Va ricordato a questo punto che le specifiche indicano in 3 mt. la lunghezza massima del bus SCSI tradizionale. Ne consegue che i server tradizionali sono alloggiati in cabinet di discrete dimensioni perché all'interno (Hard Disk) o nelle immediate vicinanze (Tape e/o Sistemi Ottici) deve essere alloggiato tutto lo "storage" necessario.
+Con una SAN, grazie alle connessioni in Fibre Channel tutti problemi di distanza sono risolti. Le periferiche di storage possono essere raggruppate in armadi dedicati, i server si riducono a poco più delle sole CPU e quindi le dimensioni si riducono notevolmente. Gli Hard disk, gestiti da un moderno controller RAID vengono raggruppati tra loro in una gigantesco volume che poi viene suddiviso in sottovolumi dedicati ai diversi server. Questo permette un'elevata duttilità, in quanto i sottovolumi possono essere facilmente ridotti o espansi, ed un miglioramento della gestione sia della configurazione che del backup.
+<br>
+<br>
+<br>
+</div>
+</body>
+</html>

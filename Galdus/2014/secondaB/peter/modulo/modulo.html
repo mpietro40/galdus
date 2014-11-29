@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<script>
+function=svuota(){
+
+document.f1.commenti.value."";
+
+}
+</script>
+<title>Modulo dati</title>
+<style>
+body{
+background-size:cover;
+background-image:url(accendi.jpg);
+}
+div{
+margin:auto;
+background-size:cover;
+background-image:url(semafororosso.jpg);
+}
+h1{
+color:orange;
+}
+.centrato{
+margin:auto;
+width:65%;
+}
+#meta{
+width:70%;
+margin:auto;
+text-align:center;
+}
+#trenta{
+height:15px;
+}
+tr{border:solid 1px green;
+}
+</style>
+</head>
+<body>
+<div class="centrato">
+<h1>Esempio di modulo di inserimento dati</h1>
+<form action="http://mp1979.altervista.org/querystring.php" method="post" name='f1'>
+<table>
+<tr id="trenta">
+<td width=100>nome</td>
+<td><input type="text" name="nome" /></td>
+</tr>
+<tr id="trenta">
+<td>Cognome</td>
+<td><input type="text name="cognome"/></td>
+</tr>
+<tr id="trenta">
+<td>Data di nascita</td>
+<td><input type="date name="data"/></td>
+</tr>
+<tr id="trenta">
+<td>Sesso</td>
+<td>
+<input type="radio" name="sesso" value="M">Maschio</input>
+&nbsp;&nbsp;
+<input type="radio" name="sesso" value="F">Femmina</input>
+</td>
+</tr>
+<tr id="trenta">
+<td>Provincia</td>
+<td>
+<select name="provincia">
+<option value="AR">Arezzo</option>
+<option value="FI">Firenze</option>
+<option value="GR">Grosseto</option>
+<option value="LI">Livorno</option>
+<option value="LU">Lucca</option>
+<option value="MI">Milano</option>
+<option value="MS">Massa-Carrara</option>
+<option value="PC">Piacenza</option>
+<option value="PI">Pisa</option>
+<option value="PS">Pistoia</option>
+<option value="PO">Prato</option>
+<option value="SI">Siena</option>
+</select>
+</td>
+</tr>
+<tr id="trenta">
+<td>Interessi</td>
+<td>
+<input type="checkbox" name="interesse1"
+value="musica">Musica</input>
+<input type="checkbox" name="interesse2"
+value"sport">Sport</input>
+<input type="checkbox" name="interesse3" 
+value="cinema">Cinema</input>
+</td>
+</tr>
+<tr>
+<td>Commenti</td>
+<td>
+<textarea name="commenti" onclick=svuota() cols="40" rows="10">
+Scrivi qui un commento...</textarea>
+</td>
+<tr>
+<tr id="trenta">
+<td>
+</td>
+<td id="meta">
+<input type="reset" value="Cancella"/>
+<input type="submit" value="Invia"/>
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>

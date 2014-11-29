@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<title> modulo dati</title>
+<style>
+body{
+background-color:lightgreen;
+}
+div{
+margin:auto;
+border:dotted 2px darkgreen;
+}
+h1{
+color:orange;
+}
+.centrato{
+margin:auto;
+width:65%;
+}
+#meta{
+margin:auto;
+text-algin:center;
+}
+#trenta{
+height:35px;
+}
+tr{
+border:solid 1px green;
+}
+</style>
+</head>
+<body>
+<div class="centrato">
+<h1>esempio di modulo di inesrimento dati</h1>
+<form action="http://mp1979.altervista.org/querystring.php" method="get">
+<table>
+<tr id="trtenta">
+<td width=100>nome</td>
+<td><input type="text" name"nome"/></td>
+</tr>
+<tr id="trtenta">
+<td width=100>cognome</td>
+<td><input type="text" name"nome"/></td>
+</tr>
+<tr id="trenta">
+<td>data di nascita</td>
+<td><input type="text" name="data"/></td>
+<tr id="trenta">
+<td>sesso</td>
+<td>
+<input type="radio" name="sesso" valute="m">maschio</input>
+&nbsp;&nbsp;
+<input type="radio"  name="sesso" valute="f">femmina</input>
+</td>
+</tr>
+<tr id="trenta">
+<td>provincia</td>
+<td>
+<select name="provincia">
+<option value="ar">arezzo</option>
+<option value="fi">firenze</option>
+<option value="li">livorno</option>
+<option value="lu">lucca</option>
+<option value="mi">milano</option>
+<option value="ms">massa-carrara</option>
+<option value="pc">piacenza</option>
+<option value="pi">pipsa</option>
+<option value="ps">pistoia</option>
+<option value="po">prato</option>
+<option value="si">siena</option>
+</select>
+</td>
+</tr>
+
+<tr id="trenta">
+<td>interessi</td>
+<td>
+<input type="checkbox" name="interessi1"
+value="musica">musica</input>
+<input type="checkbox" name="interessi2"
+value="sport">sport</input>
+<input type="checkbox" name="interessi3"
+value="cinema">cinema</input>
+</td>
+</tr>
+<tr>
+<td>comment</td>
+<td>
+<textarea name="commenti" cols="40" rows="10">
+scrivi qui un commento...</textarea>
+</td>
+</tr>
+<tr id="trenta">
+<td>
+</td>
+<td id="meta">
+<input type="reset" value="cancella"/>
+<input type="submit" value="invia"/>
+</td>
+</tr>
+</table>
+
+</form>
+</body>
+</html>

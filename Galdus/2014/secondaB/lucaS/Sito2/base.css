@@ -1,0 +1,18 @@
+#sfondo {
+	background-size: 100%;
+	background-attachment:fixed;
+	background-image: url("sfondo.jpg")
+
+}
+body{
+color:white;
+}
+
+h1{
+color:red;
+}
+
+#div{
+font-size:14;
+font-weight:bold;
+}

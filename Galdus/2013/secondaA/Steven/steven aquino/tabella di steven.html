@@ -1,0 +1,75 @@
+<html>
+<head> <title> steven aquino </title>
+<script language="javascript">
+var dimensione=10;
+function esegui(scelta){
+alert('Colore' + scelta);
+if(scelta==1)
+document.getElementById('pagina').style.color='#000022';
+if(scelta==2)
+document.getElementById('pagina').style.color='#1E90FF'
+if(scelta==3)
+document.getElementById('pagina').style.color='#00FA9A'
+}
+function cambiofont(valore){
+if(valore==1){dimensione=dimensione+10;
+document.getElementById('pagina').style.fontSize = dimensione+"px";
+document.getElementById('titolo').style.fontSize = dimensione+"px" ;
+}
+if(valore==2){dimensione=dimensione-10;
+document.getElementById('pagina').style.fontSize = dimensione+"px";
+}
+}
+</script>
+<script src="http://www.clocklink.com/embed.js"></script><script type="text/javascript" language="JavaScript">obj=new Object;obj.clockfile="5012-red.swf";obj.TimeZone="Italy_Milan";obj.width=155;obj.height=50;obj.wmode="transparent";showClock(obj);</script>
+<style type="text/css">
+p{
+font-style:italic;
+}
+body {
+color:#FF0000;
+/*background-image:url("http://www.google.it/url?source=imglanding&ct=img&q=");*/
+}
+table td{
+border: solid 1px blue;
+}
+table{
+border-collapse:collapse;
+}
+</style>
+</head>
+<body id=pagina>
+<H1 id=titolo>Qui devi inserire il contenuto della pagina.</br>E' importante non utilizzare html nelle versioni precedenti,</br>
+il sito deve essere realizzato in HTML5 e CSS3.</br></H1>
+<table>
+<tr>
+<td>nome</td>
+<td>cognome</td>
+<td>email</td>
+<td>cell</td>
+<td>facebbok</td>
+<td>foto</td>
+</tr>
+<tr>
+<td>Steven </td>
+<td>kent</td>
+<td>supersteven97@hotmail.com </td>
+<td>3202190121</td>
+<td>steven aquino </td>
+<td><img src="image/MeControlXXLUserTile.jpg"></td>
+</tr>
+</table>
+<form>
+<input type=button name=Rosso' value='Black' onclick= "esegui(1);"  style="background-color=red";>
+<input type=button name=Blu' value='blue' onclick= "esegui(2);"  style="background-color=blue";>
+<input type=button name=Verde' value='green' onclick= "esegui(3);"  style="background-color=green";>
+<input type=button name='maggiore' value='<' onclick='cambiofont(1)' style="background-color=white";>
+<input type=button name='maggiore' value='>' onclick='cambiofont(2)' style="background-color=white";>
+</form>
+<a href="" onclick="document.getElementById('pagina').style.backgroundColor='#000022'; return false;">Black</a>
+<a href="" onclick="document.getElementById('pagina').style.backgroundColor='#00FFFF'; return false;">Blue</a>
+<a href="" onclick="document.getElementById('pagina').style.backgroundColor='#00FF00'; return false;">Green</a>
+</table>
+<p> milan vs cagliari 2-0 </p>
+</body>
+</html>

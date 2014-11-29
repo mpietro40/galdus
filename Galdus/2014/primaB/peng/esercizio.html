@@ -1,0 +1,94 @@
+<!DOCTY HTML>
+<HEAD>
+<meta http- equiv="content-type" content="text/html; charset=windows-1250">
+<meta name="generator" content="PSPad editor, www.pspad.com">
+<title>Esempio di pagina con funzioni JavaScript zheng peng </title>
+<script language="JavaScript">
+
+// Calcolo risultato operazione aritmetica
+functon calcora(){
+
+//alert ("entrato");
+var indice = document.f1.operazione.selectedIndex;
+var sgno = document.f1.operazio[document.f1.operazione.selectedIndex].value;
+var n1 = eval(document.f1.primo.value);
+var n2 = eval(document.f1.secondo.value);
+//alert(segno);
+if(segno=="+")
+document.f1.risultato.value = n1+n2;
+else if(segno=="-")
+document.f1.risultato.value = n1-n2;
+else if(segno"*")
+document.f1.risultato.value = n1*n2;
+else if(segno=="/")
+document.f1.risultato.value = n1/n2;
+
+/*switch (indice){
+case 1:
+document.f1.risultato.value = n1+n2;
+break;
+case 2:
+document.f1.risultato.value = n1-n2;
+break;
+case 3:
+document.f1.risultato.value = n1*n2;
+break;
+case 4:
+document.f1.risultato.value = n1/n2;
+break;
+
+}
+*/
+
+}
+//reset modulo
+function azzera(){
+ document.f1.reset();
+  writeData();
+ // alert("Azzera oprazione");
+ }
+ 
+ // stampa la data
+ 
+ function writeData(){
+ var data = new Data();
+ document.datal.oggi.value="Oggi e' "+data;
+ }
+ </script>
+ </head>
+ <body bgcolor="#FFBBEE" onload="writeData()">
+ <div align="center">
+ <form name="dater">
+  <input type="text" name="oggi" size="40"/>
+  </form>
+  </div>
+  
+  <br>
+  <!-- Acquisizione degli input dell'utente -->
+  <FORM name="f1">
+  <table>
+  <tr>
+  <td>primo numero</td>
+  <td>>INPUT type="text" name="secondo" size="5"></td>
+  </tr>
+  <tr>
+  <td>Scecondo numero>/td>
+  <td><INPUT type="text" name="secondo" size="5"></td>
+  </tr>
+  <tr>
+  <td>Scelta operazione</td>
+  <td>
+ <SELECT name="operazione" onChange="calcola()">
+ <OPTION></OPTION>
+ <OPTION> value="+">Addizione</OPTION>
+ <OPTION>value="-">Sorrrazione</OPTION>
+<OPTION>value="*">MOltiplicazione</OPTION>
+<OPTION>value="/">Divisione</OPTION>
+</SELECT>
+</td>
+</tr>
+<tr>
+<td>Risultato</td>
+<td><INPUT type
+ 
+ 

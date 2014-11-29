@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<title>Stampa dati</title>
+<meta charset="UTF-8">
+<style>
+body{
+background-color:#70dd64;
+}
+quote{
+  font-style:italic;
+}
+table, td, th
+{
+border:1px solid green;
+}
+th
+{
+background-color:green;
+color:white;
+} 
+</style>
+</head>
+<body>
+<h1>Stampa parametri della richiesta http</h1>
+<h2>Creato da Pietro Maffi</h2>
+<quote>
+&lt;?php<br />
+<br />
+echo &quot;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Parametro&lt;/th&gt;&lt;th&gt;Valore&lt;/th&gt;&lt;/tr&gt;&quot;;<br />
+if($_GET){<br />
+  echo &quot;&lt;tr&gt;&lt;th colspan=2&gt;GET&lt;/th&gt;&lt;/tr&gt;&quot;;&lt;br&gt;<br />
+  foreach ($_GET as $key =&gt; $val) {&lt;br&gt;<br />
+    echo &quot;&lt;tr&gt;&lt;td&gt;&quot;.$key . ' &lt;/td&gt;&lt;td&gt; ' . $val . '&lt;/td&gt;&lt;/tr&gt; ';  // a =&gt; 1, b =&gt; 2, c =&gt; 3, d =&gt; 4<br />
+  }<br />
+}else{<br />
+  echo &quot;&lt;tr&gt;&lt;th colspan=2&gt;POST&lt;/th&gt;&lt;/tr&gt;&quot;;<br />
+  foreach ($_POST as $key =&gt; $val) {<br />
+    echo &quot;&lt;tr&gt;&lt;td&gt;&quot;.$key . ' &lt;/td&gt;&lt;td&gt; ' . $val . '&lt;/td&gt;&lt;/tr&gt; ';  // a =&gt; 1, b =&gt; 2, c =&gt; 3, d =&gt; 4<br />
+  }<br />
+}<br />
+echo &quot;&lt;/table&gt;&quot;;<br />
+?&gt;
+
+</quote>
+</body>
+</html>

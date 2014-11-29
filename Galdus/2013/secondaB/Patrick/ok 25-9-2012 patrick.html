@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>patikamba</title>
+<style>
+body {
+background:#000000
+}
+ body {
+ color:#ff0000;
+ */background:#FFFFFF;
+ */}
+ table,td{                            
+ border: solid 1px #ffffff;
+ color:#ffffff;
+ }
+ table{
+ border-collapse:collapse;
+ }
+
+</style>
+<script language=javascript>
+var dimensione=10;
+function aumenta(valore) {
+if(valore==1){
+dimensione=dimensione+10;
+document.getElementById('pagina').style.fontSize=dimensione+'px';
+}
+if(valore==2){
+dimensione=dimensione-10;
+document.getElementById('pagina').style.fontSize=dimensione+'px';
+}
+}
+   alert("patikamba");
+   function colora(scelta){
+   if(scelta==1){document.getElementById("pagina").style.backgroundColor='#ff0000';
+   document.getElementById("pagina").style.color="black";}
+    if(scelta==2){document.getElementById("pagina").style.backgroundColor='#0000ff';
+   document.getElementById("pagina").style.color="lime";}
+    if(scelta==3){document.getElementById("pagina").style.backgroundColor='#00ff00';
+   document.getElementById("pagina").style.color="red";}
+   }
+   
+</script>
+
+</head>
+<body id=pagina>
+PATRICK KAMBARAMI 27/11/1996
+<table>
+
+  <tr>
+       <td>Nome</td>
+       <td>Cognome</td>
+       <td>E-mail</td>  
+       <td>Cellulare</td>
+       <td>Facebook</td>
+       <td>Foto</td>
+      
+   </tr>
+   <tr>
+       <td>PATRICK</td>  
+       <td>KAMBARAMI</td>
+       <td>patikamba96@hotmail.com</td>
+       <td>346/3633808</td>
+       <td>PATI KAMBA</td>
+       <td><img src="ricky.jpg" /> </td>
+    </tr>
+<input name=red value=red type=button onclick=colora(1);>
+<input name=blue value=blue type=button onclick=colora(2);>
+<input name=green value=green type=button onclick=colora(3);>
+<input type=button name='<' value='<' onclick='aumenta(2)';>
+<input type=button name='>' value='>' onclick='aumenta(1)';>
+</html> 
+

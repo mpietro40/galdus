@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>bryan garcia</title>
+<script>
+var dimensione= 10;
+function aumenta(valore){ 
+if(valore==2){
+dimensione=dimensione +10;
+document.getElementById("pagina").style.fontSize=dimensione+"px";
+}
+if(valore==1) {
+dimensione=dimensione -10;
+document.getElementById("pagina").style.fontSize=dimensione+"px";
+}
+}
+function colora(scelta){
+if(scelta==1){
+document.getElementById("pagina").style.backgroundColor="red";
+document.getElementById("pagina").style.color="orange";
+}
+if(scelta==2){
+document.getElementById("pagina").style.backgroundColor="yellow";
+document.getElementById("pagina").style.color="lime";
+}
+if(scelta==3){
+document.getElementById("pagina").style.backgroundColor="lime";
+document.getElementById("pagina").style.color="red";
+}
+}
+</script>
+
+<style>
+body{ /*background: black;*/
+}
+body{
+color:blue
+}
+body{
+background:#000000;
+}
+table,td{
+border: solid 3px blue ;
+color:blue
+}
+table{
+border-collapse:collapse;
+}
+</style>
+</head>
+
+<body id=pagina>
+<div id= "telaio">
+<div id="testata"></div>
+<div id="centrale"><p>&nbsp;</p>
+
+<h1>MAC OS & WINDOWS</H1>
+
+                                    
+<table border="1" >
+<tr>
+<td>Mac OS è il sistema operativo dedicato della Apple per i computer Macintosh a partire dal 1984. Il nome è l'acronimo di Macintosh Operating System. Il gruppo di sviluppo che realizzò l'hardware e il software del progetto Macintosh comprendeva Bill Atkinson, Chris Espinosa, Joanna Hoffman, George Crow, Burrell Smith, Jerry Manock, Jef Raskin e Andy Hertzfeld.
+    <br>
+
+</td>
+
+</tr>
+<tr>
+<td>
+<img src="img/MAC OS.bmp">
+<a href='linguaggio1.html'>MAC OS</a>
+</td>
+
+</tr>
+<tr>
+<td>Microsoft Windows, comunemente abbreviato in Windows o ancora più semplicemente Win, è una famiglia di ambienti operativi e sistemi operativi commerciali della Microsoft Corporation dedicati ai personal computer, alle workstation e ai server.
+    <br>
+</td>
+
+</tr>
+<tr>
+<td>
+<img src="img/WINDOWS.jpg">
+<a href='linguaggio2.html'>WINDOWS</a>
+</tr>
+
+<tr>
+<td>Pagina di Bryan Garcia fatta il 3 ottobre 2012</td>
+
+
+</tr>
+</table>
+
+<input name=red value=red type=button onclick="colora(1);">
+<input name=yellow value=yellow type=button onclick="colora(2);">
+<input name=green value=green type=button onclick="colora(3)";>
+<input type=Button name="<" value="<" onclick="aumenta(1)";>
+<input type=Button name=">" value=">" onclick="aumenta(2)";>
+</body>
+</html> 

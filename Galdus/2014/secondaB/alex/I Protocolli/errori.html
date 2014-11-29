@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+<html>
+<link rel="stylesheet" href="css/css.css" type="text/css" />
+<style>
+h1{
+color:red;
+font-family:georgia;
+}
+#testo{
+font-family:Verdana;
+font-size:20px;
+font-style:italic;
+}
+#rosso{
+color:red;
+}
+</style>
+</head>
+<body>
+<div id='cssmenu'>
+<ul>
+   <li class='has-sub'><a href='index.html'><span>La rete</span></a></li>
+   <li class='has-sub'><a href='protocollo.html'><span>Protocollo</span></a>
+      <ul>
+            <ul>
+            </ul>
+         </li>
+            <ul>
+            </ul>
+      </ul>
+   </li>
+   <li><a href='requisiti.html'><span>Requisiti</span></a></li>
+   <li class='last'><a href='Componenti.html'><span>Componenti</span></a></li>
+      <li class='last'><a href='errori.html'><span>Errori HTTP</span></a></li>
+
+</ul>
+</div><br>
+<center><h1>Errori HTTP</h1></center> <br>
+<center><table width="300" height="200" border="1">
+    <tr>
+       <td><p id='rosso'>404</td></p>
+       <td>HTTP PAGE NOT FOUND.</td>
+   </tr>
+ 
+   <tr>
+      <td><p id='rosso'>200</td></p>
+      <td>Risposta andata a buon fine.</td>
+	  </tr>
+	  <tr>
+	   <td><p id='rosso'>500</td></p>
+      <td>Messaggio di errore generico.</td>
+	  </tr>
+	  <tr>
+	  <td><p id='rosso'>304</td></p>
+      <td>NOT MODIFIED.</td>
+	  </tr>
+	  <tr>
+	   <td><p id='rosso'>401</td></p>
+      <td>Il server si rifiuta di soddisfare la richiesta.</td>
+   </tr>
+   	  <tr>
+	   <td><p id='rosso'>503</td></p>
+      <td>Il server non &egrave; al momento disponibile.</td>
+   </tr>
+</table></center>
+
+</body>
+</html>

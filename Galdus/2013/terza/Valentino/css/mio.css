@@ -1,0 +1,6 @@
+html,body{margin:10px; padding: 10px}
+body{ background:"#008800";}
+color:"#FF0000";
+a:link {color:"#0000FF";} 
+a:visited {text-decoration: none; color:"#6699FF";}
+a:hover {color:"#00008B";}

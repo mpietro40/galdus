@@ -1,0 +1,16 @@
+[15-May-2014 09:52:41 Europe/Berlin] PHP Notice:  Undefined index: existing-url in C:\xampp\htdocs\GS\admin\changedata.php on line 198
+[15-May-2014 09:52:41 Europe/Berlin] PHP Notice:  Undefined index: existing-url in C:\xampp\htdocs\GS\admin\changedata.php on line 201
+[15-May-2014 09:58:37 Europe/Berlin] PHP Notice:  Undefined index: existing-url in C:\xampp\htdocs\GS\admin\changedata.php on line 198
+[15-May-2014 09:58:37 Europe/Berlin] PHP Notice:  Undefined index: existing-url in C:\xampp\htdocs\GS\admin\changedata.php on line 201
+[15-May-2014 10:02:03 Europe/Berlin] PHP Notice:  Undefined index: existing-url in C:\xampp\htdocs\GS\admin\changedata.php on line 198
+[15-May-2014 10:02:03 Europe/Berlin] PHP Notice:  Undefined index: existing-url in C:\xampp\htdocs\GS\admin\changedata.php on line 201
+[15-May-2014 10:03:58 Europe/Berlin] PHP Notice:  Undefined index: existing-url in C:\xampp\htdocs\GS\admin\changedata.php on line 198
+[15-May-2014 10:03:58 Europe/Berlin] PHP Notice:  Undefined index: existing-url in C:\xampp\htdocs\GS\admin\changedata.php on line 201
+[15-May-2014 10:05:30 Europe/Berlin] PHP Notice:  Undefined index: existing-url in C:\xampp\htdocs\GS\admin\changedata.php on line 198
+[15-May-2014 10:05:30 Europe/Berlin] PHP Notice:  Undefined index: existing-url in C:\xampp\htdocs\GS\admin\changedata.php on line 201
+[15-May-2014 10:06:57 Europe/Berlin] PHP Notice:  Undefined index: existing-url in C:\xampp\htdocs\GS\admin\changedata.php on line 198
+[15-May-2014 10:06:57 Europe/Berlin] PHP Notice:  Undefined index: existing-url in C:\xampp\htdocs\GS\admin\changedata.php on line 201
+[15-May-2014 10:08:56 Europe/Berlin] PHP Notice:  Undefined index: existing-url in C:\xampp\htdocs\GS\admin\changedata.php on line 198
+[15-May-2014 10:08:56 Europe/Berlin] PHP Notice:  Undefined index: existing-url in C:\xampp\htdocs\GS\admin\changedata.php on line 201
+[15-May-2014 11:21:16 Europe/Berlin] PHP Notice:  Undefined index: existing-url in C:\xampp\htdocs\GS\admin\changedata.php on line 198
+[15-May-2014 11:21:16 Europe/Berlin] PHP Notice:  Undefined index: existing-url in C:\xampp\htdocs\GS\admin\changedata.php on line 201

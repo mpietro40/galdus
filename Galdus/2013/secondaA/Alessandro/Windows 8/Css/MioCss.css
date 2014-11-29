@@ -1,0 +1,58 @@
+table td{
+border:solid 2px #ffffff;
+}
+table{
+border-collapse:collapse;
+}
+.testoRosso{
+font-weight: bold;
+color: red;
+font-size: 120%;
+text-align:left;
+}
+.testoVerde{
+font-weight: bold;
+color: lime;
+font-size: 120%;
+text-align:left;
+}
+.testoBlue{
+font-weight: bold;
+color: blue;
+font-size: 120%;
+text-align:left;
+}
+.testoPurple{
+font-weight: bold;
+color: purple;
+font-size: 120%;
+text-align:left;
+}
+div.centrato{
+text-align:center;}
+table.centrata{
+margin-left:auto;
+margin-right:auto;
+}
+body{
+color:white;
+background-color:black;
+background-image:url("");
+}
+img.displayed { 
+display: block; 
+margin-left: auto; 
+margin-right: auto; 
+}
+h1 {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 24pt;
+	color: White;
+	padding-top: 12px;
+	padding-bottom: 3px;
+}
+div#footer{
+text-align:center
+} 
+
+

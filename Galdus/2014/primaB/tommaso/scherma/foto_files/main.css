@@ -1,0 +1,189 @@
+@charset "utf-8";
+/* Foglio di stile degli elementi principali delle pagine del Circolo della Spada */
+
+#container
+{
+	width:1000px;
+	background-repeat: no-repeat;
+}
+
+.link_attuale
+{
+	font-weight:bold;
+	font-style:italic;
+}
+
+a:link, a:visited, a img
+{
+	text-decoration:none;
+	border:none;
+}
+
+a:hover
+{
+	text-decoration:underline;
+}
+
+#menu img
+{
+	margin-left:10px;
+	cursor:pointer;
+	margin-top: 10px;
+}
+
+#header
+{
+	padding-top: 20px;
+	padding-left: 40px;
+}
+
+#menu
+{
+	width:250px;
+	float: left;
+}
+
+#corpo
+{
+	padding-left: 85px;
+	min-height: 600px;
+	margin-left: 250px;
+	padding-right: 100px;
+	margin-top: 100px;
+}
+
+#menu table
+{
+	display:none;
+	font-size:14px;
+	font-family:Verdana, Geneva, sans-serif;
+	margin-left:65px;
+	padding-left:0;
+	width: 180px;
+	margin-top: -7px;
+	height: 130px;
+	background-image: url(../immagini/sfondi/boxON.png);
+}
+
+#menu ul li
+{
+	height:22px;
+}
+
+.briciole
+{
+	height:20px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	margin-left: 15px;
+}
+
+.briciole span
+{
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000;
+	font-weight: bold;
+	margin-left: 15px;
+}
+
+#menu table td
+{
+	width:155px;
+	padding-left:10px;
+	vertical-align:top;
+}
+
+#logone
+{
+	margin-left: 20px;
+
+}
+#main #corpo #contenuto,  #main #corpo .contenuto
+{
+	margin-top: 30px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	padding-right: 15px;
+}
+h2
+, h3
+{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	margin-left: 25px;
+}
+#main #corpo p 
+{
+	font-size: 12px;
+	font-family: "Courier New", Courier, monospace;
+	margin-left: 25px;
+}
+
+#footer 
+{
+	font-size: 12px;
+	font-family: "Courier New", Courier, monospace;
+	background-image: url(../immagini/sfondi/footer.png);
+	height: 100px;
+	margin-top: 15px;
+}
+
+#footer span
+{
+	padding-top:45px;
+	padding-right:120px;
+	margin-left: 360px;
+	display:block;
+	text-align:center;
+}
+#corpo a
+
+{
+	color:#039;
+}
+#menu img#logo_aipps
+{
+	cursor: pointer;
+	margin-left: 90px;
+}
+
+#menu a
+{
+	color:#333;
+}
+#main_container
+{
+	background-image: url(../immagini/sfondi/sfondoToRepeat.png);
+	width: 1000px;
+	margin: 0 auto;
+}
+
+#FlashID
+{
+	margin-top:25px;
+}
+
+iframe#flash
+{
+	border:none;
+	width:290px;
+	height:250px;
+}
+
+img#miti, #table_miti
+{
+	margin-bottom:30px;
+}
+
+#home
+{
+	height:150px;
+	width:130px;
+	float:left;
+	margin-right: 60px;
+	cursor: pointer;
+}
+
+#avvisi{
+	float:right;
+}

@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>Tipologie topologie di rete</title>
+<style>
+body { 
+background-color:red;
+}
+table, th {
+border: 1px solid black;
+background-color:black;
+}
+th {
+background-color:green;
+color:yellow;
+}
+td, tr {
+border: 1px solid black;
+color:white;
+background-color:limegreen;
+}
+h2 {
+color:darkred;
+}
+h1 {
+text-align:center;
+color:darkblue;
+font-size:50px
+}
+</style>
+</head>
+<body>
+<div class="centrale">
+<h1>Topologie di rete </h1>
+<table>
+<tr>
+<th>Nome</th>
+<th>Descrizione</th>
+<th>Immagine</th>
+<th>Vantaggi e svantaggi</th>
+</tr>
+<tr>
+<td> <p align="center">Rete full connecting <br>
+(punto a punto)</td>
+<td>Una rete si definisce full connecting (punto a punto), quando tutti i device collegati alla rete <br>
+hanno un cavo per ogni nodo della rete. <br>
+Cio&egrave quando ogni computer o device può parlare direttamente con tutti gli altri computer. </td>
+<td> <img src='e.png' height=145px> </td>
+<td> <h2> VANTAGGI: </h2>1. In caso di un guasto su un cavo, tutti gli altri computer possono parlarsi. <br>
+2. Ogni computer può parlare con un altro computer in un solo passo. 
+<h2> SVANTAGGI: </h2> 1. Se la rete diventa grande il costo diventa enorme. <br>
+2. I computer che possono partecipare a questa rete sono speciali, cio&egrave, possono <br> gestire tante schede di rete. 
+ </td>
+ </tr>
+<tr>
+<td><p align="center">Rete a stella </td>
+<td>Una rete si definisce a stella, quando tutti i device sono collegati ad un unico computer universale. <br>
+Cio&egrave quando ogni computer o device può parlare ad un unico computer. </td>
+<td><img src='a.png' height=145px> </td>
+<td> <h2> VANTAGGI: </h2>1. &Egrave una rete semplice. <br> 2. &Egrave adatta a tutti i normali computer.<br>
+3. &Egrave facile aggiungere nuovi elementi alla rete. 
+<h2> SVANTAGGI: </h2> 1. Questa rete ha un singolo punto di fallimento (SPOF), cio&egrave se <br> si rompe il nodo centrale 
+nessuno più riesce a comunicare. <br> 2. Il numero di nodi della rete dipende dalle caratteristiche del nodo centrale.
+<br>3. L'uso di un'app &egrave pericoloso perch&eacute consente a uno degli altri nodi collegati di leggere i messaggi scambiati.  </td>
+</tr>
+<tr>
+<td><p align="center">Rete ad anello</td>
+<td>Una rete ad anello &egrave quella rete in cui ogni nodo &egrave collegato a due altri nodi, normalmente questa rete ha un verso di comunicazione </td>
+<td><img src='i.png' height=145px></td>
+<td><h2> VANTAGGI: </h2> &Egrave una rete espandibile e semplice. 
+<h2> SVANTAGGI: </h2> 1. Se si rompe un nodo o un cavo la rete &egrave bloccata. <br> 2. Per poter usare la rete bisogna aspettare il proprio turno.
+</td>
+</tr>
+<tr> <td> Rete a Bus </td>
+<td>Una rete a Bus e quella rete in cui tutti i nodi sono collegati tra loro per mezzo di un Bus. Questo cavo consente ha tutti i nodi di parlare contemporaneamente senza dove aspetare un turno.   </td>
+<td><img src="bus.jpg "height=145px></td>
+<td> <h2> Vantaggi </h2>1. E facile aggiungere nuovi nodi. 2. I computer collegati sono semplici. <h2>Svantaggi</h2> 1. La rottura del Bus blocca tutta la rete.2 Il trafico causato da un nodo puo rallentare tutti gli altri. </td>
+<tr> <td> Rete ad Albero </td>
+<td> Una rete ad albero e una rete in qui alcuni nodi si comportano da responsabili della rete. </td>
+<td><img src="alb.jpg "height=145px></td>
+<td> <h2> Vantaggi </h2>1.E una rete semplice in qui e possibile definire dei ruoli. 
+2.I nodi si possono faccilmente aggiungere con un impato limitato al nodo padre.   
+<h2>Svantaggi</h2> 
+1.La comunicazzione tra due nodi puo richiedere molti passi.
+2.La rottura di un nodo bloca tutte le comunicazioni ha valle.  </td>
+</tr>
+</table>
+<meta charset='utf-8'>
+<H2>Sudivisioni in base all'estensione </h2><p><p>
+
+<table border=2px>
+<tr>
+<td>LAN</td>
+<td><img src="rt.jpg"></td>
+<td><h2>Local area network</h2>In informatica e telecomunicazioni una Local Area Network (LAN) (in italiano rete in area locale, o rete locale) è una rete informatica di collegamento tra più computer, estendibile anche a dispositivi periferici condivisi, che copre un'area limitata, come un'abitazione, una scuola, un'azienda o un complesso di edifici adiacenti. Si differenzia dalle Wide Area Network (WAN) non solo per l'estensione geografica più limitata ma anche perché consente migliori prestazioni in termini di velocità di trasferimento dei dati e non richiede di utilizzare circuiti dedicati su tratte telefoniche (leased line).<h2>Vantaggi</h2>1-E una rete economica.2-E una rete semplice da realizzare.<h2>Svantaggi</h2> 1-Per come e costruita non può essere molto estesa.</td>
+</tr>
+<tr>
+<td>CAN</td>
+<td><img src="can.jpg"></td>
+<td><h2>campus area network</h2>Con il termine Campus Area Network (CAN), si intende la rete interna ad un campus universitario, o comunque ad un insieme di edifici adiacenti, separati tipicamente da terreno di proprietà dello stesso ente, che possono essere collegati con cavi propri senza far ricorso ai servizi di operatori di telecomunicazioni. Tale condizione facilita la realizzazione di una rete di interconnessione ad alte prestazioni ed a costi contenuti. </td>
+</tr>
+<tr>
+<td>MAN</td>
+<td><img src="ma.jpg"></td>
+<td><h2>Metropolitan area network</h2>Si tratta di una rete di trasporto storicamente nata per fornire servizi di tv via cavo alle città dove c'era una cattiva ricezione terrestre. In pratica un'antenna posta su una posizione favorevole, distribuiva poi il segnale alle case mediante cavo.
+Prima la cosa è avvenuta a livello locale, successivamente si sono create grosse aziende che hanno richiesto di cablare intere città, soprattutto negli Stati Uniti. Quando il fenomeno Internet è esploso, queste società hanno ben pensato di diffondere la comunicazione via Internet anche attraverso il cavo TV utilizzando la struttura preesistente.
+Tipicamente questa struttura, attualmente, utilizza la fibra ottica come mezzo trasmissivo di collegamento e topologie di rete ad anello detti appunto anelli metropolitani con funzionalità di backbone metropolitano da e verso le sottoreti e le utenze interne all'area metropolitana stessa.
+Dal punto di vista protocollare, attualmente quasi tutte le MAN operano su collegamenti Gigabit Ethernet mentre in passato si sono utilizzati anche ATM, FDDI e SMDS.</td>
+</tr>
+<tr>
+<td>WAN</td>
+<td><img src="wa.jpg"></td>
+<td><h2>Wide area network</h2>Si tratta più precisamente di una rete di trasporto che può connettere fra loro più reti locali e/o metropolitane collegate tra loro da backbone. Molte WAN sono costruite per una particolare organizzazione e sono private come ad esempio la rete GARR. La più grande WAN mai realizzata, Internet, una rete di computer che copre l'intero pianeta, è invece ad accesso pubblico.
+La funzionalità delle WAN è generalmente la connessione tra host. Questa struttura forma una communication subnet o semplicemente subnet, che in genere appartiene ad una compagnia telefonica o a un ISP.
+La subnet si compone di linee di trasmissione e di elementi di commutazione. Le linee di trasmissione spostano i bit e possono essere realizzate in fibra ottica, con collegamenti radio, in rame o altro, mentre gli elementi di commutazione sono computer specializzati che collegano più linee di commutazione (router ad esempio).
+Per il trasporto dati su tali reti si utilizzano in genere protocolli di rete come Frame Relay e ATM o anche tecniche PDH e SDH.</td>
+</tr>
+<tr>
+<td>WLAN</td>
+<td><img src="wl.jpg"></td>
+<td><h2>wifi/wireless lan</h2>A wireless local area network (WLAN) links two or more devices using some wireless distribution method (typically spread-spectrum or OFDM radio), and usually providing a connection through an access point to the wider Internet. This gives users the ability to move around within a local coverage area and still be connected to the network. Most modern WLANs are based on IEEE 802.11 standards, marketed under the Wi-Fi brand name. WLANs were once called LAWNs (for local area wireless network) by the Department of Defense.
+Wireless LANs have become popular in the home due to ease of installation, and in commercial complexes offering wireless access to their customers; often for free. New York City, for instance, has begun a pilot program to provide city workers in all five boroughs of the city with wireless Internet access.</td>
+</tr>
+</table>
+</body>
+</html>

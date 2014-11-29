@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<head>
+<title>
+Script creazione database per esercitazione
+</title>
+<link href="css/menu.css" rel="stylesheet" type="text/css">
+<link href="xampp.css" rel="stylesheet" type="text/css">
+<link rel='stylesheet' href='css/style.css'>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<style>
+body{
+ padding: 0 15px 5px 25px;
+}
+ol, li{
+  margin-left:20px;
+}
+</style>
+</head>
+<body>
+<script type="text/javascript" src="js/menu.js"></script>
+
+  <h1>Creare un sito per la gestione di una biblioteca</h1>
+  In questo mini sito spiego a passi come fare un sito in php che consenta di creare e gestire un database sqlite/mysql.<br>
+  <br>Obiettivo della classe terza e' quello di arrivare ad avere le conoscenze per creare una applicazione 3 tier che consenta 
+  la gestione di una biblioteca semplificata.<br>
+  <br>Il sito della biblioteca dovra' avere un documento di design che raccolga le informazioni sulla biblioteca che si vuole realizzare.
+  <br> Sara' quindi necessario suddividere le varie parti da realizzare nei vari gruppi ed ogni partecipante del gruppo aiutera' per realizzare l'appliocazione che consente:
+  <br><ol>
+  <li>Il primo passo richiesto e' la creazione di un documento che spieghi quali sono i passi da realzzare, ogni
+  gruppo dovr&agrave; decidere quale dei punti svolgera' e su questi preovare almeno a realizzarne uno in php, 
+  con la definizione della tabella e dei suoi campi.</li>
+  <li>Inserimento dei libri - con le info necessarie da definire</li>
+  <li>Inserimento degli utenti - con le info necessarie e con ruoli da definire</li>
+  <li>Inserimento dei prestiti (associazione utente libro)</li>
+  <li>Ricerca e visualizzazione dei libri presenti (e un semaforo che indica se e' disponibile o assegnato)</li>
+  <li>Ricerca e visualizzazione degli utenti presenti (e un semaforo che indica se ha dei libri da piu' di 30 gg)</li>
+  <li>Il cancellamento e la modifica dei libri</li>
+  <li>Il cancellamento e la modifica degli utenti</li>
+  <li>Il cancellamento e la modifica dei prestiti</li>
+  <li>Il test di quanto realizzato con un documento che spiega tutte le verifiche eseguite</li>
+  <li>La definizione di un menu' per accedere alle varie aree del sito realizzato</li>
+  <li>La possibilita' di verificare se l'utente e' autorizzato ad accedere alle singole aree</li>
+  
+  </ol>
+<hr>
+<h3><a href="http://galdusmaffi.tk/Galdus/Esercitazioni/php/registro/preparaDb.html">Preparazione DB per esercizi</a></h3>
+<h3><a href="https://github.com/mpietro40/MyFirstWebsite">Web app completa</a></h3>
+<hr>
+  <!--h1>Elenco file realizzati per la creazione del sito della biblioteca</h1-->
+  <h1> Elenco dei gruppi e dei menbri di ogni gruppo</h1>
+  <h3>Primo Gruppo:</h3>
+<ul>
+<li>Gerald G
+</li><li>Ivan D
+</li><li>Alessandro C 
+</li><li>Cyrus O
+</li><li>Luis P 
+</li></ul>
+
+<h3>Secondo Gruppo:</h3>
+<ul>
+<li>Jefferson S
+</li><li>Mohamed H
+</li><li>Riccardo M
+</li><li>Alexander A
+</li><li>Luca C
+</li></ul>
+
+<h3>Terzo Gruppo:</h3>
+<ul>
+<li>Mattia A 
+</li><li>Andrea B
+</li><li>Luca C 
+</li><li>Kevin R 
+</li><li>Ylenia M
+</li></ul>
+
+<h3>Quarto Gruppo:</h3>
+<ul>
+<li>Yoriz G
+</li><li>Carmine D
+</li><li>Samuele L
+</li><li>Steven A
+</li><li>Jordi R
+</li></ul>
+</li></ul>
+  
+  <h3>Si ricorda che la possibilita' di usare DB non e' sempre consentita si potrebbero ottenere alcuni errori nella esecuzione degli script php.
+  <br>In questo caso accedere alla sezione script SQL per recuperare il codice e provarlo in XAMPP
+  </h3>
+<div class="centrato">	
+<h1>Script iniziale per connettersi e creare il DB, quindi per selezionarlo ed usarlo </h1>
+&lt;!doctype html&gt;<br />
+&lt;html&gt;<br />
+&lt;head&gt;<br />
+&lt;style&gt;<br />
+.codice{<br />
+color:red;<br />
+font-size:16px;<br />
+}<br />
+<br />
+table{<br />
+border-collapse:collapse;<br />
+}<br />
+&lt;/style&gt;<br />
+&lt;title&gt;Creazione Database SQL lite&lt;/title&gt;<br />
+&lt;link href=&quot;xampp.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;<br />
+&lt;/head&gt;<br />
+<br />
+&lt;body&gt;<br />
+<br />
+&amp;nbsp;&lt;p&gt;<br />
+&lt;?php<br />
+try<br />
+{<br />
+//create the database.<br />
+//this will generate the database file in the directory in which this script exists.<br />
+//If this file already exists, the database will be opened on this file.<br />
+// Step 1 open connection<br />
+$conn=mysql_connect(&quot;localhost&quot;,&quot;root&quot;,&quot;&quot;);<br />
+echo &quot;DB connesso&lt;br&gt;&quot;;<br />
+$sql=&quot;CREATE DATABASE lpwDB&quot;;<br />
+$ok=mysql_query($sql,$conn);<br />
+if (!$ok){ <br />
+	print(&quot;&lt;br&gt;impossibile creare DB: &quot;.mysql_error());<br />
+} else<br />
+echo &quot;&lt;br&gt;DB creato&quot;;<br />
+<br />
+//selezioniamo il database su cui lavorare<br />
+$sql = &quot;USE lpwDB&quot;;<br />
+$ok =mysql_query($sql,$conn);<br />
+if (!$ok)<br />
+  die(&quot;&lt;br&gt;imposs. selezionare DB: &quot;.mysql_error()); <br />
+else<br />
+  echo &quot;&lt;br&gt;selezionato il database su cui lavorare lpwDB&lt;br&gt;&quot;;<br />
+<br />
+// Close the connection before leaving<br />
+mysql_close($conn);<br />
+echo &quot;&lt;h3&gt;Connessione chiusa&lt;h3&gt;&quot;;<br />
+<br />
+}catch(Exception $e) {<br />
+  die('Errore generico');<br />
+}<br />
+<br />
+?&gt; <br />
+&lt;/body&gt;<br />
+&lt;/html&gt;
+</body>
+</html>

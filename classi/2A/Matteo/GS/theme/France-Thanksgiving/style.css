@@ -1,0 +1,234 @@
+@import url("css/reset.css");
+@import url("css/layout.css");
+@import url("css/menu.css");
+
+body{
+	background : White;
+	padding : 0px 0px;
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #404040;
+	line-height : 18px;
+}
+@media only screen and (min-width: 1280px) {
+
+body{
+	font-size : 14px;
+	line-height : 20px;
+}
+}
+a{
+	color : #867316;
+}
+a:hover{
+	color : #6A5B11;
+	text-decoration : none;
+}
+p{
+	margin-bottom : 15px;
+}
+*+h2,*+h3,*+h4,*+h5{
+	margin-top : 20px;
+}
+h1{
+	font : normal 28px/32px 'Oranienbaum', serif;
+	color : #867316;
+	margin-bottom : 20px;
+}
+#h1{
+	border-bottom : 1px solid #909C5B;
+	border-top : 1px solid #909C5B;
+	padding : 20px 0 0;
+	background-color : #A2975F;
+}
+#h1 h1{
+	margin-bottom : 0px;
+	color : #E8D05E;
+	margin-left : 0px;
+	font-family: 'Oranienbaum', serif;
+}
+h2,h3,h4,h5{
+	font-family: 'Oranienbaum', serif;
+	margin-bottom : 15px;
+	color : #A2855F;
+}
+h2{
+	font-size : 22px;
+	line-height : 26px;
+}
+h3{
+	font-size : 20px;
+	line-height : 24px;
+}
+h4{
+	font-size : 18px;
+	line-height : 22px;
+}
+h5{
+	font-size : 16px;
+	line-height : 20px;
+	margin-top : 15px;
+	margin-bottom : 15px;
+}
+ul, ol{
+	margin-bottom : 15px;
+	padding-left : 20px;
+}
+ul li{
+	margin-bottom : 10px;
+	list-style : disc outside;
+	margin-left : 20px;
+}
+ol li{
+	margin-bottom : 10px;
+	list-style : decimal outside;
+	margin-left : 20px;
+}
+ul ul, ol ol{
+	margin-top : 10px;
+	margin-bottom : 0px;
+	padding : 0;
+}
+ul li li{
+	list-style-type : circle;
+}
+ol li li{
+	list-style-type : lower-latin;
+}
+pre{
+	border : 1px solid Silver;
+	background-color : #EAEAEA;
+	padding : 15px;
+	margin-bottom : 15px;
+}
+.border{
+	border : 1px dashed #A2855F;
+}
+.border p:last-child{
+	margin-bottom : 0px;
+}
+aside h2{
+	background-color : #A2855F;
+	padding : 8px 12px;
+	color : White;
+}
+p img{
+	width : 190px!important;
+	height : auto!important;
+	border : 5px solid #A2855F;
+	float : left;
+	margin : 3px 20px 5px 0px;
+}
+p img.float-right{
+	float : right;
+	margin : 3px 20px 5px 20px;
+}
+#header{
+ padding : 20px 0px 0;
+ background-color : #F2E5A6;
+}
+
+#footer a, #footer h3{
+	color : #EAD46A;
+}
+#footer a:hover{
+	color : #E4EEF4;
+	text-decoration : none;
+}
+#wrapper{
+	background-color : White;
+	margin : 0px auto;
+}
+figure#logo{
+	overflow : hidden;
+}
+figure#logo img{
+	float : left;
+	width : 60px;
+	height : 60px;
+	margin-left : 10px;
+}
+figure#logo figcaption{
+	font-family: 'Oranienbaum', serif;
+	font-size : 30px;
+	margin-left : 80px;
+	padding-top : 8px;
+	line-height : 36px;
+}
+figure#logo span{
+	margin-left : 80px;
+	display : block;
+}
+.fon{
+	background-color : #A2975F;
+	padding-top : 20px;
+}
+.shadow{
+	-moz-box-shadow: 0px -2px 3px #3D3D3D;
+    -webkit-box-shadow: 0px -2px 3px #3D3D3D;
+    box-shadow: 0px -2px 3px #3D3D3D;
+}
+div.shadow{
+	height : 30px;
+}
+.bottom-shadow{
+	-moz-box-shadow: 0px 2px 3px #3D3D3D;
+    -webkit-box-shadow: 0px 2px 3px #3D3D3D;
+    box-shadow: 0px 2px 3px #3D3D3D;
+	position : relative;
+	z-index : 111;
+	height : 20px;
+}
+#content{
+	position : relative;
+	z-index : 112;
+	background-color : White;
+}
+.against{
+	margin-top : -5px;
+	background-color : White;
+	height : 10px;
+}
+.bottom-shadow.against{
+	margin-bottom : 0px;
+}
+#slider img{
+	border : 5px solid #A2855F;
+	width : 1170px;
+}
+#footer{
+	background-color : Black;
+	color : White;
+}
+#copy{
+	background-color : Black;
+}
+
+pre{
+	background-color : #DBD7C1;
+	border : none;
+}
+#copy{
+	
+	padding : 20px 0 0px;
+}
+#copy .container{
+	position : relative;
+}
+.company{
+	text-align : center;
+}
+.company a{
+	margin-left : 10px;
+}
+#cms{
+	position : absolute;
+	top : 0px;
+	right : 20px;
+}
+#cms img{
+	opacity:0.4;
+}
+#cms img:hover{
+	opacity:1.0;
+}

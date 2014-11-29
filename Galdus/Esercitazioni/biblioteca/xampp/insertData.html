@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<style>
+.codice{
+color:red;
+font-size:16px;
+}
+table, td, tr, th{
+border: solid 2px blue;
+
+}
+table{
+border-collapse:collapse;
+}
+</style>
+<title>Caricamento dati e visualizzazione dati inseriti con controllo di sicurezza</title>
+<link href="../xampp.css" rel="stylesheet" type="text/css">
+<link href="../css/style_o.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<script type="text/javascript" src="../menu/menuxampp.js"></script>
+&nbsp;<p>
+
+<h1>Di seguito il codice PHP per riaprire la connessione al DB e inserire alcuni dati di esempio nel DB</h1>
+<div class="codice">
+&lt;html&gt;<br />
+&lt;head&gt;<br />
+&lt;title&gt;Inserisco i dati&lt;/title&gt;<br />
+&lt;style&gt;<br />
+.codice{<br />
+color:red;<br />
+font-size:16px;<br />
+}<br />
+table, td, tr, th{<br />
+border: solid 2px blue;<br />
+<br />
+}<br />
+table{<br />
+border-collapse:collapse;<br />
+}<br />
+&lt;/style&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;<br />
+&lt;?php<br />
+try<br />
+{<br />
+//create the database.<br />
+//this will generate the database file in the directory in which this script exists.<br />
+//If this file already exists, the database will be opened on this file.<br />
+$database = new SQLite3('mysqlitedb.sqlite3', 0666);<br />
+echo &quot;&lt;h2&gt;DB connesso&lt;/h2&gt;&quot;;<br />
+}<br />
+catch(Exception $e)<br />
+{<br />
+die($e);<br />
+}<br />
+//Recupero i dati dal form precedente se non sono definiti ne metto a caso alcuni<br />
+if (!empty($_GET['nome'])){<br />
+$nome=$_GET['nome'];<br />
+} else<br />
+$nome='Paolo';<br />
+//-------------------//<br />
+if (!empty($_GET['cognome'])){<br />
+$cognome=$_GET['cognome'];<br />
+} else<br />
+$cognome='Rossi';<br />
+//-------------------//<br />
+if (!empty($_GET['indirizzo'])){<br />
+$indirizzo=$_GET['indirizzo'];<br />
+} else<br />
+$indirizzo='Via strada rotta';<br />
+//-------------------//<br />
+if (!empty($_GET['citta'])){<br />
+$citta=$_GET['citta'];<br />
+} else<br />
+$citta='Roma';<br />
+//-------------------//<br />
+if (!empty($_GET['cap'])){<br />
+$cap=$_GET['cap'];<br />
+} else<br />
+$cap=00145;<br />
+//-------------------//<br />
+if (!empty($_GET['controllo'])){<br />
+$controllo=$_GET['controllo'];<br />
+} else<br />
+$controllo=0;<br />
+<br />
+//Recupero il massimo dei PID nella tabella ed aggiungo 1 ad ogni inserimento<br />
+$query = &quot;SELECT MAX(PID) AS PID FROM indirizzi;&quot;;<br />
+if(!$database-&gt;exec($query)){<br />
+  die();<br />
+}<br />
+<br />
+//Recupero il valore e lo aumento di uno<br />
+if($result = $database-&gt;query($query)){<br />
+  $row=$result-&gt;fetchArray(SQLITE3_ASSOC);<br />
+  $PID=$row['PID']+1;<br />
+}<br />
+//Inserisco i valori nella tabella &quot;indirizzi&quot; (PID INT NOT NULL , nome CHAR(40), cognome CHAR(40), indirizzo CHAR(40), citta CHAR(40), cap INT )<br />
+$query = &quot;INSERT INTO indirizzi(PID, nome, cognome, indirizzo, citta, cap) &quot; .<br />
+&quot; VALUES ($PID, '$nome', '$cognome', '$indirizzo','$citta', $cap)&quot;;<br />
+<br />
+// stampo la query che eseguiro'<br />
+echo &quot;&lt;h2&gt;Queste sono le query di inserimento dati&lt;/h2&gt;&quot;;<br />
+echo &quot;la query eseguita e': &lt;span class=codice&gt;&quot;.$query.&quot;&lt;/span&gt;&lt;p&gt;&quot;;<br />
+<br />
+//Eseguo l&Atilde;&not;'inserimento <br />
+   if(!$database-&gt;exec($query)){<br />
+     die(); <br />
+   }<br />
+}<br />
+print &quot;&lt;h2&gt;Dati inseriti&lt;/h2&gt;&quot;;<br />
+<br />
+?&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;
+</div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<head>
+<title>
+Script creazione database per esercitazione
+</title>
+<link href="css/menu.css" rel="stylesheet" type="text/css">
+<link rel='stylesheet' href='css/style.css'>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+</head>
+<body>
+<script type="text/javascript" src="js/menu.js"></script>
+<div class="centrato">	
+<h1>Script che mostra i dati nel db e consente di scegliere quelli da modificare</h1>
+&lt;!doctype html&gt;<br />
+&lt;html&gt;<br />
+&lt;head&gt;<br />
+&lt;style&gt;<br />
+.codice{<br />
+color:red;<br />
+font-size:16px;<br />
+}<br />
+table, td, tr, th{<br />
+border: solid 2px blue;<br />
+<br />
+}<br />
+table{<br />
+border-collapse:collapse;<br />
+}<br />
+&lt;/style&gt;<br />
+&lt;script&gt;<br />
+function sicuro(id1){<br />
+  alert(&quot;sei sicuro di voler cancellare i dati per id = &quot;+id1);<br />
+}<br />
+&lt;/script&gt;<br />
+&lt;title&gt;Caricamento dati per aggiornamento&lt;/title&gt;<br />
+&lt;link href=&quot;css/menu.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;<br />
+&lt;link href=&quot;xampp.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;<br />
+&lt;?php<br />
+//includo il menu<br />
+//include('menu.php');<br />
+<br />
+//includo il file php che prepara la connessione<br />
+//include('openConn.php');<br />
+try{<br />
+//connect the database.<br />
+$conn=mysql_connect(&quot;localhost&quot;,&quot;root&quot;,&quot;&quot;);<br />
+echo &quot;&lt;h2&gt;DB connesso&lt;/h2&gt;&quot;;<br />
+//selezioniamo il database su cui lavorare<br />
+$sql = &quot;USE lpwDB&quot;;<br />
+$ok =mysql_query($sql,$conn);<br />
+if (!$ok)<br />
+die(&quot;&lt;br&gt;imposs. selezionare DB: &quot;.mysql_error()); <br />
+else<br />
+echo &quot;&lt;br&gt;selezionato il database su cui lavorare lpwDB&lt;br&gt;&quot;;<br />
+//Read all of the data from the table and print it in an HTML table<br />
+//this work only if connection is already open.<br />
+$sql=&quot;SELECT * FROM agenda&quot;;<br />
+// stampa di controllo<br />
+echo &quot;query SQL: $sql&quot;.&quot;&lt;br&gt;&quot;;<br />
+//esecuzione della query<br />
+$res=mysql_query($sql,$conn);<br />
+if (!$res) <br />
+	die(&quot;Errore query: &quot;.mysql_error());<br />
+<br />
+//recupero i record inseriti (se presenti)<br />
+$rows=mysql_num_rows($res);<br />
+echo &quot;sono stati trovati $rows record&quot;;<br />
+<br />
+if ($rows==0) {<br />
+// controllo se la risposta &egrave; vuota<br />
+echo &quot;&lt;h3&gt;non ci sono record&lt;/h3&gt;&quot;;<br />
+}<br />
+else {<br />
+      // altrimenti li visualizzo in una tabella<br />
+      print &quot;&lt;table&gt;n&quot;;<br />
+      print &quot;&lt;tr&gt;&lt;th&gt;PID&lt;/th&gt;&lt;th&gt;Nome&lt;/th&gt;&lt;th&gt;Cognome&lt;/th&gt;&lt;th&gt;Telefono&lt;/th&gt;&lt;th&gt;Aggiorna&lt;/th&gt;&lt;/tr&gt;n&quot;;<br />
+      //ciclo su tutti i record<br />
+	while ($row=mysql_fetch_assoc($res)) {<br />
+	        $iter=$row['id'];<br />
+		print &quot;&lt;form name='f$iter' method='post' action='updateData.php'&gt;n&quot;;<br />
+		print &quot;&lt;tr&gt;&lt;td&gt;$iter&lt;input type='hidden' name='id' value='$iter'&gt;&lt;/td&gt;n&quot;;<br />
+		print &quot;&lt;td&gt;&lt;input type='text' value='{$row['nome']}' name='nome'&gt;&lt;/td&gt;n&quot;;<br />
+		print &quot;&lt;td&gt;&lt;input type='text' value='{$row['cognome']}' name='cognome'&gt;&lt;/td&gt;n&quot;;<br />
+		print &quot;&lt;td&gt;&lt;input type='text' value='{$row['telefono']}' name='telefono'&gt;&lt;/td&gt;n&quot;;<br />
+		print &quot;&lt;td&gt;&lt;input type='submit' name='invia' value='Modifica' onclick='sicuro($iter)'&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/form&gt;n&quot;;<br />
+<br />
+	}<br />
+	print &quot;&lt;/table&gt;&quot;;<br />
+}<br />
+// Close the connection before leaving<br />
+mysql_close($conn);<br />
+echo &quot;&lt;h3&gt;Connessione chiusa&lt;h3&gt;&quot;;<br />
+<br />
+}catch(Exception $e) {<br />
+   die('Errore connessione DB');<br />
+}<br />
+<br />
+?&gt;<br />
+<br />
+&lt;/body&gt;<br />
+&lt;/html&gt; 
+
+</body>
+</html>

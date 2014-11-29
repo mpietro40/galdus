@@ -1,0 +1,59 @@
+nav{
+float:left;
+width:260px;
+text-align:right;
+}
+
+#nav_border{
+border-right:1px solid black;
+padding-right:5%;
+}
+
+#titolo{
+font-family:Arial Narrow;
+font-size:17px;
+font-weight:bold;
+}
+
+.contenuto{
+font-family:Arial Narrow;
+font-size:15px;
+}
+
+.contenuto1{
+font-family:Arial Narrow;
+font-size:13px;
+font-style:Italic;
+
+}
+
+
+section{
+padding:209px;
+margin:10px 20px 0 75px;
+}
+
+#asd{
+padding-top:105px;
+}
+
+#asd1{
+padding-top:105px;
+}
+
+#asd2{
+padding-top:166px;
+}
+
+#asd3{
+padding-top:166px;
+}
+#asd4{
+padding-top:100px;
+}
+#asd5{
+padding-top:80px;
+}
+#asd6{
+padding-top:52px;
+}

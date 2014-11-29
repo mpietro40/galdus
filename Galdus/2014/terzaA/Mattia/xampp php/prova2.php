@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<title>Mattia Aluotto</title>
+</head>
+<body>
+<h1>Esercizio sui tipi di variabile</h1>
+<?php
+ $a = 231; // da questo momento in poi $a è un intero
+ if(settype($a,double))
+ /*
+ Se l’operazione è riuscita il valore è TRUE quindi
+ visualizza il testo seguente. Altrimenti salta alla
+ fine dell’if riga 10.
+ */
+ echo "<br>valore settato a double. Ecco il nuovo valore: ";
+ echo $a;
+ 
+ ?>
+ </body>
+</html>

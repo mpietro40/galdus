@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<Html>
+<head>
+
+<title> SPORT CON PALLA OVALE PATRICK KAMBARAMI </title>
+<style>
+
+body{
+color:#6B8E23;
+background:#00FFFF;
+}
+Table,td,th{
+border:solid 2px red;
+/*color:#"#6495ED;*/
+}
+table {
+border-collapse:collapse;
+}
+</style>
+<script>
+var dimensione=10;
+function aumenta(valore) {
+if(valore==1){
+dimensione=dimensione+10;
+document.getElementById('pagina').style.fontSize=dimensione+'px';
+}
+if(valore==2){
+dimensione=dimensione-10;
+document.getElementById('pagina').style.fontSize=dimensione+'px';
+}
+}
+function colora(scelta){
+if(scelta==1) {
+document.getElementById("pagina").style.backgroundColor="#F0E68C";
+document.getElementById("pagina").style.color="GREEN";
+document.getElementById("tabella").style.color="red";
+}
+if(scelta==2) {
+document.getElementById("pagina").style.backgroundColor="#000080";
+document.getElementById("pagina").style.color="navy";
+document.getElementById("tabella").style.color="yellow";
+}
+if(scelta==3) {
+document.getElementById("pagina").style.backgroundColor="#CD5C5C";
+document.getElementById("pagina").style.color="red";
+document.getElementById("tabella").style.color="green";
+}
+}
+
+</script>
+
+</head>
+
+
+<body id=pagina>
+
+                                          
+<h1>SPORT CON PALLA OVALE </h1>
+
+<table id=tabella>
+<tr> 
+<td> <img src="img/sudafrica rugby.jpg" width=150 height=150/> </td>
+     
+</tr>
+<tr>
+<td>Il gioco del rugby è diviso, essenzialmente, in due grandi codici regolamentari: il rugby a 15 e il rugby a 13, gestiti da 2 federazioni e organismi internazionali diversi e in nessun modo collegati fra loro. Il rugby union e la sua variante a 7 dipendono dalla stessa federazione internazionale, l'International Rugby Board (IRB), mentre il rugby league dipende dalla Rugby League International Federation (RLIF). È definito come uno sport di combattimento e di situazione. È uno sport di contatto e combattimento perché il confronto fisico tra i giocatori è una costante del gioco. Il rugby è anche definito sport di situazione perché nella sua evoluzione sta diventando sempre più importante la capacità di comprendere il contesto momentaneo (momento tattico) in cui ogni fase della partita si sviluppa concretamente. La stessa definizione dei ruoli, effettiva nelle fasi di ripartenza da situazione statica, appare, nel rugby moderno, riduttiva rispetto alla necessità, per ogni giocatore, di adattarsi a qualsiasi posizione in campo e a qualsiasi fase di gioco.</td>
+</tr>
+<tr>
+
+<td> <img src="img/football-americano1.jpg" width=150 height=150/>   <A HREF="pagina2.html"> FOOTBALL - AMERICANO  </A> </td>
+</tr>
+<tr>
+<td> <img src="img/sudafrica.jpg" width=150 height=150/><A HREF="pagina1.html">RUGBY</A>  </td>
+</tr>
+<tr>
+
+<td>SITO WEB CREATO DA PATRICK KAMBARAMI </td>  
+       
+</tr>
+
+   </table>
+   <input name=red value=yellow type=button onclick='colora(1)';>
+   <input name=blue value=navy type=button onclick='colora(2)';>
+   <input name=green value=pinck type=button onclick='colora(3)';>
+   <input type=button name='<' value='<'onclick='aumenta(2)';>
+   <input type=button name='>' value='>'onclick='aumenta(1)';>
+   </body>
+</Html>

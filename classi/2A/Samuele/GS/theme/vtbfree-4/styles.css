@@ -1,0 +1,601 @@
+/*
+Design by Metamorphosis Design
+http://www.metamorphozis.com
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+@import url(nav.css);
+
+/*gallery*/
+
+ .gallery_top{
+ 	background: url(images/gallery_top.jpg) no-repeat;
+	height: 21px;
+ }
+ 
+ .gallery_bg{
+ 	background: url(images/gallery_bg.jpg) repeat-y left;
+	padding: 0px 11px 0px 11px;
+ }
+ 
+  .gallery_bot{
+ 	background: url(images/gallery_bot.jpg) no-repeat;
+	height: 21px;
+ }
+ 
+ .gal{
+ 	background: url(images/gal_bg.jpg) no-repeat 0px 0px;
+	width: 457px;
+	height: 250px;
+	padding: 10px 10px 10px 10px;
+	float: left;
+	margin: 0px 10px 0px 10px;
+ }
+ 
+ .gal h3{
+ 	background: none;
+	margin-bottom: 0px;
+ }
+ 
+ .gal_img{
+ 	border: 1px solid #ffffff;
+ }
+ 
+ .gal p{
+ 	color: #ffffff;
+ }
+
+
+.blog_footer{
+       
+      
+	width : 154px;
+	height : 37px;
+        background-image : url(images/more.gif);
+        text-align : center;
+	line-height : 37px;
+}
+
+
+
+img{
+    padding: 0px;
+    border: none;
+}
+
+a{
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #c70000;
+}
+
+
+h1{
+	padding-bottom: 5px;
+	background: url(images/title_bg.jpg) repeat-x bottom;
+	
+}
+
+h2{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #373636;
+	font-style:  italic;
+	font-weight: normal;
+	background: url(images/title_bg.jpg) repeat-x bottom;
+	padding-bottom: 3px;
+}
+
+h3{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	 
+	background: url(images/title_footer.jpg) repeat-x bottom;
+	padding-bottom: 3px;
+	margin-bottom: 5px;
+
+	
+
+
+
+}
+
+h4{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #373636;
+	font-style:  italic;
+	font-weight: normal;
+}
+
+body {	
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 22px;
+    color: #ffffff;
+    background: url(images/bg.jpg);
+}
+
+.clear{
+	clear: both;
+}
+
+#bg_top{
+	background: url(images/bg2.jpg) repeat-x top;
+	min-height: 100%;
+     
+          
+}
+
+#wrap{
+	width: 1016px;
+	margin: 0 auto;
+	padding: 9px 0px 0px 0px;
+}
+
+#wrap_bg{
+	width: 1216px;
+	margin: 0 auto;
+	background: url(images/logo_bg.png) no-repeat left top;
+}
+
+
+
+
+/*logo*/
+
+
+
+
+
+
+
+
+#logo{
+	height: 80px;
+		padding-top: 0px;
+}
+
+#logo h1 a{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #ffffff;
+	font-style: italic;
+	font-weight: normal;
+}
+
+#logo a small{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #ffffff;
+	font-style: italic;
+	font-weight: normal;
+}
+
+/*prew_box*/
+
+#prew_box{
+	background: url(images/prew_bg.png) no-repeat top left;
+	height: 329px;
+	padding: 11px;
+}
+
+#prew_but_box{
+	width: 76px;
+	margin: 0 auto;
+	height: 20px;
+	padding-top: 20px;
+}
+
+#prew_but_left{
+	float: left;
+}
+
+#prew_but_right{
+	float: right;
+}
+
+/*content*/
+
+#content{
+	color: #000000;
+}
+
+.text{
+	padding: 0px 0px 0px 0px;
+
+
+}
+
+.text: right{
+clear: both;
+	font-size: 20px;
+    width: auto;
+    padding: 8px;
+    overflow:hidden;    
+	border: 1px solid #ccc;
+	background-color: #eee;	
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;	
+}
+
+.italic_style{
+	font-style: italic;
+}
+
+
+#text ul {
+  list-style: none;
+}
+
+#text ul > li {
+  padding-left: 10px;
+}
+
+#text ul > li:hover {
+  background: url("images/bullet.gif") no-repeat scroll left 0.7em transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#left_column{
+	width: 633px;
+	float: left;
+}
+
+.left_news_top{
+	background: url(images/left_bg_top.png) no-repeat bottom left;
+	height: 22px;
+	padding-top: 13px;	
+}
+
+.left_news_bg{
+	background: url(images/left_bg.png) repeat-y;
+	padding: 2px 20px 2px 20px;
+}
+
+.left_news_bot{
+	background: url(images/left_bg_bot.png) no-repeat top left;
+	height: 22px;
+}
+
+
+
+  .nm_post {
+  padding: 0;
+  margin-bottom: 50px;
+}
+
+.nm_post h3 {
+  margin-bottom: 5px;
+}
+
+.nm_post p {
+  margin-bottom: 10px;
+}
+
+.nm_post_title a {
+  text-decoration: none;
+}
+
+.nm_post_title a:hover {
+  text-decoration: underline;
+}
+
+.nm_post_date {
+  color: #999;
+  font-size: 11px;
+}
+
+.nm_post_content {
+  margin-bottom: 20px;
+}
+
+.nm_post_meta {
+  padding: 2px 5px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  font-size: 11px;
+}
+
+.nm_post_back {
+  margin-top: 20px;
+  font-size: 11px;
+}
+
+.nm_post_back a {
+  text-decoration: none;
+}
+
+.nm_post_back a:hover {
+  text-decoration: underline;
+}
+
+.nm_page_nav .left {
+  float: left;
+  text-align: left;
+}
+
+.nm_page_nav .right {
+  float: right;
+  text-align: right;
+}
+
+aside .section a, aside .section a {
+  text-decoration: none;
+}
+
+aside .section a:hover, aside .section a:hover {
+  text-decoration: underline;
+}
+
+aside .section a.large {
+  font-size: 22px;
+}
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#right_column{
+	width: 360px;
+	float: right;
+}
+
+.right_news_top{
+	background: url(images/right_bg_top.png) no-repeat bottom left;
+	height: 22px;
+	padding-top: 13px;
+}
+
+.right_news_bg{
+	background: url(images/right_bg.png) repeat-y;
+	padding: 2px 20px 2px 20px;
+
+
+}
+
+.right_news_bot{
+	background: url(images/right_bg_bot.png) no-repeat top left;
+	height: 22px;
+}
+
+
+
+/*footer*/
+
+
+#footer{
+	padding: 10px 0px 70px 0px;
+}
+
+#footer a{
+	color: #ffffff;
+}
+
+#footer a:hover{
+	color: #c70000;
+}
+
+#footer_bg_top{
+	background: url(images/footer_bg_top.png) no-repeat top left;
+	height: 10px;
+}
+
+#footer_bg{
+	background: url(images/footer_bg.png) repeat-y left;
+	padding: 0px 10px 0px 10px;
+}
+
+#footer_bg_bot{
+	background: url(images/footer_bg_bot.png) no-repeat top left;
+	height: 10px;
+}
+/* copyright */
+
+
+
+#templatemo_copyright {
+	width: 100%;
+	margin: 0 auto;
+	padding: 15px 20px;
+	text-align: center;
+	color: #oooooo;
+}
+
+
+/* end of copyright */
+
+
+
+
+
+
+
+
+/*contact*/
+
+
+#p01-contact1_field0 {
+
+width: 300px; 
+padding: 5px; 
+background: #fff;
+ border: 1px solid #AAA;
+ }
+
+#p01-contact1_field1 {
+
+width: 300px; 
+padding: 5px; 
+background: #fff;
+ border: 1px solid #AAA;
+ }
+
+
+
+#p01-contact1_field2 {
+
+width: 300px; 
+padding: 5px; 
+background: #fff;
+ border: 1px solid #AAA;
+ }
+
+#p01-contact1_field3 {
+ width: 400px;
+ height: 200px; 
+padding: 5px;
+ background: #fff;
+ border: 1px solid #AAA;
+
+ }
+
+
+#p01-contact1_field4 {
+ width: 100px; 
+padding: 5px; 
+background: #fff;
+ border: 1px solid #AAA;
+ }
+ 
+
+
+/*=================================*/
+/* Nivo Slider Demo
+/* November 2010
+/* By: Gilbert Pellegrom
+/* http://dev7studios.com
+/*=================================*/
+
+
+#slider-wrapper {
+    background:url(images/top.jpg) no-repeat;
+    width:994px;
+    height: 299px;
+    margin:0 auto;
+}
+
+#slider {
+	position:relative;
+    width: 994px;
+    height: 299px;
+	background:url(images/loading.gif) no-repeat 50% 50%;
+}
+#slider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+}
+#slider a {
+	border:0;
+	display:block;
+}
+
+.nivo-controlNav {
+	position:absolute;
+	left: 440px;
+	bottom:-42px;
+
+}
+.nivo-controlNav a {
+	display:block;
+	width:22px;
+	height:22px;
+	background:url(images/bullets.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	margin-right:3px;
+	float:left;
+}
+.nivo-controlNav a.active {
+	background-position:0 -22px;
+}
+
+.nivo-directionNav a {
+	display:block;
+	width:30px;
+	height:30px;
+	background:url(images/arrows.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+}
+a.nivo-nextNav {
+	background-position:-30px 0;
+	right:15px;
+}
+a.nivo-prevNav {
+	left:15px;
+}
+
+.nivo-caption {
+    text-shadow:none;
+    font-family: Helvetica, Arial, sans-serif;
+}
+.nivo-caption a { 
+    color:#efe9d1;
+    text-decoration:underline;
+}
+
+
+
+
+
+
+/*breadcrumbs*/
+
+  
+#breadcrumbs{
+	padding: 10px 10px 10px 10px;
+}
+
+#breadcrumbs a{
+	color: #ffffff;
+}
+
+#breadcrumbs a:hover{
+	color: #c70000;
+}
+    
+
+
+
+
+

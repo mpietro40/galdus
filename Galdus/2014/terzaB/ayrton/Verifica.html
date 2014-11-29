@@ -1,0 +1,26 @@
+<!doctype html>
+<head>
+<title>Verifica</title>
+<script language="javascript">
+function Esempio(){       
+var n = eval(document.f1.l1.value);
+var n2 = eval(document.f1.l2.value);
+var P=(n+n2)*2;
+var A=(n*n2);   
+
+document.write('perimetro'+P+'<br>');
+document.write('area'+A);
+}
+</script>
+</head>
+<body bgcolor="#FF0000"> 
+<h1> Verifica </h1>
+<h3> Inserisci i dati della figura geometrica e calcolo area e perimetro </h3>
+<form name=f1 action=geometria.php>
+Primo lato <input type=text name=l1>
+<br>Secondo lato <input type=text name=l2>
+<br><input type="button" value="Calcola" onClick="Esempio()"/>
+<input type="reset" value="Annulla" onClick="Reset"/>
+</form>
+</body>
+</html>

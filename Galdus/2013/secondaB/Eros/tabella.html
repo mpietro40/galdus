@@ -1,0 +1,71 @@
+<!Doctype html>
+<head>
+<title ="eros magadia"> </title>
+<style>
+body{ 
+background:#000000;
+color:yellow;
+}
+ table, td,th {
+ border: solid 1px orange;
+ color:white;
+ }
+ table{
+ border-collapse:collapse;
+ }
+ </style>
+<script language=javascript>
+function colora(scelta){
+if(scelta==1){
+document.getElementById('pagina').style.backgroundColor='red';
+document.getElementById('pagina').style.color='white';
+}
+if(scelta==2){
+document.getElementById('pagina').style.backgroundColor='blue';
+document.getElementById('pagina').style.color='pink';
+}
+if(scelta==3){
+document.getElementById('pagina').style.backgroundColor='green';
+document.getElementById('pagina').style.color='grey';
+}
+}
+var dimensione=10;
+function aumenta (valore) {
+if(valore==1){
+dimensione=dimensione+10;
+document.getElementById('pagina').style.fontSize=dimensione+'px';
+}
+if(valore==2){dimensione=dimensione-10;
+document.getElementById('pagina').style.fontSize=dimensione+'px';
+}
+} 
+</script>
+</head>
+<body id=pagina>
+eros magadia
+<table>
+<td> nome</td>
+<td> cognome</td>
+<td>email</td>
+<td> cell</td>
+<td>fb</td>
+<td>foto</td>
+<tr>
+<td>eros</td>
+<td> magadia </td>
+<td>eros9690@hotmail.it</td>
+<td>non me lo ricordo</td>
+<td>eros magadia </td> 
+<td> <img src="untitled.jpg"> </td>
+</tr>
+</table>
+<input name="<" value="<" type="Button" onclick='aumenta(2)';>
+<input name="red" value="red" type="button" onclick="colora(1)";>
+<input name="blue" value="blue" type="button" onclick="colora(2)";>
+<input name="green" value="green" type="button" onclick="colora(3)";>
+<input name=">" value=">" type="Button"  onclick='aumenta(1)';>
+
+</body>
+</html>
+
+	

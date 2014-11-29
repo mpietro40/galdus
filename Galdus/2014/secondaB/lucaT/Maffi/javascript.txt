@@ -1,0 +1,10 @@
+<!doctype html>
+<html>
+<head>
+<script>
+ </script>
+ </head>
+ <body onload="esgui:('#110072')">
+ <a href="javascript:esegui('#123456')">color 1 </a>
+ </body>
+ </html>

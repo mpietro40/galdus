@@ -1,0 +1,51 @@
+header{
+font-family:bookman old style;
+font-size:2em;
+font-weight:bold;
+}
+
+p{
+font-family:bookman old style;
+font-size:18px;
+}
+
+section{
+width:77%;
+height:auto;
+color:white;
+font-family:bookman old style;
+font-size:20px;
+background-color: rgba(9, 8, 8, 0.86);
+}
+
+#section-titolo{
+font-family:bookman old style;
+font-size:1em;
+color:red;
+}
+
+table, td{
+border:1px solid white;
+border-collapse:collapse;
+padding-left:10px;
+margin-left:30px;
+}
+
+td{
+width:800px;
+height:30px;
+
+
+}
+
+
+.border{
+margin-left:50px;
+width:250px; 
+padding: 2px; 
+border: 1px solid black;
+}
+
+label{
+width:400px;
+}

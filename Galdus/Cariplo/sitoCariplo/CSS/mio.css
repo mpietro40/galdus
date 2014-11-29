@@ -1,0 +1,267 @@
+body
+{color:black;
+}
+html { 
+background: url(../Immagini/green.jpg) no-repeat center center fixed;
+-moz-background-size: cover;
+-webkit-background-size: cover;
+-o-background-size: cover;
+background-size: cover; 
+} 
+
+
+
+img{
+  width:200px;
+  height:200px;
+} 
+
+div#menu {width:350px; background:url(../Immagini/Flame) top no-repeat; padding-top:100px;} 
+
+div#menubody {background:url(../Immagini/Blue.jpg) repeat-y; padding-left:0px;} 
+
+div#menubottom {height:26px; background:url(../Immagini/Flame.) bottom no-repeat;} 
+
+ul#menulist {width:144px; list-style-type:none;} 
+
+ul#menulist li {height:35px; background:url(../Immagini/Flame.) bottom repeat-x;} 
+
+ul#menulist a {width:300px; height:20px; border-left:white 10px solid; font:bold 13px Verdana, Arial, sans-serif; color:#FFFFFF text-decoration:none; padding:5px 0 0 10px; display:block !important; display:inline-block;} 
+
+ul#menulist a:hover {background:url(../Immagini/Flame.jpg) left repeat-y;}
+
+table.centrata{
+  margin-left:auto;
+  margin-right:auto;
+}
+div.blue{
+	font-weight:bold;
+	color:blue;
+	font-size:120%;
+}
+div.red{
+	font-weight:bold;
+	color:red;
+	font-size:120;
+}
+.contenuto1 {
+position:absolute;
+ font-family:"comic Sans MS";
+ float:left;
+ top:400px;
+left:300px;
+ width:800px;
+ height:880px;
+ padding:10px;
+ color:black;
+ background:MINTCREAM;
+ border:1px solid #000;
+ padding:12;
+ filter:alpha(opacity=80); 
+-moz-opacity:0.5; 
+opacity: 0.5; 
+}
+.contenuto2 {
+position:absolute;
+ font-family:"comic Sans MS";
+ float:left;
+ top:195px;
+left:300px;
+ width:800px;
+ height:180px;
+ padding:10px;
+ color:black;
+ background:MINTCREAM;
+ border:1px solid #000;
+ padding:12;
+ filter:alpha(opacity=70); 
+-moz-opacity:0.5; 
+opacity: 0.5; 
+}
+.contenuto3 {
+position:absolute;
+ font-family:"comic Sans MS";
+ float:left;
+ top:400px;
+left:300px;
+ width:800px;
+ height:920px;
+ padding:10px;
+ color:black;
+ background:MINTCREAM;
+ border:1px solid #000;
+ padding:12;
+ filter:alpha(opacity=80); 
+-moz-opacity:0.5; 
+opacity: 0.5; 
+}
+.contenuto4 {
+position:absolute;
+ font-family:"comic Sans MS";
+ float:left;
+ top:435px;
+left:300px;
+ width:800px;
+ height:1450px;
+ padding:10px;
+ color:black;
+ background:MINTCREAM;
+ border:1px solid #000;
+ padding:12;
+ filter:alpha(opacity=80); 
+-moz-opacity:0.5; 
+opacity: 0.5; 
+}
+.contenuto5 {
+position:absolute;
+ font-family:"comic Sans MS";
+ float:left;
+ top:230px;
+left:300px;
+ width:800px;
+ height:180px;
+ padding:10px;
+ color:black;
+ background:MINTCREAM;
+ border:1px solid #000;
+ padding:12;
+ filter:alpha(opacity=70); 
+-moz-opacity:0.5; 
+opacity: 0.5; 
+}
+.contenuto6 {
+position:absolute;
+ font-family:"comic Sans MS";
+ float:left;
+ top:400px;
+left:300px;
+ width:800px;
+ height:180px;
+ padding:10px;
+ color:black;
+ background:MINTCREAM;
+ border:1px solid #000;
+ padding:12;
+ filter:alpha(opacity=70); 
+-moz-opacity:0.5; 
+opacity: 0.5; 
+}
+.testoRosso{
+  font-weight: bold;
+  color: red;
+  font-size: 120%;
+  text-align:left;
+}
+.testoVerde{
+  font-weight: bold;
+  color: green;
+  font-size: 120%;
+  text-align:left;
+}
+.testoBlue{
+  font-weight: bold;
+  color: blue;
+  font-size: 120%;
+  text-align:left;
+}
+.testoMAGENTA{
+  font-weight: bold;
+  color: MAGENTA;
+  font-size: 120%;
+  text-align:left;
+}
+.produzzione{
+color:#0000CD;
+}
+table,th, td 
+{ 
+border: solid 1px white; 
+}
+table 
+{ 
+border-collapse: collapse; 
+
+}
+
+h1 { 
+/*text-align: center; */
+} 
+#navigation {
+	width: 950px;
+	height: 50px;
+	margin-left:180px;
+	
+	padding: 0;
+	background: url(../Immagini/navigation-bg.jpg) no-repeat left top;
+} 
+#navigation ul {
+	list-style: none;
+	
+	padding: 0;
+} 
+#navigation ul li {
+	display: inline;
+	
+} 
+#navigation ul li a {
+	height:33px;
+	display: block;
+	float: left;
+	padding: 17px 15px 0 15px;
+	font: bold 12px Arial;
+	color: #FFF;
+	text-decoration: none;
+	background: url(../Immagini/navigation-separator.png) no-repeat right center;
+} 
+
+#navigation ul li a:hover {
+	color:#363636;
+	background: url(images/navigation-hover.png) repeat-x left top;
+}
+
+#navigation ul li#active a {
+	color:#363636;
+	background: url(images/navigation-hover.png) repeat-x left top;
+}
+/* Start http://www.cursors-4u.com */ body, a:hover {cursor: url(http://cur.cursors-4u.net/symbols/sym-2/sym158.cur), progress !important;} /* End http://www.cursors-4u.com */
+
+.centrato{
+   text-align:center;
+.sinistra{
+  width:500px;
+  height:300px;
+  float:left;
+  padding:10px;
+  margin:10px;
+}
+.destra{
+  width:500px;
+  height:300px;
+  float:right;
+  padding:10px;
+  margin:10px;
+}
+.testoRosso{
+  font-weight: bold;
+  color: red;
+  font-size: 120%;
+  text-align:left;
+}
+.testoBLUEVIOLET{
+  font-weight: bold;
+  color: BLUEVIOLET;
+  font-size: 120%;
+  text-align:left;
+}
+.testoBlue{
+  font-weight: bold;
+  color: blue;
+  font-size: 120%;
+  text-align:left;
+}
+.testoMAGENTA{
+  font-weight: bold;
+  color: MAGENTA;
+  font-size: 120%;
+  text-align:left;
+}

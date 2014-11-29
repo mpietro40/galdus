@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Gateway </title>
+<meta charset=UTF8>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+</head> 
+<body>
+<script src="js/menu.js"></script >
+</body>
+Un computer connesso alla rete locale confronta i primi bit dell'indirizzo di destinazione (quelli che corrispondono a bit "1" nella propria subnet mask) dei dati da inviare con il network prefix (già noto) del proprio indirizzo IP:
+se corrispondono, significa che il computer di destinazione è sulla stessa rete locale;
+se invece non corrispondono, il computer d'origine invia i dati al gateway predefinito, il quale si occuperà del loro successivo instradamento verso la rete remota di destinazione.
+non possono coesistere in una stessa rete 2 computer con lo stesso indirizzo IP (conflitto IP; il secondo arrivato disattiva la propria scheda di rete).

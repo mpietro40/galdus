@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<style type="text/css">
+
+body{
+text-align:center;
+}
+
+#div1 {
+width:200px;
+height:300px;
+padding-left:10px;
+padding-top:80px;
+background-image:url(cestino1.jpg);
+background-repeat:no-repeat;
+}
+
+</style>
+<script>
+function permettiTrascinamento(ev)
+{
+ev.preventDefault();
+}
+function trascina(ev)
+{
+ev.dataTransfer.setData("Text",ev.target.id);
+}
+function rilascia(ev)
+{
+ev.preventDefault();
+var data=ev.dataTransfer.getData("Text");
+ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+<h2>Trascina i rifiuti nei contenitori giusti</h2>
+<table align="center">
+<tr>
+<td><div id="div1" ondrop="rilascia(event)" ondragover="permettiTrascinamento(event)"></div></td>
+
+</tr>
+</table>
+<img id="drag1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlzFvAPW4dku4ViWVcrVJn3SPG2yHEObRuMv06gIAcmu-S26dxQQ" draggable="true" ondragstart="trascina(event)" width='85' height='85'>
+<img id="drag2" src="http://ascomputerprice.com/as_comp/product_image/46RAM%20512MB%20DDR-1.jpg" draggable="true" ondragstart="trascina(event)"width='85' height='85'>
+<img id="drag3" src="http://images.bit-tech.net/content_images/2010/04/the-facts-4k-advanced-format-hard-disks/2.jpg" draggable="true" ondragstart="trascina(event)"width='85' height='85'>
+</body>
+</html>
+
+

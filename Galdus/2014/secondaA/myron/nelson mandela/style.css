@@ -1,0 +1,480 @@
+*{
+margin:0px;
+padding:0px;
+font-family:verdana;
+}
+
+img{border:0px;}
+
+html{
+width:100%;
+height:100%;
+}
+
+body{
+width:100%;
+background-color:#CCFF67 !important;
+}
+
+#header{
+background-color:#20221B;
+text-align:center;
+
+}
+
+.evidente{
+font-weight:bold;
+font-size:120%;
+}
+
+.inside{
+width:980px;
+margin:50 auto;
+
+overflow:hidden
+
+}
+
+.logo{
+float:left;
+margin:0 38px 0 41px;
+background:url(images/galdus.gif) center right no-repeat;
+}
+
+.slogan{
+font-family:Arial, Helvetica, sans-serif;
+font-size:10px;
+text-transform:uppercase;
+color:#82837F;
+line-height:30px;
+border-left:1px solid #82837F;
+padding:0 0 0 21px;
+margin:40px 0 0 0;
+
+float:left
+}
+
+.rss{
+float:right;
+margin:29px 52px 0 0
+}
+
+.menu {
+background-image:url(images/menu_bg.gif);
+background-position:top left;
+background-repeat:repeat-x;
+width:100%;
+float:left;
+height:40px;
+}
+
+#wb_menu1{
+width:980px;
+margin:0 auto;
+}
+
+#wb_menu1 ul{
+width:auto;
+padding:0 0 0 25px;
+text-align:left;
+}
+
+#wb_menu1 li{
+list-style-type:none;
+display:inline;
+background:url(images/mn.gif) center right no-repeat;
+}
+
+#wb_menu1 li:last-child {
+background:none;	
+}
+
+#wb_menu1 li a {
+color:#D9D9CF;
+font-family:Arial;
+font-size:12px;
+font-weight:bold;
+text-transform:uppercase;
+text-decoration:none;
+line-height:40px;
+padding:0px;
+padding-left:20px;
+padding-right:20px;
+}
+
+.pic{
+margin:0 auto;
+/ margin:-4px auto;
+}
+
+#blocks{
+background-image:url(images/bg.gif);
+background-position:top left;
+background-repeat:repeat-x;
+height:176px;
+padding:27px 0 0 77px
+}
+
+.block1{
+background-image:url(images/block1.jpg);
+background-position:top left;
+background-repeat:no-repeat;
+width:165px;
+height:118px;
+float:left;
+padding:30px 0 0 130px;
+}
+
+.block2{
+background-image:url(images/block2.jpg);
+background-position:top left;
+background-repeat:no-repeat;
+width:165px;
+height:118px;
+float:left;
+padding:30px 0 0 130px;
+}
+
+.block3{
+background-image:url(images/block3.jpg);
+background-position:top left;
+background-repeat:no-repeat;
+width:165px;
+height:118px;
+float:left;
+padding:30px 0 0 130px;
+}
+
+#blocks h3{
+font-family:Tahoma;
+font-size:14px;
+color:#505542;
+display:block;
+width:160px;
+}
+
+#blocks span{
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+color:#698224;
+display:block;
+padding:11px 0 12px 0
+}
+
+#main{
+background-color:#CCFF67;
+padding:30px 100px 30px 100px;
+border-bottom:1px solid #fff;
+margin: 10px;
+}
+
+.column{
+padding:0 60px 0 37px;
+width:410px;
+font-family:Tahoma;
+font-size:11px;
+color:#64584C;
+line-height:17px;
+float:left;
+}
+
+.column h3{
+background-image:url(images/bullet.gif);
+background-position:left 2px;
+background-repeat:no-repeat;
+padding:3px 0 37px 28px;
+font-family:Arial;
+font-size:18px;
+color:#64584C;
+font-weight:normal;
+}
+
+.news_block h3{
+background-image:url(images/bullet.gif);
+background-position:left 2px;
+background-repeat:no-repeat;
+padding:0 0 37px 28px;
+font-family:Arial;
+font-size:18px;
+color:#64584C;
+font-weight:normal;
+}
+
+#wb_content2 {
+	min-height:200px;
+	position:relative;
+}
+
+.text{
+font-size:14px;
+color:#677D2A;
+line-height:20px;
+padding:22px 0 8px 0
+}
+
+.right{
+text-align:right;
+padding:25px 0 0 0;
+}
+
+.right2{
+width:430px;
+float:left;
+text-align:right;
+padding:25px 0 0 0;
+}
+
+.news_block{
+width:425px;
+float:left;
+font-family:Tahoma;
+font-size:11px;
+color:#64584C;
+}
+
+.news_block span{
+display:block;
+float:left;
+color:#FF8400;
+font-weight:bold;
+text-align:right;
+width:77px;
+}
+
+.news_block li{
+list-style-type:none;
+}
+
+.news_block p{
+display:block;
+float:left;
+width:310px;
+padding:0 0 23px 8px;
+}
+
+#footer{
+line-height: 25px;
+background-color:#E4DEDA;
+width:100%;
+height:25px;
+font-family:Tahoma;
+font-size:11px;
+color:#64584C;
+text-transform:uppercase;
+text-align:right;
+
+}
+
+#footer a{
+color:#64584C;
+text-decoration:none
+}
+
+#footer a:visited{text-decoration:none}
+#footer a:hover{text-decoration:underline}
+#footer p{
+line-height:90px;
+padding:0 48px 0 0
+}
+
+#wb_header {
+/*background:url(images/picture.jpg) top center no-repeat;*/
+background:url(user_images/sfondo1.jpg) top center no-repeat;
+width:980px;
+height:140px;
+margin:0 auto;
+}
+
+#wb_logo {
+	width:203px;
+	height:66px !important;
+}
+
+#wb_content1, #wb_content2, #wb_content3 {
+	min-height:250px;
+}
+
+#wb_header {
+	min-height:100px;
+}
+
+#wb_footer {
+	min-height:30px;
+}
+
+/* MENU GRAFICO IN CSS AGGIUNTO DA PM */
+/* BUBBLE PLASTIC HORIZONTAL MENU */
+
+.bubplastic.horizontal {
+width: 100%;
+height: 27px;
+margin: 0;
+padding: 0;
+background: #000000 url(/Galdus/sito/sito/images/bg-bubplastic.gif) top left repeat-x;
+}
+.bubplastic.horizontal ul {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+.bubplastic.horizontal ul li {
+float: left;
+margin: 0;
+padding: 0;
+background: transparent url(/Galdus/sito/sito/images/bg-bubplastic-button.gif) top left no-repeat;
+}
+.bubplastic.horizontal ul li a {
+display: block;
+height: 27px;
+padding-left: 35px;
+float: left;
+text-transform: uppercase;
+font-family: "Helvetica Neue",helvetica,"microsoft sans serif",arial,sans-serif;
+font-size: 70%;
+color: #FFFFFF;
+text-decoration: none;
+background: transparent url(/Galdus/sito/sito/images/bg-bubplastic-button.gif) top right no-repeat;
+cursor: pointer;
+}
+.bubplastic.horizontal ul li{
+display: block;
+float: left;
+height: 22px;
+padding-top: 5px;
+padding-right: 35px;
+background: transparent url(/Galdus/sito/sito/images/bg-bubplastic-button.gif) top right no-repeat;
+cursor: pointer;
+}
+/* END BUBBLE PLASTIC HORIZONTAL MENU */
+/* BUBBLE PLASTIC VERTICAL MENU */
+.bubplastic.vertical {
+width: 170px;
+margin: 0px;
+padding: 0px;
+display: block;
+}
+.bubplastic.vertical ul {
+display: block;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+.bubplastic.vertical ul li {
+display: block;
+float: left;
+width: 100%;
+margin: 0;
+padding: 0;
+background: transparent url(/Galdus/sito/sito/images/bg-bubplastic-button.gif) top left no-repeat;
+}
+.bubplastic.vertical ul li a {
+display: block;
+margin: 0;
+width: 100%;
+height: 27px;
+padding-left: 20px;
+padding-right: 20px;
+text-transform: uppercase;
+font-family: "Helvetica Neue",helvetica,"microsoft sans serif",arial,sans-serif;
+font-size: 70%;
+color: #FFFFFF;
+text-decoration: none;
+background: transparent url(/Galdus/sito/sito/images/bg-bubplastic-button.gif) top left no-repeat;
+}
+.barra {
+display: block;
+width: 100% !important;
+height: 22px;
+padding-left: 20px !important;
+padding-right: 20px !important;
+color:#339944;
+font-family:verdana;
+font-size:12px;
+font-weight:bold;
+text-align:center;
+background: transparent url(/Galdus/sito/sito/images/bg-bubplastic-h-orange.gif) top right no-repeat !important;
+cursor: not-allowed;/*crosshair;*/
+}
+/*.bubplastic.vertical ul li a span.menu_ar {
+display: block;
+margin: 0;
+width: 100%;
+height: 22px;
+padding-top: 5px;
+padding-right: 35px;
+background: transparent url(/Galdus/sito/sito/images/bg-bubplastic-button.gif) top right no-repeat;
+cursor: pointer;
+}
+/* END BUBBLE PLASTIC VERTICAL MENU */
+/* AQUA HOVER */
+.bubplastic.aqua ul li a:hover,
+.bubplastic.aqua ul li.highlight a {
+background: transparent url(/Galdus/sito/sito/images/bg-bubplastic-h-aqua.gif) top left no-repeat;
+}
+.bubplastic.aqua ul li a:hover span.menu_ar,
+.bubplastic.aqua ul li.highlight a span.menu_ar {
+background: transparent url(/Galdus/sito/sito/images/bg-bubplastic-h-aqua.gif) top right no-repeat;
+}
+/* BLUE HOVER */
+.bubplastic.blue ul li a:hover,
+.bubplastic.blue ul li.highlight a {
+background: transparent url(/Galdus/sito/sito/images/bg-bubplastic-h-blue.gif) top left no-repeat;
+}
+.bubplastic.blue ul li a:hover span.menu_ar,
+.bubplastic.blue ul li.highlight a span.menu_ar {
+background: transparent url(/Galdus/sito/sito/images/bg-bubplastic-h-blue.gif) top right no-repeat;
+}
+/* GRAY HOVER */
+.bubplastic.gray ul li a:hover,
+.bubplastic.gray ul li.highlight a {
+background: transparent url(/Galdus/sito/sito/images/bg-bubplastic-h-gray.gif) top left no-repeat;
+}
+.bubplastic.gray ul li a:hover span.menu_ar,
+.bubplastic.gray ul li.highlight a span.menu_ar {
+background: transparent url(/Galdus/sito/sito/images/bg-bubplastic-h-gray.gif) top right no-repeat;
+}
+/* LIME HOVER */
+.bubplastic.lime ul li a:hover,
+.bubplastic.lime ul li.highlight a {
+background: transparent url(/Galdus/sito/sito/images/bg-bubplastic-h-lime.gif) top left no-repeat;
+}
+.bubplastic.lime ul li a:hover span.menu_ar,
+.bubplastic.lime ul li.highlight a span.menu_ar {
+background: transparent url(/Galdus/sito/sito/images/bg-bubplastic-h-lime.gif) top right no-repeat;
+}
+/* ORANGE HOVER */
+.bubplastic.orange ul li a:hover,
+.bubplastic.orange ul li.highlight a {
+background: transparent url(/Galdus/sito/sito/images/bg-bubplastic-h-orange.gif) top left no-repeat;
+}
+.bubplastic.orange ul li a:hover span.menu_ar,
+.bubplastic.orange ul li.highlight a span.menu_ar {
+background: transparent url(/Galdus/sito/sito/images/bg-bubplastic-h-orange.gif) top right no-repeat;
+}
+/* PINK HOVER */
+.bubplastic.pink ul li a:hover,
+.bubplastic.pink ul li.highlight a {
+background: transparent url(/Galdus/sito/sito/images/bg-bubplastic-h-pink.gif) top left no-repeat;
+}
+.bubplastic.pink ul li a:hover span.menu_ar,
+.bubplastic.pink ul li.highlight a span.menu_ar {
+background: transparent url(/Galdus/sito/sito/images/bg-bubplastic-h-pink.gif) top right no-repeat;
+}
+/* PURPLE HOVER */
+.bubplastic.purple ul li a:hover,
+.bubplastic.purple ul li.highlight a {
+background: transparent url(/Galdus/sito/sito/images/bg-bubplastic-h-purple.gif) top left no-repeat;
+}
+.bubplastic.purple ul li a:hover span.menu_ar,
+.bubplastic.purple ul li.highlight a span.menu_ar {
+background: transparent url(/Galdus/sito/sito/images/bg-bubplastic-h-purple.gif) top right no-repeat;
+}
+/* RED HOVER */
+.bubplastic.red ul li a:hover,
+.bubplastic.red ul li.highlight a {
+background: transparent url(/Galdus/sito/sito/images/bg-bubplastic-h-red.gif) top left no-repeat;
+}
+.bubplastic.red ul li a:hover span.menu_ar,
+.bubplastic.red ul li.highlight a span.menu_ar {
+background: transparent url(/Galdus/sito/sito/images/bg-bubplastic-h-red.gif) top right no-repeat;
+} 

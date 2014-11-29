@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="easytabs.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" href="specimen_stylesheet.css" type="text/css" charset="utf-8" />
+	<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+
+	<style type="text/css">
+		body{
+			font-family: 'belligerent_madnessregular';
+			}
+	</style>
+
+	<title>Matteo Manzella-HeartBleed</title>
+	
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function() {
+			$('#container').easyTabs({defaultContent:1});
+		});
+	</script>
+</head>
+
+<body>
+<div id="container">
+	<div id="header">
+		HeartBleed	</div>
+	<ul class="tabs">
+		<li><a href="#specimen">HeartBleed</a></li>
+		<li><a href="#layout">Cos'è</a></li>
+		<li><a href="#glyphs">Le Contro Misure</a></li>
+		
+	</ul>
+	
+	<div id="main_content">
+
+		
+		<div id="specimen">
+		<img src="HeartBleed.jpg" width="450" height="450"/>
+		</div>
+				
+		<div id="layout">
+
+<h4> HeartBleed è il più pericoloso bug di OpenSSL  <img src="ssl.jpg" width="300" height="111"/> <p>
+</p> che sia mai stato scoperto: le ultime indiscrezioni parlano del coinvolgimento di Barack Obama, che avrebbe autorizzato la NSA a sfruttarlo per accedere ai dati di milioni d’utenti del web in tutto il mondo per ordire quello che, grazie alle dichiarazioni di Edward Snowden, è stato definito Datagate. La realtà potrebbe essere molto lontana da questa sorta di teoria del complotto, perché Heartbleed è “soltanto” un errore umano nell’aggiornamento della libreria commesso due anni fa. </h4> 
+<p> <h4> Sappiamo già che Heartbleed è stato trovato da Neel Mehta di Google e Codenomicon, che collabora con Mountain View <img src="Neel.jpg" width="450" height="250"/> <p> </p> nella realizzazione di soluzioni per la sicurezza informatica. Se l’apertura della falla è stata una svista, la sua scoperta non ha nulla di casuale: un debug di routine per Chrome e SafeGuard ha permesso che due gruppi diversi di ricercatori scoprissero il bug in marzo. Ciò mi riporta a sostenere l’importanza del debugging dalle app ai siti web che avrebbe potuto contenere subito i problemi dovuti a Heartbleed.</p> </h4>
+<p> <h4> La notizia di tale bug pur essendo emersa nel 2014, era stata già scoperta dalla NSA nel 2012, la quale avrebbe sfruttato tale falla per controllare criminali e terroristi. <p> <img src="nsa.jpg" width="250" height="250"/>  </p>
+Oltre alle comunicazioni software anche la veicolazione hardware può aver subito l'influenza di tale vulnerabilità, in particolar modo i router, alcuni produttori hanno dichiarato come alcuni hardware di loro produzione siano affetti da questo problema e che potrebbe essere necessario la loro sostituzione.</p>
+</h4>
+
+		</div>
+		<div id="glyphs">
+<img src="contromisure.jpg" width="450" height="300"/> <p>	
+</p> <h4> Intanto OpenSSL ha reso immediatamente disponibile la versione aggiornata (la 1.0.1g ) che chiude la falla. Quindi è doveroso che tutte le aziende che forniscono servizi aggiornino  la libreria, o che ricompilino quella in uso eliminando la parte che ha causato la falla. E’ necessario, poi, sostituire il certificato digitale. Quello in uso potrebbe essere compromesso perché la chiave privata potrebbe essere stata sottratta. <p>
+</p> E’ consigliabile anche un reset delle sessioni attive, che in sostanza “slogga” gli utenti loggati.<p> </p> <img src="passw.jpg" width="400" height="250"/> <p> </p> Infine, sarebbe opportuno suggerire agli utenti di cambiare password. Rispetto al cambio delle password, molte aziende lo hanno richiesto. E rimane comunque una buona prassi periodica. I colossi californiani, però, se pur finiti nella falla dell’OpenSSL non hanno dato alcun suggerimento ai loro utenti. Forse sarebbe stato sinonimo di debolezza, e avrebbe scatenato il panico. Ma se fosse stato realmente necessario non lo sapremo mai.
+</h4>
+</div>
+<div id="footer">
+<p>Di Matteo Manzella 2^A</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<title>Calcolo area e perimetro</title>
+<script>
+function geometria(){
+
+var name=document.f1.name.value;
+var l1=eval(document.f1.lato1.value);
+var l2=eval(document.f1.lato2.value);
+
+if(l1==l2){
+   alert("E' un quadrato!");
+}
+else {
+   alert("E' un rettangolo!");
+}
+
+alert(name+" il perimetro vale: "+(l1+l2)*2+" e l'area vale: "+(l1*l2));
+
+}
+</script>
+</head>
+<body>
+Questa pagina serve a raccogliere i dati per calcolare area e perimetro della figura<br>
+Inoltre capisce se e' un quadrato od un rettangolo e stampa questa caratteristica.<br>
+Nel Primo esempio con il pulsante calcola JS si usa javascript per il calcolo.<br>
+Usando invece il tasto Invia si usera' il PHP per eseguire lo stesso esempio.<br>
+<form name="f1" action="calcola.php" method="post">
+
+Nome: <input type="text" name="name"><br>
+Lato 1: <input type="text" name="lato1"><br>
+Lato 2: <input type="text" name="lato2"><br>
+<input type="submit" value="Calcola con php"><br>
+<input type="button" value="Calcola in js" onclick=geometria()>
+
+</form>
+
+</body>
+</html>
+

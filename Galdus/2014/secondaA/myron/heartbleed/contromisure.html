@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+ <title>Heartbleed</title>
+</head>
+ <style>
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
+#cssmenu {
+  background: #1ed4d4;
+  width: ;
+}
+#cssmenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  display: block;
+  zoom: 1;
+}
+#cssmenu ul:after {
+  content: ' ';
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+#cssmenu ul li {
+  float: left;
+  display: block;
+  padding: 0;
+}
+#cssmenu ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  padding: 15px 25px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 16px;
+  position: relative;
+  -webkit-transition: color .25s;
+  -moz-transition: color .25s;
+  -ms-transition: color .25s;
+  -o-transition: color .25s;
+  transition: color .25s;
+}
+#cssmenu ul li a:hover {
+  color: #171f8f;
+}
+#cssmenu ul li a:hover:before {
+  width: 100%;
+}
+#cssmenu ul li a:after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: -3px;
+  top: 20px;
+  height: 6px;
+  width: 6px;
+  background: #ffffff;
+  opacity: .5;
+}
+#cssmenu ul li a:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background: #171f8f;
+  -webkit-transition: width .25s;
+  -moz-transition: width .25s;
+  -ms-transition: width .25s;
+  -o-transition: width .25s;
+  transition: width .25s;
+}
+#cssmenu ul li.last > a:after,
+#cssmenu ul li:last-child > a:after {
+  display: none;
+}
+#cssmenu ul li.active a {
+  color: #171f8f;
+}
+#cssmenu ul li.active a:before {
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  #cssmenu ul li {
+    float: none;
+  }
+  #cssmenu ul li a {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  #cssmenu ul li a:after {
+    display: none;
+  }
+  #cssmenu ul li a:before {
+    height: 1px;
+    background: #ffffff;
+    width: 100%;
+    opacity: .2;
+  }
+  #cssmenu ul li.last > a:before,
+  #cssmenu ul li:last-child > a:before {
+    display: none;
+  }
+}
+ </style>
+<body bgcolor="#4169E1">
+ <center>
+ <table width="1000">
+  <tr>
+<td rowspan="2" bgcolor="">
+<div id='cssmenu'>
+<ul>
+   <li><a href='menu.html'><span>Home</span></a></li>
+   <li><a href='cosa è.html'><span>cosa è</span></a></li>
+   <li class='last'><a href='contromisure.html' target='_blank'><span>Contramisure</span></a></li>
+</ul>
+</div>   <td bgcolor="#1E90FF">
+    <!-- titolo del sito -->
+	<center>
+	 <h1>Contromisure</h1>
+	 <h2>Heartbleed ha colpito e, già di per sé, questo è un dato che fa gelare il sangue al solo sentirlo dire. Cos’è e cosa si può fare per non rischiare di perdere dati sensibili? Quali contromisure è possibile prendere?  Il bug Heartbleed sta mettendo in apprensione gran parte dei principali siti web, tanto che lo stesso OpenSSL, ossia il sistema di sicurezza usato per la gestione dei dati più sensibili ed importanti che circolano in rete, ammette la falla in questo protocollo di sicurezza. Cosa si rischia adesso con Heartbleed? Tutto ciò potrebbe inficiare la privacy di chiunque abbia un account Facebook, Gmail, YouTube, Yahoo e di tanti altri siti. Informazioni personali, numeri privati, carte di credito, è davvero enorme la mole di dati personali che rischia di essere violata e la rete potrebbe trasformarsi in una sorta di vero e proprio gigantesco Grande Fratello. L’esistenza della falla Heartbleed non è un mistero, ne parla anche il Wall Street Journal, il quale consiglia di cambiare a tutti gli utenti le password dei social e dei siti in cui si gestiscono le mail e farlo in un tempo che sia il più veloce possibile. Ma potrebbe anche non bastare ad arginare i danni di Heartbleed.</h2>
+<br>
+</br>
+<h2>Per far fronte a Heartbleed  si sta cercando di correre ai ripari, lo stesso OpenSSL ha lanciato una versione aggiornata, la 1.0.1g, che potrebbe chiudere il bug, ma ormai il dado è tratto; come riporta il quotidiano La Stampa, Gastone Nencini, Country Manager in Italia di TrendMicro, conferma l’allarme: “L’allarme per Heartbleed ha alzato il livello di attenzione, ma le contromisure sono, per così dire, posticce, nel senso che sono misure su livelli di compromissione che ancora non conosciamo”. Insomma, cosa fare e quali contromisure prendere per non rischiare, sembra se lo chiedono smarriti anche gli addetti ai lavori</h2>
+	 <img src="Heartbleed2.jpg" alt="heartbleed" />
+	</center>
+   </td>
+  </tr>
+	</table>
+   </td>
+  </tr>
+ </table>
+ </center>
+</body>
+</html>

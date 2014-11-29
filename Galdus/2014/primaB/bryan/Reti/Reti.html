@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+<head>
+<title>Topologia di Rete</title>
+<style>
+h1{
+text-align:center;
+color:#00e0d7;
+}
+table td{
+border:solid 4px #00e0d7;
+}
+body{
+background-color:royalblue;
+}
+h2{
+text-align:center;
+color:#00e0d7;
+}
+img{
+width:300px;
+height:300px;
+}
+th{
+border:solid 4px deepskyblue;
+}
+p.piede{
+bottom:0px;
+}
+</style>
+</head>
+<body>
+<h1>Topologie Di Rete</h1>
+<table>
+<tr>
+<th>Nome</th>
+<th>Immagine</th>
+<th>Descrizione</th>
+<th>Vantaggi/Svantaggi</th>
+</tr>
+<tr>
+<td>Rete<br>Punto a Punto</td>
+<td><img src='Img/puntoapunto.jpg' alt='Punto a Punto'/></td>
+<td>Una Rete Punto a Punto e' realizzata unendo ogni device della rete con un cavo </td>
+<td><h2>Vantaggi</h2><br>
+1)Ogni nodo puo' parlare direttamente con tutti gli altri.<br>
+2)E' una rete molto veloce.<br>
+<h2>Svantaggi</h2><br>
+1)Il costo della rete e' molto alto.<br>
+2)Sono neccessari dei device speciali cioe' con tante shede di rete quanti sono i nodi della rete.
+</td>
+</tr>
+<tr>
+<td>Rete a Stella </td>
+<td><img src='Img/astella.jpg' alt='a Stella'/></td>
+<td>Una Rete a Stella funziona collegando tutti i device a un punto centrale. Questo nodo centrale puo' un computer speciale o una Hub o uno Switch.</td>
+<td><h2>Vantaggi</h2><br>
+1)E' una rete  semplice da realizare.<br>
+2) E' molto economica.<br>
+<h2>Svantaggi</h2><br>
+1)Nel caso si rompa il nodo centrale la rete smette di funzionare.<br>
+2)tutte le comunicazioni passano nel nodo centrale che se non e' ben programmato lascia vedere i dati agli altri nodi.
+</td>
+</tr>
+<tr>
+<td> Rete ad Anello</td>
+<td><img src='Img/anello.jpg' alt='Anello'/></td>
+<td>La Rete ad Anello prevede che ogni nodo sia collegato ad altri due.</td>
+<td><h2>Vantaggi</h2><br>
+1)E' una rete semplice.<br>
+2)E' una rete semplice da espandere.<br>
+<h2>Svantaggi</h2><br>
+1)La rottura di un nodo blocca tutta la comunicazione.<br>
+2)Per parlare tra due nodi potrebbe essere necessario passare per tutti gli altri nodi della rete.
+</td>
+</tr>
+<tr>
+<td> Rete a Bus</td>
+<td><img src='Img/bus.jpg' alt='Bus'/></td>
+<td>Tutti i nodi sono collegati tra di loro per mezzo di un bus, cioe' un canale che possiede due estremita'  e un accesso ad esso. Le due estremita' sono chiuse con dei terminatori.</td>
+<td><h2>Vantaggi</h2><br>
+1)E' una rete semplice da realizzare.<br>
+2)E'economica.<br>
+<h2>Svantaggi</h2><br>
+1)La rottura di un terminatore puo' bloccare la rete.<br>
+2)La rottura del bus blocca tutta la rete.
+</td>
+</tr>
+<tr>
+<td>Rete ad Albero</td>
+<td><img src='Img/albero.jpg' alt='Albero'/></td>
+<td>E' una rete in cui  sono definite delle gerarchie cioe' un nodo puo' essere padre di altri nodi.<br>
+Ogni nodo e' collegato ad almeno un altro nodo che puo' vedere pezzi di rete maggiori.</td>
+<td><h2>Vantaggi</h2><br>
+1)E' adatta a gestire piccoli gruppi che devono condividere risorse.<br>
+2)La rottura di un nodo consente alle sottoreti di funzionare.<br>
+<h2>Svantaggi</h2><br>
+1)E' una rete complicata da realizzare e mantenere.<br>
+2)L'aggiunta di un nodo puo' richiedere configurazioni  complesse.</td>
+</tr>
+</table>
+<p>&nbsp;</p>
+<h1>Tipologie di Rete</h1>
+<table>
+<tr>
+<th>Nome</th>
+<th>Immagine</th>
+<th>Descrizione</th>
+<th>Vantaggi/Svantaggi</th>
+</tr>
+<tr>
+<td>Lan</td>
+<td><img src='Img/lan.jpg' alt='Lan'/></td>
+<td>Local Area Network : e' una rete di piccole dimensioni normalmente copre una stanza o piccoli edifici.</td>
+<td><h2>Vantaggi</h2>
+1)E' una rete semplice.<br>
+2)E' facilmente estendibile.<br>
+<h2>Svantaggi</h2>
+1)E' adatta per piccole aree.<br>
+2)Ha una sicurezza limitata.</td>
+</tr>
+<tr>
+<td>Can</td>
+<td><img src='Img/can.jpg' alt='Can'/></td>
+<td>Campus Area Network : E' una rete piu' grande e complessa di una Lan copre normalmente piu' edifici vicini ed e' composta da sottoreti Lan. </td>
+<td><h2>Vantaggi</h2>
+1)Normalmente e' piu' sicura di una Lan.<br>
+2)Consente la condivisione di risorse aziendali senza accesso a internet.<br>
+<h2>Svantaggi</h2>
+1)E' normalmente piu' costosa.<br>
+2)E' normalmente piu' complessa da gestire.<br></td>
+</tr>
+<tr>
+<td>Man</td>
+<td><img src='Img/man.jpg' alt='Man'/></td>
+<td>Metropolitan Area Network : E' una rete che copre parti di una citta'. E' normalmente composta da sottoreti Can.</td>
+<td><h2>Vantaggi</h2>
+1)Consente di condividere risorse aziendali anche tra sedi diverse.<br>
+2)E' una rete sicura.<br>
+<h2>Svantaggi</h2>
+1)E' una rete complicata e costosa.<br>
+2)Non e' sempre possibile realizzarla.<br></td>
+</tr>
+<tr>
+<td>Wan</td>
+<td><img src='Img/wan.jpg' alt='Wan'/></td>
+<td>Wide Area Network : E' una rete che copre regioni della terra.Normalmente serve per collegare Man. </td>
+<td><h2>Vantaggi</h2>
+1)Consente di realizzare una rete parallera ad internet.<br>
+2)E' una rete sicura.<br>
+<h2>Svantaggi</h2>
+1)Ha dei costi elevatissimi.<br>
+2)E' una rete complicata da realizzare e da gestire.<br></td>
+</tr>
+<tr>
+<td>Wlan</td>
+<td><img src='Img/wlan.jpg' alt='Wlan'/></td>
+<td>Wirless Lan Area Network : E' una rete che si basa su componenti Wi-Fi.</td>
+<td><h2>Vantaggi</h2>
+1)E' una rete semplice da realizzare e gestire.<br>
+2)E' la rete piu' economica da realizzare.<br>
+<h2>Svantaggi</h2>
+1)E' una rete poco sicura.<br>
+2)Le prestazioni offerte non sono molto buone.<br></td>
+</tr>
+</table>
+<p class=piede>Questo sito e' stato relizzato da Bryan Anzules</p>
+</body>
+</html>

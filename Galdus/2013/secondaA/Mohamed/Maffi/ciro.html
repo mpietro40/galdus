@@ -1,0 +1,58 @@
+<!doctype html>
+<head>
+<link rel="stylesheet" href="miocss/miocss.css" type="text/css" />
+<title> moh </title>
+<script language="javascript">
+//alert("ciao");
+function esegui(scelta){
+alert('colore' + scelta);
+if(scelta==1)
+document.getElementById('pagina').style.color='#FF0000';
+else if(scelta==2)
+document.getElementById('pagina').style.color='#0000FF';
+else   if(scelta==3) 
+document.getElementById('pagina').style.color="#008800";
+}
+var dimensione=10;
+function ImpostaFontSize(valore){
+alert('ImpostareFontSize' + valore);
+if(valore==2) { 
+dimensione=dimensione+10;
+document.getElementById('pagina').style.fontSize =dimensione+'px';
+} 
+if(valore==1) { 
+dimensione=dimensione-10;
+document.getElementById('pagina').style.fontSize =dimensione+'px';
+}
+}
+</script>
+</head>
+<body id='pagina'>
+<table>
+<tr>
+	<td>nome</td>
+	<td>cognome</td>
+	<td>email</td>
+	<td>cell</td>
+	<td>facebook</td>
+	<td>foto</td>
+</tr>
+<tr>	
+<td>Mohamed</td>
+<td>Hassan</td>
+<td><!--kebakmoh@gmail.com-->NP</td>
+<td><!--3894786567-->NP</td>
+<td>Mohamed Hassan</td>
+<td><img src="../img/ "></td>
+</tr>
+</table>
+<form>
+<input type='button' name='<' value='<' onclick='ImpostaFontSize(1)'>
+<input type='button' name='>' value='>' onclick='ImpostaFontSize(2)'>
+<input type='button' name='red' style="background-color:red" value='red' onClick='esegui(1)';> 
+<input type='button' name='blu' style="background-color:blue" value='blue' onclick='esegui(2)';> 
+<input type='button' name='green' style="background-color:green" value='green' onclick='esegui(3)';>
+</form>
+<p>testo in corsivo</p>
+</body>
+</html>

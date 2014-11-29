@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+  <title>Esempio di pagina con funzioni JavaScript</title>
+  <script language="JavaScript">
+// precaricamento immagini
+  var operaz = new Array();
+  operaz[0] = new Image();
+  operaz[0].src = "blank.jpg";
+  operaz[1] = new Image();
+  operaz[1].src = "piu.jpg";
+  operaz[2] = new Image();
+  operaz[2].src = "meno.jpg";
+  operaz[3] = new Image();
+  operaz[3].src = "per.jpg";
+  operaz[4] = new Image();
+  operaz[4].src = "diviso.jpg";
+
+// Calcolo risultato operazione aritmetica
+
+function calcola(){
+
+//alert("entrato");
+var indice = document.f1.operazione.selectedIndex;
+var segno = document.f1.operazione[document.f1.operazione.selectedIndex].value;
+var n1 = eval(document.f1.primo.value);
+var n2 = eval(document.f1.secondo.value);
+//alert(segno);
+if(segno=="+")
+document.f1.risultato.value = n1+n2;
+else if(segno=="-")
+document.f1.risultato.value = n1-n2;
+else if(segno=="*")
+document.f1.risultato.value = n1*n2;
+else if(segno=="/")
+document.f1.risultato.value = n1/n2;
+
+/*switch (indice){
+case 1:
+document.f1.risultato.value = n1 + n2;
+break;
+case 2:
+document.f1.risultato.value = n1 - n2;
+break;
+case 3:
+document.f1.risultato.value = n1 * n2;
+break;
+case 4:
+document.f1.risultato.value = n1 / n2;
+break;
+
+}
+*/
+
+document.simbolo.src = operaz[indice].src;
+}
+// Reset modulo
+function azzera(){
+  document.f1.reset();
+  document.simbolo.src = operaz[0].src;
+  writeData();
+//  alert("Azzera operazione");
+}
+
+// stampa la data
+
+function writeData(){
+ var data = new Date();
+ document.data1.oggi.value="Oggi e' "+data;
+}
+
+</script>
+</head>
+<body bgcolor="#FFBBEE" onload="writeData()">
+<div align="center"><h1>Esempio calcoli aritmetici</h1></div>
+<br>
+<div align="center">
+<IMG src="blank.jpg" name="simbolo" alt="simbolo operazione" width="46" height="46" border="0">
+<form name="data1">
+   <input type="text" name="oggi" size="40" />
+</form>
+</div>
+
+<br>
+<!-- Acquisizione degli input dell'utente -->
+<FORM name="f1">
+<table>
+<tr>
+<td>Primo numero</td>
+<td><INPUT type="text" name="primo" size="5"></td>
+</tr>
+<tr>
+<td>Secondo numero </td>
+<td><INPUT type="text" name="secondo" size="5"></td>
+</tr>
+<tr>
+<td>Scelta operazione</td>
+<td>
+<SELECT name="operazione" onChange="calcola()">
+<OPTION></OPTION>
+<OPTION value="+">Addizione</OPTION>
+<OPTION value="-">Sottrazione</OPTION>
+<OPTION value="*">Moltiplicazione</OPTION>
+<OPTION value="/">Divisione</OPTION>
+</SELECT>
+</td>
+</tr>
+<tr>
+<td>Risultato</td>
+<td><INPUT type="text" name="risultato" size="5"></td>
+</tr>
+</table>
+<br><br>
+<INPUT type="button" value="Azzera" onClick="azzera()"> &nbsp;
+<INPUT type="button" value="Calcola" onClick="calcola()">
+</FORM>
+<p>
+<script type="text/javascript">
+   var data = new Date();
+   document.write("Oggi e' "+data);
+
+</script>
+</body>
+</html>

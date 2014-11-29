@@ -1,0 +1,16 @@
+div.sorgente
+ {
+  float: left;
+  width: 50%;
+  margin: 1%;
+  margin-top: 8%;
+  border: solid;
+  border-color: #808080;
+  background-color: #A0A0A0;
+ }
+div.php
+ {
+  float: left;
+  margin: 1%;
+  width: 45%;
+ }

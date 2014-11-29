@@ -1,0 +1,143 @@
+body{
+background-image: url(http://img529.imageshack.us/img529/682/wildwest1281x1281.jpg);
+color: ;
+}
+div.destra{
+text-align:center;
+margin-right:20px;
+position:center;
+top:60px;
+left:500px;
+}
+h1{
+text-align:center;
+}
+table{
+border-collapse:collapse;
+}
+table td{
+border:solid 4px #2CCC5F;
+}
+table.centrata{
+margin-left:auto;
+margin-right:auto;
+}
+.testoVerde{
+font-weight: bold;
+color:#00BFFF;
+font-size: 180%;
+text-align:left;
+position:absolute; 
+top:45px; 
+left:550px;
+}
+.testoVerdeChiaro1{
+font-weight: bold;
+color: #2580a2;
+font-size: 180%;
+text-align:left;
+position:absolute; 
+top:45px; 
+left:660px;
+}
+.testoVerdeChiaro{
+font-weight: bold;
+color: #00BFFF;
+font-size: 130%;
+text-align:left;
+position:absolute; 
+top:125px; 
+left:20px;
+}
+.testoVerdeChiaro2{
+font-weight: bold;
+color: #00BFFF;
+font-size: 110%;
+text-align:left;
+position:absolute; 
+top:245px; 
+left:20px;
+}
+.testoVerdeChiaro5{
+font-weight: bold;
+color: #00BFFF;
+font-size: 110%;
+text-align:left;
+position:absolute; 
+top:275px; 
+left:20px;
+}
+.testoVerdeChiaro3{
+font-weight: bold;
+color: #2580a2;
+font-size: 130%;
+text-align:left;
+position:absolute; 
+top:450px; 
+left:20px;
+}
+.testoVerdeChiaro6{
+font-weight: bold;
+color: #2580a2;
+font-size: 130%;
+text-align:left;
+position:absolute; 
+top:505px; 
+left:20px;
+}
+.testoVerdeChiaro4{
+font-weight: bold;
+color: #2580a2;
+font-size: 110%;
+text-align:left;
+position:absolute; 
+top:640px; 
+left:20px;
+}
+div.style{
+font-weight: bold;
+position:absolute; 
+top:175px; 
+left:20px;
+text-align:left;
+}
+div.style1{
+font-weight: bold;
+position:absolute; 
+top:285px; 
+left:20px;
+text-align:left;
+}
+div.style2{
+position:absolute; 
+left:10px;
+top:750px;
+}
+div.style3{
+font-weight: bold;
+position:absolute; 
+top:500px; 
+left:20px;
+text-align:left;
+}
+div.style4{
+font-weight: bold;
+position:absolute; 
+top:680px; 
+left:20px;
+text-align:left;
+}
+div.style5{
+font-weight: bold;
+position:absolute; 
+top:315px; 
+left:20px;
+text-align:left;
+}
+div.style6{
+font-weight: bold;
+position:absolute; 
+top:550px; 
+left:20px;
+text-align:left;
+}

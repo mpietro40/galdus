@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+
+<title>Le Liste</title>
+</head>
+     
+<meta charset="UTF-8">
+<link rel='stylesheet' href='3colonneNew.css' type='text/css' />
+
+
+</head>
+<body>
+<header>
+<h1>Jason Bathan</h1>
+</header>
+<nav>
+
+
+<p><img src="http://galdusmaffi.tk/Galdus/Esercitazioni/html5/HTML-CSS/pagine/immagini/introduzione.jpg"></p>
+<p><img src="http://galdusmaffi.tk/Galdus/Esercitazioni/html5/HTML-CSS/pagine/immagini/iltesto.jpg"></p>
+<p><img src="http://galdusmaffi.tk/Galdus/Esercitazioni/html5/HTML-CSS/pagine/immagini/hyperlink.jpg"></p>
+<p><img src="http://galdusmaffi.tk/Galdus/Esercitazioni/html5/HTML-CSS/pagine/immagini/liste.jpg"></p>
+<p><img src="http://galdusmaffi.tk/Galdus/Esercitazioni/html5/HTML-CSS/pagine/immagini/tabelle.jpg"></p>
+<p><img src="http://galdusmaffi.tk/Galdus/Esercitazioni/html5/HTML-CSS/pagine/immagini/mappe.jpg"></p>
+<p><img src="http://galdusmaffi.tk/Galdus/Esercitazioni/html5/HTML-CSS/pagine/immagini/frame.jpg"></p>
+<p><img src="http://galdusmaffi.tk/Galdus/Esercitazioni/html5/HTML-CSS/pagine/immagini/form.jpg"></p>
+<p><img src="http://galdusmaffi.tk/Galdus/Esercitazioni/html5/HTML-CSS/pagine/immagini/css.jpg"></p>
+</nav>
+<aside>
+<h3>Aside</h3>
+</aside>
+<article>
+<section>
+<h1>Section</h1>
+<a name="inizio"></a>
+<img src="./immagini/intestazione.jpg" align="right" width="461"
+ height="52" alt=""><br>
+<h2>Le liste</h2>
+<p>HTML permette di generare con semplicit&agrave; tre diversi tipi di
+liste: non ordinate, ordinate, liste di definizioni.<br>
+</p>
+<hr style="width: 100%; height: 2px;">
+<h3>Liste non ordinate</h3>
+<p>Le liste non ordinate sono dei semplici elenchi le cui singole voci
+sono precedute da un marcatore (generalmente un punto). La sintassi &egrave;:<br>
+</p>
+<pre>&lt;ul&gt;<br>        &lt;li&gt;uno&lt;/li&gt;<br>        &lt;li&gt;due&lt;/li&gt;<br>        &lt;li&gt;tre&lt;/li&gt;<br>&lt;/ul&gt; <br></pre>
+<p>L'attributo type permette di cambiare l'elemento marcatore:<br>
+</p>
+<pre>&lt;ul [type="disk" | "square" | "circle" ] &gt;......&lt;/ul&gt; </pre>
+<p>disk &egrave; lo standard, circle un cerchio vuoto e square un
+quadrato pieno. </p>
+<hr style="width: 100%; height: 2px;">
+<h3>Liste ordinate</h3>
+<p>Sostituendo <tt>&lt;ul&gt;</tt> con <tt>&lt;ol&gt;</tt> si ottiene una
+lista ordinata (Ordered List), in cui ogni voce viene preceduta da un
+indice progressivo.<br>
+</p>
+<p>L'attributo type permette di cambiare l'elemento marcatore:<br>
+<pre>&lt;ol [type="1" | "a" | "A" |"i" |"I" ][start="n"] &gt;......&lt;/ol&gt; </pre>
+<p>1 per far precedere le voci da numeri arabi, a per lettere
+minuscole, A maiuscole, i per i numeri romani minuscoli, I per i numeri
+romani maiuscoli; con l'attributo start si stabilisce da quale valore
+iniziare la lista.</p>
+<hr style="width: 100%; height: 2px;">
+<h3>Liste di definizioni</h3>
+<p>Le liste di definizioni <tt>&lt;dl&gt;</tt> (Definition List) sono utili per
+strutturare elenchi che richiedono, per ogni voce, una
+porzione di testo esplicativo (glossari, dizionari).<br>
+</p>
+<p> Ogni voce &egrave; composta da una definizione, delimitata dal tag
+<tt>&lt;dt&gt;</tt> (Definition Term) e dal contenuto, delimitato dal tag
+<tt>&lt;dd&gt;</tt> (Definition Defined).
+</p>
+<p> Un esempio di utilizzo:</p>
+<pre>&lt;dl&gt;<br>        &lt;dt&gt;uno&lt;/dt&gt;<br>		&lt;dd&gt;corrisponde al numero 1.&lt;/dd&gt;<br>        &lt;dt&gt;due&lt;/dt&gt;<br> 		&lt;dd&gt;corrisponde al numero 2.&lt;/dd&gt;<br>&lt;/dl&gt; <br></pre>
+<hr style="width: 100%; height: 2px;">
+<h3>Esempio riassuntivo</h3>
+<a name="punto"></a>
+<pre>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Le Liste&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h3&gt;Lita non ordinata&lt;/h3&gt;
+    &lt;ul type="disc"&gt;
+      &lt;li&gt;uno&lt;/li&gt;
+      &lt;li&gt;due&lt;/li&gt;
+      &lt;li&gt;tre&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h3&gt;Lista ordinata&lt;/h3&gt;
+    &lt;ol&gt;
+      &lt;li&gt;uno&lt;/li&gt;
+      &lt;li&gt;due&lt;/li&gt;
+      &lt;li&gt;tre&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;h3&gt;Lista di definizioni&lt;/h3&gt;
+    &lt;dl&gt;
+      &lt;dt&gt;uno&lt;/dt&gt;
+      &lt;dd&gt;Corrisponde al numero 1.&lt;/dd&gt;
+      &lt;dt&gt;due&lt;/dt&gt;
+      &lt;dd&gt;Corrisponde al numero 2.&lt;/dd&gt;
+    &lt;/dl&gt;
+  &lt;/body&gt;
+&lt;/html&gt;  
+</pre>
+<center> <a href="liste.html#punto"
+ onclick="window.open('./esempi/sei.html','', config='toolbar=1,menubar=1,scrollbars=1,resizable=1,width=600 ,height=500,  ' )"><img
+ src="./immagini/risultato.jpg" border="0" width="135" height="35" alt=""></a>
+</center>
+<br>
+<br>
+<br>
+<table align="center" border="0">
+  <tbody>
+    <tr>
+      <td> <a href="hyperlink.html" target="main"><img
+ src="./immagini/precedente.jpg" border="0" width="135" height="34" alt=""></a></td>
+      <td> <a href="liste.html#inizio" target="main"><img
+ src="./immagini/inizio.jpg" border="0" width="135" height="33" alt=""></a></td>
+      <td> <a href="tabelle.html" target="main"><img
+ src="./immagini/successiva.jpg" border="0" width="135" height="34" alt=""></a></td>
+    </tr>
+  </tbody>
+</table>
+</section>
+</article>
+
+<footer>
+<h5>Footer</h5>
+</footer>
+</body>
+</html>

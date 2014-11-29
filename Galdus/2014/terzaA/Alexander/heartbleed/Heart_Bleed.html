@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="java.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" href="css.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet" href="css2.css" type="text/css" charset="utf-8" />
+
+<style type="text/css">
+body{
+font-family: 'belligerent_madnessregular';
+}
+</style>
+
+<title>Singola pagina con menu</title>
+
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function() {
+$('#container').easyTabs({defaultContent:1});
+});
+</script>
+</head>
+
+<body>
+<div id="container">
+<div id="header">
+Heart_Bleed</div>
+<ul class="tabs">
+<li><a href="#specimen">HeartBleed</a></li>
+<li><a href="#specimen2">Provenimenti</a></li>
+</ul>
+
+<div id="main_content">
+
+
+<div id="specimen">
+
+1.Che cosa è Heartbleed?<br>
+Heartbleed (cuore che sanguina in inglese) non è un "virus da computer": è un vulnerabilità informatica. In pratica,<br>
+una falla in una componente chiave dei sistemi che garantiscono la sicurezza delle comunicazioni su Internet. Quindi,<br> 
+non siamo protetti per il semplice fatto di avere l'antivirus installato.<br>
+<br>
+2.Quando si è diffuso e quando è stato comunicato?<br>
+La falla esiste dal dicembre 2011. È stata scoperta e comunicata lunedì 7 aprile da Neel Metha, ingegnere di Google,<br>
+che ha creato una pagina web con tanto di logo "carino". È la prima volta che si comunica una criticità così grave…<br>
+creando un sito e un logo.<br>
+«Sapremo con esattezza quanto è stato grave l’impatto di Heartbleed soltanto nelle prossime settimane» dice Antonio Forzieri,<br>
+esperto di sicurezza di Symantec.<br>
+<br>
+3.Che cosa fa Heartbleed?<br>
+Colpisce una funzionalità di OpenSSL, un tipo di sistema di cifratura (SSL) delle comunicazioni online usato, si stima, da<br>
+due terzi dei server del pianeta. Semplificando all’osso, OpenSSL si preoccupa di codificare quello che “esce” da un computer<br>
+e viaggia nella rete per raggiungere un altro computer (il nostro o un server): qui, OpenSSL esegue il processo inverso e ci<br>
+permette di leggere i dati. È un processo che, di solito, noi non percepiamo. Succede, per esempio, ogni volta che vediamo un<br>
+lucchetto in alto a sinistra nella barra degli indirizzi del browser: significa che un SSL è abilitato.<br>
+<br>
+4.Chi ha colpito?<br>
+Tutti i server che utilizzano OpenSSL, a patto che abbiano il tool "heartbeat" (vedi box qui a fianco) installato e funzionante.<br> 
+Si stima siano i due terzi del totale. Tra questi ci sono Google, Facebook, Dropbox e Yahoo.<br>
+Non sono invece affetti (perché non usano il sistema Open SSL) Microsoft, Amazon, Linkedin e PayPal.<br>
+Apple e Twitter non dichiarano quale SSL usano, quindi non è dato sapere se sono affetti o no. Non sono a rischio neppure i siti<br> 
+di home banking, protetti solitamente da protocolli proprietari.<br>
+<br>
+<br>
+<br>
+<img src="heartbleed-620x349_1354659.jpg">
+<br>
+</div>
+
+<div id="specimen2">
+
+5.Che cosa dobbiamo fare noi per essere protetti?<br>
+Un solo consiglio: è meglio cambiare le password di Google, Facebook e Yahoo, dato che hanno dichiarato di aver corretto la falla.<br> 
+Nel dubbio, è preferibile cambiare anche quelle di Twitter e Apple.<br>
+La mail, in particolare, va sempre protetta al massimo: dalla nostra mail si possono ottenere le password per quasi tutte le altre<br>
+applicazioni, dalla banca ai dati più sensibili.<br>
+<br>
+«Cambiare le password è una operazione sempre consigliabile, che andrebbe fatta comunque di tanto in tanto» spiega Antonio Forzieri.<br>
+<br>
+Va fatto, però, nel modo giusto. «Evitando i comportamenti critici: non bisogna scriversi la password da qualche parte, non usare <br>
+date di nascita o squadre di calcio ed evitare di usare la stessa per tutte le applicazioni» dice Forzieri.<br>
+Attenzione, però: «Nel caso specifico di Heartbleed, prima di cambiarla è bene chiedere all’operatore se la falla di OpenSSL è stata<br> 
+corretta: altrimenti il cambiamento è inutile».<br>
+<br>
+<br>
+<br>
+<img src="heartbleed.jpg">
+<br>
+</div>
+
+<div id="footer">
+<p>&copy;2014 Alexander Aquino.</p>
+</div>
+</div>
+</body>
+</html>

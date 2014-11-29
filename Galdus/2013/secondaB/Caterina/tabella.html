@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<Html>
+<head>
+<title> Caterina Quispe Grimaldo</title>
+<script>
+var dimensione=10;
+function aumenta(valore){
+if (valore==2){
+dimensione=dimensione+10;
+document.getElementById("pagina").style.fontSize=dimensione+"px";
+}
+if (valore==1){
+dimensione=dimensione-10;
+document.getElementById("pagina").style.fontSize=dimensione+"px";
+}
+}
+function colora(scelta){
+if(scelta==1){
+document.getElementById("pagina").style.backgroundColor="red";
+document.getElementById("pagina").style.color="#000098";
+}
+if(scelta==2){
+document.getElementById("pagina").style.backgroundColor="blue";
+document.getElementById("pagina").style.color="Lime";
+}
+if(scelta==3){
+document.getElementById("pagina").style.backgroundColor="orange";
+document.getElementById("pagina").style.color="#ff3399";
+}}
+
+</script>
+
+<style>
+body{
+background:#000000;
+}
+body{
+color:#7FFFD4;
+/*
+background:aqua;
+*/
+}
+Table,td,th{
+border:solid 2px aqua;
+color:aqua;
+}
+table {
+border-collapse:collapse;
+}
+</style>
+</head>
+<body id=pagina>
+
+
+Caterina Quispe Grimaldo
+<table border="1">
+    <tr>
+       <td>Nome</td>
+       <td>Cognome</td>
+      <td>E-mail</td>
+       <td>Cellulare</td>
+       <td>Facebook</td>
+       <td>Foto</td>
+   </tr>
+      <tr>
+       <td>Caterina</td>
+       <td>Quispe Grimaldo</td>
+         <td>quispegrimaldo@gmail.com</td>
+       <td>3319662800</td> 
+        <td>Caterina Quispe Grimaldo</td>
+       <td></td>
+      
+      
+      
+       </tr>
+   </table>
+   <input name=Red value=Red type=button onclick="colora(1)";>
+   <input name=Blue value=Blue type=button onclick="colora(2)";>
+   <input name=Orange value=Orange type=button onclick="colora(3)";>
+    <input type=button name="<" value="<"onclick="aumenta(1)";>
+    <input type=button name=">" value=">"onclick="aumenta(2)";>
+ </body>
+</Html>

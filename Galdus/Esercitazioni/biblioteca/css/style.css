@@ -1,0 +1,94 @@
+html,body{margin:10px; padding: 10px}
+body{ background:#CCFF67;}
+a:link    {color:#669900;}
+a:visited {text-decoration: none; color:#6699FF;}
+a:hover   {color: red;}
+
+.contenuto{
+position:absolute; 
+font-family:impact; 
+float:left; 
+top:220px; 
+left:250px; 
+width:750px; 
+height:400px; 
+color:black; 
+background:#CCFF99; 
+border:1px solid #000; 
+padding:20px;
+overflow:auto;
+}
+ 
+.contenuto0{
+position:absolute; 
+font-family:Georgia, serif;
+font-weight:bold;
+font-size:20; 
+float:left;
+top:120px; 
+left:260px; 
+width:720px; 
+height:380px; 
+color:#006622; 
+border:1px solid #0A0; 
+padding-top:20px;
+padding-right: 30px;
+padding-left: 50px;
+overflow:auto;
+background:#CCFF99; 
+background-image:url("../images/sfondo.jpg");
+background-repeat: repeat-y; 
+}
+
+.menu{
+position:absolute; 
+float:left; 
+top:220px; 
+left:18px; 
+width:240px; 
+height:160px; 
+font-family:impact; 
+color:black;
+background:#B8E65C; 
+border:1px solid #000; 
+padding:20px;
+}
+
+.banner{
+position:absolute; 
+float:left; 
+top:10px; 
+left:80px; 
+width:790px; 
+height:190px; 
+font-family:Georgia, serif; 
+font-size: 18px;
+color:black;
+background:#B8ED5F;
+background-image:url("../images/open_source_banner.jpg"); 
+padding:2px;
+}
+
+.banner0{
+position:absolute; 
+top:10px; 
+left:260px; 
+width:790px; 
+height:100px; 
+font-family:Georgia, serif; 
+font-size: 18px;
+color:black;
+background:#B8ED5F;
+background-image:url("images/banner.jpg"); 
+}
+
+#slideshow {
+	overflow: hidden;
+	width: 800px;
+	height: 200px;
+}
+
+#slideshow img {
+	width: 800px;
+	height: 200px;
+}

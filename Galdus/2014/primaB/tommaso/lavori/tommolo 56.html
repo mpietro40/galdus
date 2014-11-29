@@ -1,0 +1,100 @@
+<meta name="generator" content="PSPad editor, www.pspad.com">
+<title> tommy giudici </title>
+<script language="JavaScript">
+// Calcolo risultato operazione aritmatica
+
+fuction calcola () {
+
+//alter ("entrato");
+var incide = document.fl.operazione.selectedIndex;
+var segno = document.fl.operazione[document.fl.operazione.selectedIndex].value;
+var n1 = eval (document.f1.primo.value);
+var n2 = eval (document.f1.secondo.value);
+//alert (segno=="+")
+if(segno=="+")
+documenr.f1.risultato.value = n1+n2;
+else if(segno=="-")
+document.f1.risultato.value = n1 -n2;
+else if(segno=="*")
+document.f1.risultato.value = n1*n2;
+else if (segno=="/");
+document.f1.risultato.value = n1/n2;
+
+/*switch (indice) {
+case 1:
+document.f1.risultato.value = n1 + n2;
+break;
+case 2:
+document.f1.risultato.value = n1 - n2;
+break;
+case 3:
+document.f1.risultato.value = n1 * n2*;
+breack;
+case 4:
+document.f1.risultato.value = n1 / n2;
+break;
+
+}
+*/
+
+}
+//reset modulo 
+function azzerra(){
+  document.f1.reset();
+writeData()
+// alert("Azzera operazione")
+}
+
+// stampa la data
+
+function writeData(){
+ var data = new date ();
+ document.datal.oggi.value="Oggi e'  "+data;
+ }
+ </script>
+ </head>
+ <body bgcolor="orange" onload="writeData()">
+ <dv align="center"><h1>Esempo calcoli aritmetici</h1></div>
+ <br>
+ <div align="center">
+ <form name="datal">
+     <imput type=2text" name=2oggi" size="40" />
+	 </form>
+	 </div>
+	 
+	 <br>
+	 <!-- Acquisizione degli imput dell'utente -->
+	 <FORM name="f1">
+	 <table>
+	 <tr>
+	 <td>primo numero</td>
+	 <td><input type="text" name="primo" sinze="5"></td>
+	 </tr>
+	 <tr>
+	 <td>Secondo numero </td>
+	 <td><INPUT type="text" name="secondo" size="52></td>
+	 </tr>
+	 <tr>
+	 <td>Scelta operazione</td>
+	 <td>
+	 <SELECT name="operazione" onChange="calcola()">
+	 <OPTION></OPTION>
+	 <OPTION value="+">Addizione</OPTION>
+	 <OPTION value="-">Sottrazione</OPTION<
+	 <OPTION value="*">Moltiplicazione</OPTION>
+	 <OPTION value="/">Divisione</OPTION> 
+	 </SELECT>
+	 </td>
+	 </tr>
+	 <tr>
+	 <td>Risultato</td>
+	 <td><INPUT type="text" name="risultato" size="5"></td>
+	 </tr>
+	 </table>
+	 <br><br>
+	 <INPUT type="button value="Azzera" onClick="azzera"()">&nbsp;
+	 <INPUT type="button value="Calcola" onClick="calcola"()">
+	 </form>
+	 <p>
+	 </body
+	 </html>

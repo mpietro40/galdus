@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item><pubDate>Tue, 27 May 2014 10:47:29 +0200</pubDate><title><![CDATA[Switch]]></title><url><![CDATA[switch]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Switch]]></menu><menuOrder><![CDATA[8]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;p&gt;&lt;span style=&quot;font-size:16px;&quot;&gt;Lo switch è un dispositivo più &quot;intelligente&quot; dell&#039;hub, in quanto è in grado di instradare i pacchetti di dati in maniera point to point. Questo è possibile perchè lo switch, al suo interno, ha una taballa di tutti gli indirizzi delle schede di rete collegate e quando gli arriva un pacchetto sa chi è il destinatario e lo invia solo a lui. Questo permette di risolvere il problema del broadcast che si verificava negli hub, risparmiando quindi notevole banda.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;/p&gt;
+]]></content><private><![CDATA[]]></private><author><![CDATA[rahman]]></author></item>

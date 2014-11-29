@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<channel><item><title><![CDATA[search]]></title><slug>search</slug><value><![CDATA[			&lt;div id=&quot;search-box&quot;&gt;
+					&lt;?php if(!function_exists(&#039;get_i18n_search_results&#039;) || !function_exists(&#039;get_search_results&#039;)) { ?&gt;
+						
+					&lt;?php if(function_exists(&#039;get_search_results&#039;) &amp;&amp; component_exists(&#039;search-form&#039;)) { ?&gt;
+						&lt;?php get_component(&#039;search-form&#039;); ?&gt;
+					&lt;?php } else { ?&gt;
+					&lt;form method=&quot;post&quot; action=&quot;index.php?id=&lt;?php get_page_slug(); ?&gt;&quot; id=&quot;search_form&quot;&gt;
+
+							&lt;input type=&quot;text&quot; name=&quot;words&quot; class=&quot;text&quot; title=&quot;Search our website&quot; size=&quot;15&quot; value=&quot;Cerca...&quot; onfocus=&quot;if(this.value == &#039;Cerca...&#039;) {this.value = &#039;&#039;;}&quot; onblur=&quot;if (this.value == &#039;&#039;) {this.value = &#039;Cerca...&#039;;}&quot; /&gt;
+							&lt;input type=&quot;submit&quot; class=&quot;submit&quot; value=&quot;GO&quot; /&gt;
+
+					&lt;/form&gt;
+					&lt;?php }} else { ?&gt;
+						&lt;?php echo &#039;&lt;script type=&quot;text/javascript&quot;&gt;alert(&quot;Plugins Conflict!! Only one search plugin should be active&quot;);&lt;/script&gt;&#039;; } ?&gt;
+				&lt;/div&gt;
+&lt;/div&gt;
+]]></value></item><item><title><![CDATA[Tagline]]></title><slug>tagline</slug><value></value></item></channel>

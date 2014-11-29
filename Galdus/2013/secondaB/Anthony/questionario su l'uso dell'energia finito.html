@@ -1,0 +1,109 @@
+<!Doctype html>
+<html>
+<head>
+<title = "QUESTIONARIO SULL'USO DELL'ENERGIA"> </title>
+<style>
+body{ 
+background:PALEGOLDENROD;
+color:MEDIUMTORQUOISE;
+text-align:center;
+}
+ table, td,th {
+ border: solid 2px BROWN;
+ color:SIENNA;
+ }
+ table{
+ border-collapse:collapse;
+ } 
+ .centrata{
+ margin:auto;
+ }
+ .sinistra{
+ text-align:left;
+ }
+ </style>
+ </head>
+ <body>
+<h1> USO ENERGIA ELETTRICCA </h1> 
+<form method='get'action='http/maffi.eu5.org/Galdus/Test/test.php'
+>
+
+<table class=centrata>
+<tr>
+<th>
+SESSO
+</th>
+<td>
+<select name=sesso>
+<option value=''></option>
+<option value='maschio'>MASCHIO</option>
+<option value='femmina'>FEMMINA</option>
+</select>
+</td>
+</tr>
+<tr class=sinistra>
+<th>
+ELETTRODOMESTICI POSSEDUTI
+</th>
+<td>
+<input type="checkbox" name='elettrodomestico' value='LAVATRICE' > LAVATRIVE
+<BR><input type="checkbox" name='elettrodomestico' value='FRIGORIFERO'> FRIGORIFERO
+<BR><input type="checkbox" name='elettrodomestico' value=MICROONDE'> MICROONDE
+<BR><input type="checkbox" name='elettrodomestico' value='LVASTOVIGLIE'> LAVASTOVIGLIE
+<BR><input type="checkbox" name='elettrodomestico' value='CUCINA'> CUCINA
+<BR><input type="checkbox" name='elettrodomestico' value='ASPIRAPOLVERE'> ASPIRAPOLVERE
+<BR><input type="checkbox" name='elettrodomestico' value='MACCHIAN PER IL CAFFE'> MACCHINA PER IL CAFFE
+<BR><input type="checkbox" name='elettrodomestico' value='TV'> TV
+<BR><input type="checkbox" name='elettrodomestico' value='CLIMATIZATORE'> CLIMATIZATORE
+</td>
+</tr>
+<tr class=sinistra>
+<th>
+RISCALDAMENTO
+</th>
+<td>
+<input type="radio" name="button" value="centralizzato"> CENTRALIZZATO <br>
+<input type="radio" name="button" value="privatizzato"> PRIVATIZZATO  <br>
+</td>
+<tr>
+<th>
+DESCRIZIONE RISCALDAMENTO
+</th>
+<td>
+<textarea>
+
+</textarea>
+</td>
+</tr>
+<tr>
+<th>
+INDIRIZZO
+</th>
+<td>
+<input type=text>
+</td>
+</tr>
+<tr>
+<th colSpan=2>
+<input type=submit value='invia dati'>
+<input type=reset value='annulla'>
+
+
+</th>
+</tr>
+ 
+
+
+
+
+
+
+</table>
+
+
+
+
+
+</form>
+</body>
+</html>

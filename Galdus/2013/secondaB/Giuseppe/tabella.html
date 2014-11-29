@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<title>giuseppe visalli </title>
+<script language=javascript>
+function colora(scelta) {
+if (scelta==1){
+document.getElementById('pagina').style.backgroundColor='#ff0000';
+document.getElementById('pagina').style.color='#0000ff';
+}
+if (scelta==2){
+document.getElementById('pagina').style.backgroundColor='#0000ff';
+document.getElementById('pagina').style.color='#ff0000';
+}
+if (scelta==3)
+{document.getElementById('pagina').style.backgroundColor='#00ff00';
+document.getElementById('pagina').style.color='#ff0000';
+}
+if (scelta==4)
+{document.getElementById('pagina').style.backgroundColor='yellow';
+document.getElementById('pagina').style.color='#ff0000';
+}
+if (scelta==5)
+{document.getElementById('pagina').style.backgroundColor='orange';
+document.getElementById('pagina').style.color='#ff0000';
+}
+}
+var dimensione=10;
+function aumenta(valore){
+if (valore==1) { dimensione=dimensione+10;
+document.getElementById('pagina').style.fontSize=dimensione+'px'
+}
+if (valore==2) { dimensione=dimensione-10;
+document.getElementById('pagina').style.fontSize=dimensione+'px'
+}
+}
+
+</script> 
+<style>
+body{
+ background:black;
+color:#ff0000;
+}
+table,td,th{
+border:solid 7px green;
+}
+table{
+border-collapse:collapse;
+}
+</style>
+</head>
+<body id=pagina>
+
+<table>
+<tr>
+<th>NOME</th>
+<th>COGNOME</th>
+<th>E-MAIL</th>
+<th>Titolo</th>
+<th>Titolo 2</th>
+</tr>
+<tr>
+<td>Giuseppe</td>
+<td>Visalli</td>
+<td>Giuppiii@gmail.com</td>
+<td>Cella 2</td>
+<td>Cella 2</td>
+</tr>
+<tr>
+</table>
+<input name=red value=red type=button onclick='colora(1)';>
+<input name=blue value=blue type=button onclick='colora(2)';>
+<input name=green value=green type=button onclick='colora(3)';>
+<input name=yellow value=yellow type=button onclick='colora(4)';>
+<input name=orange value=orange type=button onclick='colora(5)';>
+<input  type=button name=">" value=">" onclick='aumenta(1)';>
+<input  type=button name="<" value="<" onclick='aumenta(2)';>
+</body>
+</html>

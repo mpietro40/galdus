@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<style>
+.codice{
+color:red;
+font-size:16px;
+}
+table, td, tr, th{
+border: solid 2px blue;
+
+}
+table{
+border-collapse:collapse;
+}
+</style>
+<title>Caricamento dati e visualizzazione dati inseriti con controllo di sicurezza</title>
+<link href="../xampp.css" rel="stylesheet" type="text/css">
+<link href="../css/style_o.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<script type="text/javascript" src="../menu/menuxampp.js"></script>
+&nbsp;<p>
+
+<h1>Questa e' la pagina che serve ad inserire i dati nella tabella del database</h1>
+<form action=insertData.php method=get>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td>Nome:</td><td><input type=text size=20 name=nome></td></tr>
+<tr><td>Cognome:</td><td> <input type=text size=20 name=cognome></td></tr>
+<tr><td>Indirizzo:</td><td> <input type=text size=20 name=indirizzo></td></tr>
+<tr><td>Citt&agrave;:</td><td> <input type=text size=20 name=citta></td></tr>
+<tr><td>CAP:</td><td> <input type=text size=20 name=cap></td></tr>
+
+<tr><td>
+<input type=reset border=0 value="Annlla"></td>
+</td><td>
+<input type=submit border=0 value="Inserisci"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

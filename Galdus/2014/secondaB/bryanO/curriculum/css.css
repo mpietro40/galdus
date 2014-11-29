@@ -1,0 +1,12 @@
+nav{
+float:left;
+width:20%;
+text-align:right;
+}
+
+#nav_border{
+border-right:1px solid black;
+padding-right:5%;
+}
+
+#titolo{

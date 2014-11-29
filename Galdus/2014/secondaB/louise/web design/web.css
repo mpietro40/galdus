@@ -1,0 +1,11 @@
+table{
+	border:1px solid black;
+	
+}
+body{background-image:url('.jpg');}
+header{font-family:Castellar;
+font-size:230%;
+margin-left:500px;
+}
+section{margin-left:200px;
+}

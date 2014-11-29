@@ -1,0 +1,168 @@
+<html>
+<head>
+<title>ALEJANDRO</title>
+<h1>ALEJANDRO CISNEROS </h1>
+<meta charset="UTF-8">
+<link rel='stylesheet' href='css.css' type='text/css' />
+</head>
+
+
+<header>
+<body>
+
+<font color='green'><h1></h1></font>
+<br/>
+<br/>
+
+</ul>
+</header>
+<nav>
+<body>
+<table border=0 cellspacing=7 align="center">
+<tr><td>
+<a href="introduzione.html" target="main" >
+<img src="./immagini/introduzione.jpg" border="0" align="middle" width="136" height="37" alt="introduzione"></a>
+</td></tr>
+<tr><td>
+<a href="iltesto.html" target="main" >
+<img src="./immagini/iltesto.jpg" border="0" align="middle" width="135" height="36" alt="iltesto"></a>
+</td></tr>
+<tr><td>
+<a href="hyperlink.html" target="main" >
+<img src="./immagini/hyperlink.jpg" border="0" align="middle" width="135" height="36" alt="hyperlink"></a>
+ </td></tr>
+<tr><td>
+<a href="liste.html" target="main">
+<img src="./immagini/liste.jpg" border="0" align="middle" width="136" height="37" alt="liste"></a>
+ </td></tr>
+<tr><td>
+<a href="tabelle.html" target="main">
+<img src="./immagini/tabelle.jpg" border="0" align="middle" width="136" height="37" alt="tabelle"></a>
+ </td></tr>
+<tr><td>
+<a href="mappe.html" target="main">
+<img src="./immagini/mappe.jpg" border="0" align="middle" width="136" height="37" alt="mappe"></a>
+ </td></tr>
+<tr><td>
+<a href="frame.html" target="main">
+<img src="./immagini/frame.jpg" border="0" align="middle" width="136" height="37" alt="frame"></a>
+ </td></tr>
+<tr><td>
+<a href="forms.html" target="main">
+<img src="./immagini/form.jpg" border="0" align="middle" width="134" height="36" alt="forms"></a>
+ </td></tr>
+<tr><td>
+<a href="css.html" target="main">
+<img src="./immagini/css.jpg" border="0" align="middle" width="136" height="37" alt="css"></a>
+ </td></tr>
+<!-- <tr><td>
+<a href="tag.html" target="main">
+<img src="./immagini/tag.jpg" border="0" align="middle" width="136" height="37" alt="tag"></a>
+ </td></tr>
+<tr><td>
+<a href="bibliografia.html" target="main">
+<img src="./immagini/bibliografia.jpg" border="0" align="middle" width="134" height="35" alt="bibliografia"></a>
+ </td></tr>
+<tr><td>
+<a href="../tesi.pdf" target="main">
+<img src="./immagini/download.jpg" border="0" align="middle" width="134" height="36" alt="tesi"></a>
+</td></tr> -->
+<tr><td>
+<p><a href="elenco.php" target="new" style="font-size:10px;color:green;font-weight:bold;">elenco file</a>  </p>
+</td></tr>
+</table>
+
+
+
+</nav>
+<aside>
+
+</aside>
+<article>
+<section>
+<a name="inizio"></a>
+
+<h2>Moduli</h2>
+<p><br>
+I moduli, o form, rendono interattive le pagine Web. Attraverso essi
+&egrave; infatti possibile per il browser interagire con l'utente e
+trasferire
+informazioni al server, dove possono essere utilizzate per
+creare dinamicamente pagine personalizzate (sulla base, per esempio,
+dei risultati di una ricerca su database o di altre azioni eseguite sul
+lato server).</p>
+<hr >
+<p>Per creare un elemento modulo si usa il tag:</p>
+
+<p>L'attributo ACTION specifica l'URI della risorsa a cui il browser
+invier&agrave; i dati. METHOD indica il metodo utilizzato nella trasmissione 
+dei dati:</p>
+<ul>
+  <li>GET, le informazioni vengono appese in coda all' URI; </li>
+  <li>POST &egrave; usato per spedire messaggi pi&ugrave; lunghi e
+quando sono presenti caratteri non ASCII. </li>
+<li>GET, le informazioni vengono appese in coda all' URI; </li>
+  <li>POST &egrave; usato per spedire messaggi pi&ugrave; lunghi e
+quando sono presenti caratteri non ASCII. </li>
+</ul>
+<p>Nel modulo possono essere
+usati
+altri elementi, ma non &egrave; consentito l'annidamento di moduli.</p>
+<hr>
+<p>Un modulo pu&ograve; contenere pi&ugrave; elementi INPUT, aventi
+diverse funzioni,
+definiti nel modo seguente:</p>
+
+<p>I tipi e le funzioni degli elementi INPUT, definiti dall'attributo
+TYPE, sono:</p>
+<ul>
+  <li>TEXT: crea un campo per l'immissione di una stringa. L'attributo
+SIZE definisce la dimensione del campo, ma resta comunque possibile
+inserire
+stringe di dimensione maggiore fino al valore definito da MAXLENGTH(in
+tal caso il testo scorrer&agrave;). L'attributo VALUE permette di
+inizializzare il campo.
+  </li>
+  <li>PASSWORD: funziona come TEXT, con la differenza
+che il testo &egrave; offuscato da asterischi. <span
+ style="text-decoration: underline;">L'invio dei dati avviene
+per&ograve; in
+chiaro, dunque non &egrave; assicurata la confidenzialit&agrave;.</span>
+  </li>
+  <li>RADIO: crea un gruppo
+di voci di selezione mutuamente esclusive. Il gruppo &egrave; definito
+dall'attributo NAME, che deve avere lo stesso valore per ogni
+voce appartenente al gruppo, mentre VALUE &egrave; diverso per
+ogni voce. Il dato inviato &egrave; costituito dalla coppia NAME+VALUE.
+  </li>
+  <li>CHECKBOX: crea una singola voce di selezione; se selezionata,
+ritorna NAME=on. </li>
+  <li>SUBMIT: crea un pulsante che mostra il testo definito
+dall'attributo VALUE. Quando premuto, il browser invia i dati secondo
+il metodo specificato le form. </li>
+  <li>RESET: crea un pulsante che mostra il testo definito
+dall'attributo VALUE. Quando premuto, il browser ripristina i valori di
+default in tutti gli elementi del modulo. </li>
+  <li>IMAGE: serve per inserire un'immagine che ha la funzione di un
+bottone. </li>
+</ul>
+<hr>
+<p>crea un menu di voci opzionali. Le singole voci sono definite
+dall'elemento &lt;option&gt;: </p>
+<p> Se una voce &egrave; SELECTED, sar&agrave; quella selezionata per
+default.</p>
+<pre><br></pre>
+<hr>
+<p>crea un'area di testo su pi&ugrave; righe, utile per immettere
+pi&ugrave; stringhe di testo (es.&nbsp; commenti, proposte). Le
+dimensioni dell'area di testo sono definite dagli attributi COLS e
+ROWS.</p>
+<a name="punto1"></a>
+<hr>
+<center> <a href="forms.html#punto1"
+ onclick="window.open('./esempi/sedici.html','', config='toolbar=1,menubar=1,scrollbars=1,resizable=1,width=600 ,height=500,  ' )"><img
+</section>
+</article>
+</footer>
+</body>
+</html>

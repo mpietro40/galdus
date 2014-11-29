@@ -1,0 +1,30 @@
+body {
+color:green;
+font-family:"comic Sans MS";
+ 
+font-size:13px;
+}
+body{ background: url(images/windowshd.jpg);
+ background-repeat: repeat;
+ background-color: black;
+ text-align:center;}
+ 
+table, td
+{
+border: solid 1px blue;
+}
+table
+{
+border-collapse:collapse;
+}
+p{
+font-style:italic;
+}
+div.centrato{text-align:center;}
+table.centrata{
+margin-left:auto;
+margin-right:auto;
+}
+h1 {
+text-align:center;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/easytabs.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" href="css/specimen_stylesheet.css" type="text/css" charset="utf-8" />
+	<link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8" />
+
+	<style type="text/css">
+		body{
+			font-family: 'belligerent_madnessregular';
+			}
+	</style>
+
+	<title>Singola pagina con menu</title>
+	
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function() {
+			$('#container').easyTabs({defaultContent:1});
+		});
+	</script>
+</head>
+
+<body>
+<div id="container">
+	<div id="header">
+		I SISTEMI OPERATIVI</div>
+	<ul class="tabs">
+		<li><a href="#APPLE">APPLE</a></li>
+		<li><a href="#MICROSOFT">MICROSOSF</a></li>
+		<li><a href="#LINUX">LINUX </a></li>
+		<li><a href="#UNIX">UNIX</a></li>
+		
+	</ul>
+	
+	<div id="main_content">
+
+		
+		<div id="APPLE">
+		<h1> Mac OS X </h1>
+		
+	        OS X , precedentemente noto come Mac OS X è il sistema operativo sviluppato da Apple Inc. per i computer Macintosh, nato nel 2001 per combinare le note caratteristiche dell'interfaccia utente del Mac OS classico con l'architettura di un sistema operativo di derivazione UNIX della famiglia BSD.
+            Nonostante il nome utilizzato sino alla versione 10.7.5, Mac OS X è un'altra versione rispetto a Mac OS nato nel 1984 con i primi computer Apple: venne completamente riscritto ed è di fatto un sistema operativo differente, di tipo UNIX certificato IEEE compliant al 100% con lo standard POSIX. Apple ha rilasciato il codice sorgente del kernel del sistema con licenza open source.
+			<br>
+			<br>
+			<br><img src= "mac.png" width="600" height="400" />
+					
+		</div>
+				
+		<div id="MICROSOFT">
+		<h1> Windows 8.1 </h1>
+		
+			Windows 8.1 è una versione di Windows NT famiglia di sistemi operativi e di un aggiornamento per Windows 8 . Prima ha presentato e rilasciato come beta pubblica nel giugno 2013, è stato rilasciato in produzione il 27 agosto 2013, e ha raggiunto disponibilità generale il 17 ottobre 2013, quasi un anno dopo il rilascio di vendita al dettaglio del suo predecessore. Windows 8.1 è disponibile gratuitamente per le copie retail di Windows 8 e di Windows RT utenti tramite Windows Store . Gli utenti che hanno ottenuto 8 al di fuori di copie di vendita al dettaglio o impianti pre-caricati (cioè, volume licensing ) devono avere 8.1 attraverso nuovi supporti di installazione dal rispettivo abbonamento o canale enterprise. Secondo i criteri del ciclo di vita del software di Microsoft, installazione di Windows 8.1 è necessario per mantenere l'accesso al supporto mainstream di Windows 8 dopo il 12 gennaio 2016. 
+			<br>
+			<br>
+			<br><img src= "windows-8.1.jpg" width="600" height="400" />
+		</div>
+
+  		<div id="LINUX">
+		<h1> Debian </h1>
+			Debian , creata dal Debian Project, è un sistema operativo per computer composto solo da software libero, anche se può usare, tramite l'aggiunta di appositi repository, anche software proprietario o software libero basato su software non libero. Viene sviluppata attraverso la collaborazione di volontari da ogni parte del mondo e fornisce più di un semplice sistema operativo: viene distribuito con oltre 37 000 pacchetti, programmi già compilati e impacchettati in modo tale da permettere installazioni facili.
+            La forma principale, Debian GNU/Linux utilizza Linux come kernel (la parte centrale di un sistema operativo) e programmi di utilità provenienti dal progetto GNU. Per questo prende il nome di GNU/Linux.
+            Il nome Debian è stato coniato dal fondatore del progetto, Ian Murdock, unendo il proprio nome e le prime tre lettere di quello della sua fidanzata (ora ex-moglie) Debra.
+			<br>
+			<br>
+			<br><img src= "debian.png" width="600" height="400" />
+
+		</div>
+	
+		<div id="UNIX">
+		<h1> NetBSD </h1>
+			NetBSD è un sistema operativo Unix-like derivato da BSD UNIX altamente portabile, gratuito, disponibile per molte piattaforme, dai server alpha a 64 bit fino ai dispositivi palmari. Il suo design pulito e le sue caratteristiche avanzate lo rendono idoneo a ambiti sia produttivi sia di ricerca. È completamente disponibile in forma sorgente ed ha una ricca dotazione di applicazioni.
+			<br>
+			<br>
+			<br><img src= "netbsd2.png" width="600" height="400" />
+	
+    	</div>
+	<div id="footer">
+		<p>&copy;2014 FABIO KISAR.</p>
+	</div>
+</div>
+</body>
+</html>

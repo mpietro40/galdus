@@ -1,0 +1,10 @@
+document.write("<div id='cssmenu'>");
+document.write("    <ul>");
+document.write("         <li class='has-sub '><a href='Esercitazione finale.html'><span>Esercitazione finale</span></a>");
+document.write("           <ul>");
+document.write("              <li><a href='CSS.html'><span>CSS</span></a></li>");
+document.write("			                <li><a href='Javascript.html'><span>Javascript</span></a></li>");
+document.write("							              <li><a href='Tabelle.html'><span>Tabelle</span></a></li>");
+document.write("         </ul>");
+document.write("       </li>");
+document.write("</div>");

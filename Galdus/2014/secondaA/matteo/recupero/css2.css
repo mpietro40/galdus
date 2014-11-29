@@ -1,0 +1,7 @@
+#aside, #nav, #social-links, #extra, #footer ul, #commentform, .meta, .publishinfo dt, .publishinfo .cat, #tweet-me, .gravatar {display:none;}
+
+.publishinfo dl, .publishinfo dd {
+	margin:0;
+	padding:0;
+	
+}

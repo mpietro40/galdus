@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Immagini</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<link rel="StyleSheet" href="./uno.css" type="text/css" media="screen">
+</head>
+<body>
+<a name="inizio"></a>
+<img src="./immagini/intestazione.jpg" align="right" width="461"
+ height="52" alt=""><br>
+<h2>Immagini e mappe</h2>
+<h3>Immagini</h3>
+<p>Le immagini sono uno degli oggetti pi&ugrave; frequenti di una pagina Web:
+&egrave; comunque opportuno non esagerare con le dimensioni o i colori,
+in quanto devono essere di ausilio al navigatore e non causare
+eccessivo ritardo nella presentazione della pagina.</p>
+<p>Inoltre, bisogna sempre considerare che il contenuto informativo di un'immagine non &egrave; sempre accessibile (non vedenti, screeen di dimensioni ridotte).</p>
+<p>I browser visualizzano due tipi di immagini, .gif e .jpg (le GIF
+animate sono una soluzione per creare effetti visuali dinamici ripetitivi 
+con poca occupazione di memoria).</p>
+<hr>
+<p>Per inserire un'immagine in una
+pagina si usa il tag:</p>
+<pre>&lt;img src="URI" | "name" [height="n"] [width="n"] alt="string" <br>[align="top" | "center" | "bottom"] [usemap="URI"] &gt;</pre>
+<p>Le dimensioni sono facoltative e se inserite permettono al browser
+di riservare uno spazio adeguato all'immagine.</p>
+<p>E' opportuno definire l'attributo ALT="string", per indicare al browser una
+stringa alternativa da visualizzare al posto dell'immagine in caso di
+ridotta accessibilit&agrave;.</p>
+
+<p>Le immagini possono essere usate anche nei collegamenti
+ipertestuali:</p>
+<pre>&lt;a href="URI"&gt;&lt;img src="imagename" .. &gt;&lt;/a&gt;</pre>
+
+<p>Per riempire lo sfondo della pagina con un'immagine si usa
+l'attributo: </p>
+<pre>&lt;body background="URI"&gt;</pre>
+<hr>
+<h3>Image Map</h3>
+<p>Le image map costituiscono un metodo sofisticato per creare collegamenti ipertestuali. Una image map &egrave; un'immagine divisa in aree, ognuna delle
+quali &egrave; un'ancora. </p>
+<p>Per associare una mappa ad un'immagine, si usa l'attributo <tt>usemap</tt>:</p>
+<pre>&lt;img src="URI" usemap="URI" .. &gt;</pre>
+<p> La mappa, generalmente definita all'interno dello stesso documento, &egrave; un elemento equivalente ad un'ancora di destinazione:</p>
+<pre>&lt;map name="URI"&gt;</pre>
+<p>all'interno del quale &egrave; vengono definite le aree attive sull'immagine:</p>
+<pre>&lt;area shape="circle" | "rect" | "poly" | "default"  <br>  href="URI" coords="string" alt="string"&gt;</pre>
+<p><br>
+SHAPE definisce la forma dell'area, HREF l'ancora di destinazione del collegamento,
+COORDS la posizione dell'area nella mappa. Il testo ALT viene
+visualizzato dal browser per indicare dove porta il link, ed &egrave;
+obbligatorio.
+</p>
+<ul>
+  <li> L'area circolare viene individuata dalle coordinate del centro e
+dalla lunghezza del raggio.</li>
+  <li>L' area rettangolare viene individuata dalle coordinate degli
+spigoli in alto a sinistra e i n basso a destra.</li>
+  <li>L' area poligonale viene individuata dalle coordinate di una
+serie di punti.</li>
+  <li>Si ha una sola area di default per mappa<br>
+  </li>
+</ul>
+<hr style="width: 100%; height: 2px;">
+<h3>Esempio 1<br>
+</h3>
+<p>I documenti a.html e b.html sono rispettivamente una pagina verde e
+una blu<br>
+</p>
+<a name="punto1"></a>
+<pre>&lt;html&gt;<br>  &lt;head&gt;<br>    &lt;title&gt;Image Map&lt;/title&gt; <br>  &lt;/head&gt;<br>&lt;body&gt;<br> <br>&lt;img src="../immagini/uno.jpg" usemap="#map" height=300 width=300 <br>  alt="Tutto rosso"&gt;<br><br>  &lt;map name="map"&gt;<br>  &lt;area shape="rect" href="./a.html" alt="uno"  coords="0,0,100,100" &gt;<br>  &lt;area shape="circle" href="b.html" alt="due" coords="200,200,50" &gt;<br>  &lt;/map&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;<br></pre>
+<center> <a href="mappe.html#punto1"
+ onclick="window.open('./esempi/undici.html','', config='toolbar=1,menubar=1,scrollbars=1,resizable=1,width=600 ,height=500,  ' )"><img
+ src="./immagini/risultato.jpg" border="0" width="135" height="35" alt=""></a>
+</center>
+<br>
+<hr style="width: 100%; height: 2px;">
+<h3>Esempio 2<br>
+</h3>
+<a name="punto2"></a>
+<pre>&lt;html&gt;<br>  &lt;head&gt;<br>    &lt;title&gt;Image Map&lt;/title&gt; <br>  &lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;<span
+ class="start-tag">img</span><span class="attribute-name"> src</span>=<span
+ class="attribute-value">"../immagini/famiglia.gif" </span><span
+ class="attribute-name">usemap</span>=<span class="attribute-value">"#map" </span><span
+ class="attribute-name">alt</span>=<span class="attribute-value">" La famiglia Simpson al completo."</span>&gt;<br>&lt;<span
+ class="start-tag">map</span><span class="attribute-name"> name</span>=<span
+ class="attribute-value">"map"</span>&gt;<br>  &lt;<span
+ class="start-tag">area</span><span class="attribute-name"> href</span>=<span
+ class="attribute-value">"incostruzione.html" </span><span
+ class="attribute-name">alt</span>=<span class="attribute-value">"Mio Padre" </span><span
+ class="attribute-name">shape</span>=<span class="attribute-value">"circle" </span><span
+ class="attribute-name">coords</span>=<span class="attribute-value">"56,78,30"</span>&gt;<br>  &lt;<span
+ class="start-tag">area</span><span class="attribute-name"> href</span>=<span
+ class="attribute-value">"incostruzione.html" </span><span
+ class="attribute-name">alt</span>=<span class="attribute-value">"Mia madre" </span><span
+ class="attribute-name">shape</span>=<span class="attribute-value">"circle" </span><span
+ class="attribute-name">coords</span>=<span class="attribute-value">"112,94,30"</span>&gt;<br>  &lt;<span
+ class="start-tag">area</span><span class="attribute-name"> href</span>=<span
+ class="attribute-value">"incostruzione.html" </span><span
+ class="attribute-name">alt</span>=<span class="attribute-value">"Mio fratello" </span><span
+ class="attribute-name">shape</span>=<span class="attribute-value">"circle" </span><span
+ class="attribute-name">coords</span>=<span class="attribute-value">"40,182,30"</span>&gt;<br>  &lt;<span
+ class="start-tag">area</span><span class="attribute-name"> href</span>=<span
+ class="attribute-value">"lisa.html" </span><span class="attribute-name">alt</span>=<span
+ class="attribute-value">"Io, Lisa" </span><span class="attribute-name">shape</span>=<span
+ class="attribute-value">"circle" </span><span class="attribute-name">coords</span>=<span
+ class="attribute-value">"143,201,30"</span>&gt;<br>  &lt;<span
+ class="start-tag">area</span><span class="attribute-name"> href</span>=<span
+ class="attribute-value">"incostruzione.html" </span><span
+ class="attribute-name">alt</span>=<span class="attribute-value">"Mia sorella" </span><span
+ class="attribute-name">shape</span>=<span class="attribute-value">"circle" </span><span
+ class="attribute-name">coords</span>=<span class="attribute-value">"67,237,30"</span>&gt;<br>&lt;/map&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;<br></pre>
+
+<center> <a href="mappe.html#punto2"
+  onclick="window.open('./esempi/undici_bis.html','',
+          config='toolbar=1,menubar=1,scrollbars=1,resizable=1,width=600 ,height=500,  ' )"><img src="./immagini/risultato.jpg" border="0" width="135" height="35" alt=""></a>
+</center>
+
+<hr>
+<br>
+<br>
+<table align="center" border="0">
+  <tbody>
+    <tr>
+      <td> <a href="tabelle.html" target="main"><img
+ src="./immagini/precedente.jpg" border="0" width="135" height="34" alt=""></a></td>
+      <td> <a href="mappe.html#inizio" target="main"><img
+ src="./immagini/inizio.jpg" border="0" width="135" height="33" alt=""></a></td>
+      <td> <a href="frame.html" target="main"><img
+ src="./immagini/successiva.jpg" border="0" width="135" height="34" alt=""></a></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

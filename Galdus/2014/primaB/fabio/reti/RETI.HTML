@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<meta charset=UTF-8>
+<title>
+TIPOLOGIE DI RETE
+</title>
+<style>
+img{
+width:200px;
+height:200px
+}
+table td{
+border: solid 2px green;
+width:20px;
+height:20px;
+}
+body{
+background-color:#0099FF;
+}
+.colore{
+background-color:yellow;
+}
+</style>
+</head>
+<body>
+<H1> TIPOLOGIE DI RETE </H1>
+<table>
+<tr>
+<td> IMMAGINE </td>
+<td> NOME </td>
+<td> DESCRIZIONE </td>
+<td> VANTAGGI E SVANTAGGI </td>
+</tr>
+<tr>
+<td><img src="120px-FullMeshNetwork.svg.png"/>  </td>
+<td> <h3>Rete punto a punto</h3></td>
+<td> Una rete punto a punto è realizzata unendo ogni device della rete con un cavo </td>
+<td> <h2>VANTAGGI </h2>
+<br> 1) Ogni nodo poù parlare direttamente con tutti gli altri
+<br> 2) è una rete molto veloce
+<h2> SVANTAGGI </h2>
+<br> 2)Sono necessari device speciali cioè hanno bisogno tante schede di rete tanto quanto sonop i nodi
+</td>
+</tr>
+<td><img src="images.jpg"/> </td>
+<td> <h3>Rete a stella</h3></td>
+<td>Una rete a stella funziona collegando tutti i device a un punto centrale. Questo nodo centrale può essere un computer speciale o un hub o uno switch</td>
+<td><h2>VANTAGGI</h2> <br>1- è una rete molto semplice. <br> 2- E' una rete molto economica.
+<br><h2>SVANTAGGI</h2> <br>1) Nel caso si rompa il computer centrale non vanno gli altri.
+<br>2) Tutte le comunicazioni passano nel nodo centrale che se non è ben programmato lascia vedere i dati agli altri nodi</h3></td>
+<tr>
+<td><img src="anello.png" /></td>
+<td><h3>Rete ad anello</h3></td>
+<td>Prevede che ogni nodo sia collegato ad altri due.</td>
+<td><h3>VANTAGGI</h3> <br>1- E' una rete semplice.
+<br>2- E' una rete semplice da espandere.
+<br><h3>SVANTAGGI</h3><br>1- La rottura di un nodo blocca tutta la comunicazione.
+<br>2- Per parlare tra due nodi potrebbe essere necessario passare per tutti gli altri nodi della rete.</td>
+</tr>
+<td><img src="images2.jpg" /></td>
+<td><h3>Rete a bus</h3></td>
+<td> Questo tipo di topologia è una variante di rete magliata non completamente connessa, che si può modellizzare anche come un insieme di reti a stella interconnesse tra loro in modo gerarchico. Nodi e canali sono disposti in modo ramificato; questa topologia è la preferita per le reti WAN anche perché comporta costi minori, tuttavia se si guasta un canale o un nodo viene compromessa la funzionalità di parte della rete o dell'intera rete (se si è guastato il nodo o il canale d'origine). Su questa topologia di rete si basa Internet</td>
+<td><h3>VANTAGGI</h3> <br>1- E' una rete semplice da realizzare 
+<br>2- E' molto economica
+<br><h3>SVANTAGGI</h3><br>1- la rottura di un terminatore può bloccare la rete
+<br>2- se si rompe il bus si blocca tutta la rete</td>
+</tr>
+<tr>
+<td><img src="download.jpg" /></td>
+<td><h3>Rete a albero</h3></td>
+<td>la rete a albero è una rete in cui sono definite delle gerarchie cioè un nodo può essere padre di un altro nodo. ogni nodo è collegato ad un altro nodo che può vedere pezzi di rete maggiori  </td>
+<td><h3>VANTAGGI</h3> <br>1- E' adatta a gestire piccoli gruppi che devono condividere risorse  
+<br>2-  la rottura di un nodo consente alle sottoreti di funzionare 
+<br><h3>SVANTAGGI</h3><br>1- è una rete complicata da realizzare che mantenere 
+<br>2- l'aggiunta di un nodo può richiedere configurazioni complesse </td>
+</tr>
+</table>
+<p> &nbsp;</p>
+<table>
+<h1> tipologie di rete</h1>
+<th> Nome </th>
+<th> Immagine </th>
+<th> Descrizione </th>
+<th> Vantaggi/Svantaggi </th>
+<tr>
+<td>LAN <br><br> (local <br>area <br> network)</td>
+<td><img src="hubsrete.gif" /></td>
+<td> è una rete di piccole dimenzioni normalmente copre una stanza o piccoli edifici </td>
+<td><h3>VANTAGGI</h3> <br>1-è una rete semplice  <br>2- è facilmente estendibile <h3>SVANTAGGI</h3> <br>1- è adatta solo per piccole aree <br>2- ha una sicurezza limitata</td>
+</tr>
+<tr>
+<td>CAN <br><br> (campus <br>area <br> network)</td>
+<td><img src="97973987.jpg" /></td>
+<td> è una rete più grande e compressa di una lan copre più edifici vicini ed è composta da sottoreti lan. </td>
+<td><h3>VANTAGGI</h3> 1-normalmente è più sicura di una lan <br>2-consente la condivisione di risorse aziendali senza accesso a internet  <h3>SVANTAGGI</h3>1- è normalmente più costosa <br>2- è normalmente più complessa da gestire</td> 
+</tr>
+<tr>
+<td>MAN <br><br> (metropolitan <br>area <br> network)</td></td>
+<td><img src="man.png" /></td>
+<td> è una rete che copre parti di una città è normalmente composta da sottoreti can </td>
+<td><h3>VANTAGGI</h3> 1-Consente di condividere risorse aziendali anche tra sedi diverse <br>2- è una rete sicura<h3>SVANTAGGI</h3>1-è una rete complicata e costosa <br>2- non è sempre possibile realizzarla </td> 
+</tr>
+<tr>
+<td>WAN  <br><br> (wide<br>area <br> network)</td></td>
+<td><img src="Disegno07.jpg" /></td>
+<td> è una rete che copre regioni del mondo ed è normalmente composta da sottoreti man</td>
+<td><h3>VANTAGGI</h3> 1-consente di realizzare una rete parallela ad internet 2- è una rete sicura <h3>SVANTAGGI</h3>1-ha dei costi proibitivi <br>2- è una rete complicata da realizzare e da gestire </td> 
+</tr>
+<tr>
+<td>WLAN <br><br> (wirless <br> lan)</td></td>
+<td><img src="lan-wan-wlan.jpg" /></td>
+<td>è una rete che che si basa su componenti wi-fi</td>
+<td><h3>VANTAGGI</h3> 1-è una rete semplice da realizzare e gestire <br>2- è la rete più economica da realizzare <h3>SVANTAGGI</h3>1-è una rete poco sicura <br>2-le prestazioni offerte non sono molto buone </td> 
+</tr>
+</table>
+</body>
+<html>

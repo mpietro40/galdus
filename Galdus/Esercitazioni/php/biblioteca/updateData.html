@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<head>
+<title>
+Script creazione database per esercitazione
+</title>
+<link href="css/menu.css" rel="stylesheet" type="text/css">
+<link rel='stylesheet' href='css/style.css'>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+</head>
+<body>
+<script type="text/javascript" src="js/menu.js"></script>
+<div class="centrato">	
+<h1>Script che aggiorna i dati con i valori scelti nel form precedente</h1>
+&lt;!doctype html&gt;<br />
+&lt;html&gt;<br />
+&lt;head&gt;<br />
+&lt;style&gt;<br />
+.codice{<br />
+color:red;<br />
+font-size:16px;<br />
+}<br />
+table, td, tr, th{<br />
+border: solid 2px blue;<br />
+<br />
+}<br />
+table{<br />
+border-collapse:collapse;<br />
+}<br />
+&lt;/style&gt;<br />
+&lt;title&gt;Caricamento dati e visualizzazione dati inseriti con controllo di sicurezza&lt;/title&gt;<br />
+&lt;link href=&quot;xampp.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;<br />
+&lt;link href=&quot;css/menu.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;<br />
+<br />
+&lt;/head&gt;<br />
+&lt;body&gt;<br />
+&lt;?php<br />
+//includo il menu<br />
+//include('menu.php');<br />
+<br />
+//includo il file php che prepara la connessione<br />
+//include('openConn.php');<br />
+try{<br />
+//connect the database.<br />
+$conn=mysql_connect(&quot;localhost&quot;,&quot;root&quot;,&quot;&quot;);<br />
+echo &quot;&lt;h2&gt;DB connesso&lt;/h2&gt;&quot;;<br />
+//selezioniamo il database su cui lavorare<br />
+$sql = &quot;USE lpwDB&quot;;<br />
+$ok =mysql_query($sql,$conn);<br />
+if (!$ok)<br />
+die(&quot;&lt;br&gt;imposs. selezionare DB: &quot;.mysql_error()); <br />
+else<br />
+echo &quot;&lt;br&gt;selezionato il database su cui lavorare lpwDB&lt;br&gt;&quot;;
+<br />
+// Recupero i dati dal form precedente, se qualche dato e' mancante lo setto a default value<br />
+$id=$_POST['id'];<br />
+$nome=$_POST['nome'];<br />
+$cognome=$_POST['cognome'];<br />
+$numero=$_POST['telefono'];<br />
+echo &quot;&lt;h2&gt; Hai scelto ti cambiare i seguenti dati&lt;/h2&gt;&quot;;<br />
+echo &quot;nome: &quot;.$nome.&quot; - cognome: &quot;.$cognome.&quot; - telefono: &quot;.$numero.&quot;&lt;br&gt;&quot;;<br />
+//$nome=$_POST['nome'];<br />
+if(empty($nome)||!is_string($nome)){<br />
+$nome=&quot;andrea$id&quot;;<br />
+ }<br />
+if(empty($cognome)||!is_string($cognome)){<br />
+$cognome=&quot;marchetti$id&quot;;<br />
+}<br />
+if(empty($numero)||!is_numeric($numero)){<br />
+$numero=&quot;056315249$id&quot;;<br />
+}<br />
+<br />
+//Modifico i valori nella tabella<br />
+$sql=&quot;UPDATE agenda SET nome='$nome',cognome='$cognome',telefono='$numero' WHERE id='$id' &quot;;<br />
+// stampa di controllo<br />
+echo &quot;query SQL: $sql&quot;.&quot;&lt;br&gt;&quot;;<br />
+//esecuzione della query<br />
+$res=mysql_query($sql,$conn);<br />
+if (!$res) <br />
+	die(&quot;Errore query: &quot;.mysql_error());<br />
+else<br />
+   echo &quot;Aggiornato &lt;br&gt;&quot;;<br />
+   <br />
+   <br />
+include(&quot;showdata.php&quot;); <br />
+ <br />
+// Close the connection before leaving<br />
+mysql_close($conn);<br />
+echo &quot;&lt;h3&gt;Connessione chiusa&lt;h3&gt;&quot;;<br />
+<br />
+}catch(Exception $e) {<br />
+   die('Errore connessione DB');<br />
+}<br />
+<br />
+?&gt;<br />
+<br />
+&lt;/body&gt;<br />
+&lt;/html&gt; 
+</body>
+</html>

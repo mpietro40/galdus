@@ -1,0 +1,51 @@
+/*stili per il layout fluido*/
+html,body{margin: 0;padding:0}
+head{
+link-rel:shortcut icon url("flag.jpg")
+}
+body{font-family: verdana;
+	font-size: 80%;
+	/*background-image:url('images/sfondo.jpg');*/
+	background-color: #000000;
+	height:80%;}
+container{background-color: #90BD09;}
+
+/*stili generici, su header e footer*/
+header{background-color:black;color:black; font-family:Copperplate Gothic Bold;font-size:15px;-webkit-border-radius: 10px; }
+h1{font-family:georgia;
+padding-left:10px;font-size:30px; text-align:center}
+h2{color: #000000;font-size: 1.5em}
+
+
+/*stili specifici per il layout*/
+
+section h2{color:black;
+font-family:georgia;
+font-size:20px;}
+section{margin:0 200px 2px 230px;padding: 1em 5px;background-color: red;height:930px;color:lime;-webkit-border-radius: 10px; text-align:left; height:1800px;}
+
+
+h4{
+font-family:Baskerville Old Face;
+font-size:20px;
+}
+div{
+border:solid white;
+background-color:#3366FF;
+color:black;
+-webkit-border-radius: 5px;
+margin-top:5px;
+padding-left:10px;
+padding-top:10px;
+height:30px;
+}
+.one{
+float:right;
+margin-right:200px;
+text-align:center;
+width:400px;
+height:20px;
+
+}
+input[type=text]{
+border-radius:10px;}

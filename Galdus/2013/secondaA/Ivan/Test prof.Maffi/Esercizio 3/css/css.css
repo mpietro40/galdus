@@ -1,0 +1,27 @@
+html,body{margin:10px; padding: 10px}
+body{ background:white;
+text-align:center;
+}
+font{color:black;} 
+a:link {color:#669900;} 
+a:visited {text-decoration: none; color:#6699FF;}
+a:hover {color: white;}
+
+h1
+{
+color:green;
+text-align:center;
+}
+th
+{
+background-color:grey;
+}
+table
+{
+width:400px;
+height:30px;
+}
+td
+{
+text-align:center;
+}

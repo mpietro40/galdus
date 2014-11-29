@@ -1,0 +1,81 @@
+100 Continue
+Il server ha ricevuto l'header della richiesta e il client deve procedere ad inviare il corpo della richiesta (solitamente nelle richieste di tipo POST).
+101 Switching Protocols
+Il richiedente ha richiesto di cambiare il protocollo in uso e il server è a conoscenza di ciò che dovrà fare.
+200 OK
+Risposta standard per le richieste HTTP andate a buon fine.
+201 Created
+202 Accepted
+La richiesta di elaborazione è stata accettata ma non è ancora terminata.
+203 Non-Authoritative Information
+204 No Content
+205 Reset Content
+206 Partial Content
+207 Multi-Status
+300 Multiple Choices
+301 Moved Permanently
+Questa e tutte le future richieste andranno dirette ad un altro URI (specificato nell'header Location).
+302 Found
+Questo è il codice più usato ma anche un classico esempio di non aderenza agli standard nella pratica quotidiana. Infatti, le specifiche di HTTP/1.0 (RFC 1945) richiederebbero che il client esegua redirezioni temporanee (la descrizione originale era "Moved Temporarily"), ma i più diffusi browser l'hanno implementata come 303 descritta di seguito. Perciò, HTTP/1.1 ha aggiunto i codici di stato 303 e 307 per distinguere tra i due comportamenti. Comunque, la maggior parte delle applicazioni e dei framework web ancora usano il codice di stato 302 come se fosse il 303.
+303 See Other (da HTTP/1.1)
+La risposta alla richiesta può essere trovata sotto un'altra URI usando il metodo GET.
+304 Not Modified
+305 Use Proxy (da HTTP/1.1)
+Molti client HTTP (come Mozilla ed Internet Explorer) non gestiscono correttamente le risposte con questo codice di stato.
+306 Switch Proxy
+Non più usato.
+307 Temporary Redirect (da HTTP/1.1)
+In quest'occasione, la richiesta dovrebbe essere ripetuta con un'altra URI, ma successive richieste possono essere ancora dirette a quella originale. In contrasto con 303, la richiesta di POST originale deve essere reiterata con un'altra richiesta di tipo POST.
+308 Permanent Redirect (approvato come RFC sperimentale)
+Questa richiesta e le future dovrebbero essere fatte verso un altro URI. Le risposte 307 e 308 (come proposta) dovrebbero comportarsi similmente alla 302 e la 301, ma non prevedono un cambiamento di metodo.
+400 Bad Request
+La richiesta non può essere soddisfatta a causa di errori di sintassi.
+401 Unauthorized
+Simile a 403/Forbidden, ma pensato per essere usato quando l'autenticazione è possibile ma è fallita o non può essere fornita. Vedi anche basic access authentication e digest access authentication.
+402 Payment Required
+L'intendimento originale prevedeva un suo utilizzo per realizzare meccanismi di digital cash/micropagamento, ma questo non si è mai verificato ed il codice non è mai stato utilizzato.
+403 Forbidden
+La richiesta è legittima ma il server si rifiuta di soddisfarla. Contrariamente al codice 401 Unauthorized, l'autenticazione non ha effetto.
+404 Not Found
+La risorsa richiesta non è stata trovata ma in futuro potrebbe essere disponibile.
+405 Method Not Allowed
+La richiesta è stata eseguita usando un metodo non permesso. Ad esempio questo accade quando di usa il metodo GET per inviare dati da presentare con un metodo POST.
+406 Not Acceptable
+La risorsa richiesta è solo in grado di generare contenuti non accettabili secondo la header Accept inviato nella richiesta.[2]
+407 Proxy Authentication Required
+408 Request Timeout
+Il tempo per inviare la richiesta è scaduto e il server ha terminato la connessione.
+409 Conflict
+410 Gone
+Indica che la risorsa richiesta non è più disponibile e non lo sarà più in futuro.
+411 Length Required
+La richiesta non specifica la propria dimensione come richiesto dalla risorsa richiesta.
+412 Precondition Failed
+413 Request Entity Too Large
+La richiesta è più grande di quanto il server possa gestire.
+414 Request-URI Too Long
+L'URI richiesto è troppo grande per essere processato dal server.
+415 Unsupported Media Type
+L'entità della richiesta è di un tipo non accettato dal server o dalla risorsa richiesta.
+416 Requested Range Not Satisfiable
+417 Expectation Failed
+418 I'm a teapot
+Questo è un tipico pesce d'aprile dell'IETF (RFC 2324). Non si aspettano implementazioni in alcun server HTTP.
+426 Upgrade Required (RFC 2817)
+Il client dovrebbe cambiare il protocollo ed usare ad esempio il TLS/1.0.
+449 Retry With
+Estensione di Microsoft: The request should be retried after doing the appropriate action.
+451 Unavailable For Legal Reasons (Internet draft)
+Stato non obbligatorio utilizzato quando l'accesso alla risorsa è limitato per ragioni legali come censura o mandati governativi. Probabilmente fa riferimento alla novella distopistica Fahrenheit 451.ù
+500 Internal Server Error
+Messaggio di errore generico senza alcun dettaglio.
+501 Not Implemented
+Il server non è in grado di soddisfare il metodo della richiesta.
+502 Bad Gateway
+503 Service Unavailable
+Il server non è al momento disponibile. Generalmente è una condizione temporanea.
+504 Gateway Timeout
+505 HTTP Version Not Supported
+Il server non supporta la versione HTTP della richiesta.
+509 Bandwidth Limit Exceeded
+Questo codice di stato, benché usato da molti server, non è un codice di stato ufficiale in quanto non è specificato in alcuna RFC.

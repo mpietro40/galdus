@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<title>pitagora</title>
+<style>
+body {
+background-color:green;
+}
+div{
+margin:auto;
+width:100%;
+}
+div#f {
+text-align:center;
+background-color:red;
+font-family:algerian;
+}
+table,td,th {
+text-align:center;
+margin:auto;
+}
+header {
+text-align:center;
+background-color:red;
+}
+</style>
+ <script>
+ function Quadrato() {
+ var c1=document.f1.cat1.value;
+ var c2=document.f1.cat2.value;
+ var r= Math.sqrt(c1*c2+c2*c2);
+ document.f1.ris.value=r;
+ }
+ </script>
+</head>
+<body>
+<header>
+<h1> PITAGORA </h1>
+</header>
+<div id="form">
+<FORM NAME="f1"> 
+<TABLE> 
+<TR> 
+<TD> 
+Cateto 1 : <INPUT TYPE="text" NAME="cat1" Size="18"> 
+</td>
+</tr>
+<tr>
+<td>
+Cateto 2 :<INPUT TYPE="text" NAME="cat2" Size="18"> 
+</td>
+</tr>
+<tr>
+<td>
+Risultato : <INPUT TYPE="text" NAME="ris" Size="18"> 
+</td>
+</TR>
+<tr>
+<td>
+<input type="button" name="bn" value="Calcola" onClick="Quadrato()"> 
+</td>
+</tr> 
+</FORM> 
+</TABLE> 
+</div>
+<div>
+&nbsp
+</div>
+<footer>
+<div id="f">Zakaria Rahman 
+<br/>2^A Info
+</footer>
+</body>
+</html>

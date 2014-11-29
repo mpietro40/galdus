@@ -1,0 +1,45 @@
+body {
+color:black;
+font-family:"comic Sans MS";
+ 
+font-size:13px;
+}
+body{ background: url(../images/Windows-8.12.jpg);
+ background-repeat: repeat;
+ background-color: blue;
+ height=1}
+
+table, td
+{
+border: solid 1px green;
+}
+table
+{
+border-collapse:collapse;
+}
+p{
+font-style:italic;
+}
+.centro {
+position: absolute;
+left: 20%;
+}
+h1 {
+text-align:center;
+}
+.testo rosso{ 
+font-weight:bold;
+color:red;
+font-size:120%;
+text-align:left;
+}
+.testo verde{ 
+font-weight:bold;
+color:green;
+font-size:120%;
+text-align:left;
+} 
+.centrata{
+margin:auto;
+text-align:center;
+} 

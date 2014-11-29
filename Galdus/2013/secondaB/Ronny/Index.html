@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<title> Ronny Vaquez </title>
+<script language=javascript>
+function colora(scelta){
+if (scelta==1) {
+document.getElementById("pagina").style.color="#123456";
+document.getElementById("pagina").style.backgroundColor="#ff0000";
+}if(scelta==2)
+document.getElementById("pagina").style.backgroundColor="#0000ff";
+if (scelta==3)
+document.getElementById("pagina").style.backgroundColor="#00FF00";
+}
+var dimensione=10;
+function aumenta (valore){
+if(valore==1){dimensione=dimensione + 10;
+document.getElementById("pagina").style.fontSize=dimensione+'px';
+}
+if (valore==2){dimensione=dimensione-10;
+document.getElementById("pagina").style.fontSize=dimensione+'px';}
+} 
+</script>
+<style>
+body { background:black;
+color:#ff0000
+}
+Table ,td{
+border: solid 1px Blue;
+Color: yellow
+}
+Table{
+border-collapse:collapse;
+}
+</style>
+</head>
+
+
+<body id=pagina>
+Ronny Vaquez
+
+<table>
+    <tr>
+       <td>Nome</td>
+       <td>Cognome</td>
+      <td>Email</td>
+      <td>Cellulare</td>
+      <td>fb</td>
+      <td>Foto</td>
+   <tr>
+      <td>Ronny</td>
+      <td>Vasquez</td>
+      <td>Ronny_estalin@hotmail.it</td>
+      <td>NON ME LO RICORDO</td>
+      <td>Ronny Vasquez </td>
+      <td><img src ="ronny.jpg"></td>
+</table>
+<input name="<" value="<" type=button onclick="aumenta(2)";>
+<input name=red value=red type=button onclick="colora(1);">
+<input name=blue value=blue type=button onclick="colora(2);">
+<input name=green value=green type=button onclick="colora(3);">
+<input name=">" value=">" type=button onclick="aumenta(1)";>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+body
+{color:blue;
+background:url(../Immagini/Uni.jpg);
+text-align: center ;
+}
+table, td { border: solid 1px blue; }
+table { border-collapse: collapse; }
+.testo {
+font-weight:bold ;
+color:red ;
+font.size:120%;
+text-align:left;
+}
+#navigation {
+	width: 950px;
+	height: 50px;
+	margin: 0;
+	padding: 0;
+	background: url(../Immagini/navigation-bg.jpg) no-repeat left top;
+} 
+#navigation ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+} 
+#navigation ul li {
+	display: inline;
+	margin: 0px;
+} 
+#navigation ul li a {
+	height:33px;
+	display: block;
+	float: left;
+	padding: 17px 15px 0 15px;
+	font: bold 12px Arial;
+	color: #FFF;
+	text-decoration: none;
+	background: url(../Immagini/navigation-separator.png) no-repeat right center;
+} 
+
+#navigation ul li a:hover {
+	color:#363636;
+	background: url(images/navigation-hover.png) repeat-x left top;
+}
+
+#navigation ul li#active a {
+	color:#363636;
+	background: url(images/navigation-hover.png) repeat-x left top;
+}

@@ -1,0 +1,172 @@
+//*
+* Greenclock Theme for GetSimple by Tim Whittingham, 2013.
+* Built on Skeleton V1.2 Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+/* Table of Contents
+==================================================
+	#Site Styles
+	#Media Queries
+
+/* #Site Styles
+================================================== */
+		
+div.container {margin-top: 20px;}
+		
+/*Titleblock*/
+
+#titleblock {
+	min-height: 120px;
+	background-color: white;
+	background-image:url(images/greenclock.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+#titleblock h2 , #titleblock h5{
+	text-align: right;
+	margin-right: 10px;
+	text-shadow: 1px 1px 0px #FFFFFF;
+}
+
+#titleblock h5 {margin-top: 0;} 
+#titleblock a {text-decoration:none; color: black;}
+
+/* Nav */
+
+nav ul {
+	text-align: center;
+	margin: 0 auto 0;
+}
+
+nav li {
+	display: inline-block;
+	text-transform:uppercase;
+	font-size: 17px;
+}
+
+nav a {
+	height: 120px;
+	width: 100px;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	display: block;
+	text-decoration:none;
+}
+
+nav li a:hover, nav li a:focus {
+	color:darkgray;
+	text-decoration:none;
+}
+
+nav .current a  {
+	font-weight: bold;
+}
+	
+/*#Left is the Left-Hand sidebar that holds the sub menu*/
+#left * {
+	text-align: center;
+	margin: 0 auto 0;
+	text-transform:uppercase;
+}
+	
+#left {
+	border-right: 1px solid #ddd;
+}
+
+#left img {display: block; margin: 20px auto;}
+
+#left #child_menu #parent a {
+	height: 120px;
+	width: 100px;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	display: block;
+	text-decoration:none;
+	margin-bottom: 20px;
+}
+	
+#child_menu p { 
+	text-decoration:none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    line-height: normal;
+}
+
+ #child_menu .current a {
+	font-weight: bold;
+}
+
+#child_menu a {
+     text-decoration:none;
+}
+
+#child_menu a:hover {
+     color: darkgrey;
+}
+
+/*Attn for top level nav images, default and index page */
+nav a {background-image:url(images/menuimg01.png);}
+/*then syntax for other menu items in page header and sidebar:
+ 'if the href contains the page-slug string...'
+so page slugs must contain 'index', 'second',... 'fifth'. */
+#left a[href*="index"],nav a[href*="index"] {background-image:url(images/menuimg01.png);}	
+#left a[href*="second"],nav a[href*="second"] {background-image:url(images/menuimg02.png);}
+#left a[href*="third"],nav a[href*="third"] {background-image:url(images/menuimg03.png);}
+#left a[href*="fourth"],nav a[href*="fourth"] {background-image:url(images/menuimg04.png);}
+#left a[href*="fifth"],nav a[href*="fifth"] {background-image:url(images/menuimg05.png);}
+/*These declarations are overruled by media queries below*/
+
+/*Sidebar*/
+#sidebar {
+	border-left: 1px solid #ddd;
+}
+
+#sidebar * {margin-left: 20px}
+	
+/*Footer*/
+
+.footer {
+	text-align:center;
+}
+
+.footer a {text-decoration: none;}
+	
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px)	{
+	
+		nav a {height: auto; width:auto; padding: 0 6px; background-image:none;}
+		
+		#left #child_menu #parent a{display: none;}
+		#left img.dec {display: none;}
+		#left {border-right: none; border-bottom: 1px solid rgb(221, 221, 221);}
+		#left #child_menu p {display: inline; margin: 0 10px 0 10px;}
+		hr {margin: 0 0 0 0;}
+		
+		#left a[href*="index"],nav a[href*="index"] {background-image:none;}	
+		#left a[href*="second"],nav a[href*="second"] {background-image:none;}
+		#left a[href*="third"],nav a[href*="third"] {background-image:none;}
+		#left a[href*="fourth"],nav a[href*="fourth"] {background-image:none;}
+		#left a[href*="fifth"],nav a[href*="fifth"] {background-image:none;}
+		
+		#sidebar {border-left: none;}
+	}
+	
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {}

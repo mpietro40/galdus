@@ -1,0 +1,60 @@
+<!doctype html>
+
+
+<html>
+<head>
+<style>
+.codice{
+color:red;
+font-size:16px;
+}
+
+table{
+border-collapse:collapse;
+}
+</style>
+<title>Creazione Database SQL lite</title>
+<link href="xampp.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<!----------- ----------->
+&lt;!doctype html&gt;<br />
+&lt;html&gt;<br />
+&lt;head&gt;<br />
+&lt;style&gt;<br />
+.codice{<br />
+color:red;<br />
+font-size:16px;<br />
+}<br />
+<br />
+table{<br />
+border-collapse:collapse;<br />
+}<br />
+&lt;/style&gt;<br />
+&lt;title&gt;Creazione Database SQL lite&lt;/title&gt;<br />
+&lt;link href=&quot;xampp.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;<br />
+&lt;/head&gt;<br />
+<br />
+&lt;body&gt;<br />
+<br />
+&amp;nbsp;&lt;p&gt;<br />
+&lt;?php<br />
+try<br />
+{<br />
+//create the database.<br />
+//this will generate the database file in the directory in which this script exists.<br />
+//If this file already exists, the database will be opened on this file.<br />
+  $database = new SQLiteDatabase('sqlite/dogsDb.sqlite', 0666, $error);<br />
+  echo &quot;DB creato&quot;;<br />
+}<br />
+catch(Exception $e)<br />
+{<br />
+  die($error);<br />
+}<br />
+<br />
+?&gt;
+<!----------- ----------->
+</body>
+</html>

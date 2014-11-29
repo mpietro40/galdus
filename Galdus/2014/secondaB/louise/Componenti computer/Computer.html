@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<title>Cestino</title>
+<link rel='stylesheet' href='com.css' type='text/css' />
+<style type="text/css">
+body{
+text-align:center;
+}
+#div1 {
+width:200px;
+height:100px;
+padding-left:10px;
+padding-top:80px;
+background-image:url(question.jpg);
+background-size: 70px;
+
+background-repeat:no-repeat;
+}
+#div2 {
+width:200px;
+height:100px;
+padding.left:10px;
+padding-top:80px;
+background-image:url(.jpg) ;
+background-size: 190px;
+background-repeat:no-repeat;
+
+}
+#div3 {
+width:150px;
+height:100px;
+padding.left:10px;
+padding-top:95px;
+background-image:url(question.jpg);
+background-size: 90px;
+background-repeat:no-repeat;
+}
+#div4 {
+width:150px;
+height:300px;
+padding.left:10px;
+padding-top:95px;
+background-image:url(question.jpg);
+background-size: 90px;
+background-repeat:no-repeat;
+
+}
+</style>
+<script>
+function permettiTrascinamento(ev)
+{
+ev.preventDefault();
+}
+function trascina (ev)
+{
+ev.dataTransfer.setData("Text",ev.target.id);
+}
+function rilascia(ev)
+{
+ev.preventDefault();
+var data=ev.dataTransfer.getData("Text");
+ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+<header>
+<h2>Trascina i rifiuti nei contenenti giusti</h2>
+</header>
+<nav class='one'>
+<td><div id="div1" ondrop="rilascia(event)"
+ondragover="permettiTrascinamento(event)"></div></td>
+</nav>
+<section>
+<td><div id="div2" ondrop="rilascia(event)"
+ondragover="permettiTrascinamento(event)"></div></td>
+</section>
+<aside>
+<td><div id="div3" ondrop="rilascia(event)"
+ondragover="permettiTrascinamento(event)"></div></td>
+</aside>
+<footer>
+<td><div id="div4" ondrop="rilascia(event)"
+ondragover="permettiTrascinamento(event)"></div></td>
+</footer>
+
+
+<img id="drag1" src="cpu.jpg" height='250' width='250' draggable="true"
+ondragstart="trascina(event)">
+<img id="drag2" src="keyboard.jpg" height='100' width='250'  draggable="true"
+ondragstart="trascina(event)">
+<img id="drag3" src="mouse.jpg" height='50' width='70' draggable="true"
+ondragstart="trascina(event)">
+</body>
+</html>

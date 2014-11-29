@@ -1,0 +1,2 @@
+[15-May-2014 11:09:43 Europe/Berlin] PHP Notice:  Undefined index: existing-url in C:\xampp\htdocs\GS\admin\changedata.php on line 198
+[15-May-2014 11:09:43 Europe/Berlin] PHP Notice:  Undefined index: existing-url in C:\xampp\htdocs\GS\admin\changedata.php on line 201

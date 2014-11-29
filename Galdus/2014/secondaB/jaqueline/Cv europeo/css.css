@@ -1,0 +1,10 @@
+body {Background:white ; font:Verdana ;}
+nav{border-right:1px solid black; float:left; width:35%;}
+#border{border-right:1px solid black; text-align: right ;}
+#titolo {font-family:Arial Narrow; font-size:12px; }
+#contenuto1{font-family: airial Narrow ; font-size:8px;}
+#contenuto{ font-family:Arial Narrow ; font-size:9px; text-align: right ;}
+header { background:black ; font-family: airial Narrow ; font-size:13px;color:white ; text-align:center ; }
+aside{ float:left ; width:30%; text-align:right;}
+#contenuto3{font-family: airial Narrow ; font-size:10px;}
+

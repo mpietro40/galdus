@@ -1,0 +1,231 @@
+<!doctype html>
+<html>
+<head>
+<nav>
+<table border=0 cellspacing=7 align="left">
+<tr><td>
+<a href="introduzione.html" target="main" >
+<img src="introduzione.jpg" border="0" align="middle" width="136" height="37" alt="introduzione"></a>
+</td></tr>
+<tr><td>
+<a href="iltesto.html" target="main" >
+<img src="iltesto.jpg" border="0" align="middle" width="135" height="36" alt="iltesto"></a>
+</td></tr>
+<tr><td>
+<a href="hyperlink.html" target="main" >
+<img src="hyperlink.jpg" border="0" align="middle" width="135" height="36" alt="hyperlink"></a>
+ </td></tr>
+<tr><td>
+<a href="liste.html" target="main">
+<img src="liste.jpg" border="0" align="middle" width="136" height="37" alt="liste"></a>
+ </td></tr>
+<tr><td>
+<a href="tabelle.html" target="main">
+<img src="tabelle.jpg" border="0" align="middle" width="136" height="37" alt="tabelle"></a>
+ </td></tr>
+<tr><td>
+<a href="mappe.html" target="main">
+<img src="mappe.jpg" border="0" align="middle" width="136" height="37" alt="mappe"></a>
+ </td></tr>
+<tr><td>
+<a href="frame.html" target="main">
+<img src="frame.jpg" border="0" align="middle" width="136" height="37" alt="frame"></a>
+ </td></tr>
+<tr><td>
+<a href="forms.html" target="main">
+<img src="form.jpg" border="0" align="middle" width="134" height="36" alt="forms"></a>
+ </td></tr>
+<tr><td>
+<a href="css.html" target="main">
+<img src="css.jpg" border="0" align="middle" width="136" height="37" alt="css"></a>
+ </td></tr>
+<!-- <tr><td>
+<a href="tag.html" target="main">
+<img src="./immagini/tag.jpg" border="0" align="middle" width="136" height="37" alt="tag"></a>
+ </td></tr>
+<tr><td>
+<a href="bibliografia.html" target="main">
+<img src="./immagini/bibliografia.jpg" border="0" align="middle" width="134" height="35" alt="bibliografia"></a>
+ </td></tr>
+<tr><td>
+<a href="../tesi.pdf" target="main">
+<img src="./immagini/download.jpg" border="0" align="middle" width="134" height="36" alt="tesi"></a>
+</td></tr> -->
+<tr><td>
+<p><a href="elenco.php" target="new" style="font-size:10px;color:green;font-weight:bold;">elenco file</a>  </p>
+</td></tr>
+</table>
+
+</nav>
+<section>
+<head>
+<title>Il Testo</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<link rel="StyleSheet" href="./uno.css" type="text/css" media="screen">
+</head>
+<body>
+<a name="inizio"></a>
+<img src="./immagini/intestazione.jpg" align="right" width="461" height="52" alt="">
+<br>
+
+<h2>Formattare il testo</h2>
+
+<h3>Intestazioni</h3>
+
+<p>Per strutturare il testo in sezioni si ricorre spesso alle intestazioni, formattate 
+in modo da essere pi&ugrave; evidenti.</p> 
+
+<p>In HTML sono disponibili sei livelli di intestazione, specificati dai tag:</p> 
+
+<pre>&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, &lt;h6&gt;</pre> 
+
+<p>&lt;h1&gt; corrisponde all'intestazione di primo 
+livello e cos&igrave; via. </p> 
+
+<p>Esempio:</p> 
+
+<a name="punto1"></a>
+<pre>&lt;h1 align="center"&gt;Questo &egrave; h1&lt;/h1&gt;
+&lt;h2 align="right"&gt;Questo &egrave; h2&lt;/h2&gt;
+&lt;h3 align="left"&gt;Questo &egrave; h3&lt;/h3&gt;
+&lt;h4&gt;Questo &egrave; h4 &lt;/h4&gt;
+&lt;h5&gt;Questo &egrave; h5 &lt;/h5&gt;
+&lt;h6&gt;Questo &egrave; h6&lt;/h6&gt;</pre>
+
+ 
+<center> 
+<a href="iltesto.html#punto1"  
+onClick="window.open('./esempi/due.html','', config='toolbar=1,menubar=1,scrollbars=1,resizable=1,width=600 ,height=500,  ' )">
+<img src="./immagini/risultato.jpg"  border="0" width="135" height="35" alt=""></a>
+</center>
+
+<hr>
+
+<h3>Sequence di escape</h3>
+
+<p>Spazi multipli vengono convertiti  in uno spazio singolo. Per inserire&nbsp; pi&ugrave; spazi di seguito bisogna ripetere la  sequenza di escape:</p>
+<p><tt>&amp;nbsp;</tt></p>
+<p>Se vogliamo che i caratteri speciali non vengano interpretati dal browser:</p>
+<p><tt>&amp;amp;</tt> corrisponde a: <tt>&amp;&nbsp;</tt><br>
+<tt>&amp;lt;</tt> corrisponde a: <tt>&lt;</tt><br>
+<tt>&amp;gt;</tt> corrisponde a: <tt>&gt;</tt>
+</p>
+<hr>
+
+<h3>Paragrafi, interruzioni di riga, linee orizzontali</h3>
+
+<p>Poich&eacute; i browser ignorano le interruzioni di riga nel testo, &egrave; necessario 
+utilizzare appositi tag per andare a capo e per delimitare i paragrafi.</p> 
+
+<p>L'elemento <tt>&lt;p&gt; </tt>interrompe la riga corrente e 
+inserisce una riga vuota:</p> 
+
+<pre>&lt;p&gt;Questo &egrave; un paragrafo.&lt;/p&gt;</pre> 
+
+<p>Per andare a capo senza inserire una linea vuota si usa l'elemento:</p> 
+<pre>&lt;br&gt;</pre>
+
+<p>Per evidenziare maggiormente il distacco tra parti della pagina, possiamo 
+inserire una linea di separazione:</p>
+<pre>&lt;hr&gt;</pre>
+
+<p>I due tag precedenti, non avendo contenuto, non prevedono tag di chiusura.</p>
+
+<hr>
+<h3>Esempio</h3>
+<a name="punto2"></a>
+<pre>&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt; Titolo &lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1 align="center"&gt; Formattazione del testo:&lt;/h1&gt;
+  &lt;hr size="10"&gt;
+  &lt;p&gt;Questo &egrave; un paragrafo e, se la finestra del browser &lt;br&gt;
+     &egrave; abbastanza larga, vado a capo quando lo decido io:
+     PrimaParolaPrimaParolaPrimaParolaPrimaParolaPrimaParolaPrimaParolaPrimaParolaPrimaParola
+     SecondaParola
+     TerzaParolaTerzaParolaTerzaParolaTerzaParola&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+
+<center> 
+<a href="iltesto.html#punto2"  
+onClick="window.open('./esempi/tre.html','', config='toolbar=1,menubar=1,scrollbars=1,resizable=1,width=600 ,height=500,  ' )">
+<img src="./immagini/risultato.jpg"  border="0" width="135" height="35" alt=""></a>
+</center> 
+
+<hr> 
+
+<h3>Dimensionare il testo</h3>
+
+<p>Per aumentare o diminuire la dimensione dei caratteri:</p>
+<pre>&lt;big&gt;...&lt;/big&gt;</pre>
+<pre>&lt;small&gt;...&lt;/small&gt;</pre>
+<p>Esempio (le verit&agrave; del Governo):</p>
+<pre>Le &lt;big&gt;tasse &lt;big&gt;sono &lt;big&gt;diminuite&lt;/big&gt;&lt;/big&gt;&lt;/big&gt;</pre>
+<p>Le <big>tasse <big>sono <big>diminuite</big></big></big></p>
+<pre>I posti &lt;small&gt;di lavoro &lt;small&gt;sono aumentati&lt;/small&gt;&lt;/small&gt;</pre>
+<p>I posti <small>di lavoro <small>sono <small>aumentati</small></small></small></p>
+
+<hr>
+<h3>Stili logici e stili fisici</h3>
+<p>Per definire gli stili del testo, come per esempio <b>corsivo</b> e <b>grassetto</b>,&nbsp; HTML 
+offre due serie parallele di elementi, a volte definiti stili logici e stili 
+fisici.&nbsp; Lo stile logico specifica il formato lasciando al browser il modo 
+in cui verr&agrave; reso.<p>Enfasi, grassetto:</p>
+<pre>&lt;strong&gt;...&lt;/strong&gt;	oppure	&lt;b&gt;...&lt;/b&gt;</pre> 
+<p>Corsivo, italic:</p>
+<pre>&lt;em&gt; ...&lt;/em&gt;		oppure	&lt;i&gt;...&lt;/i&gt;</pre>   
+<p>Monospaced, typewriter:</p>
+<pre>&lt;code&gt;...&lt;/code&gt;		oppure	&lt;tt&gt;...&lt;/tt&gt;</pre> 
+<p>Modifica :</p>
+<pre>&lt;sub&gt;...&lt;/sub&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;sup&gt;...&lt;/sup&gt;</pre> 
+<p>Testo non formattato (per inserire linee di codice):</p>
+<pre>&lt;pre&gt;...&lt;/pre&gt;</pre>   
+<hr>
+<h3>Esempio</h3>
+<a name="punto3"></a>
+<pre>&lt;html&gt;
+&lt;head&gt;
+&nbsp; &lt;title&gt; Titolo &lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1 align="center"&gt; Stili e dimensionamento&lt;/h1&gt;
+&nbsp; &lt;p&gt;Carattere normale. &lt;br&gt;
+  &lt;b&gt;grassetto:&lt;/b&gt;&lt;strong&gt;forte enfasi.&lt;/strong&gt&lt;br&gt;
+  &lt;em&gt;corsivo&lt;/em&gt;, &lt;i&gt;inclinato.&lt;/i&gt;&lt;br&gt;
+  &lt;code&gt;codice.&lt/code&gt;&lt;/p&gt;
+  &lt;p&gt;Inizio del paragrafo, colore e dimensioni normali
+  &lt;font size="+3" color="#ff0000"&gt;colore e dimensione diversi.&lt;/font&gt;
+  &lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<center> 
+<a href="iltesto.html#punto3"  
+onClick="window.open('./esempi/quattro.html','', config='toolbar=1,menubar=1,scrollbars=1,resizable=1,width=600 ,height=500,  ' )">
+<img src="./immagini/risultato.jpg"  border="0" width="135" height="35" alt=""></a>
+</center> 
+
+<br><br><br>
+<table align="center" border=0 >
+	<tr>
+		<td> <a href="introduzione.html" target="main" >
+        <img 
+src="./immagini/precedente.jpg" border="0" width="135" height="34" alt="" ></a></td>
+		<td> <a href="iltesto.html#inizio" target="main" >
+        <img src="./immagini/inizio.jpg" border="0" width="135" height="33" alt="" ></a></td>
+
+		<td> <a href="hyperlink.html" target="main" >
+        <img src="./immagini/successiva.jpg" border="0" width="135" height="34" alt="" ></a></td>
+	</tr>
+</table>
+
+
+
+</body>
+</html> 

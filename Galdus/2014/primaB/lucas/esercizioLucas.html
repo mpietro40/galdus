@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+  <title>Esempio di pagina con funzione JavaScript</title>
+  <script language="JavaScript">
+// Calcolo risultato opaerazione aritmetica
+
+function calcola(){
+
+//alert("entrato");
+var indice = document.f1.operazione.selectedIndex;
+var segno = document.f1.operazione[document.f1.operazione.selectedIndex].value;
+var n1 = eval(document.f1.primo.value);
+var n2 = eval(document.f1.secondo.value);
+//alert(segno);
+if(segno=="+")
+document.f1.risultato.value = n1+n2;
+else if(segno=="-")
+document.f1.risultato.value = n1-n2;
+else if(segno=="*")
+document.f1.risultato.value = n1*n2;
+else if(segno=="/")
+document.f1.risultato.value = n1/n2;
+
+/*switch (indice) {
+case 1:
+documento.f1.risultato.value = n1+n2;
+break;
+case 2:
+documento.f1.risultato.value = n1-n2;
+break;
+case 3:
+documento.f1.risultato.value = n1*n2;
+break;
+case 4:
+documento.f1.risultato.value = n1/n2;
+break;
+
+}
+*/
+
+}
+// Reset modulo
+function azzera(){
+  document.f1.reset();
+  writeData();
+//  alert("Azzera operazione");
+}
+
+//stampa la data
+
+function writeData(){
+ var data  = new Date();
+ document.data1.oggi.value="Oggi e' "+data;
+ }
+ </script>
+ <style>body{background-color:#654321;}
+ centro{imargin:auto;
+ }
+ </style>
+ </head>
+ <body onload="writeData()">
+ <div align="center"><h1>Esempio calcoli aritmentici</h1></div>
+ <br>
+ <div align="center">
+ <form name="data1">
+    <input type="text" name="oggi" size="40" />
+</form>
+</div>
+
+<br>
+<!--Acquisizione degli input dell'utente --><div class=centro>
+<FORM name="f1">
+<table>
+<tr>
+<td>Primo numero</td>
+<td><INPUT type="text" name="primo" size="5"></td>
+</tr>
+<tr>
+<td>Secondo numero</td>
+<td><INPUT type="text" name="secondo" size="5"></td>
+</tr>
+<tr>
+<td>Scelta operazione</td>
+<td>
+<SELECT name="operazione" onchange="calcola()">
+<OPTION></OPTION>
+<OPTION value="+">Addizione</OPTION>
+<OPTION value="-">Sottrazione</OPTION>
+<OPTION value="*">moltiplicazione</OPTION>
+<OPTION value="/">Divisione</OPTION>
+</select>
+</td>
+</tr>
+<tr>
+<td>Risultato</td>
+<td><INPUT type="text" name="risultato" size="15"></td>
+</tr>
+</table></div>
+<br></br>
+<INPUT type="button" value="Azzera" onclick="azzera()"> &nbsp;
+<INPUT type="button" value="Calcola" onclick="calcola()">
+</forum>
+<p>
+</body>
+</html>

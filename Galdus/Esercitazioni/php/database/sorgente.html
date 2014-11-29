@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+<style>
+.codice{
+color:red;
+font-size:16px;
+}
+</style>
+<title>XAMPP phonebook</title>
+<link href="xampp.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+Questa pagina contiene il codice sorgente dell'esercizio
+<span class=codice><br>
+
+<br />
+&lt;!doctype html&gt;<br />
+&lt;html&gt;<br />
+&lt;head&gt;<br />
+<br />
+&lt;title&gt;XAMPP phonebook&lt;/title&gt;<br />
+&lt;link href=&quot;xampp.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;<br />
+<br />
+&amp;nbsp;&lt;p&gt;<br />
+&lt;h1&gt;&lt;?php echo &quot;Primo esempio php&quot;?&gt;&lt;/h1&gt;<br />
+<br />
+&lt;?php<br />
+<br />
+//    Copyright (C) 2003-2004 Kai Seidler, oswald@apachefriends.org<br />
+//<br />
+//    This program is free software; you can redistribute it and/or modify<br />
+//    it under the terms of the GNU General Public License as published by<br />
+//    the Free Software Foundation; either version 2 of the License, or<br />
+//    (at your option) any later version.<br />
+//<br />
+//    This program is distributed in the hope that it will be useful,<br />
+//    but WITHOUT ANY WARRANTY; without even the implied warranty of<br />
+//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the<br />
+//    GNU General Public License for more details.<br />
+//<br />
+//    You should have received a copy of the GNU General Public License<br />
+//    along with this program; if not, write to the Free Software<br />
+//    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.<br />
+<br />
+	if(!($db=new SQLite3('sqlite/phonebook.sqlite3', '0666')))<br />
+	{<br />
+		echo &quot;&lt;h2&gt;&quot;.&quot;Prova inserimento dati&quot;.&quot;&lt;/h2&gt;&quot;;<br />
+		die();<br />
+	}<br />
+?&gt;<br />
+&lt;h2&gt;I miei numeri telefonici&lt;/h2&gt;<br />
+<br />
+&lt;table border=0 cellpadding=0 cellspacing=0&gt;<br />
+&lt;tr bgcolor=#f87820&gt;<br />
+&lt;td&gt;&lt;img src=img/blank.gif width=10 height=25&gt;&lt;/td&gt;<br />
+&lt;td class=tabhead&gt;&lt;img src=img/blank.gif width=150 height=6&gt;&lt;br&gt;&lt;b&gt;Cognome&lt;/b&gt;&lt;/td&gt;<br />
+&lt;td class=tabhead&gt;&lt;img src=img/blank.gif width=150 height=6&gt;&lt;br&gt;&lt;b&gt;Nome&lt;/b&gt;&lt;/td&gt;<br />
+&lt;td class=tabhead&gt;&lt;img src=img/blank.gif width=150 height=6&gt;&lt;br&gt;&lt;b&gt;Numero telefonico&lt;/b&gt;&lt;/td&gt;<br />
+&lt;td class=tabhead&gt;&lt;img src=img/blank.gif width=50 height=6&gt;&lt;br&gt;&lt;b&gt;Comando&lt;/b&gt;&lt;/td&gt;<br />
+&lt;td&gt;&lt;img src=img/blank.gif width=10 height=25&gt;&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+<br />
+<br />
+&lt;?php<br />
+	$firstname=$db-&gt;escapeString(@$_REQUEST['firstname']);<br />
+	$lastname=$db-&gt;escapeString(@$_REQUEST['lastname']);<br />
+	$phone=$db-&gt;escapeString(@$_REQUEST['phone']);<br />
+<br />
+	if($firstname!=&quot;&quot;)<br />
+	{<br />
+		$db-&gt;query(&quot;INSERT INTO users (firstname,lastname,phone) VALUES('$firstname','$lastname','$phone')&quot;);<br />
+	}<br />
+<br />
+	if(@$_REQUEST['action']==&quot;del&quot;)<br />
+	{<br />
+		$db-&gt;query(&quot;DELETE FROM users WHERE id=&quot;.round($_REQUEST['id']));<br />
+	}<br />
+<br />
+	$result=$db-&gt;query(&quot;SELECT id,firstname,lastname,phone FROM users ORDER BY lastname;&quot;);<br />
+	<br />
+	$i=0;<br />
+	while( $row=$result-&gt;fetchArray(SQLITE3_ASSOC) )<br />
+	{<br />
+		if($i&gt;0)<br />
+		{<br />
+			echo &quot;&lt;tr valign=bottom&gt;&quot;;<br />
+			echo &quot;&lt;td bgcolor=#ffffff background='img/strichel.gif' colspan=6&gt;&lt;img src=img/blank.gif width=1 height=1&gt;&lt;/td&gt;&quot;;<br />
+			echo &quot;&lt;/tr&gt;&quot;;<br />
+		}<br />
+		echo &quot;&lt;tr valign=center&gt;&quot;;<br />
+		echo &quot;&lt;td class=tabval&gt;&lt;img src=img/blank.gif width=10 height=20&gt;&lt;/td&gt;&quot;;<br />
+		echo &quot;&lt;td class=tabval&gt;&lt;b&gt;&quot;.htmlspecialchars($row['lastname']).&quot;&lt;/b&gt;&lt;/td&gt;&quot;;<br />
+		echo &quot;&lt;td class=tabval&gt;&quot;.htmlspecialchars($row['firstname']).&quot;&amp;nbsp;&lt;/td&gt;&quot;;<br />
+		echo &quot;&lt;td class=tabval&gt;&quot;.htmlspecialchars($row['phone']).&quot;&amp;nbsp;&lt;/td&gt;&quot;;<br />
+<br />
+		echo &quot;&lt;td class=tabval&gt;&lt;a onclick=&quot;return confirm('&quot;.&quot;'Sicuro?'&quot;.&quot;');&quot; href=rubrica.php?action=del&amp;id=&quot;.$row['id'].&quot;&gt;&lt;span class=red&gt;[&quot;.&quot;[CANCELLA]&quot;.&quot;]&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&quot;;<br />
+		echo &quot;&lt;td class=tabval&gt;&lt;/td&gt;&quot;;<br />
+		echo &quot;&lt;/tr&gt;&quot;;<br />
+		$i++;<br />
+<br />
+	}<br />
+<br />
+	echo &quot;&lt;tr valign=bottom&gt;&quot;;<br />
+        echo &quot;&lt;td bgcolor=#fb7922 colspan=6&gt;&lt;img src=img/blank.gif width=1 height=8&gt;&lt;/td&gt;&quot;;<br />
+        echo &quot;&lt;/tr&gt;&quot;;<br />
+<br />
+	$db-&gt;close();<br />
+<br />
+?&gt;<br />
+<br />
+&lt;/table&gt;<br />
+<br />
+&lt;h2&gt;&lt;?php print &quot;Inserisci dati&quot;?&gt;&lt;/h2&gt;<br />
+<br />
+&lt;form action=rubrica.php method=get&gt;<br />
+&lt;table border=0 cellpadding=0 cellspacing=0&gt;<br />
+&lt;tr&gt;&lt;td&gt;Cognome:&lt;/td&gt;&lt;td&gt;&lt;input type=text size=20 name=lastname&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;Nome:&lt;/td&gt;&lt;td&gt; &lt;input type=text size=20 name=firstname&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;Numero telefonico:&lt;/td&gt;&lt;td&gt; &lt;input type=text size=20 name=phone&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;input type=submit border=0 value=&quot;AGGIUNGI&quot;&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;/table&gt;<br />
+&lt;/form&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;<br />
+<hr>
+<a href="rubrica.php">Torna all'esercizio</a>
+
+</span>
+</body>
+</html>

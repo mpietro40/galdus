@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<head>
+<title>
+Questinario raccolta dati creazione rete
+</title>
+<link rel='stylesheet' href='css/style.css'>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<style>
+/*caratteristiche dello stile di questo form*/
+section{
+  width:70%;
+  margin:auto;
+  padding:10px;
+}
+.centrato{
+  width:800px;
+}
+form#payment{
+  width:750px;
+  background:cyan;
+}
+fieldset ol li{
+  width:97%;
+}
+form#payment label{
+  width:320px;
+}
+body{
+background:MEDIUMSPRINGGREEN;
+}
+</style>
+
+</head>
+<body>
+<section>
+<div class="centrato">	
+<h1>Questionario di raccolta dati per creare una rete</h1>
+<h5>I dati indicati di seguito sono alcuni di quelli necessari da raccogliere prima di mettersi alle prese con la realizzazione di una rete.<br>
+&Egrave; in primo luogo necessario capire le funzioni della rete, a cosa e' dedicata? Quanto deve essere grande? Sappiamo gia' che ci sara' un solo modem/router? Oppure serve qualcosa di piu' complesso?
+<br> Quindi e' necessario capire quanti e quali sono i device che apparterranno alla rete?
+Quali sono le caratteristiche di questi device? Infine una volta raccolti tutti i dati si puo' finalmente partire con la progettazione della rete.</h5>
+<form id=payment method="POST" action="#">
+
+<fieldset>
+<legend>Dati della rete</legend>
+<ol>
+<li>
+<label for=name>Nome e Cognome del responsabile</label>
+<input id=nome name=nome type=text placeholder="Nome e Cognome" required autofocus>
+</li>
+<li>
+<label for=Cognome>Indirizzo</label>
+<input id=Cognome name=classe type=text placeholder="indirizzo" required>
+</li>
+<li>
+<label for=sedi>Numero delle sedi dell'azienda</label>
+<input id=Cognome name=classe type=text placeholder="sedi" required>
+</li>
+<li>
+<label for=DataCompilazione>Data di Compilazione </label>
+<input type=date name=compilazione placeholder="gg/mm/aaaa" required >
+</li>
+</ol>
+</fieldset>
+<fieldset>
+<legend>Dimensioni della rete in base alla tipologia</legend>
+<ol>
+<li>
+<label> LAN </label>
+<input type="checkbox" name="Elett" value="LAN"/>
+</li>
+<li>
+<label> MAN </label>
+<input type="checkbox" name="Elett" value="MAN"/>
+</li>
+<li>
+<label> WAN </label>
+<input type="checkbox" name="Elett " value="WAN"/>
+</li>
+<li>
+<label> Altro </label>
+<input type="text" name="Elett" value="Specificare"/>
+</li>
+</ol>
+</fieldset>
+<fieldset>
+<legend>&Egrave; gi&agrave; nota la forma della rete (topologia)</legend>
+<ol>
+<li>
+<label for=Elett> A stella </label>
+<input type="radio" name="Elett" value="stella"/> 
+<br />
+<label for=Elett> A bus </label>
+<input type="radio" name="Elett" value="bus"/>   
+<br />  
+<label for=Elett> Ad albero </label>
+<input type="radio" name="Elett " value="albero"/> 
+<br />
+<label for=Elett> Altro </label>
+<input type="text" name="Elett" value="Specificare"/>  
+<br />   
+</li>
+</ol>
+</fieldset>
+
+<fieldset>
+<legend>Caratteristiche del PC</legend>
+<ol>
+<li>
+<legend>Recupera tutti i dati del tuo PC</legend>
+<li>
+<label for=A>Processore</label>
+<input id=A name='nameclass' type='text' value='Processore'>
+</li>
+<li>
+<label for=B>RAM</label>
+<input id=B name='nameclass' type='text' value='RAM'>
+</li>
+<li>
+<input id=c name='nameclass' type='text' value='c'>
+<label for=G>C</label>
+</li>
+<li>
+<input id=C name='nameclass' type='text' value='d'>
+<label for=C>D</label>
+</li>
+<li>
+<input id=D name='nameclass' type='text' value='e'>
+<label for=D>E</label>
+</li>
+<li>
+<input id=E name='nameclass' type='text' value='f'>
+<label for=E>F</label>
+</li>
+<li>
+<input id=F name='nameclass' type='text' value='g'>
+<label for=F>G</label>
+</li>
+</ol>
+</fieldset>
+
+<fieldset><!-- Consumo degli elettrodomestici -->
+<legend>Indica il consumo degli elettrodomestici</legend>
+<ol>
+<li>
+<label for=Elett> Asciugatrice </label>
+<input type="text" id="Elett" name="Elett" class="test" value="kw  "/> 
+<br />
+<label for=Elett> Frigorifero </label>
+<input type="text" id="Elett" name="Elett" class="test" value=""/>   
+<br />  
+<label for=Elett> Micro onde </label>
+<input type="text" id="Elett" name="Elett" class="test" value=""/> 
+<br />
+<label for=Elett> Lavastoviglie </label>
+<input type="text" id="Elett" name="Elett" class="test" value=""/>  
+<br />   
+<label for=Elett> Televisore </label>
+<input type="text" id="Elett" name="Elett" class="test" value=""/>  
+<br />  
+<label for=Elett> Computer </label>
+<input type="text" id="Elett" name="Elett" class="test" value=""/>  
+<br />  
+<label for=Elett> Aspirapolvere </label>
+<input type="text" id="Elett" name="Elett" class="test" value=""/>  
+<br />  
+<label for=Elett> Fornello </label>
+<input type="text" id="Elett" name="Elett" class="test" value=""/> 
+<br />  
+<label for=Elett> Lavatrice </label>
+<input type="text" id="Elett" name="Elett" class="test" value=""/> 
+<br />  
+<label for=Elett> Stampante </label>
+<input type="text" id="Elett" name="Elett" class="test" value=""/>  
+<br />  
+<label for=Elett> Ventilatore </label>
+<input type="text" id="Elett" name="Elett" class="test" value=""/> 
+<br />  
+<label for=Elett> Condizionatore </label>
+<input type="text" id="Elett" name="Elett" class="test" value=""/> 
+<br />
+<label for=Elett> Somma degli altri consumi</label>
+<input type="text" id="Elett" name="Elett" value=""/>
+<br />  
+<label for=Elett> Totale consumi</label>
+<input type="output" id="totale" name="Elett" class="risu" value="kw "/><br/>
+<label for=Elett> &nbsp;</label>
+<!--button id="somma" name='Calcola'>Calcola totale</button-->
+<input type="button" id="btn1" value="Somma"/>
+</li>
+</ol>
+
+</fieldset>
+<fieldset><!-- Costi fissi e di servizio -->
+<legend>Costi fissi e costi per servizi di rete </legend>
+<ol>
+<li>
+<label for=Elett id="large"> 
+Nella bolletta dell'energia elettrica, tra le voci che compongono la spesa totale c'&egrave; una distinzione tra costi fissi e servizi di rete. 
+Scrivi gli importi in &euro; e prova a dire secondo perch&eacute; ci sono queste due voci di spesa diverse.
+</label>
+<textarea rows="10" cols="50" name="fissi">
+</textarea>
+</li>
+</ol>
+</fieldset>
+<fieldset><!-- Costi fasce orarie -->
+<legend>Fasce orarie costi energia elettrica</legend>
+<ol>
+<li>
+<label for=Elett id="large"> 
+In quante fasce orarie &egrave; divisa il costo dell'energia elettrica per uso domestico (di solito indicate dalla lettera F e un numero)? 
+Sono le ore in cui l'energia costa meno e altre in cui costa di pi&ugrave;. Scrivi il costo di 1 kWh per ogni fascia.
+</label>
+<textarea rows="10" cols="50" name="fasce">
+</textarea>
+</li>
+</ol>
+</fieldset>
+
+<fieldset><!-- Costi  A1, A2, A3 -->
+<legend>Fasce A1, A2, A3</legend>
+<ol>
+<li>
+<label for=Elett id="large"> 
+Oltre ai consumi di energia, in bolletta, potrebbero esserci alcune voci come A1, A2, A3,... Cosa indicano?
+</label>
+<textarea rows="10" cols="50" name="a1a2a3">
+</textarea>
+</li>
+</ol>
+</fieldset>
+
+<fieldset>
+<ol>
+<li class=centrato>
+<input type=submit value='Invia Dati'/>
+<input type=reset value='annulla'/>
+</li>
+</ol>
+</fieldset>
+<script> 
+$(document).ready ( function () {
+            $("#btn1").click ( function () {
+              var resultVal = 0.0;
+              var objRegExp = '\s+';
+               $(".test").each ( function() {
+                    var temp = $(this).val();
+                    if(!isNaN(temp) && temp) //se non e' un numero non lo sommo
+                       resultVal += parseFloat ( temp.replace(/\s/g,'').replace(',','.'));
+                });
+                //alert ( resultVal );
+                $(".risu").val(""+resultVal);
+                
+            });
+        });
+</script>
+</form>	
+</div>
+</section>
+</body>
+</html>

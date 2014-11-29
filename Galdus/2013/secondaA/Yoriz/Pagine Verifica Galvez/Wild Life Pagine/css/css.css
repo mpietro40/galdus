@@ -1,0 +1,42 @@
+html,body{margin:10px; padding: 10px;}
+body{
+ background:INDIGO;
+border: 5px double DODGERBLUE;
+text-align:center;
+}
+font{color:DODGERBLUE;} 
+a:link {color:#669900;} 
+a:visited {text-decoration: none; color:#6699FF;}
+a:hover {color: red;}
+table, td, th
+{
+border:2px solid DODGERBLUE;
+}
+th
+{
+background-color:MIDNIGHTBLUE;
+color:DODGERBLUE;
+} 
+td
+{
+background-color:MIDNIGHTBLUE;
+color:DODGERBLUE;
+}
+h1
+{
+Color:DODGERBLUE;
+text-align:center;
+}
+h2
+{
+Color:DODGERBLUE;
+text-align:center;
+}
+img{
+width:400px;
+height:300px;
+}
+p{
+text-align:right;
+color:DODGERBLUE;
+}

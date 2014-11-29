@@ -1,0 +1,120 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+background:transparent url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN8YPGuvvQmpyRSrcRWOQNiBUBapvDyzCj-IGCKxAMY0pv0xNs");
+}
+.info a.back{
+	position: absolute;
+	bottom:30px;
+	left:20px;
+	text-decoration:none;
+	color:#603d05;
+	text-shadow:1px 1px 1px #fff;
+	font-weight:bold;
+}
+.info a.back:hover{
+	color:#000;
+}
+#header{
+    position:left;
+    top:10px;
+    left:0px;
+    width:900px;
+    height:100px;
+    font-size:18px;
+    background:transparent url(w.jpg) no-repeat top left;
+}
+#content{
+    width:650px;
+    height:550px;
+    margin:-120px auto 0px auto;
+    background-image:url();
+}
+#content p{
+    margin:15px;
+    width:800px;
+    background:transparent url(w.jpg);
+    text-align:center;
+    position:left;
+    left: -100px;
+   float:left;
+}
+#content .text{
+    padding:300px 0px 150px 150px;
+    background:transparent url();
+}
+#navigation li {
+        list-style:center;
+        display: block;
+        float: right;
+        margin: 0.4em;
+        
+        background:transparent url(w.jpg);
+        
+}
+#navigation li a {
+        text-shadow: 0 2px 1px rgba(0,0,0,0.5);
+        display: block;
+        text-decoration:left;
+        color: #000000;
+        font-size: 1.3em;
+        margin: 0.7em;
+        display: block;
+        background:transparent url(w.jpg);
+}
+#navigation li a:hover {
+        margin-top: 2px;
+}
+#navigation_container {
+
+   position:absolute;
+   top:10px;
+   left:400px;
+   width: 960px;
+}
+#v {
+position:absolute;
+font-family:Arial black;
+font-size: 25px;
+color:#008800;
+margin:50px 50px 50px 450px;
+text-align:center;
+background:transparent url(w.jpg);
+}
+#p{
+font-family:Arial black;
+font-size: 15px;
+color:#ffffff;
+margin:50px 450px 150px 150px;
+text-align:center;
+background-color:black;
+}
+aside {
+float: right;
+width: 170px;
+padding: 1em 5px;
+background-color:#000000;
+color:#ffffff;
+}
+#n {
+position:right;
+font-family:Arial black;
+font-size: 18px;
+color:#008800;
+margin:50px 50px 50px 600px;
+
+}
+
+footer{
+clear:both;
+width:100%; 
+text-align:center; 
+padding: 5px 0;
+background-color: #272737; 
+color: #606060;
+font-family:Algerian;
+bottom:0;
+position:absolute;
+}

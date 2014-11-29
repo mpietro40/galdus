@@ -1,0 +1,326 @@
+/* Eric Meyer Reset CSS File */
+
+@import url("reset.css");
+
+/* Template Layout CSS */
+
+html {
+   overflow-y: scroll;
+   height: 101%
+}
+
+body
+{
+	//background: #610B0B;
+	background-image:url('http://classi.galdusmaffi.tk/2A/Kurt/GS/data/uploads/img/q.jpg');
+	font-family: Helvetica, Arial, sans-serif;
+	color: #858585;
+	padding: 20px;
+	font-size: 14px;
+}
+
+a { color: #9C0; }
+a:hover { color: #FFF; }
+p { margin: 0 0 0 0; }
+
+a img.imgright { float: right; padding: 5px; margin: 0 0 10px 15px; border: 1px solid #333; }
+a:hover img.imgright { border: 5px solid #9C0; padding: 1px; margin: 0 0 10px 15px; }
+
+h1, h2, h3, h4, h5 { font-weight: bold; margin: 0 0 5px 0; color: #FFF; text-shadow: 2px 2px 2px #000000; }
+h1 {font-size: 28px}
+h2 {font-size: 24px}
+h3 {font-size: 20px}
+h4 {font-size: 16px}
+h5 {font-size: 14px}
+
+/* Start Wrapper Container */
+
+#wrapper
+{
+	width: 940px;
+	margin: 0 auto;
+}
+
+/* End Wrapper Container */
+
+/* Start Nav Styles */
+
+nav
+{
+	width: 940px;
+	height: 40px;
+}
+
+nav ul.menu
+{
+	float: right;
+}
+
+nav ul.menu li
+{
+	display: inline;
+}
+
+nav ul.menu li a
+{
+	float: left;
+	line-height: 40px;
+	padding: 0 20px;
+	//background: #111;
+	background-image:url('http://classi.galdusmaffi.tk/2A/Kurt/GS/data/uploads/img/w.jpg');
+	color: #FFF;
+	font-weight: bold;
+}
+
+nav ul.menu li.current a
+{
+	background: #191919;
+	color: #FFF;
+}
+
+nav ul.menu li a:hover
+{
+	color: #9C0;
+}
+
+/* Start Child Menu Styles - Variation of Nav */
+#child_menu
+{
+  width: 940px;
+  height: 40px;
+  clear: both;
+}
+
+#child_menu a
+{
+  float: left;
+  line-height: 40px;
+  padding: 0 20px;
+  background: #111;
+  color: #FFF;
+  font-weight: bold;
+}
+
+#child_menu .currentpath a
+{
+  background: #191919;
+  color: #FFF;
+}
+
+#child_menu .current a
+{
+  background: #191919;
+  color: #FFF;
+}
+
+#child_menu a:hover
+{
+  color: #9C0;
+}
+
+/*hide parent item to avoid redundancy, because this is already displayed in the navigation menu*/
+ #child_menu #parent a {
+  display: none;
+}
+
+/* End Child Menu Styles */
+
+/* Start Header Styles */
+
+header
+{
+	width: 900px;
+	height: 120px;
+	padding: 0 20px;
+	//background: #191919;
+	background-image:url('http://classi.galdusmaffi.tk/2A/Kurt/GS/data/uploads/img/w.jpg');
+}
+
+header h1
+{
+	font-size: 42px;
+	line-height: 120px;
+	text-align: right;
+	font-weight: bold;
+	letter-spacing: -2px;
+	
+	text-shadow: 2px 2px 2px #000000;
+}
+
+header h1 a
+{
+	color: #FFF;
+}
+
+header h1 a:hover
+{
+	color: #9C0;
+}
+
+/* End Header Styles */
+
+/* Start Main Styles */
+
+section#main
+{
+  width: 940px;
+  line-height: 24px;
+}
+
+
+section#main p, section#mainul, section#main ol { 
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+
+/*Avoid margins for nested lists*/
+section#main ul ul, section#main ul ol, section#main ol ul, section#main ol ol {
+  margin-top: 0px;
+  margin-bottom:0px;
+}
+
+section#main ul , section#main ol{
+  margin-left: 20px;
+}
+
+section#main ul {
+  list-style: square;
+}
+
+section#main ol {
+  list-style: decimal;
+}
+
+section#content p {
+  margin-bottom: 20px;
+}
+
+section#content h2
+{
+  margin-top: 15px;
+}
+
+section#content h4 {
+  margin-top: 15px;
+}
+
+/*content for default template pages with sidebar*/
+section#content
+{
+	float: left;
+	width: 800px;
+	padding: 20px;
+}
+
+/*content for no_sidebar templates*/
+section#content.no_sidebar {
+  width: 940px;
+}
+
+aside#sidebar
+{
+	float: left;
+	width: 280px;
+	padding: 20px;
+}
+
+aside#sidebar ul
+{
+	margin: 0 0 15px 0;
+}
+
+aside#sidebar ul li
+{
+	display: block;
+}
+
+aside#sidebar ul li a
+{
+	float: left;
+	width: 280px;
+	padding: 6px 10px;
+	margin: 0 0 5px 0;
+	border-left: 3px solid #222;
+	line-height: 20px;
+}
+
+aside#sidebar ul li a:hover
+{
+	background: #9C0;
+	border-left: 3px solid #9C0;
+	color: #111;
+}
+
+aside#sidebar p {
+  margin-bottom: 30px;
+}
+
+/* End Main Styles */
+
+/* Start Footer Styles */
+
+footer section#footertop
+{
+	width: 940px;
+	line-height: 22px;
+	border-top: 1px dotted #333;
+}
+
+aside.footer-column
+{
+	float: left;
+	width: 430px;
+	padding: 20px;
+}
+
+section#copyright
+{
+	clear: both;
+	width: 900px;
+	padding: 20px;
+	line-height: 22px;
+	font-size: 12px;
+	text-align: left;
+	border-top: 1px dotted #333;
+}
+
+/* End Footer Styles */
+
+/* Start Template Copyright Styles */
+
+section#templatecopy
+{
+	clear: both;
+	width: 900px;
+	padding: 20px;
+	line-height: 22px;
+	text-align: right;
+	font-size: 12px;
+	border-top: 1px dotted #333;
+}
+
+section#templatecopy a
+{
+	font-weight: bold;
+}
+
+/* End Footer Styles */
+
+/* Search Styles */
+.search-entry-date {
+  font-size: 12px;
+  color: white;
+}
+
+#content ul.search-results li{
+  margin-bottom: 25px;
+}
+
+#sidebar li a {
+  font-size: 14px;
+}
+
+#sidebar ul.search-results .search-entry-excerpt {
+  display: none;
+}

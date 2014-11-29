@@ -1,0 +1,95 @@
+<!doctype html>
+<head>
+<title>Componenti reti</title>
+<link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<script>
+$('#cssmenu').prepend('<div id="indicatorContainer"><div id="pIndicator"><div id="cIndicator"></div></div></div>');
+    var activeElement = $('#cssmenu>ul>li:first');
+
+    $('#cssmenu>ul>li').each(function() {
+        if ($(this).hasClass('active')) {
+            activeElement = $(this);
+        }
+    });
+
+
+	var posLeft = activeElement.position().left;
+	var elementWidth = activeElement.width();
+	posLeft = posLeft + elementWidth/2 -6;
+	if (activeElement.hasClass('has-sub')) {
+		posLeft -= 6;
+	}
+
+	$('#cssmenu #pIndicator').css('left', posLeft);
+	var element, leftPos, indicator = $('#cssmenu pIndicator');
+	
+	$("#cssmenu>ul>li").hover(function() {
+        element = $(this);
+        var w = element.width();
+        if ($(this).hasClass('has-sub'))
+        {
+        	leftPos = element.position().left + w/2 - 12;
+        }
+        else {
+        	leftPos = element.position().left + w/2 - 6;
+        }
+
+        $('#cssmenu #pIndicator').css('left', leftPos);
+    }
+    , function() {
+    	$('#cssmenu #pIndicator').css('left', posLeft);
+    });
+
+
+	$('#cssmenu>ul>.has-sub>ul').append('<div class="submenuArrow"></div>');
+	$('#cssmenu>ul').children('.has-sub').each(function() {
+		var posLeftArrow = $(this).width();
+		posLeftArrow /= 2;
+		posLeftArrow -= 12;
+		$(this).find('.submenuArrow').css('left', posLeftArrow);
+
+	});
+
+	$('#cssmenu>ul').prepend('<li id="menu-button"><a>Menu</a></li>');
+	$( "#menu-button" ).click(function(){
+    		if ($(this).parent().hasClass('open')) {
+    			$(this).parent().removeClass('open');
+    		}
+    		else {
+    			$(this).parent().addClass('open');
+    		}
+    	});
+</script>
+</head>
+<body>
+<script src="js/menu.js"></script>
+<br><br><br>
+<table align="center">
+<tr>
+<td id="g"><b>Nome del servizio</b></td>
+<td id="g"><b>Logo del servizio</b></td>
+<td id="g"><b>Indirizzo web</b></td>
+<td id="g"><b>Costo e spazio disponibile</b></td>
+</tr>
+<tr>
+<td>iCloud</td>
+<td><img src="img/icloud.png" id="img2"></td>
+<td><a href="https://www.icloud.com/">iCloud</a></td>
+<td>5GB gratis, 10GB 16€ l’anno, 20GB 32€ l’anno, 50GB 80€ l’anno</td>
+</tr>
+<tr>
+<td>Amazon Cloud Drive</td>
+<td><img src="img/amazon.jpeg" id="img2"></td>
+<td><a href="http://www.amazon.it/gp/feature.html?ie=UTF8&docId=1000657463">Amazon Cloud</a></td>
+<td>5GB gratis; 20GB 8€ l’anno, 50GB 20€ l’anno, 100GB 40€ l’anno, <br>200GB 80€ l’anno, 500GB 200€ l’anno, 1TB 400€ l’anno</td>
+</tr>
+<tr>
+<td>Memopal</td>
+<td><img src="img/logo.gif"></td>
+<td><a href="http://www.memopal.com/it/">Memopal</a></td>
+<td>3GB gratis, 200GB 49€ l’anno nella soluzione personale. Business 10GB 30€ l’anno</td>
+</tr>
+</table>
+</body>
+</html>

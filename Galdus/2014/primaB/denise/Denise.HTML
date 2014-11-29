@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title> Questinario </title>
+<link rel='stylesheet' href='css/style.css'>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jqyery.min.js"></script>
+<style id="jsbin-css"></style>
+</head>
+<body>
+<div class="centrato">
+<h1>Questionario sull'uso dell html15</h1>
+<h5>Prova a creare questa pagina</h5>
+<form id=payment method="POST" action="#">
+<fieldset>
+<legend>Dati personali</legend>
+<ol>
+<li>
+<label for=name>Nome e Cognome</label>
+<input id=nome name=nome tyoe=text placeholder="Nome e Cognome" required autofocus>
+</li>
+<li>
+<label for=Cognome>Classe</label>
+<input id=Cognome name=classe type=text placeholder="Classe" required autofocus>
+</li>
+<li>
+<label for=sesso>Sesso</label>
+<select name=sesso>
+<option value=''> </option>
+<option value='maschio'> Maschio</option>
+<option value='femmina'> Femmina</option>
+</select>
+</li>
+<li>
+<label for=datadinascita>Data di nascita</label>
+<input type=data name=datanascita>
+</li>
+<li>
+<label for=datacomplicazione>Data di compilazione </label>
+<input type=data name=born placeholder="gg/mm/aaaa" required >
+</li>
+</ol>
+</fieldset>
+<fieldset>
+<ol>
+<li class=centrato>
+<input type=submit value='Invia Dati'/>
+<input type=reset value='annulla'/>
+</li>
+</ol>
+</fieldset>
+</form>
+</div>
+</body>
+</html>
+

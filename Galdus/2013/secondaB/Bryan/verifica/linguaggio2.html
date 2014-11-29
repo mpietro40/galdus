@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>bryan garcia</title>
+<script>
+var dimensione= 10;
+function aumenta(valore){ 
+if(valore==2){
+dimensione=dimensione +10;
+document.getElementById("pagina").style.fontSize=dimensione+"px";
+}
+if(valore==1) {
+dimensione=dimensione -10;
+document.getElementById("pagina").style.fontSize=dimensione+"px";
+}
+}
+function colora(scelta){
+if(scelta==1){
+document.getElementById("pagina").style.backgroundColor="red";
+document.getElementById("pagina").style.color="orange";
+}
+if(scelta==2){
+document.getElementById("pagina").style.backgroundColor="yellow";
+document.getElementById("pagina").style.color="lime";
+}
+if(scelta==3){
+document.getElementById("pagina").style.backgroundColor="lime";
+document.getElementById("pagina").style.color="red";
+}
+}
+</script>
+
+<style>
+body{ /*background: black;*/
+}
+body{
+color:blue
+}
+body{
+background:#000000;
+}
+table,td{
+border: solid 3px blue ;
+color:blue
+}
+table{
+border-collapse:collapse;
+}
+</style>
+</head>
+<body id=pagina>
+<body id=pagina>
+<div id= "telaio">
+<div id="testata"></div>
+<div id="centrale"><p>&nbsp;</p>
+
+<h1>WINDOWS</H1>
+
+
+<table border="2" >
+<tr>
+<td><img src="img/windows1.bmp">Caratteristiche  [modifica]Windows è un sistema operativo concepito fin dall'inizio per essere portabile su differenti architetture, sebbene si sia diffuso quasi esclusivamente su computer con architettura x86 (in passato sono state prodotte alcune versioni di Windows NT per DEC Alpha, MIPS, PowerPC e SPARC, oggi non più supportate). Attualmente sono supportate anche le nuove piattaforme a 64 bit di Intel e AMD. Con l'avvento di Windows 8, Windows avrà una versione per ARM i processori più diffusi nei dispositivi portatili (tablet e smartphone).
+
+
+Architettura del sistema:
+Le varie famiglie di Windows hanno caratteristiche tecniche molto diverse fra loro:
+
+Le versioni a 16 bit erano semplicemente degli "ambienti grafici" che fornivano al programmatore un insieme di librerie e servizi per l'interfaccia grafica. In realtà le funzioni di base (l'input/output, l'accesso ai dischi e la gestione della memoria) sfruttavano i servizi del BIOS e del DOS.
+
+Le versioni ibride a 16/32 bit (la famiglia Windows 9x) disponevano invece di un proprio kernel in modalità protetta, che tuttavia era un'evoluzione del kernel in modalità reale del DOS.
+
+La famiglia Windows NT, invece, è basata su un kernel completamente nuovo a 32 bit (64 bit in alcune versioni recenti) con architettura a microkernel ibrido.
+
+Ciò che rende uniformi tutti i sistemi Windows è l'interfaccia ad alto livello al programmatore, costituita dalle Windows API che hanno mantenuto una forma sostanzialmente immutata dalla prima versione di Windows ad oggi.
+ 
+ L'interfaccia grafica - GUI - graphic user interface  [modifica]Windows è sin dall'origine un sistema operativo grafico, pensato per essere utilizzato con il mouse, e a differenza dei sistemi Unix l'interfaccia grafica è un componente essenziale non opzionale. Solo nelle prime versioni di Windows NT il sottosistema grafico operava in user mode, ma a partire dalla versione 4.0 è stato portato a livello kernel per motivi di prestazioni.
+
+Microsoft venne accusata di avere copiato l'interfaccia di Windows dal sistema operativo del Macintosh di Apple, il Mac OS, a sua volta ispirata a quella sviluppata dalla Xerox; Apple, tuttavia, aveva stipulato un regolare contratto con Xerox per poter utilizzare le sue risorse all'interno del progetto Macintosh. Per distribuire la prima versione di Windows, Microsoft ottenne una licenza da Apple. Tale versione tuttavia non disponeva della possibilità di avere finestre affiancate, che erano ancora una caratteristica pressoché esclusiva del Macintosh: per questo in Windows 1.0 le finestre occupavano sempre tutto lo schermo. In Windows 2.0 Microsoft introdusse le finestre affiancate e Apple citò in giudizio Microsoft. La causa legale si risolse, molti anni dopo, con una trattativa privata, i cui dettagli non sono completamente noti al pubblico.
+
+La shell di Windows fino alla versione 3.1 era divisa in diversi programmi: Executive nelle prime versioni e in seguito Program Manager e File Manager. Il grande passo avanti si ebbe con la shell Explorer di Windows 95 (in italiano Gestione risorse), caratterizzata in particolare dalla Barra delle applicazioni e dal Menu di avvio. Era inoltre presente un moderno Desktop, come quello presente da anni in altri sistemi operativi.
+
+Spesso il precursore di Explorer è considerata la shell di Acorn Archimedes del 1987, che disponeva di un componente simile alla Barra delle applicazioni. In realtà qualcosa di simile era presente già in Windows 1.0, nel 1985. In ogni caso concetti quali il desktop, il cestino e la navigazione del file system per finestre erano presenti da anni, in varie forme, in altri sistemi operativi. Tuttavia Explorer fu il frutto di una lunga ricerca di ergonomia da parte di Microsoft, che studiò con l'ausilio di esperti il modo in cui gli utenti interagivano con il computer.
+
+La diffusione dell'uso del desktop nei personal computer, favorita almeno in parte dalla vasta diffusione di Windows, ha causato un cambiamento significativo nell'interazione tra computer e utente: con esso è possibile svolgere molti compiti (task in inglese) comuni e complessi con una minima conoscenza del computer. D'altro canto, l'interfaccia isola l'utente dai processi interni del sistema.
+
+
+
+
+
+
+</td>
+
+</tr>
+<tr>
+<td><img src="img/vistavsmac.bmp"></td>
+
+</tr>
+
+
+
+
+
+
+<td>Pagina di Bryan Garcia fatta il 3 ottobre 2012</td>
+
+
+</tr>
+</table>
+
+<input name=red value=red type=button onclick="colora(1);">
+<input name=yellow value=yellow type=button onclick="colora(2);">
+<input name=green value=green type=button onclick="colora(3)";>
+<input type=Button name="<" value="<" onclick="aumenta(1)";>
+<input type=Button name=">" value=">" onclick="aumenta(2)";>
+</body>
+</html> 
+
+
+

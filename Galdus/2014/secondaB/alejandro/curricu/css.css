@@ -1,0 +1,53 @@
+/* DAVIDE SARDINA */
+/* CSS CURRICULUM */
+
+nav{
+	float:left;
+	width:20%;
+	text-align:right;
+}
+
+#bor{
+	border-right:1px solid black;
+	padding:5%;
+}
+
+#inizio{
+	margin-top:2%;
+}
+
+.titolo{
+	margin-top:20%;
+	font-weight:bold;
+}
+
+.contenuto{
+	margin-top:2%;
+}
+
+.contenuto-section{
+	padding:2px;
+}
+
+.titolino{
+	font-size:13px;
+	margin-bottom:10%;
+}
+
+section{
+	float:left;
+	padding:219px 16px;
+
+}
+
+.faq{
+	padding:75px 0 0 0;
+}
+
+ul{
+	float:right;
+}
+
+td{
+	border-right:1px solid black;
+}

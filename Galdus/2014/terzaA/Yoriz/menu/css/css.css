@@ -1,0 +1,13 @@
+html,body{margin:10px; padding: 10px;}
+body{ background:tan; text-align:center;}
+font{color:DODGERBLUE;} 
+a:link {color:#669900;} 
+a:visited {text-decoration: none; color:#6699FF;}
+a:hover {color: red;}
+div {
+border:dotted 2px;
+width:60%;
+margin:auto;
+padding:10px;
+}
+

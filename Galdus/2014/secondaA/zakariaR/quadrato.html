@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<title>Quadrato</title>
+<style>
+body {
+background-color:green;
+}
+div{
+margin:auto;
+width:100%;
+}
+div#f {
+text-align:right;
+background-color:red;
+font-family:algerian;
+}
+table,td,th {
+text-align:center;
+margin:auto;
+}
+header {
+text-align:center;
+background-color:red;
+}
+</style>
+ <script>
+ function Quadrato1() {
+ var numero=document.f1.numero.value;
+ var r=numero*numero;
+ document.f1.ris.value=r;
+ }
+ 
+ </script>
+</head>
+<body>
+<header>
+<h1>QUADRATO</h1>
+</header>
+<div id="form">
+<FORM NAME="f1"> 
+<TABLE> 
+<tr>
+<td>
+numero: <INPUT TYPE="text" NAME="numero" Size="18"> 
+</td>
+</tr>
+<tr>
+<td>
+Risultato : <INPUT TYPE="text" NAME="ris" Size="18"> 
+</td>
+</TR>
+<tr>
+<td>
+<input type="button" name="bn" value="Calcola" onClick="Quadrato1()"> 
+</td>
+</tr> 
+</FORM> 
+</TABLE> 
+</div>
+<div>
+&nbsp
+</div>
+<footer>
+<div id="f">Zakaria Rahman 
+<br/>2^A Info&nbsp
+<br/>
+Compito per casa &nbsp
+</footer>
+</body>
+</html>

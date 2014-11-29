@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Leggi parametri di Pietro Maffi</title>
+
+<link rel="stylesheet" type="text/css" href="../style.css" />
+<link rel="stylesheet" type="text/css" href="../images/hmenu.css" />
+<style>
+h2{
+  color:#449999;
+  text-align:center;
+}
+.centrata { 
+margin:auto;
+}
+
+table,td,th{
+border: solid 1px #990055;
+padding:10px;
+}
+table{
+border-collapse:collapse;
+}
+
+
+</style>
+</head>
+<body>
+<h2>QUESTIONARIO SULL'USO DELL'ENERGIA</h2>
+<p>&nbsp;</p>
+<form method='POST' action='http://galdusmaffi.tk/Galdus/Test/test.php'>
+<table class="centrata">
+<tr> <th>sesso</th> <td><select name='sesso'> <!-- [size='45'] [onchange='gestore(...)'] -->
+<option value = '' ></option>
+<option value = 'maschio' >Maschio</option>
+<option value = 'femmina' >Femmina</option>
+</select>
+</td>
+<tr class=sinistra> 
+<th>elettrodomestici posseduti</th>
+<td>
+<input type="checkbox" name="elettro" value="lavatrice">lavatrice<br>
+<input type="checkbox" name="elettro" value="tv">tv<br>
+<input type="checkbox" name="elettro" value="lavstoviglie">lavastoviglie<br>
+<input type="checkbox" name="elettro" value="computer">computer<br>
+<input type="checkbox" name="elettro" value="console">console ps3<br>
+<input type="checkbox" name="elettro" value="microonde">microonde<br>
+<input type="checkbox" name="elettro" value="phoon">phoon<br>
+<input type="checkbox" name="elettro" value="dvd">dvd<br>
+<input type="checkbox" name="elettro" value="frigo">frigo<br>
+</td>
+<tr> 
+<th>riscaldamento</th> 
+<td>
+<input type="radio" name="riscaldamento" value="centralizzato"> centralizzato<br>
+<input type="radio" name="riscaldamento" value="privato" > privato<br>
+<tr> 
+<th>descrizione riscaldamento</th> 
+<td><textarea name=testo >
+</textarea></td>
+</tr>
+<tr> <th>indirizzo</th> 
+<td><input type=text name=indirizzo> </td>
+</tr>
+<tr> <th>classe frequentata</th> 
+<td><input type=text name=classe> </td>
+</tr>
+
+<tr> <th colspan=2>
+<input type=submit value='invia dati'>
+<input type=reset value='annulla'>
+</th> </tr>
+
+</table>
+</form>
+
+</body>
+</html>

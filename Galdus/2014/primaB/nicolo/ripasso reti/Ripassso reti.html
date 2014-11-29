@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="it">
+<head>
+<style type="text/css">
+body{
+text-align:center;
+}
+#div1 {
+width:500px;
+height:400px;
+padding-left:10px;
+padding-top:100px;
+//background-image:url(tipologia.jpg);
+background-repeat:no-repeat;
+}
+#div2 {
+width:500px;
+height:400px;
+padding-left:10px;
+padding-top:100px;
+//background-image:url(topologia.jpg);
+background-repeat:no-repeat;
+}
+h1{
+font-size:32px;
+font-family:Verdana;
+color:#123456;
+}
+
+h2{
+font-size:32px;
+font-family:Verdana;
+color:#123456;
+}
+img{
+width:150px;
+height:120px;
+}
+</style>
+<script>
+function permettiTrascinamento(ev)
+{
+ev.preventDefault();
+}
+function trascina(ev)
+{
+ev.dataTransfer.setData("text", ev.target.id);
+}
+function rilascia(ev)
+{
+ev.preventDefault();
+var data=ev.dataTransfer.getData("text");
+var arrivo=ev.target.nodeName;
+//alert(arrivo);
+if(arrivo=="H1"){
+if(data=="drag1"||data=="drag2"||data=="drag3")
+ev.target.appendChild(document.getElementById(data));
+}
+if(arrivo=="H2"){
+if(data=="drag4"||data=="drag5"||data=="drag6")
+ev.target.appendChild(document.getElementById(data));
+}
+}
+</script>
+</head>
+<body>
+<h2> Trascina gli ogetti al loro posto</h2>
+<table align="center">
+<tr>
+<td><div id="div1" name=primo ondrop="rilascia(event)"
+ondragover="permettiTrascinamento(event)"> <h1>TIPOLOGIA DI RETE</h1></div></td>
+<td><div id="div2" name=secondo ondrop="rilascia(event)"
+ondragover="permettiTrascinamento(event)"> <h2>TIPOLOGIA DI RETE</h2></div></td>
+</tr>
+</table>
+<img id="drag1" src="img/lan.jpg" draggable="true"
+ondragstart="trascina(event)">
+<img id="drag2" src="img/man.jpg" draggable="true"
+ondragstart="trascina(event)">
+<img id="drag3" src="img/wan.jpg" draggable="true"
+ondragstart="trascina(event)">
+<img id="drag4" src="img/anello.jpg" draggable="true"
+ondragstart="trascina(event)">
+<img id="drag5" src="img/stella.jpg" draggable="true"
+ondragstart="trascina(event)">
+<img id="drag6" src="img/bus.jpg" draggable="true"
+ondragstart="trascina(event)">
+</body>
+</html>
+
+

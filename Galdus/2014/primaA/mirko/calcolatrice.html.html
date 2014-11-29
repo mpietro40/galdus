@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+<meta name="generator" content="Mirko Minino, www.pspad.com">
+<title>esempio di pagina con funzioni Mirko Minino</title>
+<script language="javascript">
+// calcolo risultato operazione aritmetica
+
+function calcola(){
+
+//alert("entrato");
+var indice = document.f1.operazione.selectedIndex;
+var segno = document.f1.operazione[document.f1.operazione.selectedIndex] .value;
+var n1 = eval(document.f1.primo.value);
+var n2 = eval(document.f1.secondo.value);
+//alert(segno);
+if(segno=="+")
+document.f1.risultato.value = n1+n2;
+else if(segno=="-")
+document.f1.risultato.value = n1-n2;
+else if(segno=="*")
+document.f1.risultato.value = n1*n2;
+else if(segno=="/")
+document.f1.risultato.value =n1/n2;
+
+/*switch (indice){
+case 1:
+document.f1.risultato.value =n1 + n2;
+break;
+case 2:
+document.f1.risultato.value = n1 - n2;
+break;
+case 3:
+document.f1.risultato.value = n1 * n2;
+case4:
+document.f1.risultato.value = n1 / n2;
+break;
+}
+*/
+
+}
+// reset modulo
+function azzera(){
+  document.f1.reset();
+  writeData() ;
+//  alert("azzera operazione");
+}
+
+// stampa la data
+
+function writedata(){
+var data = new Date();
+document.data1.oggi.value="oggi e' "+data;
+}
+</script>
+</head>
+<body bgcolor="#FFBBEE" onload="writedata()">
+<div align="center"><h1>esempio calcoli aritmetici</h1>
+<form name="data1">
+   <input type="text" name="oggi" size"40" />
+ </form>
+ </div>
+ 
+ <br>
+ <!--acquisizione degli input dell'utente-->
+ <FORM name="f1">
+ <table>
+ <tr>
+ <td>primo numero</td>
+ <td><input type="text" name="primo" size="5"></td>
+ </tr>
+ <tr>
+ <td>secondo numero</td>
+ <td><input type="text" name="secondo" size="5"></td>
+ </tr>
+ <tr>
+ <td>scelta operazione</td>
+ <td>
+ <select name="operazione" onchange="calcola()">
+ <option></option>
+ <option value="+">addizione</option>
+ <option value="-">sottrazione</option>
+ <option value="*">moltiplicazione</option>
+ <option value="/">divisione</option>
+ </select>
+ </td>
+ </tr>
+ <tr>
+ <td>risultato</td>
+ <td><input type=text" name=risultato size"5"></td>
+ </tr>
+ </table>
+ <br><br>
+ <input type="button" value="azzera" onclick="azzera()"> &nbsp;
+ <input type="button" value="calcola" onclick="calcola()">
+ </form>
+ <p>
+ </body>
+ </html>

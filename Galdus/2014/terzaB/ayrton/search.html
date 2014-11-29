@@ -1,0 +1,19 @@
+<!Doctype html>
+<html>
+<head>
+</head>
+<body>
+<?php try{
+//connect the database.
+$conn=mysql_connect("localhost","root","");
+$capitale=$_Post['capitale'];
+$sql="select nazione from nazioni 
+where capitale=$capitale";
+$res=mysql_query($sql,$conn);
+$row=mysql_fetch_array($res)
+$nazione=$row['nazione'];
+echo"<h1> La nazione della capitale $capitale &egrave $nazione </h1>";
+mysql_close($conn);
+?>
+</body>
+</html>

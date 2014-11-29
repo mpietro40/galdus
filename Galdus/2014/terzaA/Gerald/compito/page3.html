@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="Gerald Joshua" CONTENT="Lavoro"> 
+<title> Gerald.Chillax.D </title>
+<link rel="stylesheet" href="CSS/mio.css" type="text/css" />
+
+</head>
+<body>
+<div class=centrato>
+
+</div>
+<div class="centrato">
+<div id="navigation">
+			<ul>
+            		<li><a href="Home.html"> Home </a></li>  
+                <li><a href="page1.html"> NAS </a></li>
+                <li><a href="page2.html"> SAN </a></li>
+                <li><a href="page3.html"> Differenza Tra NAS è SAN </a></li>
+                <li><a href="page4.html"> ISO </a></li>
+                <li><a href="page5.html"> ANSI</a></li>
+                <li><a href="page6.html"> IEEE</a></li>
+                 
+			</ul>
+	</div>    
+  
+<br>
+
+</h1>
+<br>
+<u> <h1> Differenza Tra NAS è SAN </h1> </u>
+<br>
+<div class="contenuto4">
+<br>
+Entrambe questi sistemi di storage stanno aumentando la popolarità a discapito dei storage tradizionali ad attacco diretto. Gli analisti hanno stimato che l’uso di entrambe le tecnologie NAS e SAN sono in continua crescita. A prima vista le tecnologie NAS e SAN potrebbero sembrare pressochè identiche, ed infatti molte volte esse lavorano in condizioni identiche. Dopo tutto, entrambe usano generalmente controller RAID connessi ad una rete, dei quali viene eseguito il back up su un nastro. Comunque, qui ci sono alcune differenze — importanti differenze — che possono seriamente influire nel modo in cui i tuoi dati vengono utilizzati.
+Cavi e Protocolli
+Molte persone si concentrano sui cavi, ma la differenza nei protocolli è attualmente il fattore più importante. Per esempio, un comune argomento è che lo SCSI è più veloce dell’ethernet quindi è meglio. Perche? Principalmente, le persone dicono che il overhead del TCP/IP taglia l’efficenza del trasferimento dei dati. Così una Ethernet da Gigabit ti da un trasferimento di 60-80 Mbps contro 100Mbps.
+Ma consideriamo questo, la prossima versione di SCSI raddoppierà la velocità; la prossima versione del protocollo ethernet (disponibile in versione beta oggi) moltiplicherà la velocità con un fattore 10. Qui sarà dunque più veloce? Anche con l’overhead? E’ qualcosa da considerare.
+I Cavi
+–NAS usa Reti TCP/IP: Ethernet, FDDI, ATM (oppure TCP/IP su Fibre Channel qualche volta)
+–SAN usa Fibre Channel
+I Protocolli
+–NAS usa TCP/IP e NFS/CIFS/HTTP
+–SAN usa Encapsulated SCSI
+Altre Differenze
+NAS
+Almeno ogni macchina che può connettersi alla LAN (o è interconnessa alla LAN traverso una WAN) può usare i protocolli NFS, CIFS, SMB o HTTP per connettersi ad un NAS e condividere files.
+SAN
+Solo macchine classificate come servers equipaggiate con SCSI Fibre Channel possono connettersi alla SAN. Il Fibre Channel della SAN ha un limite di circa 10km al massimo.
+NAS
+Un NAS identifica i dati mediante nome file e byte offsets, trasferisce file dati o file meta-dati (il proprietario del file, i permessi, la data di creazione, etc.), amministra la sicurezza, l’autenticazione utente, il file locking
+SAN
+Un SAN indirizza i dati mediante il numero di blocchi disco e trasferisce blocchi discho raw.
+NAS
+Un NAS permette miglior condivisione delle informazioni specialmente tra disparati systemi operativi come Unix e NT.
+SAN
+La condivisione dei files è dipendente dal sistema operativo ed è addirittura inesistente in molti sistemi operativi.
+NAS
+Il File System è amministrato dall’unità principale NAS
+SAN
+Il File System è amministrato dai singoli servers
+NAS
+I Backups ed i mirrors (utilizzando caratteristiche come gli Snapshots NetApp’s) sono eseguiti su files, non blocchi, per salvare banda passante e tempo. Uno Snapshot può essere più piccolo se paragonato al volume della sua sorgente.
+SAN
+I Backups ed i mirrors richiedono una copia blocco per blocco, anche se i blocchi sono vuoti. Una macchina mirror deve essere uguale o maggiore in capacitè se paragonata al volume sorgente.
+<br>
+<br>
+<br>
+</div>
+</body>
+</html>

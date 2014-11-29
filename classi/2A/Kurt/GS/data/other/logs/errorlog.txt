@@ -1,0 +1,6 @@
+[15-May-2014 10:30:40 Europe/Berlin] PHP Notice:  Undefined index: existing-url in C:\xampp\htdocs\gs\admin\changedata.php on line 198
+[15-May-2014 10:30:40 Europe/Berlin] PHP Notice:  Undefined index: existing-url in C:\xampp\htdocs\gs\admin\changedata.php on line 201
+[15-May-2014 11:16:40 Europe/Berlin] PHP Notice:  Undefined index: existing-url in C:\xampp\htdocs\gs\admin\changedata.php on line 198
+[15-May-2014 11:16:40 Europe/Berlin] PHP Notice:  Undefined index: existing-url in C:\xampp\htdocs\gs\admin\changedata.php on line 201
+[15-May-2014 11:23:36 Europe/Berlin] PHP Notice:  Undefined index: existing-url in C:\xampp\htdocs\gs\admin\changedata.php on line 198
+[15-May-2014 11:23:36 Europe/Berlin] PHP Notice:  Undefined index: existing-url in C:\xampp\htdocs\gs\admin\changedata.php on line 201

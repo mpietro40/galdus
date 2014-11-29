@@ -1,0 +1,68 @@
+
+body{
+  color:white;
+  background:url("../img/5dd17ddb8a749766ecb1f0fdc76bfdae.jpg");
+}
+h1{ 
+  font-size:25px;
+  text-align:center;
+} 
+div.centrato{
+   text-align:center;
+}
+
+table.centrato{+
+  margin-left:auto;
+  margin-right:auto;
+}
+table, td { 
+  border: solid 3px red; 
+}
+table { 
+  border-collapse: collapse; 
+}
+table{
+  text-align:left;
+}
+
+#cssmenu ul {
+  list-style-type:none;
+  width:auto;
+  position:relative;
+  display:block;
+  height:33px;
+  font-size:.6em;
+  background: #76B3F1 url(../img/Flip_top_Logo.png) repeat-x top left;
+  font-family:Verdana,Helvetica,Arial,sans-serif;
+  border:1px solid #000;
+  margin:0;
+  padding:0;
+}
+
+#cssmenu li {
+  display:block;
+  float:left;
+  margin:0;
+  padding:0;
+}
+
+#cssmenu li a {
+  float:left;
+  color:#A79787;
+  text-decoration:none;
+  height:24px;
+  padding:9px 15px 0;
+  font-weight:normal;
+}
+
+#cssmenu li a:hover,.current {
+  color:#fff;
+  background: #A3BAE6 url(../img/8bit_full_grad_gray.png) repeat-x top left;
+  text-decoration:none;
+}
+
+#cssmenu .current a {
+  color:#fff;
+  font-weight:700;
+}
+

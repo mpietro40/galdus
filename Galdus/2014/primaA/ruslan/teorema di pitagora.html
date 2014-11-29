@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<title>Teorema di Pitagora</title><p>
+
+<style>
+table,td {
+border:inset 2px blue;
+}
+body{
+background-color:red;
+}
+body{
+text-align:center;
+font-family:calibri;
+font-size:34px;
+}
+</style>
+
+<script>
+function calcola1(){
+
+var c1=document.f1.ct1.value;
+var c2=document.f1.ct2.value;
+var risultato=Math.sqrt (c1*c1+c2*c2);
+
+document.f1.ipo.value=risultato;
+}
+
+</script>
+
+<meta charset="utf-8">
+</head>
+<body>
+<h1>Pitagora</h1>
+<img src="download.jpg"width=300px height=250px>
+<form name=f1>
+<table><table align="center"> 
+<tr>
+<td><input type=text name=ct1>
+</td>
+<td>cateto 1 </td>
+</tr>
+<tr>
+<td><input type=text name=ct2>
+</td>
+<td>cateto 2 </td>
+</tr>
+<tr>
+<td><input type=text name=ipo>
+</td>
+<td>Ipotenusa </td>
+</tr>
+<tr>
+<td>&nbsp; </td>
+<td><input type=button name=calcola value=calcola onclick='calcola1()'>
+</td>
+</tr>
+</table>
+</form>
+</html>
+</body>

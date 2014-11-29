@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>convertitore</title>
+<script type="text/javascript">
+function n(op)
+{
+if(document.getElementById("risultato").value=="0" || document.getElementById("risultato").value==null)
+{document.getElementById("risultato").value=op;}
+else{document.getElementById("risultato").value+=op;}
+}
+function risultato() { document.getElementById("risultato").value=eval(document.getElementById("risultato").value); }
+function cancella() { document.getElementById("risultato").value=document.getElementById("risultato").value.substring(0, document.getElementById("risultato").value.length-1); }
+function azzera() { document.getElementById("risultato").value="0"; }
+</script>
+<style type="text/css">
+input {
+	background-color:black;
+	border-color:black;
+	color:#00ff00;
+	width:50px;
+}
+
+body {
+	background-color:white;
+}
+
+#risultato
+{
+	width:215px;
+	background-color:black;
+	color:#00ff00;
+}
+
+.large
+{
+	width:105px;
+}
+
+</style>
+</head>
+<body>
+<table style="border-color:#00ff00; background-color:black;" border="1">
+<tr><td><input type="text" value="0" id="risultato" readonly="readonly"></td></tr>
+<tr><td>
+<input type="submit" value="Cancella" OnClick="cancella()">
+<input type="submit" value="Azzera" OnClick="azzera();">
+</td></tr>
+<tr><td>
+<input type="submit" value="×" id="*" OnClick="n(this.id)">
+<input type="submit" value="÷" id="/" OnClick="n(this.id)">
+<input type="submit" value="+" id="+" OnClick="n(this.id)">
+<input type="submit" value="-" id="-" OnClick="n(this.id)">
+<input type="submit" value="0" id="0" OnClick="n(this.id)">
+<input type="submit" value="1" id="1" OnClick="n(this.id)">
+<input type="submit" value="2" id="2" OnClick="n(this.id)">
+<input type="submit" value="3" id="3" OnClick="n(this.id)">
+<input type="submit" value="4" id="4" OnClick="n(this.id)">
+<input type="submit" value="5" id="5" OnClick="n(this.id)">
+<input type="submit" value="6" id="6" OnClick="n(this.id)">
+<input type="submit" value="7" id="7" OnClick="n(this.id)">
+<input type="submit" value="8" id="8" OnClick="n(this.id)">
+<input type="submit" value="9" id="9" OnClick="n(this.id)">
+<input type="submit" value="(" id="(" OnClick="n(this.id)">
+<input type="submit" value=")" id=")" OnClick="n(this.id)">
+<input type="submit" value="[" id="[" OnClick="n(this.id)">
+<input type="submit" value="]" id="]" OnClick="n(this.id)">
+<input type="submit" value="{" id="{" OnClick="n(this.id)">
+<input type="submit" value="}" id="}" OnClick="n(this.id)">
+<input type="submit" value="=" OnClick="risultato();">
+</table>
+</body>
+</html>

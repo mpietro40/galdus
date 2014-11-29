@@ -1,0 +1,91 @@
+table{
+border-collapse:collapse;
+width:180px;
+height:150px;
+}
+table td{
+border:solid 2px black;
+
+}
+table.centrata{
+margin-left:auto;
+margin-right:auto;
+}
+h1{
+text-align:center;
+}
+p{
+text-align:left
+}
+div.style{
+position:absolute; 
+top:180px; 
+left:590px;
+}
+div.bordo{
+border:solid 2px black;
+width:200px;
+height:200px;
+
+}
+div.bordo2{
+border:solid 2px black;
+width:500px;
+height:110px;
+margin:auto;
+text-align:absolute;
+}
+div.bordo3{
+border:solid 2px black;
+width:170px;
+height:130px;
+margin:auto;
+text-align:absolute;
+}
+.testoVerde{
+font-weight: bold;
+color: #2580a2;
+font-size: 80%;
+text-align:center;
+}
+.testorosso{
+font-weight: bold;
+color: red;
+font-size: 80%;
+text-align:left;
+}
+.LT{
+text-align:left;
+vertical-align:top;
+}
+.CT{
+text-align:center;
+vertical-align:top;
+}
+.RT{
+text-align:right;
+vertical-align:top;
+}.LM{
+text-align:left;
+vertical-align:middle;
+}
+.CM{
+text-align:center;
+vertical-align:middle;
+}
+.RM{
+text-align:right;
+vertical-align:middle;
+}
+.LB{
+text-align:left;
+vertical-align:bottom;
+}
+.BC{
+text-align:center;
+vertical-align:bottom;
+}
+.BR{
+text-align:right;
+vertical-align:bottom;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Frame</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<link rel="StyleSheet" href="./uno.css" type="text/css" media="screen">
+</head>
+<body>
+<a name="inizio"></a>
+<img src="./immagini/intestazione.jpg" align="right" width="461"
+ height="52" alt=""><br>
+<h2>Frame </h2>
+<p>Introdotti a partire dalla versione 2 di Netscape e dalla 3 di
+Explorer, i frame rivoluzionano decisamente l'aspetto di una pagina
+Web, permettendo l'inserimento di pi&ugrave; viste indipendenti all'interno
+della stessa finestra. In pratica, su ogni porzione della finestra pu&ograve; essere definito un frame, che contiene una diversa risorsa Web. </p>
+<p>L'esempio tipico &egrave; quello utilizzato per questa presentazione: una finestra con un frame laterale contenente
+un men&ugrave; di ancore, che rimane sempre in primo piano, mentre nel
+frame principale vengono presentati i documenti localizzati dalle
+ancore del men&ugrave;. </p>
+<hr>
+<h3>Sintassi</h3>
+<p>Per dividere la pagina in frame &egrave; necessario creare un
+documento principale che definisca dimensioni e contenuto dei singoli
+frame. Tale documento non ha corpo, dunque non contiene
+altri elementi a parte l'elemento:</p>
+<pre> &lt;frameset [cols="%,%"] [rows="%,%"]&gt;....&lt;/frameset&gt;</pre>
+<p>gli attributi COLS e ROWS dividono la pagina in porzioni verticali e
+orizzontali, rispettivamente. Si possono usare valori percentuali, in
+pixel e "*", che corrisponde a "lo spazio rimanente": usato per
+l'ultimo frame assicura il giusto dimensionamento.</p>
+
+<p>All'interno del frameset, ogni elemento frame &egrave; definito dal tag:</p>
+<pre> &lt;frame[name="name"] src="filename"<br> [scrolling="yes" | "auto" | "no" ] [frameborder= "0" | "1"]&gt;   </pre>
+<p>SRC indica il percorso del documento da visualizzare nel frame,
+SCROLLING abilita o disabilita la visualizzazione&nbsp; delle barre di
+scorrimento laterali.</p>
+<p>L'attributo NAME permette di riferire il frame come destinatario del documento collegato da un'ancora, dove si specificher&agrave; l'attributo TARGET:</p>
+<pre> &lt;a href="url" target="name"&gt;</pre>
+<a name="punto1"></a>
+<hr>
+
+<h3>Esempio</h3>
+<p>I documenti a.html e b.html sono due pagine colorate.<br>
+</p>
+<pre> &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN"
+   "http://www.w3.org/TR/html4/frameset.dtd"&gt;
+&lt;html&gt;<br>   &lt;head&gt;<br>     &lt;title&gt;Frame&lt;/title&gt;<br>   &lt;/head&gt;<br>   &lt;frameset cols="22%,*"&gt;<br>     &lt;frame name="lato"  src="./a.html"&gt;<br>     &lt;frame name="main"  src="./b.html"&gt;<br>   &lt;/frameset&gt;<br>&lt;/html&gt;<br></pre>
+<center> <a href="frame.html#punto1"
+ onclick="window.open('./esempi/dieci.html','', config='toolbar=1,menubar=1,scrollbars=1,resizable=1,width=600 ,height=500,  ' )"><img
+ src="./immagini/risultato.jpg" border="0" width="135" height="35" alt=""></a>
+</center>
+<br>
+<br>
+<br>
+<table align="center" border="0">
+  <tbody>
+    <tr>
+      <td> <a href="mappe.html" target="main"><img
+ src="./immagini/precedente.jpg" border="0" width="135" height="34" alt=""></a></td>
+      <td> <a href="frame.html#inizio" target="main"><img
+ src="./immagini/inizio.jpg" border="0" width="135" height="33" alt=""></a></td>
+      <td> <a href="forms.html" target="main"><img
+ src="./immagini/successiva.jpg" border="0" width="135" height="34" alt=""></a></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

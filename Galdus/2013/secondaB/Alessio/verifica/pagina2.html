@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>alessio canfora</title>
+<script>
+var dimensione= 10;
+function aumenta(valore){ 
+if(valore==2){
+dimensione=dimensione +10;
+document.getElementById("pagina").style.fontSize=dimensione+"px";
+}
+if(valore==1) {
+dimensione=dimensione -10;
+document.getElementById("pagina").style.fontSize=dimensione+"px";
+}
+}
+function colora(scelta){
+if(scelta==1){
+document.getElementById("pagina").style.backgroundColor="red";
+document.getElementById("pagina").style.color="orange";
+}
+if(scelta==2){
+document.getElementById("pagina").style.backgroundColor="yellow";
+document.getElementById("pagina").style.color="lime";
+}
+if(scelta==3){
+document.getElementById("pagina").style.backgroundColor="lime";
+document.getElementById("pagina").style.color="red";
+}
+}
+</script>
+
+<style>
+body{ /*background: black;*/
+}
+body{
+color:blue
+}
+body{
+background:#000000;
+}
+table,td{
+border: solid 3px blue ;
+color:blue
+}
+table{
+border-collapse:collapse;
+}
+</style>
+</head>
+
+<body id=pagina>
+<div id= "telaio">
+<div id="testata"></div>
+<div id="centrale"><p>&nbsp;</p>
+
+<h1> ipad 3</H1>
+
+                                    
+<table border="1" >
+<tr>
+<td>Apple ha presentato ieri il nuovo iPad di terza generazione: il dispositivo è dotato di un display Retina, il nuovo chip A5X di Apple con grafica quad-core e una webcam iSight da 5 megapixel per scattare foto e girare video HD 1080p. 
+iPad con Wi-Fi + 4G si collega alle reti più veloci in tutto il mondo, incluse le reti LTE 4G di AT&T e Verizon. 
+Il display Retina del nuovo iPad ha un numero di pixel quattro volte superiore rispetto ad iPad 2, al fine di rendere pagine web, testo, immagini e video ancora più nitidi e realistici. 
+I 3,1 milioni di pixel nel display Retina sono oltre un milione di pixel in più rispetto a un televisore HD e, con un aumento del 44% della saturazione del colore, il nuovo iPad visualizza colori più ricchi, profondi e vivaci. 
+I film inoltre possono essere riprodotti in Full HD 1080p.  
+Il nuovo chip A5X con grafica quad-core è stato appositamente progettato da Apple per offrire un'esperienza utente veloce e reattiva, supportando al contempo il display Retina.
+Il chip A5X possiede prestazioni grafiche doppie rispetto al chip A5 e offre il giusto equilibrio fra performance ed efficienza energetica: gli utenti potranno godere di tutti i vantaggi offerti dal nuovo display e dell'intuitiva interfaccia Multi-Touch, di una buona profondità  visiva e della celebre autonomia di iPad.   
+L'ottica della webcam iSight da 5 megapixel è in grado di scattare foto e registrare video in Full HD. L'illuminazione posteriore consente di fotografare anche quando c'è poca luce e la nuova funzione di stabilizzazione delle immagini video rimuove i salti e le vibrazioni cui sono soggetti i filmati ripresi con un dispositivo mobile. 
+Le immagini, oltre ad essere visualizzate sul display Retina, possono anche essere modificate, ottimizzate e condivise con amici e familiari grazie all'app Immagini inclusa sull'iPad.   
+iPad Wi-Fi + 4G con LTE 4G di ultima generazione integrato offre supporto per le reti veloci in tutto il mondo, incluse HSPA+ e DC-HSDPA, e ora sia gli utenti di iPad CDMA che GSM potranno usare facilmente il roaming internazionale.
+
+    <br>
+
+</td>
+
+</tr>
+<tr>
+<td>
+<img src="img/ipad3.jpg">
+<a href="index.html">home</a>
+</td>
+
+</tr>
+<tr>
+
+
+</tr>
+<tr>
+<td>
+
+
+</tr>
+
+<tr>
+<td>Pagina di Alessio Canfora fatta il 3 ottobre 2012</td>
+
+
+</tr>
+</table>
+
+<input name=red value=red type=button onclick="colora(1);">
+<input name=yellow value=yellow type=button onclick="colora(2);">
+<input name=green value=green type=button onclick="colora(3)";>
+<input type=Button name="<" value="<" onclick="aumenta(1)";>
+<input type=Button name=">" value=">" onclick="aumenta(2)";>
+</body>
+</html> 

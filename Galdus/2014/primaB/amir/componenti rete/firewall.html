@@ -1,0 +1,83 @@
+<!doctype html>
+<head>
+<title>Componenti reti</title>
+<link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<style>
+#img1 {
+width:800px;
+height:400px;
+}
+</style>
+<script>
+$('#cssmenu').prepend('<div id="indicatorContainer"><div id="pIndicator"><div id="cIndicator"></div></div></div>');
+    var activeElement = $('#cssmenu>ul>li:first');
+
+    $('#cssmenu>ul>li').each(function() {
+        if ($(this).hasClass('active')) {
+            activeElement = $(this);
+        }
+    });
+
+
+	var posLeft = activeElement.position().left;
+	var elementWidth = activeElement.width();
+	posLeft = posLeft + elementWidth/2 -6;
+	if (activeElement.hasClass('has-sub')) {
+		posLeft -= 6;
+	}
+
+	$('#cssmenu #pIndicator').css('left', posLeft);
+	var element, leftPos, indicator = $('#cssmenu pIndicator');
+	
+	$("#cssmenu>ul>li").hover(function() {
+        element = $(this);
+        var w = element.width();
+        if ($(this).hasClass('has-sub'))
+        {
+        	leftPos = element.position().left + w/2 - 12;
+        }
+        else {
+        	leftPos = element.position().left + w/2 - 6;
+        }
+
+        $('#cssmenu #pIndicator').css('left', leftPos);
+    }
+    , function() {
+    	$('#cssmenu #pIndicator').css('left', posLeft);
+    });
+
+
+	$('#cssmenu>ul>.has-sub>ul').append('<div class="submenuArrow"></div>');
+	$('#cssmenu>ul').children('.has-sub').each(function() {
+		var posLeftArrow = $(this).width();
+		posLeftArrow /= 2;
+		posLeftArrow -= 12;
+		$(this).find('.submenuArrow').css('left', posLeftArrow);
+
+	});
+
+	$('#cssmenu>ul').prepend('<li id="menu-button"><a>Menu</a></li>');
+	$( "#menu-button" ).click(function(){
+    		if ($(this).parent().hasClass('open')) {
+    			$(this).parent().removeClass('open');
+    		}
+    		else {
+    			$(this).parent().addClass('open');
+    		}
+    	});
+</script>
+</head>
+<body>
+<script src="js/menu.js"></script>
+<div id="img"><img src="img/firewall.jpg" id="img2"></div>
+<a id="fatto"><h1>Come è fatto</h1></a>
+<p>
+Il compito fondamentale di un firewall è quello di regolare (vietare o autorizzare) l'accesso ad un determinato servizio di rete in base a delle regole precedentemente definite. 
+</p>
+<a id="arrivato"><h1>A cosa serve</h1></a>
+<p>
+Il firewall sia software che hardware serve a proteggere il computer da attacchi hacker/cracker e inoltre registrate le entrate e le uscite di connessioni o invii di pacchetti.
+</p>
+</body>
+</html>
