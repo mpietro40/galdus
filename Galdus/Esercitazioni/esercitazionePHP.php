@@ -24,8 +24,8 @@ text-decoration: none
 </head>
 <body>
 <?php
-ini_set('include_path', '/home/galdusmaffi.tk/public/');
-include 'template/page1.php';
+ini_set('include_path', 'D:\\Inetpub\\webs\\pietromafficom\\Galdus\\template\\');
+include 'page1.php';
 
 ?>
 <!-- Insert here your content in html-->
@@ -53,7 +53,7 @@ echo $_SERVER['HTTP_REFERER']." - se chiamata direttamente e' vuota </li><li>";
 echo $_GET['nome']." - e' il valore del parametro nome passato</li>";
 echo "</ol></h4></div>";
 
-include 'template/page2.php';
+include 'page2.php';
 
 ?>
 

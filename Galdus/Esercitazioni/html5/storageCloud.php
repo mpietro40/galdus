@@ -32,8 +32,8 @@ color:white;
 </head>
 <body>
 <?php
-ini_set('include_path', '/home/galdusmaffi.tk/public/');
-include 'template/page1.php';
+ini_set('include_path', 'D:\\Inetpub\\webs\\pietromafficom\\Galdus\\template\\');
+include 'page1.php';
 
 ?>
 <!-- Insert here your content in html-->
@@ -77,7 +77,7 @@ Costo e spazio disponibile
 
 <?php
 
-include 'template/page2.php';
+include 'page2.php';
 
 ?>
 

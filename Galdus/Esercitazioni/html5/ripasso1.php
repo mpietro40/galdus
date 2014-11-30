@@ -44,8 +44,8 @@ textarea{
 </head>
 <body>
 <?php
-ini_set('include_path', '/home/galdusmaffi.tk/public/');
-include 'template/page1.php';
+ini_set('include_path', 'D:\\Inetpub\\webs\\pietromafficom\\Galdus\\template\\');
+include 'page1.php';
 
 ?>
 <p>
@@ -72,7 +72,7 @@ Realizzare un sito in HTML5 con CSS e Javascript, che riassuma almeno tre sistem
 <li>La quarta pagina deve contenere una breve descrizione (almeno 5 righe) su cosa sia OSX, una immagine che ricordi OSX, il menu' per le altre pagine.</li>
 </ol>
 Le pagine dalla 2 alla 4 devono contenere una area come la seguente con almeno 2 comandi specifici del linguaggio:<p>
-<span class="stile"> galdusmaffi.tk Command prompt  </span>
+<span class="stile"> Command prompt  </span>
 <textarea 
   maxlength="2000" 
   cols="80" 
@@ -91,7 +91,7 @@ Un voto in piu' a chi inserisce il menu' in javascript.
 </h3>
 <?php
 
-include 'template/page2.php';
+include 'page2.php';
 
 ?>
 

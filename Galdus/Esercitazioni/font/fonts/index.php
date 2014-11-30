@@ -24,8 +24,8 @@ text-decoration: none
 </head>
 <body>
 <?php
-ini_set('include_path', '/home/galdusmaffi.tk/public/');
-include 'template/page1.php';
+ini_set('include_path', 'D:\\Inetpub\\webs\\pietromafficom\\Galdus\\template\\');
+include 'page1.php';
 
 ?>
 <!-- Insert here your content in html-->
@@ -33,11 +33,11 @@ include 'template/page1.php';
 
 <?php
 // Start folder listing -->
-include 'template/folderlist.php';
+include 'folderlist.php';
 
 // end folder listing -->
 
-include 'template/page2.php';
+include 'page2.php';
 
 ?>
 

@@ -30,9 +30,10 @@
 
 <div id=content>
 <?php
-ini_set('include_path', '/home/galdusmaffi.tk/public/');
+//ini_set('include_path', '/home/galdusmaffi.tk/public/');
+ini_set('include_path', 'D:\\Inetpub\\webs\\pietromafficom\\Galdus\\template\\');
 // include site breadcrumb 
-include 'template/breadcrumb.php';
+include 'breadcrumb.php';
 // include folder list
 // print space
 //print("<p>&nbsp;</p>\n");
@@ -59,7 +60,7 @@ include 'template/breadcrumb.php';
   Si ricorda che la possibilita' di usare SQL lite non e' sempre consentita si potrebbero ottenere alcuni errori.
   <br>In questo caso accedere alla sezione MySql (non affrontata con i ragazzi)
 <?php>
-include 'template/folderlist.php';
+include 'folderlist.php';
 ?>
 
 <h2>Accedere al DB mysql di XAMPP</h2>

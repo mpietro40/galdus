@@ -1,4 +1,4 @@
 <?php
-ini_set('include_path', '/home/galdusmaffi.tk/public/');
-include 'template/index.php';
+//ini_set('include_path', 'nix folder');
+include 'D:\\Inetpub\\webs\\pietromafficom\\Galdus\\template\\index.php';
 ?>

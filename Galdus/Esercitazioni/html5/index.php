@@ -24,8 +24,8 @@ text-decoration: none
 </head>
 <body>
 <?php
-ini_set('include_path', '/home/galdusmaffi.tk/public/');
-include 'template/page1.php';
+ini_set('include_path', 'D:\\Inetpub\\webs\\pietromafficom\\Galdus\\template\\');
+include 'page1.php';
 
 ?>
 <!-- Insert here your content in html-->
@@ -85,7 +85,7 @@ Realizzare una pagina html5 che visualizzi una tabella come quella indicata nel 
 <img src="tabella.jpg" alt=tabella>
 <?php
 
-include 'template/page2.php';
+include 'page2.php';
 
 ?>
 

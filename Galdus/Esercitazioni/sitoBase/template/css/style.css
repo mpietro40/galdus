@@ -1,9 +1,9 @@
 * { margin: 0; padding: 0; }
 
 body {
-  font: 11px sans-serif;
+  font: 12px sans-serif;
   min-width: 910px;
-  padding: 0 20px;
+  padding: -10px 20px;
 }
 
 a { text-decoration: none; }
@@ -21,7 +21,7 @@ a { text-decoration: none; }
   width: 447px; height: 125px;
   margin: 0 0 0 15px;
   background: url(../images/logo.png) left center no-repeat;
-  text-indent: -999em;
+  text-indent: 9em;
 }
                             
 #extras { position: absolute; right: 0; top: 0; width: 125px; text-align: right; }

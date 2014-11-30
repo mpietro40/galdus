@@ -1,6 +1,6 @@
 document.write("<div id='cssmenu'> ");
 document.write("<ul>");
-document.write("<li><a href='http://galdusmaffi.tk/'><span>Home</span></a></li> ");
+document.write("<li><a href='/Galdus'><span>Home</span></a></li> ");
 document.write("<li><a href='creaDB.html'><span>crea il database</span></a> </li> ");
 document.write("<li><a href='creaTabella.html'><span>creare la tabella</span></a> </li>  ");
 document.write("<li class='has-sub'><a href='inserisci.html'><span>Inserimento dati</span></a> ");
